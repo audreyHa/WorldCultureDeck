@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9587AFBFB1A346564015100F /* Pods_World_Culture_Deck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 352BD80C18464331F729CDAC /* Pods_World_Culture_Deck.framework */; };
 		F6CE53A623B99E7A00B42791 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CE53A523B99E7A00B42791 /* AppDelegate.swift */; };
 		F6CE53A823B99E7A00B42791 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CE53A723B99E7A00B42791 /* SceneDelegate.swift */; };
 		F6CE53AB23B99E7B00B42791 /* World_Culture_Deck.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F6CE53A923B99E7B00B42791 /* World_Culture_Deck.xcdatamodeld */; };
@@ -14,9 +15,21 @@
 		F6CE53AF23B99E7C00B42791 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6CE53AE23B99E7C00B42791 /* Assets.xcassets */; };
 		F6CE53B223B99E7C00B42791 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6CE53B123B99E7C00B42791 /* Preview Assets.xcassets */; };
 		F6CE53B523B99E7C00B42791 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6CE53B323B99E7C00B42791 /* LaunchScreen.storyboard */; };
+		F6CE53BD23B9A10200B42791 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F6CE53BC23B9A10200B42791 /* GoogleService-Info.plist */; };
+		F6CE53C423B9A46100B42791 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6CE53C323B9A46100B42791 /* Login.storyboard */; };
+		F6CE53C623B9A4B900B42791 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6CE53C523B9A4B900B42791 /* Main.storyboard */; };
+		F6CE53C923B9A81900B42791 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CE53C823B9A81900B42791 /* LoginViewController.swift */; };
+		F6CE53CB23B9D0B600B42791 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CE53CA23B9D0B600B42791 /* User.swift */; };
+		F6CE53CD23B9D5CD00B42791 /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CE53CC23B9D5CD00B42791 /* CreateUsernameViewController.swift */; };
+		F6CE53CF23B9D7DF00B42791 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CE53CE23B9D7DF00B42791 /* UserService.swift */; };
+		F6CE53D123B9DB7400B42791 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CE53D023B9DB7400B42791 /* Constants.swift */; };
+		F6CE53D323B9DBB700B42791 /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CE53D223B9DBB700B42791 /* Storyboard+Utility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1CE70D85015DFF0BC538C868 /* Pods-World Culture Deck.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-World Culture Deck.release.xcconfig"; path = "Pods/Target Support Files/Pods-World Culture Deck/Pods-World Culture Deck.release.xcconfig"; sourceTree = "<group>"; };
+		352BD80C18464331F729CDAC /* Pods_World_Culture_Deck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_World_Culture_Deck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38AE7D98688EF3EDF962B038 /* Pods-World Culture Deck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-World Culture Deck.debug.xcconfig"; path = "Pods/Target Support Files/Pods-World Culture Deck/Pods-World Culture Deck.debug.xcconfig"; sourceTree = "<group>"; };
 		F6CE53A223B99E7A00B42791 /* World Culture Deck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "World Culture Deck.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6CE53A523B99E7A00B42791 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6CE53A723B99E7A00B42791 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +39,15 @@
 		F6CE53B123B99E7C00B42791 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F6CE53B423B99E7C00B42791 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6CE53B623B99E7C00B42791 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6CE53BC23B9A10200B42791 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F6CE53C323B9A46100B42791 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		F6CE53C523B9A4B900B42791 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		F6CE53C823B9A81900B42791 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F6CE53CA23B9D0B600B42791 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F6CE53CC23B9D5CD00B42791 /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
+		F6CE53CE23B9D7DF00B42791 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		F6CE53D023B9DB7400B42791 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F6CE53D223B9DBB700B42791 /* Storyboard+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+Utility.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +55,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9587AFBFB1A346564015100F /* Pods_World_Culture_Deck.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E6AD7B7795245AAF887974DA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				38AE7D98688EF3EDF962B038 /* Pods-World Culture Deck.debug.xcconfig */,
+				1CE70D85015DFF0BC538C868 /* Pods-World Culture Deck.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F4475EECE50D4C6930BB6445 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				352BD80C18464331F729CDAC /* Pods_World_Culture_Deck.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F6CE539923B99E7A00B42791 = {
 			isa = PBXGroup;
 			children = (
 				F6CE53A423B99E7A00B42791 /* World Culture Deck */,
 				F6CE53A323B99E7A00B42791 /* Products */,
+				E6AD7B7795245AAF887974DA /* Pods */,
+				F4475EECE50D4C6930BB6445 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,12 +100,19 @@
 		F6CE53A423B99E7A00B42791 /* World Culture Deck */ = {
 			isa = PBXGroup;
 			children = (
+				F6CE53C723B9A80C00B42791 /* Controllers */,
+				F6CE53C223B9A42A00B42791 /* Views */,
+				F6CE53C123B9A42600B42791 /* Storyboards */,
+				F6CE53C023B9A42300B42791 /* Services */,
+				F6CE53BF23B9A41F00B42791 /* Models */,
+				F6CE53BE23B9A41500B42791 /* Helpers */,
 				F6CE53A523B99E7A00B42791 /* AppDelegate.swift */,
 				F6CE53A723B99E7A00B42791 /* SceneDelegate.swift */,
 				F6CE53AC23B99E7B00B42791 /* ContentView.swift */,
 				F6CE53AE23B99E7C00B42791 /* Assets.xcassets */,
 				F6CE53B323B99E7C00B42791 /* LaunchScreen.storyboard */,
 				F6CE53B623B99E7C00B42791 /* Info.plist */,
+				F6CE53BC23B9A10200B42791 /* GoogleService-Info.plist */,
 				F6CE53A923B99E7B00B42791 /* World_Culture_Deck.xcdatamodeld */,
 				F6CE53B023B99E7C00B42791 /* Preview Content */,
 			);
@@ -78,6 +127,56 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		F6CE53BE23B9A41500B42791 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F6CE53D023B9DB7400B42791 /* Constants.swift */,
+				F6CE53D223B9DBB700B42791 /* Storyboard+Utility.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F6CE53BF23B9A41F00B42791 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F6CE53CA23B9D0B600B42791 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F6CE53C023B9A42300B42791 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F6CE53CE23B9D7DF00B42791 /* UserService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F6CE53C123B9A42600B42791 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F6CE53C323B9A46100B42791 /* Login.storyboard */,
+				F6CE53C523B9A4B900B42791 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		F6CE53C223B9A42A00B42791 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F6CE53C723B9A80C00B42791 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F6CE53C823B9A81900B42791 /* LoginViewController.swift */,
+				F6CE53CC23B9D5CD00B42791 /* CreateUsernameViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -85,9 +184,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F6CE53B923B99E7C00B42791 /* Build configuration list for PBXNativeTarget "World Culture Deck" */;
 			buildPhases = (
+				746D3B143CA91A117C200537 /* [CP] Check Pods Manifest.lock */,
 				F6CE539E23B99E7A00B42791 /* Sources */,
 				F6CE539F23B99E7A00B42791 /* Frameworks */,
 				F6CE53A023B99E7A00B42791 /* Resources */,
+				BE53AE3BD1B5526266DF0339 /* [CP] Embed Pods Frameworks */,
+				462CD2604BDA42CE0460FC12 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -138,11 +240,79 @@
 			files = (
 				F6CE53B523B99E7C00B42791 /* LaunchScreen.storyboard in Resources */,
 				F6CE53B223B99E7C00B42791 /* Preview Assets.xcassets in Resources */,
+				F6CE53BD23B9A10200B42791 /* GoogleService-Info.plist in Resources */,
+				F6CE53C623B9A4B900B42791 /* Main.storyboard in Resources */,
+				F6CE53C423B9A46100B42791 /* Login.storyboard in Resources */,
 				F6CE53AF23B99E7C00B42791 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		462CD2604BDA42CE0460FC12 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-World Culture Deck/Pods-World Culture Deck-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-World Culture Deck/Pods-World Culture Deck-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		746D3B143CA91A117C200537 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-World Culture Deck-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE53AE3BD1B5526266DF0339 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-World Culture Deck/Pods-World Culture Deck-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-World Culture Deck/Pods-World Culture Deck-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F6CE539E23B99E7A00B42791 /* Sources */ = {
@@ -151,8 +321,14 @@
 			files = (
 				F6CE53AB23B99E7B00B42791 /* World_Culture_Deck.xcdatamodeld in Sources */,
 				F6CE53A623B99E7A00B42791 /* AppDelegate.swift in Sources */,
+				F6CE53CB23B9D0B600B42791 /* User.swift in Sources */,
 				F6CE53AD23B99E7B00B42791 /* ContentView.swift in Sources */,
+				F6CE53CF23B9D7DF00B42791 /* UserService.swift in Sources */,
+				F6CE53C923B9A81900B42791 /* LoginViewController.swift in Sources */,
 				F6CE53A823B99E7A00B42791 /* SceneDelegate.swift in Sources */,
+				F6CE53CD23B9D5CD00B42791 /* CreateUsernameViewController.swift in Sources */,
+				F6CE53D123B9DB7400B42791 /* Constants.swift in Sources */,
+				F6CE53D323B9DBB700B42791 /* Storyboard+Utility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +462,7 @@
 		};
 		F6CE53BA23B99E7C00B42791 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38AE7D98688EF3EDF962B038 /* Pods-World Culture Deck.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -306,6 +483,7 @@
 		};
 		F6CE53BB23B99E7C00B42791 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CE70D85015DFF0BC538C868 /* Pods-World Culture Deck.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

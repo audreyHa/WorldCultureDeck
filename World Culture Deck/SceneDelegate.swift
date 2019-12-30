@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftUI
+import Firebase
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -29,9 +30,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: contentView)
-            self.window = window
-            window.makeKeyAndVisible()
+            configureInitialRootViewController(for: window)
         }
     }
 
@@ -69,3 +68,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 }
 
+extension SceneDelegate{
+    func configureInitialRootViewController(for window: UIWindow?){
+        let defaults=UserDefaults.standard
+        let initialViewController: UIViewController
+        
+        if let _ = Auth.auth().currentUser,
+            let userData=defaults.object(forKey: Constants.UserDefaults.currentUser) as? Data,
+            let user=try? JSONDecoder().decode(User.self, from: userData){
+            //if the user data exists in user defaults, then we unarchive it and skip the login flow
+                User.setCurrent(user)
+                initialViewController=UIStoryboard.initialViewController(for: .main)
+        //else we go through the login flow
+        }else{
+            initialViewController=UIStoryboard.initialViewController(for: .login)
+        }
+        
+        window?.rootViewController=initialViewController
+        self.window=window
+        window?.makeKeyAndVisible()
+    }
+}

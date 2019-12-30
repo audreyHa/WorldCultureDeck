@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8u5-gb-ehz">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login-->
+        <scene sceneID="KSI-ci-MDF">
+            <objects>
+                <viewController title="Login" id="hSL-RE-OuP" customClass="LoginViewController" customModule="World_Culture_Deck" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IGE-cx-Qi3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="OZB-QH-aK3">
+                                <rect key="frame" x="19" y="229.5" width="337.5" height="208"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="World Culture Deck" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JLF-Ts-8bv">
+                                        <rect key="frame" x="0.0" y="0.0" width="337.5" height="56"/>
+                                        <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up to see lessons and content!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPS-0h-isg">
+                                        <rect key="frame" x="0.0" y="76" width="337.5" height="56"/>
+                                        <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="20"/>
+                                        <color key="textColor" red="0.78039215689999997" green="0.94117647059999998" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3s-Sd-aEZ">
+                                        <rect key="frame" x="0.0" y="152" width="337.5" height="56"/>
+                                        <color key="backgroundColor" red="0.16078431369999999" green="0.63137254899999995" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="20"/>
+                                        <state key="normal" title="  Sign Up/Log In  ">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="loginButtonTapped:" destination="hSL-RE-OuP" eventType="touchUpInside" id="1AK-jp-8To"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="JLF-Ts-8bv" firstAttribute="leading" secondItem="OZB-QH-aK3" secondAttribute="leading" id="2MI-ni-twP"/>
+                                    <constraint firstAttribute="trailing" secondItem="JLF-Ts-8bv" secondAttribute="trailing" id="5i8-Ej-edv"/>
+                                    <constraint firstAttribute="trailing" secondItem="TPS-0h-isg" secondAttribute="trailing" id="UPZ-S1-I9N"/>
+                                    <constraint firstItem="TPS-0h-isg" firstAttribute="leading" secondItem="OZB-QH-aK3" secondAttribute="leading" id="Ve1-ZX-Qm8"/>
+                                    <constraint firstItem="g3s-Sd-aEZ" firstAttribute="height" secondItem="JLF-Ts-8bv" secondAttribute="height" id="fsk-Gh-aCh"/>
+                                    <constraint firstItem="g3s-Sd-aEZ" firstAttribute="width" secondItem="OZB-QH-aK3" secondAttribute="width" id="jZe-Bl-fp7"/>
+                                    <constraint firstItem="TPS-0h-isg" firstAttribute="height" secondItem="JLF-Ts-8bv" secondAttribute="height" id="rPY-i7-q2A"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.097609010093349546" green="0.22002248273916553" blue="0.44544861219861176" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="OZB-QH-aK3" firstAttribute="centerX" secondItem="Vjf-qb-QSe" secondAttribute="centerX" id="IMS-HW-bQ5"/>
+                            <constraint firstItem="OZB-QH-aK3" firstAttribute="width" secondItem="IGE-cx-Qi3" secondAttribute="width" multiplier="0.9" id="sdn-52-8u1"/>
+                            <constraint firstItem="OZB-QH-aK3" firstAttribute="centerY" secondItem="Vjf-qb-QSe" secondAttribute="centerY" id="vix-cq-znT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Vjf-qb-QSe"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YmB-0r-j0n"/>
+                    <connections>
+                        <outlet property="WCDLabel" destination="JLF-Ts-8bv" id="vI7-Nt-Q0U"/>
+                        <outlet property="loginButton" destination="g3s-Sd-aEZ" id="noN-FF-Y7W"/>
+                        <segue destination="zZs-2e-5Z8" kind="show" identifier="toCreateUsername" id="Otl-mn-lDf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x8A-Ku-ePU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="838" y="124"/>
+        </scene>
+        <!--Create Username View Controller-->
+        <scene sceneID="LcB-My-SeW">
+            <objects>
+                <viewController id="zZs-2e-5Z8" customClass="CreateUsernameViewController" customModule="World_Culture_Deck" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vBG-Ot-OjY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="G0U-oy-c5c">
+                                <rect key="frame" x="19" y="100" width="337.5" height="158"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="te4-b0-LxW">
+                                        <rect key="frame" x="0.0" y="0.0" width="337.5" height="42"/>
+                                        <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nal-1L-sIB">
+                                        <rect key="frame" x="0.0" y="62" width="337.5" height="36"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yzf-Wn-bKX">
+                                        <rect key="frame" x="0.0" y="118" width="337.5" height="40"/>
+                                        <color key="backgroundColor" red="0.16078431369999999" green="0.63137254899999995" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="20"/>
+                                        <state key="normal" title="Next">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="nextButtonTapped:" destination="zZs-2e-5Z8" eventType="touchUpInside" id="joA-HW-aPQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Nal-1L-sIB" secondAttribute="trailing" id="2Kz-Zl-aVn"/>
+                                    <constraint firstItem="Nal-1L-sIB" firstAttribute="leading" secondItem="G0U-oy-c5c" secondAttribute="leading" id="Cmy-Vr-8Ni"/>
+                                    <constraint firstAttribute="trailing" secondItem="te4-b0-LxW" secondAttribute="trailing" id="QYa-sk-CQX"/>
+                                    <constraint firstAttribute="trailing" secondItem="Yzf-Wn-bKX" secondAttribute="trailing" id="RhU-r5-aBB"/>
+                                    <constraint firstItem="Yzf-Wn-bKX" firstAttribute="leading" secondItem="G0U-oy-c5c" secondAttribute="leading" id="Wbn-KP-JgI"/>
+                                    <constraint firstItem="te4-b0-LxW" firstAttribute="leading" secondItem="G0U-oy-c5c" secondAttribute="leading" id="n9C-e8-PiO"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.78039215689999997" green="0.94117647059999998" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="G0U-oy-c5c" firstAttribute="top" secondItem="PJY-aJ-oG2" secondAttribute="top" constant="100" id="bTc-tS-cTR"/>
+                            <constraint firstItem="G0U-oy-c5c" firstAttribute="centerX" secondItem="PJY-aJ-oG2" secondAttribute="centerX" id="etZ-sY-niH"/>
+                            <constraint firstItem="G0U-oy-c5c" firstAttribute="width" secondItem="vBG-Ot-OjY" secondAttribute="width" multiplier="0.9" id="fq4-jM-yvW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PJY-aJ-oG2"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Nkv-7c-ZTY"/>
+                    <connections>
+                        <outlet property="createUsernameLabel" destination="te4-b0-LxW" id="xxe-e8-YJF"/>
+                        <outlet property="nextButton" destination="Yzf-Wn-bKX" id="EBW-zO-3C8"/>
+                        <outlet property="usernameTextField" destination="Nal-1L-sIB" id="KL3-ZA-xV3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BUB-nZ-7hS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1504.4977511244379" y="136.80000000000001"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GAC-qL-wRd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="8u5-gb-ehz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lrz-MI-h0a">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hSL-RE-OuP" kind="relationship" relationship="rootViewController" id="dBU-6f-Yza"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4ke-Mf-19k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="59.820089955022496" y="124"/>
+        </scene>
+    </scenes>
+</document>
