@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="L50-cy-GXG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UyJ-W8-HdG">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
@@ -7,6 +7,57 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufd-zj-dnZ">
+            <objects>
+                <viewController id="W9L-10-x0Q" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Akd-mO-U3E">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="iTb-uA-01I"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="gear" catalog="system" id="mGU-7J-YPY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oMY-Tp-Cdn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-528" y="318"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="QtN-2m-9p8">
+            <objects>
+                <viewController id="nuF-E1-m6h" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="US5-w0-WX1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="m94-VR-mPZ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="cart.fill" catalog="system" id="TtJ-GX-L2e"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hU3-BG-AQO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-528" y="-330"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="pfc-ct-8HY">
+            <objects>
+                <tabBarController id="UyJ-W8-HdG" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="W4O-nK-jui">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="nuF-E1-m6h" kind="relationship" relationship="viewControllers" id="zVB-R5-pcN"/>
+                        <segue destination="L50-cy-GXG" kind="relationship" relationship="viewControllers" id="zEI-qF-cP6"/>
+                        <segue destination="W9L-10-x0Q" kind="relationship" relationship="viewControllers" id="7w7-kn-nIp"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rka-I1-nhV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1445" y="-6"/>
+        </scene>
         <!--Main-->
         <scene sceneID="0dX-Kp-2sw">
             <objects>
@@ -14,13 +65,72 @@
                     <view key="view" contentMode="scaleToFill" id="94o-Dv-uoF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="opc-vU-jrS">
+                                <rect key="frame" x="0.0" y="44" width="414" height="80"/>
+                                <color key="backgroundColor" red="0.78823529410000004" green="1" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="ssC-gO-tgn"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="World Culture Deck" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UjW-Py-fvK">
+                                <rect key="frame" x="15" y="63" width="384" height="42"/>
+                                <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="30"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xUR-9S-vIj">
+                                <rect key="frame" x="331.5" y="139" width="67.5" height="35"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FIB-Ua-FAc">
+                                        <rect key="frame" x="0.0" y="0.0" width="22" height="35"/>
+                                        <color key="tintColor" red="0.78823529410000004" green="1" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="star.fill" catalog="system">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SE5-Ob-Iir">
+                                        <rect key="frame" x="27" y="0.0" width="40.5" height="35"/>
+                                        <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="25"/>
+                                        <color key="textColor" red="0.78823529410000004" green="1" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U5k-5G-4ix">
+                                <rect key="frame" x="0.0" y="124" width="414" height="689"/>
+                                <color key="backgroundColor" red="0.097609010090000004" green="0.22002248269999999" blue="0.44544861219999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.78823529410000004" green="1" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="e80-cD-ajq" firstAttribute="trailing" secondItem="opc-vU-jrS" secondAttribute="trailing" id="6ca-oj-XwQ"/>
+                            <constraint firstItem="e80-cD-ajq" firstAttribute="trailing" secondItem="UjW-Py-fvK" secondAttribute="trailing" constant="15" id="GhL-ua-p7J"/>
+                            <constraint firstItem="e80-cD-ajq" firstAttribute="bottom" secondItem="U5k-5G-4ix" secondAttribute="bottom" id="Hlx-tS-KQb"/>
+                            <constraint firstItem="e80-cD-ajq" firstAttribute="trailing" secondItem="xUR-9S-vIj" secondAttribute="trailing" constant="15" id="LUu-9R-Mk3"/>
+                            <constraint firstItem="opc-vU-jrS" firstAttribute="leading" secondItem="e80-cD-ajq" secondAttribute="leading" id="UpT-4J-3k9"/>
+                            <constraint firstItem="UjW-Py-fvK" firstAttribute="leading" secondItem="e80-cD-ajq" secondAttribute="leading" constant="15" id="aCr-ca-1cl"/>
+                            <constraint firstItem="xUR-9S-vIj" firstAttribute="top" secondItem="opc-vU-jrS" secondAttribute="bottom" constant="15" id="bpk-Ot-UIq"/>
+                            <constraint firstItem="U5k-5G-4ix" firstAttribute="top" secondItem="opc-vU-jrS" secondAttribute="bottom" id="gh7-wk-b49"/>
+                            <constraint firstItem="UjW-Py-fvK" firstAttribute="centerY" secondItem="opc-vU-jrS" secondAttribute="centerY" id="imw-Yj-s1l"/>
+                            <constraint firstItem="e80-cD-ajq" firstAttribute="trailing" secondItem="U5k-5G-4ix" secondAttribute="trailing" id="lwl-aG-i0p"/>
+                            <constraint firstItem="opc-vU-jrS" firstAttribute="top" secondItem="e80-cD-ajq" secondAttribute="top" id="qJT-OV-DPW"/>
+                            <constraint firstItem="U5k-5G-4ix" firstAttribute="leading" secondItem="e80-cD-ajq" secondAttribute="leading" id="z0A-K8-noc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="e80-cD-ajq"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="globe" catalog="system" id="eEr-qR-FPo"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qY5-Yn-B2l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="167" y="206"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cart.fill" catalog="system" width="64" height="50"/>
+        <image name="gear" catalog="system" width="64" height="58"/>
+        <image name="globe" catalog="system" width="64" height="60"/>
+        <image name="star.fill" catalog="system" width="64" height="58"/>
+    </resources>
+    <color key="tintColor" red="0.16078431372549018" green="0.63137254901960782" blue="0.61176470588235299" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>
