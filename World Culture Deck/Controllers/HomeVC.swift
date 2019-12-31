@@ -8,23 +8,90 @@
 
 import UIKit
 
-class HomeVC: UIViewController {
+class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
+    @IBOutlet weak var allDeckCollectionView: UICollectionView!
+    @IBOutlet weak var completedCollectionView: UICollectionView!
+    
+    var collectionViewFlowLayout: UICollectionViewFlowLayout!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupCollectionView()
+    }
+
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        setupAllDecksLayout()
+        setUpCompletedDecksLayout()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setupCollectionView(){
+        allDeckCollectionView.delegate=self
+        allDeckCollectionView.dataSource=self
+        
+        completedCollectionView.delegate=self
+        completedCollectionView.dataSource=self
     }
-    */
+
+    private func setupAllDecksLayout(){
+        let lineSpacing:CGFloat=15
+        let interItemSpacing:CGFloat=15
+        
+        
+        let height=allDeckCollectionView.frame.height
+        let width=height*0.8
+        collectionViewFlowLayout=UICollectionViewFlowLayout()
+        collectionViewFlowLayout.itemSize=CGSize(width: width, height: height)
+        collectionViewFlowLayout.sectionInset=UIEdgeInsets.zero
+        collectionViewFlowLayout.scrollDirection = .horizontal
+        collectionViewFlowLayout.minimumLineSpacing=lineSpacing
+        collectionViewFlowLayout.minimumInteritemSpacing=interItemSpacing
+        
+        allDeckCollectionView.setCollectionViewLayout(collectionViewFlowLayout, animated: true)
+    }
+    
+    private func setUpCompletedDecksLayout(){
+        let lineSpacing:CGFloat=15
+        let interItemSpacing:CGFloat=15
+        
+        
+        let height=allDeckCollectionView.frame.height
+        let width=height*0.8
+        collectionViewFlowLayout=UICollectionViewFlowLayout()
+        collectionViewFlowLayout.itemSize=CGSize(width: width, height: height)
+        collectionViewFlowLayout.sectionInset=UIEdgeInsets.zero
+        collectionViewFlowLayout.scrollDirection = .horizontal
+        collectionViewFlowLayout.minimumLineSpacing=lineSpacing
+        collectionViewFlowLayout.minimumInteritemSpacing=interItemSpacing
+        
+        completedCollectionView.setCollectionViewLayout(collectionViewFlowLayout, animated: true)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
+        if(collectionView==allDeckCollectionView){
+            return 3
+        }else{
+            return 10
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
+        if(collectionView==allDeckCollectionView){
+            let cell=collectionView.dequeueReusableCell(withReuseIdentifier: "AllDecksCell", for: indexPath) as! AllDecksCell
+                cell.layer.cornerRadius=10
+                cell.regionLabel.adjustsFontSizeToFitWidth=true
+            
+                return cell
+        }else{
+            let cell=collectionView.dequeueReusableCell(withReuseIdentifier: "CompletedDecksCell", for: indexPath) as! CompletedDecksCell
+                cell.layer.cornerRadius=10
+                cell.regionLabel.adjustsFontSizeToFitWidth=true
+            
+                return cell
+        }
+        
+    }
 
 }

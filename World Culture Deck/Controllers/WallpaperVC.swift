@@ -17,6 +17,7 @@ class WallpaperVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
+
     }
     
     override func viewWillLayoutSubviews() {

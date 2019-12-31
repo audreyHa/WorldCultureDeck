@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="160" height="260"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Hp-Fm-22P">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play" translatesAutoresizingMaskIntoConstraints="NO" id="0Hp-Fm-22P">
                         <rect key="frame" x="15" y="15" width="130" height="130"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="0Hp-Fm-22P" secondAttribute="height" multiplier="1:1" id="xgJ-Il-myl"/>
@@ -28,13 +28,14 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W1J-bk-MwZ">
                                 <rect key="frame" x="0.0" y="0.0" width="130" height="37.5"/>
                                 <color key="backgroundColor" red="0.16078431369999999" green="0.63137254899999995" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="17"/>
                                 <state key="normal" title="20 Stars">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="America" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Vz-Bb-6LV">
                                 <rect key="frame" x="0.0" y="47.5" width="130" height="37.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -65,4 +66,7 @@
             <point key="canvasLocation" x="214.49275362318843" y="178.125"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="play" width="730" height="886"/>
+    </resources>
 </document>

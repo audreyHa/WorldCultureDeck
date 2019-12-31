@@ -29,6 +29,9 @@
 		F6CE53D323B9DBB700B42791 /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CE53D223B9DBB700B42791 /* Storyboard+Utility.swift */; };
 		F6E3433723BAD4B5005B62A2 /* WallpaperCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E3433523BAD4B5005B62A2 /* WallpaperCell.swift */; };
 		F6E3433823BAD4B5005B62A2 /* WallpaperCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6E3433623BAD4B5005B62A2 /* WallpaperCell.xib */; };
+		F6E3433A23BADC02005B62A2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E3433923BADC02005B62A2 /* TabBarController.swift */; };
+		F6E3433C23BAE02F005B62A2 /* AllDecksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E3433B23BAE02F005B62A2 /* AllDecksCell.swift */; };
+		F6E3433E23BAE03A005B62A2 /* CompletedDecksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E3433D23BAE03A005B62A2 /* CompletedDecksCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +61,9 @@
 		F6CE53D223B9DBB700B42791 /* Storyboard+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+Utility.swift"; sourceTree = "<group>"; };
 		F6E3433523BAD4B5005B62A2 /* WallpaperCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperCell.swift; sourceTree = "<group>"; };
 		F6E3433623BAD4B5005B62A2 /* WallpaperCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WallpaperCell.xib; sourceTree = "<group>"; };
+		F6E3433923BADC02005B62A2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		F6E3433B23BAE02F005B62A2 /* AllDecksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDecksCell.swift; sourceTree = "<group>"; };
+		F6E3433D23BAE03A005B62A2 /* CompletedDecksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedDecksCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +182,8 @@
 			children = (
 				F6E3433523BAD4B5005B62A2 /* WallpaperCell.swift */,
 				F6E3433623BAD4B5005B62A2 /* WallpaperCell.xib */,
+				F6E3433B23BAE02F005B62A2 /* AllDecksCell.swift */,
+				F6E3433D23BAE03A005B62A2 /* CompletedDecksCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -188,6 +196,7 @@
 				F6A4656F23BA1649004255BE /* HomeVC.swift */,
 				F6A4657123BA197A004255BE /* SettingsVC.swift */,
 				F6A4657323BA2303004255BE /* WallpaperVC.swift */,
+				F6E3433923BADC02005B62A2 /* TabBarController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -335,9 +344,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6E3433C23BAE02F005B62A2 /* AllDecksCell.swift in Sources */,
 				F6CE53AB23B99E7B00B42791 /* World_Culture_Deck.xcdatamodeld in Sources */,
 				F6CE53A623B99E7A00B42791 /* AppDelegate.swift in Sources */,
 				F6CE53CB23B9D0B600B42791 /* User.swift in Sources */,
+				F6E3433A23BADC02005B62A2 /* TabBarController.swift in Sources */,
 				F6A4657423BA2303004255BE /* WallpaperVC.swift in Sources */,
 				F6CE53AD23B99E7B00B42791 /* ContentView.swift in Sources */,
 				F6CE53CF23B9D7DF00B42791 /* UserService.swift in Sources */,
@@ -349,6 +360,7 @@
 				F6A4657023BA1649004255BE /* HomeVC.swift in Sources */,
 				F6E3433723BAD4B5005B62A2 /* WallpaperCell.swift in Sources */,
 				F6CE53D323B9DBB700B42791 /* Storyboard+Utility.swift in Sources */,
+				F6E3433E23BAE03A005B62A2 /* CompletedDecksCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
