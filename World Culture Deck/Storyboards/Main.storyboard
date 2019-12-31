@@ -496,7 +496,7 @@
                                                                             <rect key="frame" x="0.0" y="10" width="159" height="194"/>
                                                                             <subviews>
                                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play" translatesAutoresizingMaskIntoConstraints="NO" id="Qzf-ER-qU2">
-                                                                                    <rect key="frame" x="5" y="0.0" width="149" height="149.00000000000023"/>
+                                                                                    <rect key="frame" x="5" y="0.0" width="149" height="149"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="width" secondItem="Qzf-ER-qU2" secondAttribute="height" multiplier="1:1" id="REh-Tp-NN5"/>
                                                                                     </constraints>
@@ -571,7 +571,7 @@
                                                                             <rect key="frame" x="0.0" y="10" width="151" height="186"/>
                                                                             <subviews>
                                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play" translatesAutoresizingMaskIntoConstraints="NO" id="asa-Kn-Hyg">
-                                                                                    <rect key="frame" x="5" y="0.0" width="141" height="141.00000000000023"/>
+                                                                                    <rect key="frame" x="5" y="0.0" width="141" height="141"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="width" secondItem="asa-Kn-Hyg" secondAttribute="height" multiplier="1:1" id="4yh-Ld-ot0"/>
                                                                                     </constraints>

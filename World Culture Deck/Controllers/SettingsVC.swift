@@ -28,9 +28,28 @@ class SettingsVC: UIViewController {
         do{
             try Auth.auth().signOut()
             
-            let initialViewController=UIStoryboard.initialViewController(for: .login)
-            self.view.window?.rootViewController=initialViewController
-            self.view.window?.makeKeyAndVisible()
+            guard let window = self.view.window else {
+                return
+            }
+            let storyboard = UIStoryboard(name: "Login", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "Login")
+
+            // Set the new rootViewController of the window.
+            // Calling "UIView.transition" below will animate the swap.
+            window.rootViewController = vc
+
+            // A mask of options indicating how you want to perform the animations.
+            let options: UIView.AnimationOptions = .transitionCrossDissolve
+
+            // The duration of the transition animation, measured in seconds.
+            let duration: TimeInterval = 0.3
+
+            // Creates a transition animation.
+            // Though `animations` is optional, the documentation tells us that it must not be nil. ¯\_(ツ)_/¯
+            UIView.transition(with: window, duration: duration, options: options, animations: {}, completion:
+            { completed in
+                // maybe do something on completion here
+            })
         }catch let error as NSError{
             assertionFailure("Error signing out: \(error.localizedDescription)")
         }

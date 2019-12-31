@@ -10,7 +10,7 @@
         <!--Login-->
         <scene sceneID="KSI-ci-MDF">
             <objects>
-                <viewController title="Login" id="hSL-RE-OuP" customClass="LoginViewController" customModule="World_Culture_Deck" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" title="Login" id="hSL-RE-OuP" customClass="LoginViewController" customModule="World_Culture_Deck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IGE-cx-Qi3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
