@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		9587AFBFB1A346564015100F /* Pods_World_Culture_Deck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 352BD80C18464331F729CDAC /* Pods_World_Culture_Deck.framework */; };
+		F6A4657023BA1649004255BE /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4656F23BA1649004255BE /* HomeVC.swift */; };
+		F6A4657223BA197A004255BE /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4657123BA197A004255BE /* SettingsVC.swift */; };
+		F6A4657423BA2303004255BE /* WallpaperVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4657323BA2303004255BE /* WallpaperVC.swift */; };
 		F6CE53A623B99E7A00B42791 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CE53A523B99E7A00B42791 /* AppDelegate.swift */; };
 		F6CE53A823B99E7A00B42791 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CE53A723B99E7A00B42791 /* SceneDelegate.swift */; };
 		F6CE53AB23B99E7B00B42791 /* World_Culture_Deck.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F6CE53A923B99E7B00B42791 /* World_Culture_Deck.xcdatamodeld */; };
@@ -24,12 +27,17 @@
 		F6CE53CF23B9D7DF00B42791 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CE53CE23B9D7DF00B42791 /* UserService.swift */; };
 		F6CE53D123B9DB7400B42791 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CE53D023B9DB7400B42791 /* Constants.swift */; };
 		F6CE53D323B9DBB700B42791 /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CE53D223B9DBB700B42791 /* Storyboard+Utility.swift */; };
+		F6E3433723BAD4B5005B62A2 /* WallpaperCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E3433523BAD4B5005B62A2 /* WallpaperCell.swift */; };
+		F6E3433823BAD4B5005B62A2 /* WallpaperCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6E3433623BAD4B5005B62A2 /* WallpaperCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1CE70D85015DFF0BC538C868 /* Pods-World Culture Deck.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-World Culture Deck.release.xcconfig"; path = "Pods/Target Support Files/Pods-World Culture Deck/Pods-World Culture Deck.release.xcconfig"; sourceTree = "<group>"; };
 		352BD80C18464331F729CDAC /* Pods_World_Culture_Deck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_World_Culture_Deck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38AE7D98688EF3EDF962B038 /* Pods-World Culture Deck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-World Culture Deck.debug.xcconfig"; path = "Pods/Target Support Files/Pods-World Culture Deck/Pods-World Culture Deck.debug.xcconfig"; sourceTree = "<group>"; };
+		F6A4656F23BA1649004255BE /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		F6A4657123BA197A004255BE /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		F6A4657323BA2303004255BE /* WallpaperVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperVC.swift; sourceTree = "<group>"; };
 		F6CE53A223B99E7A00B42791 /* World Culture Deck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "World Culture Deck.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6CE53A523B99E7A00B42791 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6CE53A723B99E7A00B42791 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +56,8 @@
 		F6CE53CE23B9D7DF00B42791 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		F6CE53D023B9DB7400B42791 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F6CE53D223B9DBB700B42791 /* Storyboard+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+Utility.swift"; sourceTree = "<group>"; };
+		F6E3433523BAD4B5005B62A2 /* WallpaperCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperCell.swift; sourceTree = "<group>"; };
+		F6E3433623BAD4B5005B62A2 /* WallpaperCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WallpaperCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +174,8 @@
 		F6CE53C223B9A42A00B42791 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F6E3433523BAD4B5005B62A2 /* WallpaperCell.swift */,
+				F6E3433623BAD4B5005B62A2 /* WallpaperCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -173,6 +185,9 @@
 			children = (
 				F6CE53C823B9A81900B42791 /* LoginViewController.swift */,
 				F6CE53CC23B9D5CD00B42791 /* CreateUsernameViewController.swift */,
+				F6A4656F23BA1649004255BE /* HomeVC.swift */,
+				F6A4657123BA197A004255BE /* SettingsVC.swift */,
+				F6A4657323BA2303004255BE /* WallpaperVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -243,6 +258,7 @@
 				F6CE53BD23B9A10200B42791 /* GoogleService-Info.plist in Resources */,
 				F6CE53C623B9A4B900B42791 /* Main.storyboard in Resources */,
 				F6CE53C423B9A46100B42791 /* Login.storyboard in Resources */,
+				F6E3433823BAD4B5005B62A2 /* WallpaperCell.xib in Resources */,
 				F6CE53AF23B99E7C00B42791 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,12 +338,16 @@
 				F6CE53AB23B99E7B00B42791 /* World_Culture_Deck.xcdatamodeld in Sources */,
 				F6CE53A623B99E7A00B42791 /* AppDelegate.swift in Sources */,
 				F6CE53CB23B9D0B600B42791 /* User.swift in Sources */,
+				F6A4657423BA2303004255BE /* WallpaperVC.swift in Sources */,
 				F6CE53AD23B99E7B00B42791 /* ContentView.swift in Sources */,
 				F6CE53CF23B9D7DF00B42791 /* UserService.swift in Sources */,
+				F6A4657223BA197A004255BE /* SettingsVC.swift in Sources */,
 				F6CE53C923B9A81900B42791 /* LoginViewController.swift in Sources */,
 				F6CE53A823B99E7A00B42791 /* SceneDelegate.swift in Sources */,
 				F6CE53CD23B9D5CD00B42791 /* CreateUsernameViewController.swift in Sources */,
 				F6CE53D123B9DB7400B42791 /* Constants.swift in Sources */,
+				F6A4657023BA1649004255BE /* HomeVC.swift in Sources */,
+				F6E3433723BAD4B5005B62A2 /* WallpaperCell.swift in Sources */,
 				F6CE53D323B9DBB700B42791 /* Storyboard+Utility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
