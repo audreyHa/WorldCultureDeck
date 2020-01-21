@@ -15,49 +15,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="OZB-QH-aK3">
-                                <rect key="frame" x="19" y="229.5" width="337.5" height="208"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Haf-g8-YQc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="267"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="World Culture Deck" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JLF-Ts-8bv">
-                                        <rect key="frame" x="0.0" y="0.0" width="337.5" height="56"/>
-                                        <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="30"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up to see lessons and content!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPS-0h-isg">
-                                        <rect key="frame" x="0.0" y="76" width="337.5" height="56"/>
-                                        <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="20"/>
-                                        <color key="textColor" red="0.78039215689999997" green="0.94117647059999998" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3s-Sd-aEZ">
-                                        <rect key="frame" x="0.0" y="152" width="337.5" height="56"/>
-                                        <color key="backgroundColor" red="0.16078431369999999" green="0.63137254899999995" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="20"/>
-                                        <state key="normal" title="  Sign Up/Log In  ">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="loginButtonTapped:" destination="hSL-RE-OuP" eventType="touchUpInside" id="1AK-jp-8To"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OZB-QH-aK3">
+                                        <rect key="frame" x="30" y="72.5" width="315" height="122"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="World Culture Deck" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JLF-Ts-8bv">
+                                                <rect key="frame" x="0.0" y="0.0" width="315" height="56"/>
+                                                <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="30"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up to see lessons and content!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPS-0h-isg">
+                                                <rect key="frame" x="0.0" y="66" width="315" height="56"/>
+                                                <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="20"/>
+                                                <color key="textColor" red="0.78039215689999997" green="0.94117647059999998" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="JLF-Ts-8bv" firstAttribute="leading" secondItem="OZB-QH-aK3" secondAttribute="leading" id="2MI-ni-twP"/>
+                                            <constraint firstAttribute="trailing" secondItem="JLF-Ts-8bv" secondAttribute="trailing" id="5i8-Ej-edv"/>
+                                            <constraint firstAttribute="trailing" secondItem="TPS-0h-isg" secondAttribute="trailing" id="UPZ-S1-I9N"/>
+                                            <constraint firstItem="TPS-0h-isg" firstAttribute="leading" secondItem="OZB-QH-aK3" secondAttribute="leading" id="Ve1-ZX-Qm8"/>
+                                            <constraint firstItem="TPS-0h-isg" firstAttribute="height" secondItem="JLF-Ts-8bv" secondAttribute="height" id="rPY-i7-q2A"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
+                                <color key="backgroundColor" red="0.097609010090000004" green="0.22002248269999999" blue="0.44544861219999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstItem="JLF-Ts-8bv" firstAttribute="leading" secondItem="OZB-QH-aK3" secondAttribute="leading" id="2MI-ni-twP"/>
-                                    <constraint firstAttribute="trailing" secondItem="JLF-Ts-8bv" secondAttribute="trailing" id="5i8-Ej-edv"/>
-                                    <constraint firstAttribute="trailing" secondItem="TPS-0h-isg" secondAttribute="trailing" id="UPZ-S1-I9N"/>
-                                    <constraint firstItem="TPS-0h-isg" firstAttribute="leading" secondItem="OZB-QH-aK3" secondAttribute="leading" id="Ve1-ZX-Qm8"/>
-                                    <constraint firstItem="g3s-Sd-aEZ" firstAttribute="height" secondItem="JLF-Ts-8bv" secondAttribute="height" id="fsk-Gh-aCh"/>
-                                    <constraint firstItem="g3s-Sd-aEZ" firstAttribute="width" secondItem="OZB-QH-aK3" secondAttribute="width" id="jZe-Bl-fp7"/>
-                                    <constraint firstItem="TPS-0h-isg" firstAttribute="height" secondItem="JLF-Ts-8bv" secondAttribute="height" id="rPY-i7-q2A"/>
+                                    <constraint firstAttribute="trailing" secondItem="OZB-QH-aK3" secondAttribute="trailing" constant="30" id="fHW-Oe-lKp"/>
+                                    <constraint firstItem="OZB-QH-aK3" firstAttribute="centerY" secondItem="Haf-g8-YQc" secondAttribute="centerY" id="pdT-uv-atK"/>
+                                    <constraint firstItem="OZB-QH-aK3" firstAttribute="leading" secondItem="Haf-g8-YQc" secondAttribute="leading" constant="30" id="t03-X1-0ku"/>
                                 </constraints>
-                            </stackView>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3s-Sd-aEZ">
+                                <rect key="frame" x="30" y="297" width="315" height="40"/>
+                                <color key="backgroundColor" red="0.16078431369999999" green="0.63137254899999995" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="20"/>
+                                <state key="normal" title="  Sign Up/Log In  ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginButtonTapped:" destination="hSL-RE-OuP" eventType="touchUpInside" id="1AK-jp-8To"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.097609010093349546" green="0.22002248273916553" blue="0.44544861219861176" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="OZB-QH-aK3" firstAttribute="centerX" secondItem="Vjf-qb-QSe" secondAttribute="centerX" id="IMS-HW-bQ5"/>
-                            <constraint firstItem="OZB-QH-aK3" firstAttribute="width" secondItem="IGE-cx-Qi3" secondAttribute="width" multiplier="0.9" id="sdn-52-8u1"/>
-                            <constraint firstItem="OZB-QH-aK3" firstAttribute="centerY" secondItem="Vjf-qb-QSe" secondAttribute="centerY" id="vix-cq-znT"/>
+                            <constraint firstItem="g3s-Sd-aEZ" firstAttribute="top" secondItem="Haf-g8-YQc" secondAttribute="bottom" constant="30" id="7rm-rY-9pm"/>
+                            <constraint firstItem="Haf-g8-YQc" firstAttribute="height" secondItem="IGE-cx-Qi3" secondAttribute="height" multiplier="0.4" id="EMa-ZP-5FV"/>
+                            <constraint firstItem="Vjf-qb-QSe" firstAttribute="trailing" secondItem="Haf-g8-YQc" secondAttribute="trailing" id="SQN-Z8-d8E"/>
+                            <constraint firstItem="Haf-g8-YQc" firstAttribute="leading" secondItem="Vjf-qb-QSe" secondAttribute="leading" id="bW2-xm-oGg"/>
+                            <constraint firstItem="Vjf-qb-QSe" firstAttribute="trailing" secondItem="g3s-Sd-aEZ" secondAttribute="trailing" constant="30" id="hay-15-dI2"/>
+                            <constraint firstItem="g3s-Sd-aEZ" firstAttribute="leading" secondItem="Vjf-qb-QSe" secondAttribute="leading" constant="30" id="oXd-nv-sax"/>
+                            <constraint firstItem="Haf-g8-YQc" firstAttribute="top" secondItem="Vjf-qb-QSe" secondAttribute="top" id="q1P-rT-wLl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Vjf-qb-QSe"/>
                     </view>
@@ -80,48 +93,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="G0U-oy-c5c">
-                                <rect key="frame" x="19" y="100" width="337.5" height="158"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qdf-jM-Amw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="267"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="te4-b0-LxW">
-                                        <rect key="frame" x="0.0" y="0.0" width="337.5" height="42"/>
-                                        <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="30"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nal-1L-sIB">
-                                        <rect key="frame" x="0.0" y="62" width="337.5" height="36"/>
-                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yzf-Wn-bKX">
-                                        <rect key="frame" x="0.0" y="118" width="337.5" height="40"/>
-                                        <color key="backgroundColor" red="0.16078431369999999" green="0.63137254899999995" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="20"/>
-                                        <state key="normal" title="Next">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="nextButtonTapped:" destination="zZs-2e-5Z8" eventType="touchUpInside" id="joA-HW-aPQ"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="G0U-oy-c5c">
+                                        <rect key="frame" x="30" y="85.5" width="315" height="96"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="te4-b0-LxW">
+                                                <rect key="frame" x="0.0" y="0.0" width="315" height="42"/>
+                                                <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nal-1L-sIB">
+                                                <rect key="frame" x="0.0" y="62" width="315" height="34"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Nal-1L-sIB" secondAttribute="trailing" id="2Kz-Zl-aVn"/>
+                                            <constraint firstItem="Nal-1L-sIB" firstAttribute="leading" secondItem="G0U-oy-c5c" secondAttribute="leading" id="Cmy-Vr-8Ni"/>
+                                            <constraint firstAttribute="trailing" secondItem="te4-b0-LxW" secondAttribute="trailing" id="QYa-sk-CQX"/>
+                                            <constraint firstItem="te4-b0-LxW" firstAttribute="leading" secondItem="G0U-oy-c5c" secondAttribute="leading" id="n9C-e8-PiO"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
+                                <color key="backgroundColor" red="0.78039215689999997" green="0.94117647059999998" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="Nal-1L-sIB" secondAttribute="trailing" id="2Kz-Zl-aVn"/>
-                                    <constraint firstItem="Nal-1L-sIB" firstAttribute="leading" secondItem="G0U-oy-c5c" secondAttribute="leading" id="Cmy-Vr-8Ni"/>
-                                    <constraint firstAttribute="trailing" secondItem="te4-b0-LxW" secondAttribute="trailing" id="QYa-sk-CQX"/>
-                                    <constraint firstAttribute="trailing" secondItem="Yzf-Wn-bKX" secondAttribute="trailing" id="RhU-r5-aBB"/>
-                                    <constraint firstItem="Yzf-Wn-bKX" firstAttribute="leading" secondItem="G0U-oy-c5c" secondAttribute="leading" id="Wbn-KP-JgI"/>
-                                    <constraint firstItem="te4-b0-LxW" firstAttribute="leading" secondItem="G0U-oy-c5c" secondAttribute="leading" id="n9C-e8-PiO"/>
+                                    <constraint firstItem="G0U-oy-c5c" firstAttribute="leading" secondItem="Qdf-jM-Amw" secondAttribute="leading" constant="30" id="Ohh-mx-xC4"/>
+                                    <constraint firstAttribute="trailing" secondItem="G0U-oy-c5c" secondAttribute="trailing" constant="30" id="cdD-zU-Imx"/>
+                                    <constraint firstItem="G0U-oy-c5c" firstAttribute="centerY" secondItem="Qdf-jM-Amw" secondAttribute="centerY" id="k7S-RJ-ZiR"/>
                                 </constraints>
-                            </stackView>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yzf-Wn-bKX">
+                                <rect key="frame" x="30" y="297" width="315" height="40"/>
+                                <color key="backgroundColor" red="0.16078431369999999" green="0.63137254899999995" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="20"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextButtonTapped:" destination="zZs-2e-5Z8" eventType="touchUpInside" id="joA-HW-aPQ"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.78039215689999997" green="0.94117647059999998" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="G0U-oy-c5c" firstAttribute="top" secondItem="PJY-aJ-oG2" secondAttribute="top" constant="100" id="bTc-tS-cTR"/>
-                            <constraint firstItem="G0U-oy-c5c" firstAttribute="centerX" secondItem="PJY-aJ-oG2" secondAttribute="centerX" id="etZ-sY-niH"/>
-                            <constraint firstItem="G0U-oy-c5c" firstAttribute="width" secondItem="vBG-Ot-OjY" secondAttribute="width" multiplier="0.9" id="fq4-jM-yvW"/>
+                            <constraint firstItem="Yzf-Wn-bKX" firstAttribute="leading" secondItem="PJY-aJ-oG2" secondAttribute="leading" constant="30" id="IoY-7O-FpX"/>
+                            <constraint firstItem="Qdf-jM-Amw" firstAttribute="top" secondItem="PJY-aJ-oG2" secondAttribute="top" id="QHx-C7-1AB"/>
+                            <constraint firstItem="Qdf-jM-Amw" firstAttribute="leading" secondItem="PJY-aJ-oG2" secondAttribute="leading" id="SbL-nz-gYX"/>
+                            <constraint firstItem="PJY-aJ-oG2" firstAttribute="trailing" secondItem="Qdf-jM-Amw" secondAttribute="trailing" id="UMn-IY-BIu"/>
+                            <constraint firstItem="Yzf-Wn-bKX" firstAttribute="top" secondItem="Qdf-jM-Amw" secondAttribute="bottom" constant="30" id="VBF-jC-Qjj"/>
+                            <constraint firstItem="PJY-aJ-oG2" firstAttribute="trailing" secondItem="Yzf-Wn-bKX" secondAttribute="trailing" constant="30" id="lEo-Sa-Dv8"/>
+                            <constraint firstItem="Qdf-jM-Amw" firstAttribute="height" secondItem="vBG-Ot-OjY" secondAttribute="height" multiplier="0.4" id="mi1-gf-tQq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PJY-aJ-oG2"/>
                     </view>
@@ -134,7 +160,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BUB-nZ-7hS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1504.4977511244379" y="136.80000000000001"/>
+            <point key="canvasLocation" x="1503" y="124"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GAC-qL-wRd">

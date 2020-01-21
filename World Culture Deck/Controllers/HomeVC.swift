@@ -21,8 +21,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         setupCollectionView()
     }
 
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
+    override func viewDidAppear(_ animated: Bool) {
         setupAllDecksLayout()
         setUpCompletedDecksLayout()
     }
@@ -77,17 +76,22 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         }
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "countryController", sender: nil)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
         if(collectionView==allDeckCollectionView){
             let cell=collectionView.dequeueReusableCell(withReuseIdentifier: "AllDecksCell", for: indexPath) as! AllDecksCell
                 cell.layer.cornerRadius=10
                 cell.regionLabel.adjustsFontSizeToFitWidth=true
-            
+                cell.regionImage.layer.cornerRadius=10
                 return cell
         }else{
             let cell=collectionView.dequeueReusableCell(withReuseIdentifier: "CompletedDecksCell", for: indexPath) as! CompletedDecksCell
                 cell.layer.cornerRadius=10
                 cell.regionLabel.adjustsFontSizeToFitWidth=true
+                cell.regionImage.layer.cornerRadius=10
             
                 return cell
         }

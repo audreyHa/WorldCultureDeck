@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9587AFBFB1A346564015100F /* Pods_World_Culture_Deck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 352BD80C18464331F729CDAC /* Pods_World_Culture_Deck.framework */; };
+		F62E07E323D685B400A5D157 /* CountryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62E07E223D685B400A5D157 /* CountryController.swift */; };
 		F6A4657023BA1649004255BE /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4656F23BA1649004255BE /* HomeVC.swift */; };
 		F6A4657223BA197A004255BE /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4657123BA197A004255BE /* SettingsVC.swift */; };
 		F6A4657423BA2303004255BE /* WallpaperVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4657323BA2303004255BE /* WallpaperVC.swift */; };
@@ -38,6 +39,7 @@
 		1CE70D85015DFF0BC538C868 /* Pods-World Culture Deck.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-World Culture Deck.release.xcconfig"; path = "Pods/Target Support Files/Pods-World Culture Deck/Pods-World Culture Deck.release.xcconfig"; sourceTree = "<group>"; };
 		352BD80C18464331F729CDAC /* Pods_World_Culture_Deck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_World_Culture_Deck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38AE7D98688EF3EDF962B038 /* Pods-World Culture Deck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-World Culture Deck.debug.xcconfig"; path = "Pods/Target Support Files/Pods-World Culture Deck/Pods-World Culture Deck.debug.xcconfig"; sourceTree = "<group>"; };
+		F62E07E223D685B400A5D157 /* CountryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryController.swift; sourceTree = "<group>"; };
 		F6A4656F23BA1649004255BE /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		F6A4657123BA197A004255BE /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		F6A4657323BA2303004255BE /* WallpaperVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperVC.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				F6A4657123BA197A004255BE /* SettingsVC.swift */,
 				F6A4657323BA2303004255BE /* WallpaperVC.swift */,
 				F6E3433923BADC02005B62A2 /* TabBarController.swift */,
+				F62E07E223D685B400A5D157 /* CountryController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				F6CE53C923B9A81900B42791 /* LoginViewController.swift in Sources */,
 				F6CE53A823B99E7A00B42791 /* SceneDelegate.swift in Sources */,
 				F6CE53CD23B9D5CD00B42791 /* CreateUsernameViewController.swift in Sources */,
+				F62E07E323D685B400A5D157 /* CountryController.swift in Sources */,
 				F6CE53D123B9DB7400B42791 /* Constants.swift in Sources */,
 				F6A4657023BA1649004255BE /* HomeVC.swift in Sources */,
 				F6E3433723BAD4B5005B62A2 /* WallpaperCell.swift in Sources */,

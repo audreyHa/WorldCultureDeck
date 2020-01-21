@@ -12,4 +12,5 @@ class AllDecksCell: UICollectionViewCell {
     
     @IBOutlet weak var regionImage: UIImageView!
     @IBOutlet weak var regionLabel: UILabel!
+
 }

@@ -17,13 +17,13 @@ class WallpaperVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
-
+        
     }
     
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
+    override func viewDidAppear(_ animated: Bool) {
         setupLayout()
     }
+    
     
     private func setupCollectionView(){
         collectionView.delegate=self
@@ -59,6 +59,7 @@ class WallpaperVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         cell.layer.cornerRadius=10
         cell.starsButton.layer.cornerRadius=10
         cell.regionLabel.adjustsFontSizeToFitWidth=true
+        cell.wallpaperImageView.layer.cornerRadius=10
         return cell
     }
     
