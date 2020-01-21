@@ -33,7 +33,7 @@ class CountryController: UIViewController {
             var myButton=buttonsArray[i]
             myButton!.layer.cornerRadius=10
             myButton!.clipsToBounds=true
-            myButton!.setBackgroundImage(images[i]!.alpha(0.8), for: .normal)
+            myButton!.setBackgroundImage(darkenImage(originalImage: images[i]!), for: .normal)
             myButton!.adjustsImageWhenHighlighted=false
 
         }
@@ -51,6 +51,23 @@ class CountryController: UIViewController {
         
     }
     
+    func darkenImage(originalImage: UIImage) -> UIImage{
+        // Get the original image and set up the CIExposureAdjust filter
+        guard let inputImage = CIImage(image: originalImage),
+          let filter = CIFilter(name: "CIExposureAdjust") else { return originalImage}
+
+        // The inputEV value on the CIFilter adjusts exposure (negative values darken, positive values brighten)
+        filter.setValue(inputImage, forKey: "inputImage")
+        filter.setValue(-2.0, forKey: "inputEV")
+
+        // Break early if the filter was not a success (.outputImage is optional in Swift)
+        guard let filteredImage = filter.outputImage else { return originalImage}
+
+        let context = CIContext(options: nil)
+        let outputImage = UIImage(cgImage: context.createCGImage(filteredImage, from: filteredImage.extent)!)
+        
+        return outputImage
+    }
 }
 
 extension UIImage {
@@ -62,4 +79,6 @@ extension UIImage {
         UIGraphicsEndImageContext()
         return newImage!
     }
+    
+    
 }
