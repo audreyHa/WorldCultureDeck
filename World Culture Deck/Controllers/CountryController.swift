@@ -51,6 +51,39 @@ class CountryController: UIViewController {
         
     }
     
+    @IBAction func clothingPressed(_ sender: Any) {
+        UserDefaults.standard.set("South Korea",forKey:"countryName")
+        UserDefaults.standard.set("Clothing",forKey:"infoType")
+        performSegue(withIdentifier: "infoController", sender: nil)
+        
+    }
+    
+    @IBAction func musicPressed(_ sender: Any) {
+        UserDefaults.standard.set("South Korea",forKey:"countryName")
+        UserDefaults.standard.set("Music",forKey:"infoType")
+        performSegue(withIdentifier: "infoController", sender: nil)
+        
+    }
+    
+    @IBAction func artPressed(_ sender: Any) {
+        UserDefaults.standard.set("South Korea",forKey:"countryName")
+        UserDefaults.standard.set("Art",forKey:"infoType")
+        performSegue(withIdentifier: "infoController", sender: nil)
+        
+    }
+    
+    @IBAction func foodPressed(_ sender: Any) {
+        UserDefaults.standard.set("South Korea",forKey:"countryName")
+        UserDefaults.standard.set("Food",forKey:"infoType")
+        performSegue(withIdentifier: "infoController", sender: nil)
+        
+    }
+    
+    @IBAction func xPressed(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
+    }
+    
     func darkenImage(originalImage: UIImage) -> UIImage{
         // Get the original image and set up the CIExposureAdjust filter
         guard let inputImage = CIImage(image: originalImage),
