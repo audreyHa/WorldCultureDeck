@@ -19,17 +19,17 @@ class InfoController: UIViewController {
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var pageCountLabel: UILabel!
+    @IBOutlet weak var blueBackground: UIView!
     
     var pageCount: Int=0
     
-    var allCountryInfo: [String: [String:[[String]]]]=[
-        "South Korea":["Clothing":[["The Hanbok is the traditional Korean dress.",
+    var allCountryInfo: [String: [[String:[[String]]]]]=[
+        "South Korea":[["Clothing":[["The Hanbok is the traditional Korean dress.",
                              "Most of today’s Hanboks follow the style of the Joseon Dynasty (1392-1897), but Hanboks existed as early as 1600 years ago."],
-                             
-                             ["Currently, the Hanbok is only worn for special occasions or Korean holidays.",
-                             "Children wear the Hanbok for their 1st birthday and adults wear it for their wedding or major family events like funerals."],
                              ["For men, a full Hanbok has a vest and pants.",
                               "For women, the full Hanbok has a fitted top jacket, undershirt, and a wide, flexible skirt. Hanboks for women resemble a bell shape."],
+                             ["Currently, the Hanbok is only worn for special occasions or Korean holidays.",
+                             "Children wear the Hanbok for their 1st birthday and adults wear it for their wedding or major family events like funerals."],
                              ["Hanboks are made using natural dyes, giving the dress more vibrant and deep colors compared to artificial dyes. ",
                               "Hair accessories, including hairpins or headbands, are often worn with the Hanbok."]],
                  "Music":[["Gugak, which directly translates to “national music,” refers to traditional Korean music, songs, dances, and ceremonial performances.",
@@ -42,8 +42,8 @@ class InfoController: UIViewController {
                  "Art":[["Calligraphy developed in Korea through cultural influences from China.",
                          "Calligraphy is the art of handwriting using ink and brush strokes. One of the most famous Korean calligraphers is Kim Jeong-hui, who developed his own style of calligraphy called “Chusa Style.”"],
                         
-                        ["In the 1700s, two great Korean artists were Kim Hong-do and Sin Yun-bok who often illustrated the day-to-day activities of ordinary people.",
-                         "Directly above is Ssireum, one of Kim Hong-do’s paintings. It illustrates Korean wrestlers along with their spectators. To the top left is one of Sin Yun-bok’s paintings (INSERT DETAILS HERE)."],
+                        ["In the 1700s, one of the great Korean artists was Kim Hong-do who often illustrated the day-to-day activities of ordinary people.",
+                         "Directly above is Ssireum, one of Kim Hong-do’s paintings. It illustrates Korean wrestlers along with their spectators."],
                         ["Korean pottery usually falls into 3 categories: Cheongja (blue-green celadon), Buncheong (stoneware), and Baekja (white porcelain).",
                          "Celadon blue-green pottery was mostly made during the Goryeo Dynasty (918-1392). "],["Buncheong was made by Goryeo potters after the end of the Goryeo Dynasty in 1392. This type of stone pottery has simple designs on the outside.","The white porcelain pottery was mainly from the Joseon Dynasty (1392-1910). The porcelain was typically covered with designs made with iron, copper, and cobalt."]],
                  "Food":[["Kimchi is arguably the most classic of all Korean foods.",
@@ -52,6 +52,26 @@ class InfoController: UIViewController {
                           "Galbi or Korean barbeque is thick meat marinated in a soy sauce, garlic, and sugar mixture. Galbi is grilled over a fire and is a staple of Korean culture."],
                          ["Bibimpap is a mixed bowl with rice, vegetables, rice, beef, egg, sesame oil, and chili paste for flavor.",
                           "Gimbap is a popular meal and street food. Vegetables, meat, eggs, and rice are rolled together in seaweed and then cut into bite sized circular pieces."]]
+                ], //end of text
+               ["Clothing":[
+                        ["koClothing1","koClothing2"],
+                        ["koClothing6","koClothing5"],
+                        ["koClothing3","koClothing4"],
+                        ["koClothing7",""]],
+                "Music":[
+                    ["koMusic1","koMusic2"],
+                    ["koMusic3","koMusic4"],
+                    ["koMusic5","koMusic6"]],
+                "Art":[
+                    ["koArt1","koArt2"],
+                    ["koArt3","koArt4"],
+                    ["koArt5","koArt6"],
+                    ["koArt7","koArt8"]],
+                "Food":[
+                    ["koFood1","koFood2"],
+                    ["koFood3","koFood4"],
+                    ["koFood5","koFood6"]]
+            ]
         ] //end of South Korea
     ] //end of Array
     
@@ -61,6 +81,14 @@ class InfoController: UIViewController {
         backButton.layer.cornerRadius=10
         nextButton.layer.cornerRadius=10
         
+        UIGraphicsBeginImageContext(blueBackground.frame.size)
+        UIImage(named: "southKoPalace.jpg")?.draw(in: blueBackground.bounds)
+        
+        if let image = UIGraphicsGetImageFromCurrentImageContext(){
+            UIGraphicsEndImageContext()
+            blueBackground.backgroundColor = UIColor(patternImage: image.alpha(0.2))
+        }
+        
         setUpPage()
         setSlider()
     }
@@ -69,6 +97,7 @@ class InfoController: UIViewController {
         var countryName: String=UserDefaults.standard.string(forKey: "countryName")!
         var infoType: String=UserDefaults.standard.string(forKey: "infoType")!
         var infoArray=returnInfoArray()
+        var imageArray=returnImageArray()
         
         headerLabel.text="\(countryName): \(infoType)"
         
@@ -77,6 +106,18 @@ class InfoController: UIViewController {
             var myLabel=labels[i]
             myLabel!.text=infoArray[pageCount][i]
             myLabel!.adjustsFontSizeToFitWidth=true
+        }
+        
+        var imageViews=[firstImage, secondImage]
+        firstImage.image=nil
+        secondImage.image=nil
+        for i in 0...1{
+            var myImageView=imageViews[i]
+            var imageName=imageArray[pageCount][i]
+            
+            if(imageName != ""){
+                myImageView!.image=UIImage(named: imageName)?.roundedImage
+            }
         }
     }
     
@@ -90,12 +131,22 @@ class InfoController: UIViewController {
     
     func returnInfoArray() -> [[String]]{
         var countryName: String=UserDefaults.standard.string(forKey: "countryName")!
-        var countryArray: [String: [[String]]]=allCountryInfo[countryName]!
+        var countryArray: [String: [[String]]]=allCountryInfo[countryName]![0]
         
         var infoType: String=UserDefaults.standard.string(forKey: "infoType")!
         var infoArray: [[String]]=countryArray[infoType]!
         
         return infoArray
+    }
+    
+    func returnImageArray() -> [[String]]{
+        var countryName: String=UserDefaults.standard.string(forKey: "countryName")!
+        var allImages: [String: [[String]]]=allCountryInfo[countryName]![1]
+        
+        var infoType: String=UserDefaults.standard.string(forKey: "infoType")!
+        var infoImageArray: [[String]]=allImages[infoType]!
+        
+        return infoImageArray
     }
     
     @IBAction func backPressed(_ sender: Any) {
@@ -131,4 +182,17 @@ class InfoController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+}
+
+extension UIImage{
+    var roundedImage: UIImage {
+        let rect = CGRect(origin:CGPoint(x: 0, y: 0), size: self.size)
+        UIGraphicsBeginImageContextWithOptions(self.size, false, 1)
+        UIBezierPath(
+            roundedRect: rect,
+            cornerRadius: self.size.height
+            ).addClip()
+        self.draw(in: rect)
+        return UIGraphicsGetImageFromCurrentImageContext()!
+    }
 }
