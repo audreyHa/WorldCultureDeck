@@ -80,6 +80,7 @@ class InfoController: UIViewController {
 
         backButton.layer.cornerRadius=10
         nextButton.layer.cornerRadius=10
+        slider.isEnabled=false
         
         UIGraphicsBeginImageContext(blueBackground.frame.size)
         UIImage(named: "southKoPalace.jpg")?.draw(in: blueBackground.bounds)
@@ -166,16 +167,7 @@ class InfoController: UIViewController {
             setUpPage()
         }
     }
-    
-    @IBAction func sliderChanged(_ sender: Any) {
-        var sliderValue=slider.value
-        sliderValue=round(sliderValue)
-        pageCount=Int(sliderValue)
-        setUpPage()
-        
-        var infoArray=returnInfoArray()
-        pageCountLabel.text="\(pageCount+1)/\(infoArray.count)"
-    }
+
     
     @IBAction func xPressed(_ sender: Any) {
         navigationController?.popViewController(animated: true)

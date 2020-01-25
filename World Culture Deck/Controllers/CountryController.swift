@@ -18,6 +18,8 @@ class CountryController: UIViewController {
     @IBOutlet weak var mapImage: UIImageView!
     @IBOutlet weak var countryDescription: UILabel!
     @IBOutlet weak var blueBackground: UIView!
+    @IBOutlet weak var quizButton: UIButton!
+    @IBOutlet weak var linksVideoButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +50,11 @@ class CountryController: UIViewController {
             UIGraphicsEndImageContext()
             blueBackground.backgroundColor = UIColor(patternImage: image.alpha(0.2))
         }
+        
+        linksVideoButton.layer.cornerRadius=10
+        quizButton.layer.cornerRadius=10
+        linksVideoButton.titleLabel?.adjustsFontSizeToFitWidth=true
+        quizButton.titleLabel?.adjustsFontSizeToFitWidth=true
         
     }
     
@@ -82,6 +89,10 @@ class CountryController: UIViewController {
     @IBAction func xPressed(_ sender: Any) {
         navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func quizPressed(_ sender: Any) {
+        performSegue(withIdentifier: "quizController", sender: nil)
     }
     
     func darkenImage(originalImage: UIImage) -> UIImage{
