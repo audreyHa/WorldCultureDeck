@@ -56,6 +56,9 @@ class CountryController: UIViewController {
         linksVideoButton.titleLabel?.adjustsFontSizeToFitWidth=true
         quizButton.titleLabel?.adjustsFontSizeToFitWidth=true
         
+        //COMMENT: DELETE THIS LATER
+        UserDefaults.standard.set("South Korea",forKey:"countryName")
+        
     }
     
     @IBAction func clothingPressed(_ sender: Any) {

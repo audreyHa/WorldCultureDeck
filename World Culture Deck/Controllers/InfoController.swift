@@ -32,7 +32,13 @@ class InfoController: UIViewController {
                              "Children wear the Hanbok for their 1st birthday and adults wear it for their wedding or major family events like funerals."],
                              ["Hanboks are made using natural dyes, giving the dress more vibrant and deep colors compared to artificial dyes. ",
                               "Hair accessories, including hairpins or headbands, are often worn with the Hanbok."]],
-                 "Music":[["Gugak, which directly translates to “national music,” refers to traditional Korean music, songs, dances, and ceremonial performances.",
+                 "Music":[["BTS is one of the most famous K-pop (Korean pop) groups. The band is made up of seven Korean singers: Jin, Suga, J-Hope, RM, Jimin, V, and Jungkook.",
+                 "BTS has hit #1 on iTunes in more than 65 countries, and they’re the first K-pop group to top U.S. music album charts. BTS’s “Boy With Luv” Youtube video was the fastest Youtube video to ever hit 100 million views."],
+                          
+                          ["BTS’s songs include topics like bullying and mental health, which other bands may not cover.",
+                            "Some of the key factors of BTS’s success are their impressives dance routines, creative music videos, and the topics in their songs."],
+                          
+                          ["Gugak, which directly translates to “national music,” refers to traditional Korean music, songs, dances, and ceremonial performances.",
                            "Buchaechum is the Korean fan dance, usually performed by female dancers holding fans with floral prints."],
                           
                           ["Of all Korean folk songs, Arirang is the most famous and important among Koreans.",
@@ -42,8 +48,8 @@ class InfoController: UIViewController {
                  "Art":[["Calligraphy developed in Korea through cultural influences from China.",
                          "Calligraphy is the art of handwriting using ink and brush strokes. One of the most famous Korean calligraphers is Kim Jeong-hui, who developed his own style of calligraphy called “Chusa Style.”"],
                         
-                        ["In the 1700s, one of the great Korean artists was Kim Hong-do who often illustrated the day-to-day activities of ordinary people.",
-                         "Directly above is Ssireum, one of Kim Hong-do’s paintings. It illustrates Korean wrestlers along with their spectators."],
+                        ["Paintings during the early Joseon dynasty (1400s) were similar to the Chinese style of peaceful landscapes",
+                         "In the later Joseon dynasty, paintings transitioned towards realism. In the 1700s, one of the great Korean artists was Kim Hong-do who often illustrated the day-to-day activities of ordinary people. Directly above is Ssireum, one of Kim Hong-do’s paintings, illustrating Korean wrestlers along with their spectators."],
                         ["Korean pottery usually falls into 3 categories: Cheongja (blue-green celadon), Buncheong (stoneware), and Baekja (white porcelain).",
                          "Celadon blue-green pottery was mostly made during the Goryeo Dynasty (918-1392). "],["Buncheong was made by Goryeo potters after the end of the Goryeo Dynasty in 1392. This type of stone pottery has simple designs on the outside.","The white porcelain pottery was mainly from the Joseon Dynasty (1392-1910). The porcelain was typically covered with designs made with iron, copper, and cobalt."]],
                  "Food":[["Kimchi is arguably the most classic of all Korean foods.",
@@ -59,6 +65,8 @@ class InfoController: UIViewController {
                         ["koClothing3","koClothing4"],
                         ["koClothing7",""]],
                 "Music":[
+                    ["koMusicA","koMusicB"],
+                    ["koMusicC","koMusicD"],
                     ["koMusic1","koMusic2"],
                     ["koMusic3","koMusic4"],
                     ["koMusic5","koMusic6"]],

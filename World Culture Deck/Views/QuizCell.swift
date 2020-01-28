@@ -16,9 +16,8 @@ class QuizCell: UITableViewCell {
     @IBOutlet weak var thirdOption: UIButton!
     @IBOutlet weak var questionSurrounding: UIView!
     
-    var mintColor: UIColor=UIColor(red: 215.0/255.0, green: 241.0/255.0, blue: 227.0/255.0, alpha: 1.0)
-    var tealColor: UIColor=UIColor(red: 8.0/255.0, green: 164.0/255.0, blue: 157.0/255.0, alpha: 1.0)
     var allOptionButtons=[UIButton]()
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,32 +30,33 @@ class QuizCell: UITableViewCell {
     }
 
     @IBAction func option1Pressed(_ sender: Any) {
-        setButtonSelected(myButton: firstOption)
+        buttonPressed(myButton: firstOption)
     }
     
     @IBAction func option2Pressed(_ sender: Any) {
-        setButtonSelected(myButton: secondOption)
+        buttonPressed(myButton: secondOption)
     }
     
     @IBAction func option3Pressed(_ sender: Any) {
-        setButtonSelected(myButton: thirdOption)
+        buttonPressed(myButton: thirdOption)
     }
     
-    func setButtonSelected(myButton: UIButton){
-        if(myButton.backgroundColor==mintColor){
-            myButton.backgroundColor=tealColor
-            myButton.setTitleColor(mintColor, for: .normal)
-        }else{
-            myButton.backgroundColor=mintColor
-            myButton.setTitleColor(tealColor, for: .normal)
-        }
-        
-        for button in allOptionButtons{
-            if(button != myButton){
-                button.backgroundColor=tealColor
-                button.setTitleColor(mintColor, for: .normal)
-            }
-        }
+    func buttonPressed(myButton: UIButton){
+        UserDefaults.standard.set(myButton.titleLabel!.text,forKey:"newAnswer")
+        var indexPath=getIndexPath()
+        UserDefaults.standard.set(indexPath!.row, forKey: "newAnswerIndex")
+        NotificationCenter.default.post(name: Notification.Name("newAnswerPressed"), object: nil)
     }
+    
+    func getIndexPath() -> IndexPath? {
+        guard let superView = self.superview as? UITableView else {
+            print("superview is not a UITableView - getIndexPath")
+            return nil
+        }
+        var myIndexPath = superView.indexPath(for: self)
+        return myIndexPath
+    }
+
 }
+
 
