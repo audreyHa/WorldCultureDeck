@@ -26,11 +26,16 @@ class QuizVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
             ["Which of the following are 2 types of Korean meat:","  Kimchi and Bibimpap", "  Bulgogi and Galbi", "  Seoul and Busan"],
             ["What is the capital of South Korea?","  Seoul", "  Busan", "  Incheon"]]]
     
+    var allCountryCorrectAnswers: [String: [String]]=["South Korea":["A","B","C","B","C","A","B","B","A"]]
+    
+    var quizAnswersString: [String]=["","","","","","","","",""]
     var quizAnswers: [String]=["","","","","","","","",""]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        UserDefaults.standard.set(false,forKey:"isFeedback")
         submitButton.layer.cornerRadius=10
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.newAnswerPressed(notification:)), name: Notification.Name("newAnswerPressed"), object: nil)
@@ -39,7 +44,9 @@ class QuizVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     @objc func newAnswerPressed(notification: Notification) {
         var answer=UserDefaults.standard.string(forKey: "newAnswer")
         var index=UserDefaults.standard.integer(forKey: "newAnswerIndex")
-        quizAnswers[index]=answer!
+        var letter=UserDefaults.standard.string(forKey: "letter")
+        quizAnswersString[index]=answer!
+        quizAnswers[index]=letter!
         
         tableView.reloadData()
     }
@@ -51,7 +58,19 @@ class QuizVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         return countryQuizArray
     }
     
+    func returnCorrectAnswersArray() -> [String]{
+        var countryName: String=UserDefaults.standard.string(forKey: "countryName")!
+        var countryQuizArray: [String]=allCountryCorrectAnswers[countryName]!
+        
+        return countryQuizArray
+    }
+    
     @IBAction func submitPressed(_ sender: Any) {
+        var isFeedback=UserDefaults.standard.bool(forKey: "isFeedback")
+        if(isFeedback==nil || isFeedback==false){
+            UserDefaults.standard.set(true,forKey:"isFeedback")
+            tableView.reloadData()
+        }
     }
     
     @IBAction func xPressed(_ sender: Any) {
@@ -75,31 +94,92 @@ class QuizVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         
         var optionButtons=[cell.firstOption, cell.secondOption, cell.thirdOption]
         
-        for i in 1...3{
-            var myButton=optionButtons[i-1]
-            myButton!.layer.cornerRadius=10
-            myButton!.titleLabel?.adjustsFontSizeToFitWidth=true
+        var isFeedback=UserDefaults.standard.bool(forKey: "isFeedback")
+        if(isFeedback){
+            for i in 1...3{
+                var myButton=optionButtons[i-1]
+                myButton!.layer.cornerRadius=10
+                myButton!.titleLabel?.adjustsFontSizeToFitWidth=true
+                
+                var optionTitle=countryQuizArray[indexPath.row][i]
+                myButton?.setTitle(optionTitle, for: .normal)
+                setButtonUNSelected(myButton: myButton!)
+            }
             
-            var optionTitle=countryQuizArray[indexPath.row][i]
-            print(optionTitle)
-            myButton?.setTitle(optionTitle, for: .normal)
-            setButtonUNSelected(myButton: myButton!)
+            var correctAnswersArray=returnCorrectAnswersArray()
+            var correctIndex=0
             
-            for answer in quizAnswers{
-                if(answer==optionTitle){
-                    setButtonSelected(myButton: myButton!)
+            for i in 0...countryQuizArray.count-1{
+                if(countryQuizArray[i].contains(cell.questionLabel.text!)){
+                    correctIndex=i
+                }
+            }
+            
+            print(correctIndex)
+            
+            if(correctAnswersArray[correctIndex] != quizAnswers[correctIndex]){
+                switch(correctAnswersArray[correctIndex]){
+                case "A":
+                    setButtonSelected(myButton: cell.firstOption)
+                case "B":
+                    setButtonSelected(myButton: cell.secondOption)
+                default:
+                    setButtonSelected(myButton: cell.thirdOption)
+                }
+                    
+                switch(quizAnswers[correctIndex]){
+                case "A":
+                    setButtonRed(myButton: cell.firstOption)
+                case "B":
+                    setButtonRed(myButton: cell.secondOption)
+                default:
+                    setButtonRed(myButton: cell.thirdOption)
+                }
+            }else{
+                switch(quizAnswers[correctIndex]){
+                case "A":
+                    setButtonSelected(myButton: cell.firstOption)
+                case "B":
+                    setButtonSelected(myButton: cell.secondOption)
+                default:
+                    setButtonSelected(myButton: cell.thirdOption)
+                }
+            }
+
+        }else{
+            for i in 1...3{
+                var myButton=optionButtons[i-1]
+                myButton!.layer.cornerRadius=10
+                myButton!.titleLabel?.adjustsFontSizeToFitWidth=true
+                
+                var optionTitle=countryQuizArray[indexPath.row][i]
+                
+                myButton?.setTitle(optionTitle, for: .normal)
+                setButtonUNSelected(myButton: myButton!)
+                
+                for answer in quizAnswersString{
+                    if(answer==optionTitle){
+                        setButtonSelected(myButton: myButton!)
+                    }
                 }
             }
         }
+        
         return cell
     }
     
     var mintColor: UIColor=UIColor(red: 215.0/255.0, green: 241.0/255.0, blue: 227.0/255.0, alpha: 1.0)
     var tealColor: UIColor=UIColor(red: 8.0/255.0, green: 164.0/255.0, blue: 157.0/255.0, alpha: 1.0)
+    var redColor: UIColor=UIColor(red: 213.0/255.0, green: 99.0/255.0, blue: 99.0/255.0, alpha: 1.0)
     
     func setButtonSelected(myButton: UIButton){
         myButton.backgroundColor=mintColor
         myButton.setTitleColor(tealColor, for: .normal)
+    }
+    
+    func setButtonRed(myButton: UIButton){
+        myButton.backgroundColor=redColor
+        myButton.setTitleColor(mintColor, for: .normal)
     }
     
     func setButtonUNSelected(myButton: UIButton){

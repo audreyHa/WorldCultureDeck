@@ -30,15 +30,27 @@ class QuizCell: UITableViewCell {
     }
 
     @IBAction func option1Pressed(_ sender: Any) {
-        buttonPressed(myButton: firstOption)
+        var isFeedback=UserDefaults.standard.bool(forKey: "isFeedback")
+        if(isFeedback==nil || isFeedback==false){
+            UserDefaults.standard.set("A",forKey:"letter")
+            buttonPressed(myButton: firstOption)
+        }
     }
     
     @IBAction func option2Pressed(_ sender: Any) {
-        buttonPressed(myButton: secondOption)
+        var isFeedback=UserDefaults.standard.bool(forKey: "isFeedback")
+        if(isFeedback==nil || isFeedback==false){
+            UserDefaults.standard.set("B",forKey:"letter")
+            buttonPressed(myButton: secondOption)
+        }
     }
     
     @IBAction func option3Pressed(_ sender: Any) {
-        buttonPressed(myButton: thirdOption)
+        var isFeedback=UserDefaults.standard.bool(forKey: "isFeedback")
+        if(isFeedback==nil || isFeedback==false){
+            UserDefaults.standard.set("C",forKey:"letter")
+            buttonPressed(myButton: thirdOption)
+        }
     }
     
     func buttonPressed(myButton: UIButton){
