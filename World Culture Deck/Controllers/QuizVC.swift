@@ -13,6 +13,7 @@ class QuizVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var topScoreLabel: UILabel!
+    @IBOutlet weak var redoButton: UIButton!
     
     var allCountryQuizzes: [String: [[String]]] =
         ["South Korea":[
@@ -28,8 +29,8 @@ class QuizVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     var allCountryCorrectAnswers: [String: [String]]=["South Korea":["A","B","C","B","C","A","B","B","A"]]
     
-    var quizAnswersString: [String]=["","","","","","","","",""]
-    var quizAnswers: [String]=["","","","","","","","",""]
+    var userAnswersString: [String]=["","","","","","","","",""]
+    var userAnswers: [String]=["","","","","","","","",""]
     
     
     override func viewDidLoad() {
@@ -39,14 +40,16 @@ class QuizVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         submitButton.layer.cornerRadius=10
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.newAnswerPressed(notification:)), name: Notification.Name("newAnswerPressed"), object: nil)
+        
+        tableView.allowsSelection=false
     }
     
     @objc func newAnswerPressed(notification: Notification) {
         var answer=UserDefaults.standard.string(forKey: "newAnswer")
         var index=UserDefaults.standard.integer(forKey: "newAnswerIndex")
         var letter=UserDefaults.standard.string(forKey: "letter")
-        quizAnswersString[index]=answer!
-        quizAnswers[index]=letter!
+        userAnswersString[index]=answer!
+        userAnswers[index]=letter!
         
         tableView.reloadData()
     }
@@ -71,6 +74,24 @@ class QuizVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
             UserDefaults.standard.set(true,forKey:"isFeedback")
             tableView.reloadData()
         }
+        
+        var correctAnswersArray=returnCorrectAnswersArray()
+        var totalQuestionNumber=correctAnswersArray.count
+        var totalCorrect=totalQuestionNumber
+        for i in 0...correctAnswersArray.count-1{
+            if(userAnswers[i] != correctAnswersArray[i]){
+                totalCorrect-=1
+            }
+        }
+        
+        topScoreLabel.text="Top Score: \(totalCorrect)/\(totalQuestionNumber)"
+    }
+    
+    @IBAction func redoPressed(_ sender: Any) {
+        UserDefaults.standard.set(false,forKey:"isFeedback")
+        userAnswersString=["","","","","","","","",""]
+        userAnswers=["","","","","","","","",""]
+        tableView.reloadData()
     }
     
     @IBAction func xPressed(_ sender: Any) {
@@ -117,7 +138,7 @@ class QuizVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
             
             print(correctIndex)
             
-            if(correctAnswersArray[correctIndex] != quizAnswers[correctIndex]){
+            if(correctAnswersArray[correctIndex] != userAnswers[correctIndex]){
                 switch(correctAnswersArray[correctIndex]){
                 case "A":
                     setButtonSelected(myButton: cell.firstOption)
@@ -127,7 +148,7 @@ class QuizVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
                     setButtonSelected(myButton: cell.thirdOption)
                 }
                     
-                switch(quizAnswers[correctIndex]){
+                switch(userAnswers[correctIndex]){
                 case "A":
                     setButtonRed(myButton: cell.firstOption)
                 case "B":
@@ -136,7 +157,7 @@ class QuizVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
                     setButtonRed(myButton: cell.thirdOption)
                 }
             }else{
-                switch(quizAnswers[correctIndex]){
+                switch(userAnswers[correctIndex]){
                 case "A":
                     setButtonSelected(myButton: cell.firstOption)
                 case "B":
@@ -157,7 +178,7 @@ class QuizVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
                 myButton?.setTitle(optionTitle, for: .normal)
                 setButtonUNSelected(myButton: myButton!)
                 
-                for answer in quizAnswersString{
+                for answer in userAnswersString{
                     if(answer==optionTitle){
                         setButtonSelected(myButton: myButton!)
                     }

@@ -1233,8 +1233,8 @@
                                             <outlet property="delegate" destination="dds-SJ-LGe" id="7mk-MQ-AiK"/>
                                         </connections>
                                     </tableView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Score: 10/10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gel-gm-hNG">
-                                        <rect key="frame" x="20" y="70" width="240.5" height="35"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1st Attempt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gel-gm-hNG">
+                                        <rect key="frame" x="20" y="70" width="162.5" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="Abs-59-Swf"/>
                                         </constraints>
@@ -1256,19 +1256,32 @@
                                             <action selector="submitPressed:" destination="dds-SJ-LGe" eventType="touchUpInside" id="g2a-Ue-cfT"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ye-Nn-lTy">
+                                        <rect key="frame" x="354" y="63.5" width="45" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="2Ye-Nn-lTy" secondAttribute="height" multiplier="1:1" id="kFP-0w-Ki5"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="gobackward" catalog="system"/>
+                                        <connections>
+                                            <action selector="redoPressed:" destination="dds-SJ-LGe" eventType="touchUpInside" id="Jcj-yB-064"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.097609010090000004" green="0.22002248269999999" blue="0.44544861219999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="Z7G-jI-DdX" secondAttribute="bottom" constant="20" id="4pC-gl-vLj"/>
                                     <constraint firstItem="QFk-8p-ngs" firstAttribute="leading" secondItem="LcG-0a-XAe" secondAttribute="leading" id="9SQ-El-fBi"/>
                                     <constraint firstItem="gel-gm-hNG" firstAttribute="top" secondItem="7JO-Hw-mj2" secondAttribute="bottom" constant="20" id="9j2-Ao-HVB"/>
+                                    <constraint firstItem="QFk-8p-ngs" firstAttribute="top" secondItem="2Ye-Nn-lTy" secondAttribute="bottom" constant="15" id="BEQ-OT-DN4"/>
                                     <constraint firstAttribute="trailing" secondItem="QFk-8p-ngs" secondAttribute="trailing" id="HAv-l9-Rky"/>
                                     <constraint firstItem="QFk-8p-ngs" firstAttribute="top" secondItem="gel-gm-hNG" secondAttribute="bottom" constant="20" id="LVq-MK-Ure"/>
                                     <constraint firstItem="gel-gm-hNG" firstAttribute="leading" secondItem="LcG-0a-XAe" secondAttribute="leading" constant="20" id="UId-YN-CxN"/>
                                     <constraint firstAttribute="trailing" secondItem="7JO-Hw-mj2" secondAttribute="trailing" id="hjD-Qs-1Nc"/>
                                     <constraint firstItem="7JO-Hw-mj2" firstAttribute="top" secondItem="LcG-0a-XAe" secondAttribute="top" id="hqg-93-D9t"/>
+                                    <constraint firstItem="2Ye-Nn-lTy" firstAttribute="top" secondItem="7JO-Hw-mj2" secondAttribute="bottom" constant="15" id="kta-Sj-7nR"/>
                                     <constraint firstItem="Z7G-jI-DdX" firstAttribute="top" secondItem="QFk-8p-ngs" secondAttribute="bottom" constant="20" id="lJC-z4-Qeq"/>
                                     <constraint firstAttribute="trailing" secondItem="Z7G-jI-DdX" secondAttribute="trailing" constant="20" id="lkZ-N3-mzl"/>
+                                    <constraint firstAttribute="trailing" secondItem="2Ye-Nn-lTy" secondAttribute="trailing" constant="15" id="npr-Hp-1m9"/>
                                     <constraint firstItem="7JO-Hw-mj2" firstAttribute="leading" secondItem="LcG-0a-XAe" secondAttribute="leading" id="ygV-Cf-SOp"/>
                                 </constraints>
                             </view>
@@ -1288,6 +1301,7 @@
                     <tabBarItem key="tabBarItem" title="" image="gear" catalog="system" id="5Nz-FE-F6b"/>
                     <navigationItem key="navigationItem" id="sCU-v3-HS1"/>
                     <connections>
+                        <outlet property="redoButton" destination="2Ye-Nn-lTy" id="6kU-Ta-gCZ"/>
                         <outlet property="submitButton" destination="Z7G-jI-DdX" id="7gg-iZ-S57"/>
                         <outlet property="tableView" destination="QFk-8p-ngs" id="oy5-LZ-s5O"/>
                         <outlet property="topScoreLabel" destination="gel-gm-hNG" id="NUh-Lg-ndT"/>
@@ -1302,6 +1316,7 @@
         <image name="cart.fill" catalog="system" width="64" height="50"/>
         <image name="gear" catalog="system" width="64" height="58"/>
         <image name="globe" catalog="system" width="64" height="60"/>
+        <image name="gobackward" catalog="system" width="60" height="64"/>
         <image name="star.fill" catalog="system" width="64" height="58"/>
         <image name="xmark.square" catalog="system" width="64" height="56"/>
     </resources>
