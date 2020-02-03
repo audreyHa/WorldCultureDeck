@@ -14,6 +14,7 @@ class QuizVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var topScoreLabel: UILabel!
     @IBOutlet weak var redoButton: UIButton!
+    @IBOutlet weak var starLabel: UILabel!
     
     var allCountryQuizzes: [String: [[String]]] =
         ["South Korea":[
@@ -38,10 +39,17 @@ class QuizVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         
         UserDefaults.standard.set(false,forKey:"isFeedback")
         submitButton.layer.cornerRadius=10
-        
+
         NotificationCenter.default.addObserver(self, selector: #selector(self.newAnswerPressed(notification:)), name: Notification.Name("newAnswerPressed"), object: nil)
         
         tableView.allowsSelection=false
+        QuizService.displayQuizScore(myLabel: topScoreLabel)
+        StarService.displayStars(myLabel: starLabel)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+      super.viewDidDisappear(animated)
+      QuizService.removeAllObservers()
     }
     
     @objc func newAnswerPressed(notification: Notification) {
@@ -73,18 +81,24 @@ class QuizVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         if(isFeedback==nil || isFeedback==false){
             UserDefaults.standard.set(true,forKey:"isFeedback")
             tableView.reloadData()
-        }
-        
-        var correctAnswersArray=returnCorrectAnswersArray()
-        var totalQuestionNumber=correctAnswersArray.count
-        var totalCorrect=totalQuestionNumber
-        for i in 0...correctAnswersArray.count-1{
-            if(userAnswers[i] != correctAnswersArray[i]){
-                totalCorrect-=1
+            
+            var correctAnswersArray=returnCorrectAnswersArray()
+            var totalQuestionNumber=correctAnswersArray.count
+            var totalCorrect=totalQuestionNumber
+            for i in 0...correctAnswersArray.count-1{
+                if(userAnswers[i] != correctAnswersArray[i]){
+                    totalCorrect-=1
+                }
             }
+
+            QuizService.saveScore(quizScore: totalCorrect)
+            DispatchQueue.main.async{
+                QuizService.displayQuizScore(myLabel: self.topScoreLabel)
+            }
+           
+            StarService.displayStars(myLabel: starLabel)
         }
         
-        topScoreLabel.text="Top Score: \(totalCorrect)/\(totalQuestionNumber)"
     }
     
     @IBAction func redoPressed(_ sender: Any) {
@@ -135,8 +149,6 @@ class QuizVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
                     correctIndex=i
                 }
             }
-            
-            print(correctIndex)
             
             if(correctAnswersArray[correctIndex] != userAnswers[correctIndex]){
                 switch(correctAnswersArray[correctIndex]){

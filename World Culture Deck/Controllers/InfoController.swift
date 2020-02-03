@@ -20,6 +20,7 @@ class InfoController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var pageCountLabel: UILabel!
     @IBOutlet weak var blueBackground: UIView!
+    @IBOutlet weak var starLabel: UILabel!
     
     var pageCount: Int=0
     
@@ -89,7 +90,7 @@ class InfoController: UIViewController {
         backButton.layer.cornerRadius=10
         nextButton.layer.cornerRadius=10
         slider.isEnabled=false
-        
+        StarService.displayStars(myLabel: starLabel)
         UIGraphicsBeginImageContext(blueBackground.frame.size)
         UIImage(named: "southKoPalace.jpg")?.draw(in: blueBackground.bounds)
         

@@ -11,6 +11,8 @@
 		F61DB99623DC136C008943C6 /* QuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61DB99523DC136C008943C6 /* QuizVC.swift */; };
 		F61DB99823DC140C008943C6 /* QuizCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61DB99723DC140C008943C6 /* QuizCell.swift */; };
 		F62E07E323D685B400A5D157 /* CountryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62E07E223D685B400A5D157 /* CountryController.swift */; };
+		F65645ED23E69FEE008FDD04 /* QuizService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65645EC23E69FEE008FDD04 /* QuizService.swift */; };
+		F65645EF23E6A974008FDD04 /* StarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F65645EE23E6A974008FDD04 /* StarService.swift */; };
 		F6A4657023BA1649004255BE /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4656F23BA1649004255BE /* HomeVC.swift */; };
 		F6A4657223BA197A004255BE /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4657123BA197A004255BE /* SettingsVC.swift */; };
 		F6A4657423BA2303004255BE /* WallpaperVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4657323BA2303004255BE /* WallpaperVC.swift */; };
@@ -45,6 +47,8 @@
 		F61DB99523DC136C008943C6 /* QuizVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizVC.swift; sourceTree = "<group>"; };
 		F61DB99723DC140C008943C6 /* QuizCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCell.swift; sourceTree = "<group>"; };
 		F62E07E223D685B400A5D157 /* CountryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryController.swift; sourceTree = "<group>"; };
+		F65645EC23E69FEE008FDD04 /* QuizService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizService.swift; sourceTree = "<group>"; };
+		F65645EE23E6A974008FDD04 /* StarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarService.swift; sourceTree = "<group>"; };
 		F6A4656F23BA1649004255BE /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		F6A4657123BA197A004255BE /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		F6A4657323BA2303004255BE /* WallpaperVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperVC.swift; sourceTree = "<group>"; };
@@ -172,6 +176,8 @@
 			isa = PBXGroup;
 			children = (
 				F6CE53CE23B9D7DF00B42791 /* UserService.swift */,
+				F65645EC23E69FEE008FDD04 /* QuizService.swift */,
+				F65645EE23E6A974008FDD04 /* StarService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -360,6 +366,7 @@
 				F61DB99623DC136C008943C6 /* QuizVC.swift in Sources */,
 				F6CE53AB23B99E7B00B42791 /* World_Culture_Deck.xcdatamodeld in Sources */,
 				F6CE53A623B99E7A00B42791 /* AppDelegate.swift in Sources */,
+				F65645ED23E69FEE008FDD04 /* QuizService.swift in Sources */,
 				F6CE53CB23B9D0B600B42791 /* User.swift in Sources */,
 				F6E3433A23BADC02005B62A2 /* TabBarController.swift in Sources */,
 				F6A4657423BA2303004255BE /* WallpaperVC.swift in Sources */,
@@ -367,6 +374,7 @@
 				F6CE53CF23B9D7DF00B42791 /* UserService.swift in Sources */,
 				F6A4657223BA197A004255BE /* SettingsVC.swift in Sources */,
 				F6CE53C923B9A81900B42791 /* LoginViewController.swift in Sources */,
+				F65645EF23E6A974008FDD04 /* StarService.swift in Sources */,
 				F6CE53A823B99E7A00B42791 /* SceneDelegate.swift in Sources */,
 				F6A6CA6E23D6ADF0007158B8 /* InfoController.swift in Sources */,
 				F6CE53CD23B9D5CD00B42791 /* CreateUsernameViewController.swift in Sources */,

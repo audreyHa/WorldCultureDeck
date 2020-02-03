@@ -12,6 +12,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
 
     @IBOutlet weak var allDeckCollectionView: UICollectionView!
     @IBOutlet weak var completedCollectionView: UICollectionView!
+    @IBOutlet weak var starLabel: UILabel!
     
     var collectionViewFlowLayout: UICollectionViewFlowLayout!
     
@@ -19,6 +20,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         super.viewDidLoad()
 
         setupCollectionView()
+        StarService.displayStars(myLabel: starLabel)
     }
 
     override func viewDidAppear(_ animated: Bool) {
