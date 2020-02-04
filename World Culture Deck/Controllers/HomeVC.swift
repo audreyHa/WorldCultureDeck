@@ -25,47 +25,49 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         StarService.displayStars(myLabel: starLabel)
         InfoService.insertAllCountryInfo()
         
-        var myArray=returnTextCategoryDict()
-        print(myArray)
+        var someArray=returnTextCategoryDict()
+        print(someArray)
     }
-
-    func returnAllInfo(completionHandler: @escaping ([String:[String:[String:[String:[String:String]]]]]) -> Void) {
-        var tempAllInfo: [String:[String:[String:[String:[String:String]]]]]=[:]
+    
+    func returnAllInfo(completionHandler: @escaping ([String:Any]) -> Void) {
+        print("I am running returnAllInfo")
+        var tempAllInfo: [String:Any]=[:]
         
         let allCountriesRef=Database.database().reference().child("countryInfo")
         
         allCountriesRef.observeSingleEvent(of: .value, with: { (snapshot) in
-            // Get user value
-            print("doing this")
-            print(snapshot.value)
-//            tempAllInfo = (snapshot.value as? [String:[String:[String:[String:[String:String]]]]])!
-            tempAllInfo = (snapshot.value as? [String:[String:[String:[String:[String:String]]]]])!
+            let value = snapshot.value as! NSDictionary
+            tempAllInfo=value as! [String:Any]
+            
             completionHandler(tempAllInfo)
         })
     }
     
     func returnTextCategoryDict() -> [String:[String:String]]{
+        print("I am running returnTextCategoryDict")
         var textCategoryArray: [String:[String:String]]=[:]
         
         self.returnAllInfo{tempAllInfo in
             var countryName: String=UserDefaults.standard.string(forKey: "countryName")!
             var infoType: String=UserDefaults.standard.string(forKey: "infoType")!
-            var countryTextArray: [String:[String:[String:String]]]=tempAllInfo[countryName]!["Text"]!
-            textCategoryArray=countryTextArray[infoType]!
-            
+            var countryArray: [String:Any]=tempAllInfo[countryName]! as! [String : Any]
+            var countryTextArray: [String:Any]=countryArray["Text"]! as! [String : Any]
+            textCategoryArray=countryTextArray[infoType]! as! [String : [String : String]]
         }
 
         return textCategoryArray
     }
     
     func returnImageNameDict() -> [String:[String:String]]{
+        print("I am running returnImageNameDict")
         var infoImageArray: [String:[String:String]]=[:]
         
         self.returnAllInfo{tempAllInfo in
             var countryName: String=UserDefaults.standard.string(forKey: "countryName")!
             var infoType: String=UserDefaults.standard.string(forKey: "infoType")!
-            var countryImageNameArray: [String:[String:[String:String]]]=tempAllInfo[countryName]!["ImageNames"]!
-            infoImageArray=countryImageNameArray[infoType]!
+            var countryArray: [String:Any]=tempAllInfo[countryName]! as! [String : Any]
+            var countryImageNameArray: [String:Any]=countryArray["ImageNames"]! as! [String : Any]
+            infoImageArray=countryImageNameArray[infoType]! as! [String : [String : String]]
             
         }
 

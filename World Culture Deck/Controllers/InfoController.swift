@@ -24,6 +24,7 @@ class InfoController: UIViewController {
     @IBOutlet weak var starLabel: UILabel!
     
     var pageCount: Int=0
+    var numberWords: [String]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,85 +43,77 @@ class InfoController: UIViewController {
             blueBackground.backgroundColor = UIColor(patternImage: image.alpha(0.2))
         }
         
+        numberWords=["zero","one","two","three","four","five","six"]
         setUpPage()
         setSlider()
     }
     
     func setUpPage(){
-        var countryName: String=UserDefaults.standard.string(forKey: "countryName")!
-        var infoType: String=UserDefaults.standard.string(forKey: "infoType")!
-        var infoDict=returnTextCategoryDict()
-        var imageDict=returnImageNameDict()
         
-        headerLabel.text="\(countryName): \(infoType)"
-        
-        var labels=[firstLabel, secondLabel]
-        for i in 0...1{
-            var myLabel=labels[i]
-            myLabel!.text=infoDict["\(pageCount)"]!["\(i)"]
-            myLabel!.adjustsFontSizeToFitWidth=true
-        }
-        
-        var imageViews=[firstImage, secondImage]
-        firstImage.image=nil
-        secondImage.image=nil
-        for i in 0...1{
-            var myImageView=imageViews[i]
-            var imageName=imageDict["\(pageCount)"]!["\(i)"]
-            
-            if(imageName != ""){
-                myImageView!.image=UIImage(named: imageName!)?.roundedImage
-            }
-        }
-    }
-    
-    func setSlider(){
-        var infoDict=returnTextCategoryDict()
-        slider.minimumValue=0
-        slider.maximumValue=Float(infoDict.count-1)
-        slider.setValue(Float(pageCount), animated: true)
-        pageCountLabel.text="\(pageCount+1)/\(infoDict.count)"
-    }
-    
-    func returnAllInfo(completionHandler: @escaping ([String:[String:[String:[String:[String:String]]]]]) -> Void) {
-        var tempAllInfo: [String:[String:[String:[String:[String:String]]]]]=[:]
-        
-        let allCountriesRef=Database.database().reference().child("countryInfo")
-        
-        allCountriesRef.observeSingleEvent(of: .value, with: { (snapshot) in
-            // Get user value
-            print("doing this")
-            tempAllInfo = (snapshot.value as? [String:[String:[String:[String:[String:String]]]]])!
-            completionHandler(tempAllInfo)
-        })
-    }
-    
-    func returnTextCategoryDict() -> [String:[String:String]]{
         var textCategoryArray: [String:[String:String]]=[:]
         
         self.returnAllInfo{tempAllInfo in
             var countryName: String=UserDefaults.standard.string(forKey: "countryName")!
             var infoType: String=UserDefaults.standard.string(forKey: "infoType")!
-            var countryTextArray: [String:[String:[String:String]]]=tempAllInfo[countryName]!["Text"]!
-            textCategoryArray=countryTextArray[infoType]!
+            var countryArray: [String:Any]=tempAllInfo[countryName]! as! [String : Any]
+            var countryTextArray: [String:Any]=countryArray["Text"]! as! [String : Any]
+            textCategoryArray=countryTextArray[infoType]! as! [String : [String : String]]
             
+            //setting the header label
+            self.headerLabel.text="\(countryName): \(infoType)"
+            
+            //Setting the first and second labels
+            var labels=[self.firstLabel, self.secondLabel]
+            for i in 0...1{
+                var myLabel=labels[i]
+                myLabel!.text=textCategoryArray["\(self.numberWords[self.pageCount])"]!["\(self.numberWords[i])"]
+                myLabel!.adjustsFontSizeToFitWidth=true
+            }
         }
-
-        return textCategoryArray
-    }
-    
-    func returnImageNameDict() -> [String:[String:String]]{
+        
         var infoImageArray: [String:[String:String]]=[:]
         
         self.returnAllInfo{tempAllInfo in
             var countryName: String=UserDefaults.standard.string(forKey: "countryName")!
             var infoType: String=UserDefaults.standard.string(forKey: "infoType")!
-            var countryImageNameArray: [String:[String:[String:String]]]=tempAllInfo[countryName]!["ImageNames"]!
-            infoImageArray=countryImageNameArray[infoType]!
+            var countryArray: [String:Any]=tempAllInfo[countryName]! as! [String : Any]
+            var countryImageNameArray: [String:Any]=countryArray["ImageNames"]! as! [String : Any]
+            infoImageArray=countryImageNameArray[infoType]! as! [String : [String : String]]
             
+            //setting the first and second images
+            var imageViews=[self.firstImage, self.secondImage]
+            self.firstImage.image=nil
+            self.secondImage.image=nil
+            for i in 0...1{
+                var myImageView=imageViews[i]
+                var imageName=infoImageArray["\(self.numberWords[self.pageCount])"]!["\(self.numberWords[i])"]
+                
+                if(imageName != ""){
+                    myImageView!.image=UIImage(named: imageName!)?.roundedImage
+                }
+            }
         }
-
-        return infoImageArray
+        
+    }
+    
+    func setSlider(){
+        var textCategoryArray: [String:[String:String]]=[:]
+        
+        self.returnAllInfo{tempAllInfo in
+            var countryName: String=UserDefaults.standard.string(forKey: "countryName")!
+            var infoType: String=UserDefaults.standard.string(forKey: "infoType")!
+            var countryArray: [String:Any]=tempAllInfo[countryName]! as! [String : Any]
+            var countryTextArray: [String:Any]=countryArray["Text"]! as! [String : Any]
+            textCategoryArray=countryTextArray[infoType]! as! [String : [String : String]]
+            
+            //setting the min and max values of the slider
+            self.slider.minimumValue=0
+            self.slider.maximumValue=Float(textCategoryArray.count-1)
+            
+            //setting current value of slider and page count
+            self.slider.setValue(Float(self.pageCount), animated: true)
+            self.pageCountLabel.text="\(self.pageCount+1)/\(textCategoryArray.count)"
+        }
     }
     
     @IBAction func backPressed(_ sender: Any) {
@@ -132,20 +125,43 @@ class InfoController: UIViewController {
     }
     
     @IBAction func nextPressed(_ sender: Any) {
-        var infoDict=returnTextCategoryDict()
-        if(pageCount<infoDict.count-1){
-            pageCount+=1
-            setSlider()
-            setUpPage()
+        var textCategoryArray: [String:[String:String]]=[:]
+        
+        self.returnAllInfo{tempAllInfo in
+            var countryName: String=UserDefaults.standard.string(forKey: "countryName")!
+            var infoType: String=UserDefaults.standard.string(forKey: "infoType")!
+            var countryArray: [String:Any]=tempAllInfo[countryName]! as! [String : Any]
+            var countryTextArray: [String:Any]=countryArray["Text"]! as! [String : Any]
+            textCategoryArray=countryTextArray[infoType]! as! [String : [String : String]]
+            
+            //check to make sure you're not increasing page count beyond limit
+            if(self.pageCount<textCategoryArray.count-1){
+                self.pageCount+=1
+                self.setSlider()
+                self.setUpPage()
+            }
         }
+        
+        
     }
 
-    
     @IBAction func xPressed(_ sender: Any) {
         navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
     }
     
+    func returnAllInfo(completionHandler: @escaping ([String:Any]) -> Void) {
+        print("Running return all info")
+        var tempAllInfo: [String:Any]=[:]
+        
+        let allCountriesRef=Database.database().reference().child("countryInfo")
+        
+        allCountriesRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as! NSDictionary
+            tempAllInfo=value as! [String:Any]
+            completionHandler(tempAllInfo)
+        })
+    }
 }
 
 extension UIImage{
