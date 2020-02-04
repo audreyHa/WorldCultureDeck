@@ -12,4 +12,6 @@ target 'World Culture Deck' do
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
   pod 'Kingfisher', '~> 5.0'
+  pod 'SwiftyJSON', '~> 4.0'
+  pod 'CodableFirebase'
 end

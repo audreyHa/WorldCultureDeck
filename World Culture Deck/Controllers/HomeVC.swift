@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import SwiftyJSON
 
 class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
@@ -21,8 +23,55 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
 
         setupCollectionView()
         StarService.displayStars(myLabel: starLabel)
+        InfoService.insertAllCountryInfo()
+        
+        var myArray=returnTextCategoryDict()
+        print(myArray)
     }
 
+    func returnAllInfo(completionHandler: @escaping ([String:[String:[String:[String:[String:String]]]]]) -> Void) {
+        var tempAllInfo: [String:[String:[String:[String:[String:String]]]]]=[:]
+        
+        let allCountriesRef=Database.database().reference().child("countryInfo")
+        
+        allCountriesRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            print("doing this")
+            print(snapshot.value)
+//            tempAllInfo = (snapshot.value as? [String:[String:[String:[String:[String:String]]]]])!
+            tempAllInfo = (snapshot.value as? [String:[String:[String:[String:[String:String]]]]])!
+            completionHandler(tempAllInfo)
+        })
+    }
+    
+    func returnTextCategoryDict() -> [String:[String:String]]{
+        var textCategoryArray: [String:[String:String]]=[:]
+        
+        self.returnAllInfo{tempAllInfo in
+            var countryName: String=UserDefaults.standard.string(forKey: "countryName")!
+            var infoType: String=UserDefaults.standard.string(forKey: "infoType")!
+            var countryTextArray: [String:[String:[String:String]]]=tempAllInfo[countryName]!["Text"]!
+            textCategoryArray=countryTextArray[infoType]!
+            
+        }
+
+        return textCategoryArray
+    }
+    
+    func returnImageNameDict() -> [String:[String:String]]{
+        var infoImageArray: [String:[String:String]]=[:]
+        
+        self.returnAllInfo{tempAllInfo in
+            var countryName: String=UserDefaults.standard.string(forKey: "countryName")!
+            var infoType: String=UserDefaults.standard.string(forKey: "infoType")!
+            var countryImageNameArray: [String:[String:[String:String]]]=tempAllInfo[countryName]!["ImageNames"]!
+            infoImageArray=countryImageNameArray[infoType]!
+            
+        }
+
+        return infoImageArray
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         setupAllDecksLayout()
         setUpCompletedDecksLayout()

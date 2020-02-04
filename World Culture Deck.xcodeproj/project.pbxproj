@@ -17,6 +17,7 @@
 		F6A4657223BA197A004255BE /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4657123BA197A004255BE /* SettingsVC.swift */; };
 		F6A4657423BA2303004255BE /* WallpaperVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4657323BA2303004255BE /* WallpaperVC.swift */; };
 		F6A6CA6E23D6ADF0007158B8 /* InfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A6CA6D23D6ADF0007158B8 /* InfoController.swift */; };
+		F6B053A723E9457400BD8045 /* allInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B053A623E9457400BD8045 /* allInfo.swift */; };
 		F6CE53A623B99E7A00B42791 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CE53A523B99E7A00B42791 /* AppDelegate.swift */; };
 		F6CE53A823B99E7A00B42791 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CE53A723B99E7A00B42791 /* SceneDelegate.swift */; };
 		F6CE53AB23B99E7B00B42791 /* World_Culture_Deck.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F6CE53A923B99E7B00B42791 /* World_Culture_Deck.xcdatamodeld */; };
@@ -33,6 +34,7 @@
 		F6CE53CF23B9D7DF00B42791 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CE53CE23B9D7DF00B42791 /* UserService.swift */; };
 		F6CE53D123B9DB7400B42791 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CE53D023B9DB7400B42791 /* Constants.swift */; };
 		F6CE53D323B9DBB700B42791 /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CE53D223B9DBB700B42791 /* Storyboard+Utility.swift */; };
+		F6D9BEB123E7F2C7005F0690 /* InfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D9BEB023E7F2C7005F0690 /* InfoService.swift */; };
 		F6E3433723BAD4B5005B62A2 /* WallpaperCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E3433523BAD4B5005B62A2 /* WallpaperCell.swift */; };
 		F6E3433823BAD4B5005B62A2 /* WallpaperCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6E3433623BAD4B5005B62A2 /* WallpaperCell.xib */; };
 		F6E3433A23BADC02005B62A2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E3433923BADC02005B62A2 /* TabBarController.swift */; };
@@ -53,6 +55,7 @@
 		F6A4657123BA197A004255BE /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		F6A4657323BA2303004255BE /* WallpaperVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperVC.swift; sourceTree = "<group>"; };
 		F6A6CA6D23D6ADF0007158B8 /* InfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoController.swift; sourceTree = "<group>"; };
+		F6B053A623E9457400BD8045 /* allInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = allInfo.swift; sourceTree = "<group>"; };
 		F6CE53A223B99E7A00B42791 /* World Culture Deck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "World Culture Deck.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6CE53A523B99E7A00B42791 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6CE53A723B99E7A00B42791 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +74,7 @@
 		F6CE53CE23B9D7DF00B42791 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		F6CE53D023B9DB7400B42791 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F6CE53D223B9DBB700B42791 /* Storyboard+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+Utility.swift"; sourceTree = "<group>"; };
+		F6D9BEB023E7F2C7005F0690 /* InfoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoService.swift; sourceTree = "<group>"; };
 		F6E3433523BAD4B5005B62A2 /* WallpaperCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperCell.swift; sourceTree = "<group>"; };
 		F6E3433623BAD4B5005B62A2 /* WallpaperCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WallpaperCell.xib; sourceTree = "<group>"; };
 		F6E3433923BADC02005B62A2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -178,6 +182,8 @@
 				F6CE53CE23B9D7DF00B42791 /* UserService.swift */,
 				F65645EC23E69FEE008FDD04 /* QuizService.swift */,
 				F65645EE23E6A974008FDD04 /* StarService.swift */,
+				F6D9BEB023E7F2C7005F0690 /* InfoService.swift */,
+				F6B053A623E9457400BD8045 /* allInfo.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -336,17 +342,21 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-World Culture Deck/Pods-World Culture Deck-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CodableFirebase/CodableFirebase.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableFirebase.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -363,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6E3433C23BAE02F005B62A2 /* AllDecksCell.swift in Sources */,
+				F6D9BEB123E7F2C7005F0690 /* InfoService.swift in Sources */,
 				F61DB99623DC136C008943C6 /* QuizVC.swift in Sources */,
 				F6CE53AB23B99E7B00B42791 /* World_Culture_Deck.xcdatamodeld in Sources */,
 				F6CE53A623B99E7A00B42791 /* AppDelegate.swift in Sources */,
@@ -376,6 +387,7 @@
 				F6CE53C923B9A81900B42791 /* LoginViewController.swift in Sources */,
 				F65645EF23E6A974008FDD04 /* StarService.swift in Sources */,
 				F6CE53A823B99E7A00B42791 /* SceneDelegate.swift in Sources */,
+				F6B053A723E9457400BD8045 /* allInfo.swift in Sources */,
 				F6A6CA6E23D6ADF0007158B8 /* InfoController.swift in Sources */,
 				F6CE53CD23B9D5CD00B42791 /* CreateUsernameViewController.swift in Sources */,
 				F62E07E323D685B400A5D157 /* CountryController.swift in Sources */,
