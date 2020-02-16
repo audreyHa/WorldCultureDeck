@@ -17,10 +17,12 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     @IBOutlet weak var starLabel: UILabel!
     
     var collectionViewFlowLayout: UICollectionViewFlowLayout!
+    var countryNames: [String]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        countryNames=["Ghana","Lebanon","Mexico","Navajo Nation","Norway","Roma","South Africa","South Korea","Tonga"]
+        
         setupCollectionView()
         StarService.displayStars(myLabel: starLabel)
         InfoService.insertAllCountryInfo()
@@ -123,13 +125,15 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
         if(collectionView==allDeckCollectionView){
-            return 3
+            return 9
         }else{
-            return 10
+            return 0
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        var countryName=countryNames[indexPath.row]
+        UserDefaults.standard.set(countryName, forKey:"countryName")
         performSegue(withIdentifier: "countryController", sender: nil)
     }
     

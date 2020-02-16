@@ -58,35 +58,28 @@ class CountryController: UIViewController {
         quizButton.layer.cornerRadius=10
         linksVideoButton.titleLabel?.adjustsFontSizeToFitWidth=true
         quizButton.titleLabel?.adjustsFontSizeToFitWidth=true
-        
-        //COMMENT: DELETE THIS LATER
-        UserDefaults.standard.set("South Korea",forKey:"countryName")
-        
+
     }
     
     @IBAction func clothingPressed(_ sender: Any) {
-        UserDefaults.standard.set("South Korea",forKey:"countryName")
         UserDefaults.standard.set("Clothing",forKey:"infoType")
         performSegue(withIdentifier: "infoController", sender: nil)
         
     }
     
     @IBAction func musicPressed(_ sender: Any) {
-        UserDefaults.standard.set("South Korea",forKey:"countryName")
         UserDefaults.standard.set("Music",forKey:"infoType")
         performSegue(withIdentifier: "infoController", sender: nil)
         
     }
     
     @IBAction func artPressed(_ sender: Any) {
-        UserDefaults.standard.set("South Korea",forKey:"countryName")
         UserDefaults.standard.set("Art",forKey:"infoType")
         performSegue(withIdentifier: "infoController", sender: nil)
         
     }
     
     @IBAction func foodPressed(_ sender: Any) {
-        UserDefaults.standard.set("South Korea",forKey:"countryName")
         UserDefaults.standard.set("Food",forKey:"infoType")
         performSegue(withIdentifier: "infoController", sender: nil)
         
