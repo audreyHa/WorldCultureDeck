@@ -215,7 +215,7 @@ struct InfoService{
                                           ] //end of Norway images
             ], //end of all Norway content
             "South Africa":["Text":
-                ["Clothing":["zero":["zero":"South Africa is known for its diversity, with Black, white, Mixed (Coloured), and Asian as the largest racial groups.",
+                ["Clothing":["zero":["zero":"South Africa is known for its diversity, with Black, White, Mixed, and Asian as the largest racial groups.",
                                 "one":"The traditional clothes for the Zulus (ethnic group) consist of animal skins for the men and skirts embellished with beads for the women."],
                              "one":["zero":"Traditional clothes for the Xhosa (ethnic group) consist of shawls and capes.",
                                 "one":"These shawls have detailed designs sewn onto them. Another Xhosa tradition is face-painting."]],
@@ -223,7 +223,7 @@ struct InfoService{
                              "one":"Popular genres in South Africa are kwaito (African house music), jazz, hip hop, Afrikaans rock, African gospel, and more."],
                           "one":["zero":"Zulu traditional dances have stomping on the ground, weapons, and shields.",
                                  "one":"Traditional Xhosa dances heavily involve group singing and clapping as an accompaniment to dancing. Instruments include mouth harps, rattles, whistles, flute, and stringed-instruments."]],
-                 "Art":["zero":["zero":"The oldest Afgrican hunter-gatherers are the San Bushman and lived in South Africa’s Drakensberg mountains 4,000 years ago.",
+                 "Art":["zero":["zero":"The oldest African hunter-gatherers are the San Bushman and lived in South Africa’s Drakensberg mountains 4,000 years ago.",
                                 "one":"The group painted a significant amount of art on cave and rock walls, creating sub-Saharan Africa’s largest collection of rock paintings."],
                         "one":["zero":"The Ndebele people are famous for their beadwork and murals on buildings.",
                                "one":"They initially used soot, ash, and clay for the mural colors, but colored paints are more widely used today. "]],
@@ -247,7 +247,7 @@ struct InfoService{
                                               "one":["zero":"SAFunFact3","one":"SAFunFact4"]]
                                           ] //end of South Africa images
             ], //end of all South Africa content
-            "The Romani":["Text":
+            "Roma":["Text":
                 ["Clothing":["zero":["zero":"The traditional clothing for Roma women in Finland includes a velvet skirt and long-sleeve blouse.",
                                 "one":"Currently, many Roma women wear lighter skirts, and jewellery, typically gold jewellery, is an important aspect of the outfit."],
                              "one":["zero":"Roma men do not wear as many traditional clothes as Roma women.",
@@ -286,66 +286,57 @@ struct InfoService{
         let quizInfoArray: [String:[String:[String:Any]]]=[
         "Ghana":
         ["Quiz Questions":[
-            "zero":["zero":"Kente is:","one":"The traditional cloth of Ghana, used to make shirts/smocks","two":"A prominent type of dance","three":"A popular dish"],
-            "one":["zero":"Wood carving is a traditional Ghanaian art form, used to create:","one":"Stools","two":"Drums","three":"All of the above"],
-            "two":["zero":"Fufu is a spicy tomato soup with a paste that contains:","one":"Sweet potatoes and eggs","two":"Soybeans","three":"Cassava and plantains"]],
-        "Quiz Answers":["zero":"A","one":"C","two":"C"]],
+            "zero":["zero":"Kente is:","one":"  The traditional cloth of Ghana, used to make shirts/smocks","two":"  A prominent type of dance","three":"  A popular dish"],
+            "one":["zero":"Wood carving is a traditional Ghanaian art form, used to create:","one":"  Stools","two":"  Drums","three":"  All of the above"],
+            "two":["zero":"Fufu is a spicy tomato soup with a paste that contains:","one":"  Sweet potatoes and eggs","two":"  Soybeans","three":"  Cassava and plantains"]]],
         
         "Lebanon":
         ["Quiz Questions":[
-            "zero":["zero":"Traditional clothes for men consist of:","one":"Dark baggy trousers, white shirt","two":"Dark Vest, red/black belt, headdress","three":"All of the above"],
-            "one":["zero":"The tablah, a hand drum… ","one":"Is often decorated with wood, tiles, and metal","two":"Has a narrow opening","three":"Is not very popular in Lebanon"],
-            "two":["zero":"People in Lebanon almost always eat… ","one":"Noodles and dumplings","two":"With family/in a community","three":"Quesadillas and chilaquiles"]],
-        "Quiz Answers":["zero":"C","one":"A","two":"B"]],
+            "zero":["zero":"Traditional clothes for men consist of:","one":"  Dark baggy trousers, white shirt","two":"  Dark Vest, red/black belt, headdress","three":"  All of the above"],
+            "one":["zero":"The tablah, a hand drum… ","one":"  Is often decorated with wood, tiles, and metal","two":"  Has a narrow opening","three":"  Is not very popular in Lebanon"],
+            "two":["zero":"People in Lebanon almost always eat… ","one":"  Noodles and dumplings","two":"  With family/in a community","three":"  Quesadillas and chilaquiles"]]],
         
         "Mexico":
         ["Quiz Questions":[
-            "zero":["zero":"Huipils are:","one":"A popular street food","two":"Traditional Mexican tunics","three":"Traditional Mexican shoes"],
-            "one":["zero":"Alebrijes are hand-painted sculptures of creatures and are:","one":"Vibrantly colored","two":"Black and white","three":"Red, Green, and White"],
-            "two":["zero":"Which two are traditional Mexican music forms?","one":"K-pop and Rock & Roll music","two":"Blues and Hip Hop music","three":"Mariachi and Ranchero music"]],
-         "Quiz Answers":["zero":"B","one":"A","two":"C"]],
+            "zero":["zero":"Huipils are:","one":"  A popular street food","two":"  Traditional Mexican tunics","three":"  Traditional Mexican shoes"],
+            "one":["zero":"Alebrijes are hand-painted sculptures of creatures and are:","one":"  Vibrantly colored","two":"  Black and white","three":"  Red, Green, and White"],
+            "two":["zero":"Which two are traditional Mexican music forms?","one":"  K-pop and Rock & Roll music","two":"  Blues and Hip Hop music","three":"  Mariachi and Ranchero music"]]],
         
         "Navajo Nation":
         ["Quiz Questions":[
-        "zero":["zero":"Which gemstone is the most important in Navajo culture?","one":"Rubies","two":"Turquoise","three":"Amethyst"],
-        "one":["zero":"What did the Navajo Code Talkers do?","one":"Transmit key battle info for the U.S. marines during WW2","two":"Create the Diné language","three":"Teach the Diné language in schools"],
-        "two":["zero":"Navajo women’s traditional clothing includes:","one":"Trousers and a vest","two":"A smock made of Kente cloth","three":"Velvet/cotton skirt, velvet blouse, deer moccasins"]],
-         "Quiz Answers":["zero":"B","one":"A","two":"C"]],
+        "zero":["zero":"Which gemstone is the most important in Navajo culture?","one":"  Rubies","two":"  Turquoise","three":"  Amethyst"],
+        "one":["zero":"What did the Navajo Code Talkers do?","one":"  Transmit key battle info for the U.S. marines during WW2","two":"  Create the Diné language","three":"  Teach the Diné language in schools"],
+        "two":["zero":"Navajo women’s traditional clothing includes:","one":"  Trousers and a vest","two":"  A smock made of Kente cloth","three":"  Velvet/cotton skirt, velvet blouse, deer moccasins"]]],
         
         "Norway":
         ["Quiz Questions":[
-        "zero":["zero":"What is the bunad?","one":"Norway’s traditional tight-fitting, wool dress","two":"Norwegian traditional shoes","three":"A type of folk dance"],
-        "one":["zero":"Which instrument is prominent in Norwegian folk music?","one":"The Hardanger fiddle","two":"The Daegeum flute","three":"The Djembe drum"],
-        "two":["zero":"What landform is Norway famous for?","one":"Deserts","two":"Fjords","three":"Volcanoes"]],
-         "Quiz Answers":["zero":"A","one":"A","two":"B"]],
+        "zero":["zero":"What is the bunad?","one":"  Norway’s traditional tight-fitting, wool dress","two":"  Norwegian traditional shoes","three":"  A type of folk dance"],
+        "one":["zero":"Which instrument is prominent in Norwegian folk music?","one":"  The Hardanger fiddle","two":"  The Daegeum flute","three":"  The Djembe drum"],
+        "two":["zero":"What landform is Norway famous for?","one":"  Deserts","two":"  Fjords","three":"  Volcanoes"]]],
         
         "South Africa":
         ["Quiz Questions":[
-        "zero":["zero":"Xhosa (ethnic group) traditional clothing consists of:","one":"Shawls and capes","two":"Face painting","three":"All of the above"],
-        "one":["zero":"South Africa’s national anthem is sung in:","one":"English","two":"Afrikaans","three":"5 different languages"],
-        "two":["zero":"5 different languages Sub-Saharan Africa’s largest collection of rock paintings is in:","one":"Zambia","two":"South Africa","three":"Democratic Republic of the Congo"]],
-         "Quiz Answers":["zero":"C","one":"C","two":"B"]],
+        "zero":["zero":"Xhosa (ethnic group) traditional clothing consists of:","one":"  Shawls and capes","two":"  Face painting","three":"  All of the above"],
+        "one":["zero":"South Africa’s national anthem is sung in:","one":"  English","two":"  Afrikaans","three":"  5 different languages"],
+        "two":["zero":"Sub-Saharan Africa’s largest collection of rock paintings is in:","one":"  Zambia","two":"  South Africa","three":"  Democratic Republic of the Congo"]]],
         
         "South Korea":
         ["Quiz Questions":[
-        "zero":["zero":"For women, the Hanbok dress consists of what?","one":"Pants and jeans","two":"Fitted top jacket and wide, flexible skirt","three":"Vest and pants"],
-        "one":["zero":"What is the name of the most popular K-pop group?","one":"KBS","two":"ABC","three":"BTS"],
-        "two":["zero":"Which of the following are 2 types of Korean meat:","one":"Kimchi and Bibimbap","two":"Bulgogi and Galbi","three":"Seoul and Busan"]],
-         "Quiz Answers":["zero":"B","one":"C","two":"B"]],
+        "zero":["zero":"For women, the Hanbok dress consists of what?","one":"  Pants and jeans","two":"  Fitted top jacket and wide, flexible skirt","three":"  Vest and pants"],
+        "one":["zero":"What is the name of the most popular K-pop group?","one":"  KBS","two":"  ABC","three":"  BTS"],
+        "two":["zero":"Which of the following are 2 types of Korean meat:","one":"  Kimchi and Bibimbap","two":"  Bulgogi and Galbi","three":"  Seoul and Busan"]]],
         
-        "The Romani":
+        "Roma":
         ["Quiz Questions":[
-        "zero":["zero":"What is the traditional clothing for Roma women?","one":"Shirt and trousers","two":"Velvet or light skirt, long-sleeve blouse, jewellery","three":"A single long dress"],
-        "one":["zero":"The Romani originated from ______ and the majority currently reside in ______","one":"Northern India, Europe","two":"East Asia, America","three":"Latin America, Europe"],
-        "two":["zero":"Romani music groups in Hungary:","one":"Played without sheet music, instead playing by ear","two":"Became popular during the 1948 Hungarian Revolution","three":"All of the above"]],
-         "Quiz Answers":["zero":"B","one":"A","two":"C"]],
+        "zero":["zero":"What is the traditional clothing for Roma women?","one":"  Shirt and trousers","two":"  Velvet or light skirt, long-sleeve blouse, jewellery","three":"  A single long dress"],
+        "one":["zero":"The Romani originated from ______ and the majority currently reside in ______","one":"  Northern India, Europe","two":"  East Asia, America","three":"  Latin America, Europe"],
+        "two":["zero":"Romani music groups in Hungary:","one":"  Played without sheet music, instead playing by ear","two":"  Became popular during the 1948 Hungarian Revolution","three":"  All of the above"]]],
         
         "Tonga":
         ["Quiz Questions":[
-        "zero":["zero":"The traditional Tongan tupenu (cloth wrapped around waist) is worn:","one":"Only special occasions","two":"On weekends","three":"Every day"],
-        "one":["zero":"A Ta’ovala is a:","one":"Floor mat","two":"Waist mat worn for special occasions","three":"Type of T-Shirt"],
-        "two":["zero":"Traditional Tongan women’s crafts include:","one":"Woven mats","two":"Traditional dance clothing","three":"All of the above"]],
-         "Quiz Answers":["zero":"C","one":"B","two":"C"]]]
+        "zero":["zero":"The traditional Tongan tupenu (cloth wrapped around waist) is worn:","one":"  Only special occasions","two":"  On weekends","three":"  Every day"],
+        "one":["zero":"A Ta’ovala is a:","one":"  Floor mat","two":"  Waist mat worn for special occasions","three":"  Type of T-Shirt"],
+        "two":["zero":"Traditional Tongan women’s crafts include:","one":"  Woven mats","two":"  Traditional dance clothing","three":"  All of the above"]]]]
         
         quizInfoRef.setValue(quizInfoArray){(error, _) in
             if let error=error{
@@ -355,15 +346,15 @@ struct InfoService{
         
         let countryBlurbsRef=Database.database().reference().child("Country Blurbs")
         let blurbsArray: [String:String]=[
-            "Ghana":"Ghana is a country in Western Africa, and its capital is Accra.",
-            "Lebanon":"Lebanon is a country in the Levant region of the Middle East, bordering the Mediterranean Sea. The capital is Beirut.",
-            "Mexico":"Mexico is a country in North America, and its capital is Mexico City.",
+            "Ghana":"Ghana is a country in Western Africa. Capital: Accra",
+            "Lebanon":"Lebanon is a country in the Middle East, bordering the Mediterranean Sea. Capital: Beirut",
+            "Mexico":"Mexico is a country in North America. Capital: Mexico City",
             "Navajo Nation":"Navajo Nation is an American Indian territory spanning 27,000+ square miles, covering parts of Utah, Arizona, and New Mexico.",
-            "Norway":"Norway is a country in Northern Europe, and its capital is Oslo.",
-            "South Africa":"South Africa is a country in Africa and has 3 capitals (Pretoria, Cape Town, and Bloemfontein), one for different government branches.",
-            "South Korea":"South Korea is a country in East Asia, and the capital is Seoul.",
-            "The Romani":"The Roma or Romani are a traditionally nomadic ethnic group residing worldwide, particularly in Europe. The group is also known as G#psies, but many Roma consider this term to be a slur. World Romani population range from 2-5 million.",
-            "Tonga":"Tonga is a Polynesian country in the southwestern Pacific Ocean. It consists of 170+ islands, and the capital is Nuku’alofa."]
+            "Norway":"Norway is a country in Northern Europe. Capital: Oslo",
+            "South Africa":"South Africa is a country in Africa and has 3 capitals (Pretoria, Cape Town, and Bloemfontein) for different government branches.",
+            "South Korea":"South Korea is a country in East Asia. Capital: Seoul",
+            "Roma":"The Roma or Romani are an ethnic group mostly residing in Europe. The group is also known as G#psies, but many Romani consider this term to be a slur. 2-5 million Romani live worldwide.",
+            "Tonga":"Tonga is a Polynesian country in the southwestern Pacific Ocean. It consists of 170+ islands. Capital: Nuku’alofa."]
         
         countryBlurbsRef.setValue(blurbsArray){(error, _) in
             if let error=error{

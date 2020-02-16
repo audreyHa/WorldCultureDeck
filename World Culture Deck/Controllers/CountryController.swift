@@ -8,6 +8,7 @@
 
 import UIKit
 import Kingfisher
+import FirebaseDatabase
 
 class CountryController: UIViewController {
 
@@ -21,18 +22,35 @@ class CountryController: UIViewController {
     @IBOutlet weak var quizButton: UIButton!
     @IBOutlet weak var linksVideoButton: UIButton!
     @IBOutlet weak var starLabel: UILabel!
+    @IBOutlet weak var countryNameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         StarService.displayStars(myLabel: starLabel)
-        
-        mapImage.image=UIImage(named: "koreaMap")
+
         mapImage.layer.cornerRadius=10
         mapImage.clipsToBounds=true
         
+        countryDescription.adjustsFontSizeToFitWidth=true
+        
+        linksVideoButton.layer.cornerRadius=10
+        quizButton.layer.cornerRadius=10
+        linksVideoButton.titleLabel?.adjustsFontSizeToFitWidth=true
+        quizButton.titleLabel?.adjustsFontSizeToFitWidth=true
+
+        setUpForCountry()
+    }
+    
+    func setUpForCountry(){
+        var countryName=UserDefaults.standard.string(forKey: "countryName")!
+        countryNameLabel.text=countryName
+        
+        var countryMapString=countryName+"Map"
+        mapImage.image=UIImage(named: countryMapString)
+
         let buttonsArray=[clothingButton, musicButton, artButton, foodButton]
-        let images=[UIImage(named: "korea1"),UIImage(named: "korea2"),UIImage(named: "korea3"),UIImage(named: "korea4")]
+        let images=[UIImage(named: "\(countryName)1"),UIImage(named: "\(countryName)2"),UIImage(named: "\(countryName)3"),UIImage(named: "\(countryName)4")]
         
         for i in 0...buttonsArray.count-1{
             var myButton=buttonsArray[i]
@@ -40,25 +58,33 @@ class CountryController: UIViewController {
             myButton!.clipsToBounds=true
             myButton!.setBackgroundImage(darkenImage(originalImage: images[i]!), for: .normal)
             myButton!.adjustsImageWhenHighlighted=false
+            myButton!.titleLabel?.adjustsFontSizeToFitWidth=true
 
         }
         
-        countryDescription.text="South Korea is a country in East Asia. Major cities include Seoul (capital) and Busan"
-        countryDescription.adjustsFontSizeToFitWidth=true
+        self.returnCountryBlurb{value in
+            self.countryDescription.text=value
+        }
         
         UIGraphicsBeginImageContext(blueBackground.frame.size)
-        UIImage(named: "southKoPalace.jpg")?.draw(in: blueBackground.bounds)
+        UIImage(named: "\(countryName)Background")?.draw(in: blueBackground.bounds)
         
         if let image = UIGraphicsGetImageFromCurrentImageContext(){
             UIGraphicsEndImageContext()
             blueBackground.backgroundColor = UIColor(patternImage: image.alpha(0.2))
         }
-        
-        linksVideoButton.layer.cornerRadius=10
-        quizButton.layer.cornerRadius=10
-        linksVideoButton.titleLabel?.adjustsFontSizeToFitWidth=true
-        quizButton.titleLabel?.adjustsFontSizeToFitWidth=true
+    }
+    
+    func returnCountryBlurb(completionHandler: @escaping (String) -> Void) {
+        print("Running return country blurb")
 
+        var countryName=UserDefaults.standard.string(forKey: "countryName")!
+        let blurbRef=Database.database().reference().child("Country Blurbs").child(countryName)
+        
+        blurbRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as! String
+            completionHandler(value)
+        })
     }
     
     @IBAction func clothingPressed(_ sender: Any) {
@@ -80,7 +106,7 @@ class CountryController: UIViewController {
     }
     
     @IBAction func foodPressed(_ sender: Any) {
-        UserDefaults.standard.set("Food",forKey:"infoType")
+        UserDefaults.standard.set("Fun Facts",forKey:"infoType")
         performSegue(withIdentifier: "infoController", sender: nil)
         
     }

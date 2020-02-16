@@ -36,7 +36,7 @@ struct QuizService{
                    let starCountRef=Database.database().reference().child("users").child(currentUID).child("stars")
                    starCountRef.runTransactionBlock({(mutableData) -> TransactionResult in
                        let currentStarCount=mutableData.value as? String ?? "0"
-                       mutableData.value=String(Int(currentStarCount)!+incrementBy)
+                       mutableData.value=String(Int(currentStarCount)!+(incrementBy*10))
                        return TransactionResult.success(withValue: mutableData)
                        
                    }, andCompletionBlock: {(error,_,_) in
@@ -61,7 +61,7 @@ struct QuizService{
             if(currentScore=="0"){
                 myLabel.text = ""
             }else{
-                myLabel.text = "Top Score: \(currentScore)/10"
+                myLabel.text = "Top Score: \(currentScore)/3"
             }
         })
     }

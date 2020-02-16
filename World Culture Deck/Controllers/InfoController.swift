@@ -17,7 +17,7 @@ class InfoController: UIViewController {
     @IBOutlet weak var secondLabel: UILabel!
     @IBOutlet weak var secondImage: UIImageView!
     @IBOutlet weak var backButton: UIButton!
-    @IBOutlet weak var slider: UISlider!
+
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var pageCountLabel: UILabel!
     @IBOutlet weak var blueBackground: UIView!
@@ -31,7 +31,6 @@ class InfoController: UIViewController {
 
         backButton.layer.cornerRadius=10
         nextButton.layer.cornerRadius=10
-        slider.isEnabled=false
         
         StarService.displayStars(myLabel: starLabel)
         
@@ -45,7 +44,7 @@ class InfoController: UIViewController {
         
         numberWords=["zero","one","two","three","four","five","six"]
         setUpPage()
-        setSlider()
+        setPageNumber()
     }
     
     func setUpPage(){
@@ -96,7 +95,7 @@ class InfoController: UIViewController {
         
     }
     
-    func setSlider(){
+    func setPageNumber(){
         var textCategoryArray: [String:[String:String]]=[:]
         
         self.returnAllInfo{tempAllInfo in
@@ -106,12 +105,6 @@ class InfoController: UIViewController {
             var countryTextArray: [String:Any]=countryArray["Text"]! as! [String : Any]
             textCategoryArray=countryTextArray[infoType]! as! [String : [String : String]]
             
-            //setting the min and max values of the slider
-            self.slider.minimumValue=0
-            self.slider.maximumValue=Float(textCategoryArray.count-1)
-            
-            //setting current value of slider and page count
-            self.slider.setValue(Float(self.pageCount), animated: true)
             self.pageCountLabel.text="\(self.pageCount+1)/\(textCategoryArray.count)"
         }
     }
@@ -119,7 +112,7 @@ class InfoController: UIViewController {
     @IBAction func backPressed(_ sender: Any) {
         if(pageCount>0){
             pageCount-=1
-            setSlider()
+            setPageNumber()
             setUpPage()
         }
     }
@@ -137,12 +130,10 @@ class InfoController: UIViewController {
             //check to make sure you're not increasing page count beyond limit
             if(self.pageCount<textCategoryArray.count-1){
                 self.pageCount+=1
-                self.setSlider()
+                self.setPageNumber()
                 self.setUpPage()
             }
         }
-        
-        
     }
 
     @IBAction func xPressed(_ sender: Any) {

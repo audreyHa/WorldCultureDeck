@@ -27,53 +27,6 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         StarService.displayStars(myLabel: starLabel)
         InfoService.insertAllCountryInfo()
         
-        var someArray=returnTextCategoryDict()
-        print(someArray)
-    }
-    
-    func returnAllInfo(completionHandler: @escaping ([String:Any]) -> Void) {
-        print("I am running returnAllInfo")
-        var tempAllInfo: [String:Any]=[:]
-        
-        let allCountriesRef=Database.database().reference().child("countryInfo")
-        
-        allCountriesRef.observeSingleEvent(of: .value, with: { (snapshot) in
-            let value = snapshot.value as! NSDictionary
-            tempAllInfo=value as! [String:Any]
-            
-            completionHandler(tempAllInfo)
-        })
-    }
-    
-    func returnTextCategoryDict() -> [String:[String:String]]{
-        print("I am running returnTextCategoryDict")
-        var textCategoryArray: [String:[String:String]]=[:]
-        
-        self.returnAllInfo{tempAllInfo in
-            var countryName: String=UserDefaults.standard.string(forKey: "countryName")!
-            var infoType: String=UserDefaults.standard.string(forKey: "infoType")!
-            var countryArray: [String:Any]=tempAllInfo[countryName]! as! [String : Any]
-            var countryTextArray: [String:Any]=countryArray["Text"]! as! [String : Any]
-            textCategoryArray=countryTextArray[infoType]! as! [String : [String : String]]
-        }
-
-        return textCategoryArray
-    }
-    
-    func returnImageNameDict() -> [String:[String:String]]{
-        print("I am running returnImageNameDict")
-        var infoImageArray: [String:[String:String]]=[:]
-        
-        self.returnAllInfo{tempAllInfo in
-            var countryName: String=UserDefaults.standard.string(forKey: "countryName")!
-            var infoType: String=UserDefaults.standard.string(forKey: "infoType")!
-            var countryArray: [String:Any]=tempAllInfo[countryName]! as! [String : Any]
-            var countryImageNameArray: [String:Any]=countryArray["ImageNames"]! as! [String : Any]
-            infoImageArray=countryImageNameArray[infoType]! as! [String : [String : String]]
-            
-        }
-
-        return infoImageArray
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -142,7 +95,9 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
             let cell=collectionView.dequeueReusableCell(withReuseIdentifier: "AllDecksCell", for: indexPath) as! AllDecksCell
                 cell.layer.cornerRadius=10
                 cell.regionLabel.adjustsFontSizeToFitWidth=true
+                cell.regionLabel.text=countryNames[indexPath.row]
                 cell.regionImage.layer.cornerRadius=10
+                cell.regionImage.image=UIImage(named: "\(countryNames[indexPath.row])Cover")
                 return cell
         }else{
             let cell=collectionView.dequeueReusableCell(withReuseIdentifier: "CompletedDecksCell", for: indexPath) as! CompletedDecksCell

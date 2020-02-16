@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class QuizVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
@@ -15,23 +16,9 @@ class QuizVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     @IBOutlet weak var topScoreLabel: UILabel!
     @IBOutlet weak var redoButton: UIButton!
     @IBOutlet weak var starLabel: UILabel!
-    
-    var allCountryQuizzes: [String: [[String]]] =
-        ["South Korea":[
-            ["The traditional Korean Hanbok is worn for what type of event?", "  Only special occasions or Korean holidays", "  Every day", "  On weekends"],
-            ["For women, a Hanbok consists of what?","  Pants and jeans", "  Fitted top jacket and wide, flexible skirt", "  Vest and pants"],
-            ["What is the name of the most popular K-pop group?","  KBS", "  ABC", "  BTS"],
-            ["Arirang is the most famous/culturally important Korean folk song. Which of the following is true?","  There is only one variation of Arirang in Korea", "  Different regions have their own musical and lyrical variations", "  Only Eastern parts of Korea sing Arirang today"],
-            ["Kimchi is:","  A type of Korean painting style", "  A major city in South Korea", "  A spicy, salty, fermented cabbage dish"],
-            ["During the Joseon dynasty, Korean paintings transitioned from:","  Idealized landscapes >>> Day-to-day illustrations of people", "  Paintings of war >>> Landscape paintings", "  Paintings of animals >>> Paintings of oceans"],
-            ["What were the 3 main types of Korean pottery?","  Pottery with dragons, flowers, or animal designs", "  Blue-green, white porcelain, stone", "  Trick question--white porcelain is the only type of Korean pottery"],
-            ["Which of the following are 2 types of Korean meat:","  Kimchi and Bibimpap", "  Bulgogi and Galbi", "  Seoul and Busan"],
-            ["What is the capital of South Korea?","  Seoul", "  Busan", "  Incheon"]]]
-    
-    var allCountryCorrectAnswers: [String: [String]]=["South Korea":["A","B","C","B","C","A","B","B","A"]]
-    
-    var userAnswersString: [String]=["","","","","","","","",""]
-    var userAnswers: [String]=["","","","","","","","",""]
+
+    var userAnswersString: [String]=["","",""]
+    var userAnswers: [String]=["","",""]
     
     
     override func viewDidLoad() {
@@ -43,6 +30,7 @@ class QuizVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         NotificationCenter.default.addObserver(self, selector: #selector(self.newAnswerPressed(notification:)), name: Notification.Name("newAnswerPressed"), object: nil)
         
         tableView.allowsSelection=false
+        
         QuizService.displayQuizScore(myLabel: topScoreLabel)
         StarService.displayStars(myLabel: starLabel)
     }
@@ -62,32 +50,36 @@ class QuizVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         tableView.reloadData()
     }
     
-    func returnCountryQuizArray() -> [[String]]{
-        var countryName: String=UserDefaults.standard.string(forKey: "countryName")!
-        var countryQuizArray: [[String]]=allCountryQuizzes[countryName]!
+    func returnCountryQuizQuestions(completionHandler: @escaping ([String:[String:String]]) -> Void) {
+        var countryName=UserDefaults.standard.string(forKey: "countryName")!
+        let quizRef=Database.database().reference().child("quizInfo").child(countryName).child("Quiz Questions")
         
-        return countryQuizArray
+        quizRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as! [String:[String:String]]
+            completionHandler(value)
+        })
     }
-    
-    func returnCorrectAnswersArray() -> [String]{
-        var countryName: String=UserDefaults.standard.string(forKey: "countryName")!
-        var countryQuizArray: [String]=allCountryCorrectAnswers[countryName]!
+
+    func returnCorrectAnswers() -> [String:[String]] {
+        let correctAnswersDict=["Ghana":["A","C","C"],"Lebanon":["C","A","B"],"Mexico":["B","A","C"],"Navajo Nation":["B","A","C"],"Norway":["A","A","B"],"Roma":["B","A","C"],"South Africa":["C","C","B"],"South Korea":["B","C","B"],"Tonga":["C","B","C"]]
         
-        return countryQuizArray
+        return correctAnswersDict
     }
     
     @IBAction func submitPressed(_ sender: Any) {
-        var isFeedback=UserDefaults.standard.bool(forKey: "isFeedback")
-        if(isFeedback==nil || isFeedback==false){
+        let isFeedback=UserDefaults.standard.bool(forKey: "isFeedback")
+        if(isFeedback==false){
             UserDefaults.standard.set(true,forKey:"isFeedback")
             tableView.reloadData()
             
-            var correctAnswersArray=returnCorrectAnswersArray()
-            var totalQuestionNumber=correctAnswersArray.count
-            var totalCorrect=totalQuestionNumber
-            for i in 0...correctAnswersArray.count-1{
-                if(userAnswers[i] != correctAnswersArray[i]){
-                    totalCorrect-=1
+            let countryName=UserDefaults.standard.string(forKey: "countryName")!
+            let correctAnswersArray=returnCorrectAnswers()
+            
+            var totalCorrect=0
+            
+            for i in 0...correctAnswersArray[countryName]!.count-1{
+                if(userAnswers[i] == correctAnswersArray[countryName]![i]){
+                    totalCorrect+=1
                 }
             }
 
@@ -103,8 +95,8 @@ class QuizVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBAction func redoPressed(_ sender: Any) {
         UserDefaults.standard.set(false,forKey:"isFeedback")
-        userAnswersString=["","","","","","","","",""]
-        userAnswers=["","","","","","","","",""]
+        userAnswersString=["","",""]
+        userAnswers=["","",""]
         tableView.reloadData()
     }
     
@@ -114,90 +106,92 @@ class QuizVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        var countryQuizArray=returnCountryQuizArray()
         
-        return countryQuizArray.count
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "QuizCell", for: indexPath) as! QuizCell
         
         cell.questionSurrounding.layer.cornerRadius=10
+        let numberWords=["zero","one","two","three","four","five","six"]
         
-        var countryQuizArray=returnCountryQuizArray()
-        cell.questionLabel.text=countryQuizArray[indexPath.row][0]
-        
-        var optionButtons=[cell.firstOption, cell.secondOption, cell.thirdOption]
-        
-        var isFeedback=UserDefaults.standard.bool(forKey: "isFeedback")
-        if(isFeedback){
-            for i in 1...3{
-                var myButton=optionButtons[i-1]
-                myButton!.layer.cornerRadius=10
-                myButton!.titleLabel?.adjustsFontSizeToFitWidth=true
-                
-                var optionTitle=countryQuizArray[indexPath.row][i]
-                myButton?.setTitle(optionTitle, for: .normal)
-                setButtonUNSelected(myButton: myButton!)
-            }
-            
-            var correctAnswersArray=returnCorrectAnswersArray()
-            var correctIndex=0
-            
-            for i in 0...countryQuizArray.count-1{
-                if(countryQuizArray[i].contains(cell.questionLabel.text!)){
-                    correctIndex=i
-                }
-            }
-            
-            if(correctAnswersArray[correctIndex] != userAnswers[correctIndex]){
-                switch(correctAnswersArray[correctIndex]){
-                case "A":
-                    setButtonSelected(myButton: cell.firstOption)
-                case "B":
-                    setButtonSelected(myButton: cell.secondOption)
-                default:
-                    setButtonSelected(myButton: cell.thirdOption)
-                }
-                    
-                switch(userAnswers[correctIndex]){
-                case "A":
-                    setButtonRed(myButton: cell.firstOption)
-                case "B":
-                    setButtonRed(myButton: cell.secondOption)
-                default:
-                    setButtonRed(myButton: cell.thirdOption)
-                }
-            }else{
-                switch(userAnswers[correctIndex]){
-                case "A":
-                    setButtonSelected(myButton: cell.firstOption)
-                case "B":
-                    setButtonSelected(myButton: cell.secondOption)
-                default:
-                    setButtonSelected(myButton: cell.thirdOption)
-                }
-            }
+        self.returnCountryQuizQuestions{value in
 
-        }else{
-            for i in 1...3{
-                var myButton=optionButtons[i-1]
-                myButton!.layer.cornerRadius=10
-                myButton!.titleLabel?.adjustsFontSizeToFitWidth=true
+            cell.questionLabel.text=value[numberWords[indexPath.row]]!["zero"]
+            
+            let optionButtons=[cell.firstOption, cell.secondOption, cell.thirdOption]
+            let countryName=UserDefaults.standard.string(forKey: "countryName")!
+            
+            let isFeedback=UserDefaults.standard.bool(forKey: "isFeedback")
+            if(isFeedback){
+                for i in 1...3{
+                    let myButton=optionButtons[i-1]
+                    myButton!.layer.cornerRadius=10
+                    myButton!.titleLabel?.adjustsFontSizeToFitWidth=true
+                    
+                    let optionTitle=value[numberWords[indexPath.row]]![numberWords[i]]
+                    myButton?.setTitle(optionTitle, for: .normal)
+                    self.setButtonUNSelected(myButton: myButton!)
+                }
                 
-                var optionTitle=countryQuizArray[indexPath.row][i]
+                let correctAnswersArray=self.returnCorrectAnswers()
+                var correctIndex=0
                 
-                myButton?.setTitle(optionTitle, for: .normal)
-                setButtonUNSelected(myButton: myButton!)
+                for j in 0...2{
+                    if((value[numberWords[j]]!["zero"]==cell.questionLabel.text! || value[numberWords[j]]!["one"]==cell.questionLabel.text!)||value[numberWords[j]]!["two"]==cell.questionLabel.text!){
+                        correctIndex=j
+                    }
+                }
                 
-                for answer in userAnswersString{
-                    if(answer==optionTitle){
-                        setButtonSelected(myButton: myButton!)
+                if(correctAnswersArray[countryName]![correctIndex] != self.userAnswers[correctIndex]){
+                    switch(correctAnswersArray[countryName]![correctIndex]){
+                    case "A":
+                        self.setButtonSelected(myButton: cell.firstOption)
+                    case "B":
+                        self.setButtonSelected(myButton: cell.secondOption)
+                    default:
+                        self.setButtonSelected(myButton: cell.thirdOption)
+                    }
+                        
+                    switch(self.userAnswers[correctIndex]){
+                    case "A":
+                        self.setButtonRed(myButton: cell.firstOption)
+                    case "B":
+                        self.setButtonRed(myButton: cell.secondOption)
+                    default:
+                        self.setButtonRed(myButton: cell.thirdOption)
+                    }
+                }else{
+                    switch(self.userAnswers[correctIndex]){
+                    case "A":
+                        self.setButtonSelected(myButton: cell.firstOption)
+                    case "B":
+                        self.setButtonSelected(myButton: cell.secondOption)
+                    default:
+                        self.setButtonSelected(myButton: cell.thirdOption)
+                    }
+                }
+
+            }else{
+                for i in 1...3{
+                    var myButton=optionButtons[i-1]
+                    myButton!.layer.cornerRadius=10
+                    myButton!.titleLabel?.adjustsFontSizeToFitWidth=true
+                    
+                    var optionTitle=value[numberWords[indexPath.row]]![numberWords[i]]
+                    myButton?.setTitle(optionTitle, for: .normal)
+                    self.setButtonUNSelected(myButton: myButton!)
+                    
+                    for answer in self.userAnswersString{
+                        if(answer==optionTitle){
+                            self.setButtonSelected(myButton: myButton!)
+                        }
                     }
                 }
             }
         }
-        
+
         return cell
     }
     
