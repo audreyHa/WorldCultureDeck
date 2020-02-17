@@ -41,38 +41,68 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U2m-1a-IMC">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username: Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ac-hF-9lw">
-                                                <rect key="frame" x="15" y="11" width="384" height="28"/>
-                                                <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="20"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="p50-HW-Tfh">
+                                                <rect key="frame" x="15" y="0.0" width="384" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ac-hF-9lw">
+                                                        <rect key="frame" x="0.0" y="0.0" width="289" height="50"/>
+                                                        <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zs7-3h-Cvz">
+                                                        <rect key="frame" x="304" y="0.0" width="80" height="50"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xah-wJ-dxV">
+                                                                <rect key="frame" x="0.0" y="0.0" width="35" height="50"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="35" id="DbY-Nz-pCd"/>
+                                                                </constraints>
+                                                                <color key="tintColor" red="0.16078431369999999" green="0.63137254899999995" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <state key="normal" image="star.fill" catalog="system">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vat-ls-cUd">
+                                                                <rect key="frame" x="35" y="0.0" width="45" height="50"/>
+                                                                <color key="tintColor" red="0.16078431369999999" green="0.63137254899999995" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="45" id="JLL-Lj-HFq"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="25"/>
+                                                                <color key="textColor" red="0.16078431369999999" green="0.63137254899999995" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="4ac-hF-9lw" firstAttribute="centerY" secondItem="U2m-1a-IMC" secondAttribute="centerY" id="34M-ON-Zsd"/>
-                                            <constraint firstItem="4ac-hF-9lw" firstAttribute="leading" secondItem="U2m-1a-IMC" secondAttribute="leading" constant="15" id="CUE-O2-UIo"/>
-                                            <constraint firstAttribute="trailing" secondItem="4ac-hF-9lw" secondAttribute="trailing" constant="15" id="bEg-Yq-aea"/>
+                                            <constraint firstItem="p50-HW-Tfh" firstAttribute="leading" secondItem="U2m-1a-IMC" secondAttribute="leading" constant="15" id="fMx-49-c2x"/>
+                                            <constraint firstItem="p50-HW-Tfh" firstAttribute="centerY" secondItem="U2m-1a-IMC" secondAttribute="centerY" id="hJ0-v0-t1u"/>
+                                            <constraint firstAttribute="trailing" secondItem="p50-HW-Tfh" secondAttribute="trailing" constant="15" id="otI-1w-NtM"/>
                                             <constraint firstAttribute="height" constant="50" id="yns-Yf-o3K"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tje-N4-8Nb">
-                                        <rect key="frame" x="15" y="65" width="384" height="295"/>
+                                        <rect key="frame" x="15" y="65" width="384" height="383"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="F9n-27-ik4">
-                                                <rect key="frame" x="15" y="15" width="354" height="265"/>
+                                                <rect key="frame" x="15" y="15" width="354" height="353"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="2QX-HN-G6z" userLabel="DecksCompleted">
-                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="28"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Decks Completed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v2V-pX-JKk">
-                                                                <rect key="frame" x="0.0" y="0.0" width="299" height="28"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="299" height="50"/>
                                                                 <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="20"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgq-r3-teH">
-                                                                <rect key="frame" x="329" y="0.0" width="25" height="28"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgq-r3-teH">
+                                                                <rect key="frame" x="329" y="0.0" width="25" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="25" id="P7c-IC-6MD"/>
                                                                 </constraints>
@@ -83,16 +113,16 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="RuO-Cy-N7h" userLabel="DecksRemaining">
-                                                        <rect key="frame" x="0.0" y="58" width="354" height="28"/>
+                                                        <rect key="frame" x="0.0" y="80" width="354" height="50"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Decks Remaining:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3Z-vT-kOi">
-                                                                <rect key="frame" x="0.0" y="0.0" width="299" height="28"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="299" height="50"/>
                                                                 <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="20"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3mo-gx-D3O" userLabel="DecksRemaining">
-                                                                <rect key="frame" x="329" y="0.0" width="25" height="28"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3mo-gx-D3O" userLabel="DecksRemaining">
+                                                                <rect key="frame" x="329" y="0.0" width="25" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="25" id="nKK-w4-cYU"/>
                                                                 </constraints>
@@ -103,16 +133,16 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ZK4-gG-jb5" userLabel="QuizScore">
-                                                        <rect key="frame" x="0.0" y="116" width="354" height="28"/>
+                                                        <rect key="frame" x="0.0" y="160" width="354" height="50"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Quiz Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vYi-Rd-90m">
-                                                                <rect key="frame" x="0.0" y="0.0" width="264" height="28"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="264" height="50"/>
                                                                 <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="20"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20/20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6S3-HU-mSZ" userLabel="DecksRemaining">
-                                                                <rect key="frame" x="294" y="0.0" width="60" height="28"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6S3-HU-mSZ" userLabel="DecksRemaining">
+                                                                <rect key="frame" x="294" y="0.0" width="60" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="60" id="CQ1-Og-qAF"/>
                                                                 </constraints>
@@ -123,16 +153,16 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Ban-zK-zFe" userLabel="WallpapersPurchased">
-                                                        <rect key="frame" x="0.0" y="174" width="354" height="28"/>
+                                                        <rect key="frame" x="0.0" y="240" width="354" height="50"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wallpapers Purchased:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ycy-Wk-omI">
-                                                                <rect key="frame" x="0.0" y="0.0" width="299" height="28"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# of Badges Earned:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ycy-Wk-omI">
+                                                                <rect key="frame" x="0.0" y="0.0" width="299" height="50"/>
                                                                 <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="20"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjS-u9-yCH" userLabel="DecksRemaining">
-                                                                <rect key="frame" x="329" y="0.0" width="25" height="28"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjS-u9-yCH" userLabel="DecksRemaining">
+                                                                <rect key="frame" x="329" y="0.0" width="25" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="25" id="Rli-DT-T3u"/>
                                                                 </constraints>
@@ -143,7 +173,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="NPb-vW-Veu" userLabel="Buttons">
-                                                        <rect key="frame" x="0.0" y="232" width="354" height="33"/>
+                                                        <rect key="frame" x="0.0" y="320" width="354" height="33"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7pc-ls-HsQ">
                                                                 <rect key="frame" x="0.0" y="0.0" width="146.5" height="33"/>
@@ -219,7 +249,12 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="gear" catalog="system" id="mGU-7J-YPY"/>
                     <connections>
+                        <outlet property="completedCountLabel" destination="fgq-r3-teH" id="dKr-Y2-JN9"/>
                         <outlet property="logoutButton" destination="7pc-ls-HsQ" id="YUJ-bU-V77"/>
+                        <outlet property="quizScoreCountLabel" destination="6S3-HU-mSZ" id="zSo-Ug-WFr"/>
+                        <outlet property="remainingCountLabel" destination="3mo-gx-D3O" id="pWB-ta-PQ3"/>
+                        <outlet property="settingsHeader" destination="4ac-hF-9lw" id="TMu-v2-u7V"/>
+                        <outlet property="starCountLabel" destination="Vat-ls-cUd" id="nh9-ID-Iuq"/>
                         <outlet property="suggestionButton" destination="fPi-Ts-sn1" id="pP1-IG-eqm"/>
                         <outlet property="surroundingGreyView" destination="Tje-N4-8Nb" id="OjM-0h-bDd"/>
                     </connections>
@@ -501,7 +536,7 @@
                                                                                         <constraint firstAttribute="width" secondItem="Qzf-ER-qU2" secondAttribute="height" multiplier="1:1" id="REh-Tp-NN5"/>
                                                                                     </constraints>
                                                                                 </imageView>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Africa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbc-CX-HzR">
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbc-CX-HzR">
                                                                                     <rect key="frame" x="0.0" y="144" width="159" height="50"/>
                                                                                     <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="20"/>
                                                                                     <nil key="textColor"/>
@@ -541,7 +576,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="XDF-7J-yZ3">
                                                 <rect key="frame" x="0.0" y="315.5" width="384" height="293.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Completed Decks: (12/25)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FeQ-C7-iNy">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Completed Decks:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FeQ-C7-iNy">
                                                         <rect key="frame" x="0.0" y="0.0" width="384" height="35"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="35" id="l4m-wZ-aPb"/>
@@ -576,7 +611,7 @@
                                                                                         <constraint firstAttribute="width" secondItem="asa-Kn-Hyg" secondAttribute="height" multiplier="1:1" id="4yh-Ld-ot0"/>
                                                                                     </constraints>
                                                                                 </imageView>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Europe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bg-Vy-fp0">
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bg-Vy-fp0">
                                                                                     <rect key="frame" x="0.0" y="136" width="151" height="50"/>
                                                                                     <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="20"/>
                                                                                     <nil key="textColor"/>
@@ -649,6 +684,7 @@
                     <connections>
                         <outlet property="allDeckCollectionView" destination="nJu-BA-weV" id="7Vs-B3-FCf"/>
                         <outlet property="completedCollectionView" destination="NfG-kC-o3y" id="47G-vO-gKi"/>
+                        <outlet property="completedDecksLabel" destination="FeQ-C7-iNy" id="ifH-0s-ANI"/>
                         <outlet property="starLabel" destination="tnT-bo-8YK" id="llg-gm-pDd"/>
                         <segue destination="oEm-XA-QTI" kind="show" identifier="countryController" id="UdE-sa-Igz"/>
                     </connections>
@@ -705,8 +741,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iRh-AB-kmg">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="South Korea" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rm3-pL-fcn">
-                                                <rect key="frame" x="15" y="11" width="384" height="28"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rm3-pL-fcn">
+                                                <rect key="frame" x="15" y="25" width="384" height="0.0"/>
                                                 <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -954,8 +990,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a6u-hc-j0b">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="South Korea" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="poV-Hi-Zfi">
-                                                <rect key="frame" x="15" y="11" width="384" height="28"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="poV-Hi-Zfi">
+                                                <rect key="frame" x="15" y="25" width="384" height="0.0"/>
                                                 <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1046,7 +1082,7 @@
                                                     <action selector="nextPressed:" destination="HX0-2h-ZkL" eventType="touchUpInside" id="ttL-pW-XUz"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1/2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYw-3U-5x3">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYw-3U-5x3">
                                                 <rect key="frame" x="220" y="0.0" width="164" height="60"/>
                                                 <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1166,8 +1202,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7JO-Hw-mj2">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="South Korea Quiz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQT-za-ngM">
-                                                <rect key="frame" x="15" y="11" width="384" height="28"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQT-za-ngM">
+                                                <rect key="frame" x="15" y="25" width="384" height="0.0"/>
                                                 <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1311,8 +1347,8 @@
                                             <outlet property="delegate" destination="dds-SJ-LGe" id="7mk-MQ-AiK"/>
                                         </connections>
                                     </tableView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1st Attempt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gel-gm-hNG">
-                                        <rect key="frame" x="20" y="70" width="162.5" height="35"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gel-gm-hNG">
+                                        <rect key="frame" x="20" y="70" width="0.0" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="Abs-59-Swf"/>
                                         </constraints>

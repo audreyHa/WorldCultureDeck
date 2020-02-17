@@ -61,7 +61,7 @@ class QuizVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     }
 
     func returnCorrectAnswers() -> [String:[String]] {
-        let correctAnswersDict=["Ghana":["A","C","C"],"Lebanon":["C","A","B"],"Mexico":["B","A","C"],"Navajo Nation":["B","A","C"],"Norway":["A","A","B"],"Roma":["B","A","C"],"South Africa":["C","C","B"],"South Korea":["B","C","B"],"Tonga":["C","B","C"]]
+        let correctAnswersDict=["Ghana":["A","C","C"],"Lebanon":["C","A","B"],"Mexico":["B","A","C"],"Navajo Nation":["B","A","C"],"Norway":["A","A","B"],"Peru":["A","A","C"],"Roma":["B","A","C"],"South Africa":["C","C","B"],"South Korea":["B","C","B"],"Tonga":["C","B","C"]]
         
         return correctAnswersDict
     }

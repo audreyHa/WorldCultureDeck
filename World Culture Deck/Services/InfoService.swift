@@ -10,6 +10,16 @@ import Foundation
 import FirebaseDatabase
 
 struct InfoService{
+    static func setUpCompletedCountries(){
+        let completedCountryRef=Database.database().reference().child("users").child(User.current.uid).child("Completed Countries")
+        print("completedCountryRef")
+        completedCountryRef.setValue(["Some Country":false]){(error, _) in
+            if let error=error{
+                assertionFailure(error.localizedDescription)
+            }
+        }
+    }
+    
     static func insertAllCountryInfo(){
         
         let allCountriesRef=Database.database().reference().child("countryInfo")
@@ -162,7 +172,9 @@ struct InfoService{
                              "one":"Sacred holy songs detail stories or epics about religion or morality. All traditional songs have chants, but contemporary Navajo music has many genres (punk, metal, hip hop, rock, etc.)"]
                           ],
                  "Art":["zero":["zero":"In the middle of the 1800s, Navajos learned silversmithing techniques from the Spaniards and Mexicans.",
-                                "one":"The Navajos used silver along with turquoise to create jewelry for ceremonies and religious rituals. Turquoise is particularly important to Navajos, as it represents water, sky, harvests, health, and protection."]
+                                "one":"The Navajos used silver along with turquoise to create jewelry for ceremonies and religious rituals. Turquoise is particularly important to Navajos, as it represents water, sky, harvests, health, and protection."],
+                        "one":["zero":"",
+                        "one":"Navajos also make baskets for ceremonial purposes. These baskets are also used for household displays and wedding ceremonies."]
                       ],
                  "Fun Facts":["zero":["zero":"The Navajo Code Talkers saved countless lives during WW2.",
                                       "one":"The Code Talkers served in all 6 Marine divisions and spoke in the Diné language to effectively transmit classified information on battlefield strategies and orders."],
@@ -175,7 +187,8 @@ struct InfoService{
                                           "Music":[
                                               "zero":["zero":"navajoMusic1","one":"navajoMusic2"]],
                                           "Art":[
-                                              "zero":["zero":"navajoArt1","one":"navajoArt2"]],
+                                              "zero":["zero":"navajoArt1","one":"navajoArt2"],
+                                            "one":["zero":"","one":"navajoArt4"]],
                                           "Fun Facts":[
                                               "zero":["zero":"navajoCT1","one":"navajoCT2"],
                                               "one":["zero":"navajoCT3","one":"navajoCT4"]]
@@ -214,6 +227,30 @@ struct InfoService{
                                               "one":["zero":"norwayFunFact3","one":"norwayFunFact4"]]
                                           ] //end of Norway images
             ], //end of all Norway content
+            "Peru":["Text":
+                ["Clothing":["zero":["zero":"The Montera is a traditional hat with a woven strap tying it under the chin",
+                                "one":"Peruvians traditionally wear the Lliclla, which is a square of colorful, heavy woven cloth worn around the shoulders like a shawl."],
+                             "one":["zero":"",
+                                "one":"Polleras are traditional handwoven skirts made with bayeta cloth. These wide skirts are covered in multi-colored fabrics and designs vary by region."]],
+                 "Music":["zero":["zero":"The Andean style of Peruvian music is known for flutes, panpipes, and wind instruments.",
+                             "one":"Peruvian music has been influenced by indigenous music in the Andes Mountains, Spanish music, and African music. The national instrument in Peru is the charango and has influences from Spain’s vihuela string instrument. "]],
+                 "Art":["zero":["zero":"A common artform among Peruvians is spinning and weaving cotton, llama, alpaca, and sheep wool to make cloth. Different villages have different weaving styles. ",
+                                "one":"Chulucanas Pottery is popular in Northwestern Peru. This pottery form has Incan influences and is mostly black and white."]],
+                 "Fun Facts":["zero":["zero":"The Amazon Rainforest--the largest rainforest in the world--covers roughly half of Peru",
+                                      "one":"The Andes Mountains--the 2nd highest mountain range in the world--also cross through Peru."]]
+                ], //end of Norway text
+                                          "ImageNames":[
+                                          "Clothing":[
+                                              "zero":["zero":"PeruClothing1","one":"PeruClothing2"],
+                                              "one":["zero":"","one":"PeruClothing4"]],
+                                          "Music":[
+                                              "zero":["zero":"PeruMusic1","one":"PeruMusic2"]],
+                                          "Art":[
+                                              "zero":["zero":"PeruArt1","one":"PeruArt2"]],
+                                          "Fun Facts":[
+                                              "zero":["zero":"PeruFunFact1","one":"PeruFunFact2"]]
+                                          ] //end of Norway images
+            ],
             "South Africa":["Text":
                 ["Clothing":["zero":["zero":"South Africa is known for its diversity, with Black, White, Mixed, and Asian as the largest racial groups.",
                                 "one":"The traditional clothes for the Zulus (ethnic group) consist of animal skins for the men and skirts embellished with beads for the women."],
@@ -314,6 +351,24 @@ struct InfoService{
         "one":["zero":"Which instrument is prominent in Norwegian folk music?","one":"  The Hardanger fiddle","two":"  The Daegeum flute","three":"  The Djembe drum"],
         "two":["zero":"What landform is Norway famous for?","one":"  Deserts","two":"  Fjords","three":"  Volcanoes"]]],
         
+        "Peru":
+        ["Quiz Questions":[
+        "zero":[
+            "zero":"The Lliclla is:",
+            "one":"  A square of colorful, heavy cloth worn as a shawl",
+            "two":"  A traditional Peruvian hat",
+            "three":"  Traditional pants"],
+        "one":[
+            "zero":"Peruvian music has the strongest influences from:",
+            "one":"  Andean, Spanish, and African music",
+            "two":"  Chinese, Indian, and Australian music",
+            "three":"  Norweigan, Italian, and Swiss music"],
+        "two":[
+            "zero":"Roughly half of Peru is covered by:",
+            "one":"  Lakes",
+            "two":"  The Himalayan Mountains",
+            "three":"  The Amazon Rainforest"]]],
+        
         "South Africa":
         ["Quiz Questions":[
         "zero":["zero":"Xhosa (ethnic group) traditional clothing consists of:","one":"  Shawls and capes","two":"  Face painting","three":"  All of the above"],
@@ -351,6 +406,7 @@ struct InfoService{
             "Mexico":"Mexico is a country in North America. Capital: Mexico City",
             "Navajo Nation":"Navajo Nation is an American Indian territory spanning 27,000+ square miles, covering parts of Utah, Arizona, and New Mexico.",
             "Norway":"Norway is a country in Northern Europe. Capital: Oslo",
+            "Peru":"Peru is a country in South America. Capital: Lima",
             "South Africa":"South Africa is a country in Africa and has 3 capitals (Pretoria, Cape Town, and Bloemfontein) for different government branches.",
             "South Korea":"South Korea is a country in East Asia. Capital: Seoul",
             "Roma":"The Roma or Romani are an ethnic group mostly residing in Europe. The group is also known as G#psies, but many Romani consider this term to be a slur. 2-5 million Romani live worldwide.",
@@ -361,5 +417,6 @@ struct InfoService{
                 assertionFailure(error.localizedDescription)
             }
         }
+        
     }
 }

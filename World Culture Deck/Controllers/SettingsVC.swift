@@ -11,9 +11,17 @@ import Firebase
 
 class SettingsVC: UIViewController {
 
+    @IBOutlet weak var settingsHeader: UILabel!
+    
     @IBOutlet weak var surroundingGreyView: UIView!
     @IBOutlet weak var logoutButton: UIButton!
     @IBOutlet weak var suggestionButton: UIButton!
+    
+    @IBOutlet weak var completedCountLabel: UILabel!
+    @IBOutlet weak var remainingCountLabel: UILabel!
+    @IBOutlet weak var quizScoreCountLabel: UILabel!
+    
+    @IBOutlet weak var starCountLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +30,66 @@ class SettingsVC: UIViewController {
         surroundingGreyView.layer.cornerRadius=10
         logoutButton.layer.cornerRadius=10
         suggestionButton.layer.cornerRadius=10
+        settingsHeader.adjustsFontSizeToFitWidth=true
+
+        StarService.displayStars(myLabel: starCountLabel)
+        updateTotals()
+    }
+    
+    //need to get deck counts
+    //need to get star count, divide by 10, then divide by (decks * 3)
+    
+    func updateTotals(){
+        self.returnUsername{username in
+            self.settingsHeader.text="\(username): Settings"
+        }
+        
+        self.returnCompletedDict{completedCountries in
+            print("return completed dict")
+            var allNames=["Ghana","Lebanon","Mexico","Navajo Nation","Norway","Peru","Roma","South Africa","South Korea","Tonga"]
+            var incompletedNames:[String]=[]
+            var completedNames:[String]=[]
+            
+            for countryName in allNames{
+                if(completedCountries[countryName] != nil && completedCountries[countryName]==true){
+                    completedNames.append(countryName)
+                }else{
+                    incompletedNames.append(countryName)
+                }
+            }
+            print("Completed names: \(completedNames)")
+            print("Incompleted names: \(incompletedNames)")
+            
+            self.completedCountLabel.text="\(completedNames.count)"
+            self.remainingCountLabel.text="\(incompletedNames.count)"
+            
+           
+            var totalQuizCorrect=Int(self.starCountLabel.text!)!/10
+            self.quizScoreCountLabel.text="\(totalQuizCorrect)/\(completedNames.count*3)"
+        }
+    }
+    
+    func returnCompletedDict(completionHandler: @escaping ([String:Bool]) -> Void) {
+        print("Running return completed names")
+        var completedCountries: [String:Bool]=[:]
+        
+        let completedCountryRef=Database.database().reference().child("users").child(User.current.uid).child("Completed Countries")
+        
+        completedCountryRef.observeSingleEvent(of: .value, with: { (snapshot) in
+                completedCountries=snapshot.value as! [String:Bool]
+                completionHandler(completedCountries)
+        })
+    }
+    
+    func returnUsername(completionHandler: @escaping (String) -> Void) {
+        print("Running return username")
+        
+        let usernameRef=Database.database().reference().child("users").child(User.current.uid).child("username")
+        
+        usernameRef.observeSingleEvent(of: .value, with: { (snapshot) in
+                let username=snapshot.value as! String
+                completionHandler(username)
+        })
     }
     
     @IBAction func logoutPressed(_ sender: Any) {

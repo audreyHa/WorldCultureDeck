@@ -35,8 +35,25 @@ struct QuizService{
                    //increasing the user's stars if they got more points than their last score
                    let starCountRef=Database.database().reference().child("users").child(currentUID).child("stars")
                    starCountRef.runTransactionBlock({(mutableData) -> TransactionResult in
-                       let currentStarCount=mutableData.value as? String ?? "0"
+                       
+                    let currentStarCount=mutableData.value as? String ?? "0"
                        mutableData.value=String(Int(currentStarCount)!+(incrementBy*10))
+                    
+                        if((incrementBy+Int(currentScore)!)==3){
+                            let currentUID=User.current.uid
+                            
+                            let completedRef=Database.database().reference().child("users").child(currentUID).child("Completed Countries").child(countryName)
+                           
+                            completedRef.setValue(true){(error, _) in
+                                if let error=error{
+                                    assertionFailure(error.localizedDescription)
+                                }
+                            }
+                            
+                            NotificationCenter.default.post(name: Notification.Name("newDeckCompleted"), object: nil)
+                            print("sending noti for new deck completed")
+                        }
+                    
                        return TransactionResult.success(withValue: mutableData)
                        
                    }, andCompletionBlock: {(error,_,_) in
