@@ -14,6 +14,7 @@ class SourcesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var linksTableView: UITableView!
     @IBOutlet weak var linksHeaderLabel: UILabel!
     @IBOutlet weak var starCountLabel: UILabel!
+    @IBOutlet weak var blueBackground: UIView!
     
     var countrySources:[String:[String:String]]=[:]
     var shortenedTitleArray: [String]! = []
@@ -21,13 +22,22 @@ class SourcesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         StarService.displayStars(myLabel: starCountLabel)
 
         linksTableView.layer.cornerRadius=15
         
         var countryName=UserDefaults.standard.string(forKey: "countryName")!
+        
         linksHeaderLabel.text="\(countryName): Links/Sources"
+        
+        UIGraphicsBeginImageContext(blueBackground.frame.size)
+        UIImage(named: "\(countryName)Background")?.draw(in: blueBackground.bounds)
+        
+        if let image = UIGraphicsGetImageFromCurrentImageContext(){
+            UIGraphicsEndImageContext()
+            blueBackground.backgroundColor = UIColor(patternImage: image.alpha(0.2))
+        }
         
         self.returnAllSources{allSources in
             self.countrySources=allSources[countryName]!
@@ -35,8 +45,7 @@ class SourcesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        linksTableView.estimatedRowHeight = 100
-        linksTableView.rowHeight = UITableView.automaticDimension
+        checkNetwork()
         linksTableView.reloadData()
     }
     
@@ -61,7 +70,6 @@ class SourcesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             for i in 0...numberWords.count-1{
                 if(countrySources[numberWords[i]] != nil){
                     var oneItemArray=Array(countrySources[numberWords[i]]!.keys)
-                    print(oneItemArray)
                     var shortenedTitle: String=Array(countrySources[numberWords[i]]!.keys)[0]
                     var longLink: String=countrySources[numberWords[i]]![shortenedTitle]!
                     
@@ -73,6 +81,7 @@ class SourcesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             cell.websiteLabel.text=self.shortenedTitleArray[indexPath.row]
         }
         
+        linksTableView.reloadRows(at: [indexPath], with: .automatic)
         return cell
     }
     

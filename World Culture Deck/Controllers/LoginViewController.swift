@@ -26,6 +26,10 @@ class LoginViewController: UIViewController {
         WCDLabel.adjustsFontSizeToFitWidth=true
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        checkNetwork()
+    }
+    
     @IBAction func loginButtonTapped(_ sender: Any) {
         guard let authUI=FUIAuth.defaultAuthUI() else {return}
         

@@ -22,6 +22,10 @@ class CreateUsernameViewController: UIViewController {
         createUsernameLabel.adjustsFontSizeToFitWidth=true
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        checkNetwork()
+    }
+    
     @IBAction func nextButtonTapped(_ sender: UIButton){
         //1 check that a FIRUser is logged in and that user has provided a username in text field
         print("next button tapped")

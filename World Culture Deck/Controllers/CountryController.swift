@@ -42,6 +42,10 @@ class CountryController: UIViewController {
         setUpForCountry()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        checkNetwork()
+    }
+    
     func setUpForCountry(){
         var countryName=UserDefaults.standard.string(forKey: "countryName")!
         countryNameLabel.text=countryName

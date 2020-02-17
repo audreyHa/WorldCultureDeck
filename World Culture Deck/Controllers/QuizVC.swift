@@ -20,7 +20,6 @@ class QuizVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     var userAnswersString: [String]=["","",""]
     var userAnswers: [String]=["","",""]
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,6 +32,10 @@ class QuizVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         
         QuizService.displayQuizScore(myLabel: topScoreLabel)
         StarService.displayStars(myLabel: starLabel)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        checkNetwork()
     }
     
     override func viewDidDisappear(_ animated: Bool) {

@@ -21,6 +21,7 @@ class WallpaperVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        checkNetwork()
         setupLayout()
     }
     

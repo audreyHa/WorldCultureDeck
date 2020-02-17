@@ -23,7 +23,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         StarService.displayStars(myLabel: starLabel)
         InfoService.insertAllCountryInfo()
         
@@ -98,6 +98,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        checkNetwork()
         setupAllDecksLayout()
         setUpCompletedDecksLayout()
     }
@@ -192,4 +193,25 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         
     }
 
+}
+
+extension UIViewController{
+    func checkNetwork(){
+        if Reachability.isConnectedToNetwork(){
+            print("Internet Connection Available!")
+        }else{
+            UserDefaults.standard.set("internet",forKey: "typeShortAlert")
+            
+            makeShortAlert()
+        }
+    }
+    
+    func makeShortAlert(){
+        print("short alert created")
+        let vc = storyboard!.instantiateViewController(withIdentifier: "ShortAlertVC") as! ShortAlertVC
+        var transparentGrey=UIColor(red: 0.16, green: 0.16, blue: 0.16, alpha: 0.95)
+        vc.view.backgroundColor = transparentGrey
+        vc.modalPresentationStyle = .overCurrentContext
+        present(vc, animated: true, completion: nil)
+    }
 }

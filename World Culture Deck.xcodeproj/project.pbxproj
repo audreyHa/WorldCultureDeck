@@ -17,6 +17,8 @@
 		F6A4657223BA197A004255BE /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4657123BA197A004255BE /* SettingsVC.swift */; };
 		F6A4657423BA2303004255BE /* WallpaperVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4657323BA2303004255BE /* WallpaperVC.swift */; };
 		F6A6CA6E23D6ADF0007158B8 /* InfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A6CA6D23D6ADF0007158B8 /* InfoController.swift */; };
+		F6BEF4CB23FB349D00863713 /* ReachabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BEF4CA23FB349D00863713 /* ReachabilityService.swift */; };
+		F6BEF4CD23FB41C600863713 /* ShortAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BEF4CC23FB41C600863713 /* ShortAlertVC.swift */; };
 		F6C5D87223FA5986004DBDB4 /* SourcesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C5D87123FA5986004DBDB4 /* SourcesVC.swift */; };
 		F6C5D87423FA5A17004DBDB4 /* LinksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C5D87323FA5A17004DBDB4 /* LinksCell.swift */; };
 		F6CE53A623B99E7A00B42791 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CE53A523B99E7A00B42791 /* AppDelegate.swift */; };
@@ -56,6 +58,8 @@
 		F6A4657123BA197A004255BE /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		F6A4657323BA2303004255BE /* WallpaperVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperVC.swift; sourceTree = "<group>"; };
 		F6A6CA6D23D6ADF0007158B8 /* InfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoController.swift; sourceTree = "<group>"; };
+		F6BEF4CA23FB349D00863713 /* ReachabilityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityService.swift; sourceTree = "<group>"; };
+		F6BEF4CC23FB41C600863713 /* ShortAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortAlertVC.swift; sourceTree = "<group>"; };
 		F6C5D87123FA5986004DBDB4 /* SourcesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesVC.swift; sourceTree = "<group>"; };
 		F6C5D87323FA5A17004DBDB4 /* LinksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinksCell.swift; sourceTree = "<group>"; };
 		F6CE53A223B99E7A00B42791 /* World Culture Deck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "World Culture Deck.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,6 +189,7 @@
 				F65645EC23E69FEE008FDD04 /* QuizService.swift */,
 				F65645EE23E6A974008FDD04 /* StarService.swift */,
 				F6D9BEB023E7F2C7005F0690 /* InfoService.swift */,
+				F6BEF4CA23FB349D00863713 /* ReachabilityService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -224,6 +229,7 @@
 				F6A6CA6D23D6ADF0007158B8 /* InfoController.swift */,
 				F61DB99523DC136C008943C6 /* QuizVC.swift */,
 				F6C5D87123FA5986004DBDB4 /* SourcesVC.swift */,
+				F6BEF4CC23FB41C600863713 /* ShortAlertVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -377,6 +383,7 @@
 			files = (
 				F6E3433C23BAE02F005B62A2 /* AllDecksCell.swift in Sources */,
 				F6D9BEB123E7F2C7005F0690 /* InfoService.swift in Sources */,
+				F6BEF4CD23FB41C600863713 /* ShortAlertVC.swift in Sources */,
 				F61DB99623DC136C008943C6 /* QuizVC.swift in Sources */,
 				F6CE53AB23B99E7B00B42791 /* World_Culture_Deck.xcdatamodeld in Sources */,
 				F6CE53A623B99E7A00B42791 /* AppDelegate.swift in Sources */,
@@ -398,6 +405,7 @@
 				F6CE53D123B9DB7400B42791 /* Constants.swift in Sources */,
 				F6A4657023BA1649004255BE /* HomeVC.swift in Sources */,
 				F6E3433723BAD4B5005B62A2 /* WallpaperCell.swift in Sources */,
+				F6BEF4CB23FB349D00863713 /* ReachabilityService.swift in Sources */,
 				F61DB99823DC140C008943C6 /* QuizCell.swift in Sources */,
 				F6CE53D323B9DBB700B42791 /* Storyboard+Utility.swift in Sources */,
 				F6E3433E23BAE03A005B62A2 /* CompletedDecksCell.swift in Sources */,

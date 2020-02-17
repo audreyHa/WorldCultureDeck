@@ -36,6 +36,10 @@ class SettingsVC: UIViewController {
         updateTotals()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        checkNetwork()
+    }
+    
     //need to get deck counts
     //need to get star count, divide by 10, then divide by (decks * 3)
     

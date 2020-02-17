@@ -47,6 +47,10 @@ class InfoController: UIViewController {
         setUpPage()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        checkNetwork()
+    }
+    
     func setUpPage(){
         
         var textCategoryArray: [String:[String:String]]=[:]
