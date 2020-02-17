@@ -17,6 +17,8 @@
 		F6A4657223BA197A004255BE /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4657123BA197A004255BE /* SettingsVC.swift */; };
 		F6A4657423BA2303004255BE /* WallpaperVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4657323BA2303004255BE /* WallpaperVC.swift */; };
 		F6A6CA6E23D6ADF0007158B8 /* InfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A6CA6D23D6ADF0007158B8 /* InfoController.swift */; };
+		F6C5D87223FA5986004DBDB4 /* SourcesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C5D87123FA5986004DBDB4 /* SourcesVC.swift */; };
+		F6C5D87423FA5A17004DBDB4 /* LinksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C5D87323FA5A17004DBDB4 /* LinksCell.swift */; };
 		F6CE53A623B99E7A00B42791 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CE53A523B99E7A00B42791 /* AppDelegate.swift */; };
 		F6CE53A823B99E7A00B42791 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CE53A723B99E7A00B42791 /* SceneDelegate.swift */; };
 		F6CE53AB23B99E7B00B42791 /* World_Culture_Deck.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F6CE53A923B99E7B00B42791 /* World_Culture_Deck.xcdatamodeld */; };
@@ -54,6 +56,8 @@
 		F6A4657123BA197A004255BE /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		F6A4657323BA2303004255BE /* WallpaperVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperVC.swift; sourceTree = "<group>"; };
 		F6A6CA6D23D6ADF0007158B8 /* InfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoController.swift; sourceTree = "<group>"; };
+		F6C5D87123FA5986004DBDB4 /* SourcesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesVC.swift; sourceTree = "<group>"; };
+		F6C5D87323FA5A17004DBDB4 /* LinksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinksCell.swift; sourceTree = "<group>"; };
 		F6CE53A223B99E7A00B42791 /* World Culture Deck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "World Culture Deck.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6CE53A523B99E7A00B42791 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6CE53A723B99E7A00B42791 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -202,6 +206,7 @@
 				F6E3433B23BAE02F005B62A2 /* AllDecksCell.swift */,
 				F6E3433D23BAE03A005B62A2 /* CompletedDecksCell.swift */,
 				F61DB99723DC140C008943C6 /* QuizCell.swift */,
+				F6C5D87323FA5A17004DBDB4 /* LinksCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -218,6 +223,7 @@
 				F62E07E223D685B400A5D157 /* CountryController.swift */,
 				F6A6CA6D23D6ADF0007158B8 /* InfoController.swift */,
 				F61DB99523DC136C008943C6 /* QuizVC.swift */,
+				F6C5D87123FA5986004DBDB4 /* SourcesVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -377,8 +383,10 @@
 				F65645ED23E69FEE008FDD04 /* QuizService.swift in Sources */,
 				F6CE53CB23B9D0B600B42791 /* User.swift in Sources */,
 				F6E3433A23BADC02005B62A2 /* TabBarController.swift in Sources */,
+				F6C5D87223FA5986004DBDB4 /* SourcesVC.swift in Sources */,
 				F6A4657423BA2303004255BE /* WallpaperVC.swift in Sources */,
 				F6CE53AD23B99E7B00B42791 /* ContentView.swift in Sources */,
+				F6C5D87423FA5A17004DBDB4 /* LinksCell.swift in Sources */,
 				F6CE53CF23B9D7DF00B42791 /* UserService.swift in Sources */,
 				F6A4657223BA197A004255BE /* SettingsVC.swift in Sources */,
 				F6CE53C923B9A81900B42791 /* LoginViewController.swift in Sources */,

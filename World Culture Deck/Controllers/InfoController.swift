@@ -34,8 +34,9 @@ class InfoController: UIViewController {
         
         StarService.displayStars(myLabel: starLabel)
         
+        var countryName=UserDefaults.standard.string(forKey: "countryName")!
         UIGraphicsBeginImageContext(blueBackground.frame.size)
-        UIImage(named: "southKoPalace.jpg")?.draw(in: blueBackground.bounds)
+        UIImage(named: "\(countryName)Background")?.draw(in: blueBackground.bounds)
         
         if let image = UIGraphicsGetImageFromCurrentImageContext(){
             UIGraphicsEndImageContext()
@@ -44,7 +45,6 @@ class InfoController: UIViewController {
         
         numberWords=["zero","one","two","three","four","five","six"]
         setUpPage()
-        setPageNumber()
     }
     
     func setUpPage(){
@@ -54,86 +54,61 @@ class InfoController: UIViewController {
         self.returnAllInfo{tempAllInfo in
             var countryName: String=UserDefaults.standard.string(forKey: "countryName")!
             var infoType: String=UserDefaults.standard.string(forKey: "infoType")!
+            
             var countryArray: [String:Any]=tempAllInfo[countryName]! as! [String : Any]
             var countryTextArray: [String:Any]=countryArray["Text"]! as! [String : Any]
+            
             textCategoryArray=countryTextArray[infoType]! as! [String : [String : String]]
             
-            //setting the header label
-            self.headerLabel.text="\(countryName): \(infoType)"
-            
-            //Setting the first and second labels
-            var labels=[self.firstLabel, self.secondLabel]
-            for i in 0...1{
-                var myLabel=labels[i]
-                myLabel!.text=textCategoryArray["\(self.numberWords[self.pageCount])"]!["\(self.numberWords[i])"]
-                myLabel!.adjustsFontSizeToFitWidth=true
-            }
-        }
-        
-        var infoImageArray: [String:[String:String]]=[:]
-        
-        self.returnAllInfo{tempAllInfo in
-            var countryName: String=UserDefaults.standard.string(forKey: "countryName")!
-            var infoType: String=UserDefaults.standard.string(forKey: "infoType")!
-            var countryArray: [String:Any]=tempAllInfo[countryName]! as! [String : Any]
-            var countryImageNameArray: [String:Any]=countryArray["ImageNames"]! as! [String : Any]
-            infoImageArray=countryImageNameArray[infoType]! as! [String : [String : String]]
-            
-            //setting the first and second images
-            var imageViews=[self.firstImage, self.secondImage]
-            self.firstImage.image=nil
-            self.secondImage.image=nil
-            for i in 0...1{
-                var myImageView=imageViews[i]
-                var imageName=infoImageArray["\(self.numberWords[self.pageCount])"]!["\(self.numberWords[i])"]
+            if(self.pageCount<=textCategoryArray.count-1){ //making sure that page count isn't exceding
+                //setting the page count and header label
+                self.pageCountLabel.text="\(self.pageCount+1)/\(textCategoryArray.count)"
+                self.headerLabel.text="\(countryName): \(infoType)"
                 
-                if(imageName != ""){
-                    myImageView!.image=UIImage(named: imageName!)?.roundedImage
+                //Setting the first and second labels
+                var labels=[self.firstLabel, self.secondLabel]
+                for i in 0...1{
+                    var myLabel=labels[i]
+                    myLabel!.text=textCategoryArray["\(self.numberWords[self.pageCount])"]!["\(self.numberWords[i])"]
+                    myLabel!.adjustsFontSizeToFitWidth=true
                 }
+                
+                var infoImageArray: [String:[String:String]]=[:]
+                var countryImageNameArray: [String:Any]=countryArray["ImageNames"]! as! [String : Any]
+                
+                infoImageArray=countryImageNameArray[infoType]! as! [String : [String : String]]
+                
+                //setting the first and second images
+                var imageViews=[self.firstImage, self.secondImage]
+                
+                self.firstImage.image=nil
+                self.secondImage.image=nil
+                
+                for i in 0...1{
+                    var myImageView=imageViews[i]
+                    var imageName=infoImageArray["\(self.numberWords[self.pageCount])"]!["\(self.numberWords[i])"]
+                    
+                    if(imageName != ""){
+                        myImageView!.image=UIImage(named: imageName!)?.roundedImage
+                    }
+                }
+            }else{
+                self.pageCount-=1
             }
         }
-        
-    }
-    
-    func setPageNumber(){
-        var textCategoryArray: [String:[String:String]]=[:]
-        
-        self.returnAllInfo{tempAllInfo in
-            var countryName: String=UserDefaults.standard.string(forKey: "countryName")!
-            var infoType: String=UserDefaults.standard.string(forKey: "infoType")!
-            var countryArray: [String:Any]=tempAllInfo[countryName]! as! [String : Any]
-            var countryTextArray: [String:Any]=countryArray["Text"]! as! [String : Any]
-            textCategoryArray=countryTextArray[infoType]! as! [String : [String : String]]
-            
-            self.pageCountLabel.text="\(self.pageCount+1)/\(textCategoryArray.count)"
-        }
+
     }
     
     @IBAction func backPressed(_ sender: Any) {
         if(pageCount>0){
             pageCount-=1
-            setPageNumber()
             setUpPage()
         }
     }
     
     @IBAction func nextPressed(_ sender: Any) {
-        var textCategoryArray: [String:[String:String]]=[:]
-        
-        self.returnAllInfo{tempAllInfo in
-            var countryName: String=UserDefaults.standard.string(forKey: "countryName")!
-            var infoType: String=UserDefaults.standard.string(forKey: "infoType")!
-            var countryArray: [String:Any]=tempAllInfo[countryName]! as! [String : Any]
-            var countryTextArray: [String:Any]=countryArray["Text"]! as! [String : Any]
-            textCategoryArray=countryTextArray[infoType]! as! [String : [String : String]]
-            
-            //check to make sure you're not increasing page count beyond limit
-            if(self.pageCount<textCategoryArray.count-1){
-                self.pageCount+=1
-                self.setPageNumber()
-                self.setUpPage()
-            }
-        }
+        pageCount+=1
+        setUpPage()
     }
 
     @IBAction func xPressed(_ sender: Any) {

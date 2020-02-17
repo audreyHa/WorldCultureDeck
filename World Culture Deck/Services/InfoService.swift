@@ -25,9 +25,9 @@ struct InfoService{
         let allCountriesRef=Database.database().reference().child("countryInfo")
         let allInfoArray: [String:[String:[String:[String:[String:String]]]]]=["South Korea":["Text":
                             ["Clothing":["zero":["zero":"The Hanbok is the traditional Korean dress.",
-                                            "one":"Currently, the Hanbok is only worn for special occasions (birthdays, weddings, funerals) or Korean holidays."],
+                                            "one":"Currently, the Hanbok is only worn for special occasions (birthdays, weddings, funerals, Korean holidays)."],
                                          "one":["zero":"For men, a full Hanbok has a vest and pants.",
-                                            "one":"For women, the full Hanbok has a fitted top jacket, undershirt, and a wide, flexible skirt. Hanboks for women resemble a bell shape."]],
+                                            "one":"For women, the full Hanbok has a fitted top jacket and a wide, flexible skirt. Hanboks for women resemble a bell shape."]],
                              "Music":["zero":["zero":"In the K-Pop (Korean pop music) world, BTS is one of the most famous K-pop groups. BTS has hit #1 on iTunes in more than 65 countries, and they’re the first K-pop group to top U.S. music album charts.",
                                          "one":"Some of the key factors of BTS’s success are their impressives dance routines and creative music videos. Their songs include topics like bullying and mental health, which other bands may not cover."]],
                              "Art":["zero":["zero":"Paintings during the early Joseon dynasty (1400s) were similar to the Chinese style of peaceful landscapes",
@@ -48,48 +48,46 @@ struct InfoService{
                             ] //end of South Korea images
                         ], //end of all South Korea content
             "Tonga":["Text":
-                ["Clothing":["zero":["zero":"A traditional Tongan clothing item is a tupenu, which is a cloth wrapped around the waist, often with bright designs of animals or plants.",
-                                "one":"For men, the Tupenu must cover the knees and shins and any shirt can go above the tupenu. For women, the tupenu must reach the ankle and women wear a long overblouse called a kofu."],
+                ["Clothing":["zero":["zero":"A traditional Tongan clothing item is the tupenu, which is a cloth wrapped around the waist, often with bright designs of animals or plants.",
+                                "one":"For men, the Tupenu must cover the knees/shins. For women, the tupenu must reach the ankles."],
                              "one":["zero":"For formal occasions, men and women can wear a ta’ovala or woven mat on top of the tupenu.",
-                                "one":"Ta’ovala waist mats are often precious family heirlooms and traditional forms of wealth. Nobles and monarchs in particular have finely woven mats passed down through generations."]],
+                                "one":"Ta’ovala waist mats are often precious family heirlooms. Nobles and monarchs in particular have finely woven mats passed down through generations."]],
                  "Music":["zero":["zero":"Traditional songs have been passed down through generations and are sung at ceremonies",
                              "one":"Methodism is one of the most prominent religions in Tonga. Early hymns introduced by missionaries are still sung in Tongan churches."],
-                          "one":["zero":"Me’etu’upaki is a popular paddle dance where the dancers carry paddles with paintings or carvings of abstract human body patterns.","one":"Other Ancient dances still performed today are ula and ‘otuhaka. Dances are a critical part of ceremonies, both on the national and village level."]],
+                          "one":["zero":"Lakalaka is Tonga’s national dance and performed at formal events like the opening day of a church. The performers mostly stand still and move the arms only.","one":"Tau’olunga is a group traditional dance done by girls, often at weddings. Tonga’s dances are different from other Polynesian nations since the performers rotate the hands/wrists during the dance."]],
                  "Art":["zero":["zero":"Traditionally, Tongan women made ta’ovala (waist mats), kiekie (string skirts), floor mats, and other traditional dance clothing.",
                  "one":"These woven mats had everyday uses and ceremonial uses. "],
-                        "one":["zero":"For traditional men’s crafts, most objects like dishes and weapons were made of carved wood before Western contact.","one":"Tongan craftsmen were skilled at creating canoes, and the canoes used daily were called popaos or dug-out canoes"]],
-                 "Fun Facts":["zero":["zero":"Sapasui is made of thin, long clear noodles mixed with mutton, beef, or pork with vegetables and soy sauce.",
+                        "one":["zero":"For traditional men’s crafts, most objects (ex: dishes, weapons) were made of carved wood before Western contact.","one":"Tongan craftsmen were skilled at creating canoes. These canoes were called popaos or dug-out canoes"]],
+                 "Fun Facts":["zero":["zero":"Pani Popo is sticky dinner rolls covered in coconut milk and sugar.",
                             "one":"Otai is a popular drink with watermelon or green mango blended into coconut milk, with sugar and ice"]]
                 ], //end of Tonga text
                                           "ImageNames":[
                 "Clothing":[
-                    "zero":["zero":"tongaClothing1","one":""],
-                    "one":["zero":"tongaClothing3","one":""]],
+                    "zero":["zero":"","one":"tongaClothing2"],
+                    "one":["zero":"","one":"tongaClothing4"]],
                 "Music":[
                     "zero":["zero":"","one":"tongaMusic2"],
-                    "one":["zero":"tongaMusic3","one":""]],
+                    "one":["zero":"tongaMusic3","one":"tongaMusic4"]],
                 "Art":[
-                    "zero":["zero":"tongaArt1","one":""],
+                    "zero":["zero":"tongaArt1","one":"tongaArt2"],
                     "one":["zero":"tongaArt3","one":"tongaArt4"]],
                 "Fun Facts":[
                     "zero":["zero":"tongaFood1","one":"tongaFood2"]]
                 ] //end of Tonga images
             ],//end of all Tonga content
             "Ghana":["Text":
-                ["Clothing":["zero":["zero":"The Ghanaian smock made of Kente cloth is the national dress of Ghana.",
-                                "one":"Hand-loomed strips of dyed and undyed cotton are sewn together to make a plaid shirt. The Akan and Ewe people are known for making the Kente cloth, and it’s worn for special occasions."],
-                             "one":["zero":"For day-to-day occasions, women typically wear headwraps and vibrant long skirts or long dresses.",
-                                "one":"Men typically wear a smock on top of pants along with plastic sandals. "]],
-                 "Art":["zero":["zero":"Art in Ghana includes pottery, wood carving, gold and silverwork, and weaving kente cloth.",
-                             "one":"Wood carving is a traditional Ghanaian art form, creating objects such as stools, drums, human figurines, and animals."],
-                          "one":["zero":"There are craft villages throughout the country that create traditional arts.",
-                                 "one":"The most prominent craft villages in Ghana are Bonwire (kente cloth), Ntonso (Adinkra cloth), Kurofuforum (brass figures), and Ahwiaa (wood carving)."]],
-                 "Music":["zero":["zero":"Traditional Ghanaian music is different in the savannas of Northern Ghana and coastal areas of Southern Ghana. ",
-                                "one":"Northern music consists of melodies made with stringed instruments (the lute, goje fiddle), flute, horns, drums, and voice."],
-                        "one":["zero":"Music along the Southern coast has multiple simultaneous rhythms that are played with drums, bells, and harmonized songs. ",
+                ["Clothing":["zero":["zero":"The Ghanaian smock is made of Kente cloth, and it's is the national dress of Ghana.",
+                                "one":"Hand-loomed strips of dyed and undyed cotton are sewn together to make a plaid fabric. The Akan and Ewe people are known for making Kente cloth, and it’s worn for special occasions."],
+                             "one":["zero":"For day-to-day occasions, women typically wear headwraps and vibrant long skirts/dresses.",
+                                "one":"Men typically wear a smock over pants."]],
+                 "Art":["zero":["zero":"There are craft villages throughout the country that create traditional arts. Art in Ghana includes pottery, wood carving, gold/silverwork, and weaving kente cloth.",
+                             "one":"Wood carving is a traditional Ghanaian art form. Stools, drums, human figurines, and animals are often carved."]],
+                 "Music":["zero":["zero":"Traditional music is different in the savannas of Northern Ghana versus the coastal areas of Southern Ghana. ",
+                                "one":"Northern music consists of melodies made with the goje fiddle (upper left image), xylophone, flute, drums, and voice."],
+                        "one":["zero":"Music along the Southern coast is played with drums, bells, and harmonized songs.",
                                "one":"Ghanaian hip hop became popular in the late 1990s, and it was a mix of traditional African musical sounds and hip hop."]],
                  "Fun Facts":["zero":["zero":"Fufu is spicy tomato soup with a paste made of cassava and plantains.",
-                                      "one":"Waakye is a popular food in Ghana that mixes together beans and rice. It was from the North, but Waakye is now popular in various cities across Ghana."]]
+                                      "one":"Waakye is a popular food in Ghana that mixes together beans and rice."]]
                 ], //end of Ghana text
                                           "ImageNames":[
                                           "Clothing":[
@@ -99,57 +97,53 @@ struct InfoService{
                                               "zero":["zero":"ghanaMusic1","one":"ghanaMusic2"],
                                               "one":["zero":"ghanaMusic3","one":"ghanaMusic4"]],
                                           "Art":[
-                                              "zero":["zero":"ghanaArt1","one":"ghanaArt2"],
-                                              "one":["zero":"","one":"ghanaArt4"]],
+                                              "zero":["zero":"ghanaArt1","one":"ghanaArt2"]],
                                           "Fun Facts":[
                                               "zero":["zero":"ghanaFood1","one":"ghanaFood2"]]
                                           ] //end of Ghana images
             ], //end of all Ghana content
             "Lebanon":["Text":
-                ["Clothing":["zero":["zero":"Traditional clothing for women consists of long dresses with long sleeves, vests made of satin/silk/cotton, cloaks or scarves, and occasionally baggy pants.",
-                                "one":"Traditional clothes for men consists of dark baggy trousers, a white shirt, a dark vest, a red/black belt, and a headdress."],
-                             "one":["zero":"Today, almost all Lebanese wear modern clothing and traditional clothing is worn more in the countryside.",
-                                "one":"One traditional Lebanese headdress for women is the tantur, which is a tall cone with a piece of silk attached to the top. The tantur was traditionally worn by women who recently married."]],
-                 "Music":["zero":["zero":"The lute is a traditional Lebanese string instrument, with a short neck and the shape of half a pear.",
+                ["Clothing":["zero":["zero":"Traditional clothes for men consists of headdresses, dark vests, belts, and baggy trousers.",
+                                "one":"Traditional clothing for women consists of vests, cloaks, long dresses, and baggy pants"],
+                             "one":["zero":"Today, almost all Lebanese wear modern clothing. Traditional clothing is worn more in the countryside.",
+                                "one":"One traditional Lebanese headdress for women is the tantur, which is a tall cone with a piece of silk attached to the top. The tantur was worn by women who recently married."]],
+                 "Music":["zero":["zero":"",
                              "one":"The mijwiz is a popular reed clarinet played by breathing through a circular opening and covering holes with the fingers. "],
-                          "one":["zero":"The daf is an instrument similar to the tambourine, with goat or fish skin covering the round frame.",
-                                 "one":"The tablah or durbakke is a common hand drum, often decorated with wood, tiles, metal, or paintings. Goat or fish skin is stretched over the top of the drum, which has a vase shape and wide opening."]],
+                          "one":["zero":"The tablah or durbakke is a common hand drum, often decorated with wood, tiles, metal, or paintings.",
+                                 "one":"Goat or fish skin is stretched over the top of the drum, which has a vase shape and wide opening."]],
                  "Art":["zero":["zero":"Beirut, Lebanon’s capital, is a popular city in the Arab world for artwork and literature.",
                                 "one":"Lebanese architecture has influence from previous occupying groups like the Romans, Ottomans, Phoenicians, and French. The Renaissance also increased Italian influence on Lebanese architecture, with many streets having Italian-styled houses."]],
-                 "Fun Facts":["zero":["zero":"People in Lebanon almost always eat with family or in a community.",
-                                      "one":"Common foods in Lebanon include pita bread, rice, pasta, hummus (chickpea dip), fool (fava bean dip), and a variety of bean dishes."],
-                              "one":["zero":"A popular food in Lebanon is tabbouleh.",
-                                     "one":"Tabbouleh is a salad containing parsley, tomatoes, and cracked wheat or burghul."]]
+                 "Fun Facts":["zero":["zero":"People in Lebanon almost always eat in a family or community.",
+                                      "one":"Common foods in Lebanon include pita bread, rice, pasta, hummus (chickpea dip), fool (fava bean dip), and a variety of bean dishes."]]
                 ], //end of Lebanon text
                                           "ImageNames":[
                                           "Clothing":[
-                                              "zero":["zero":"lebanonClothing1","one":""],
-                                              "one":["zero":"lebanonClothing3","one":""]],
+                                              "zero":["zero":"","one":"lebanonClothing2"],
+                                              "one":["zero":"","one":"lebanonClothing4"]],
                                           "Music":[
                                               "zero":["zero":"","one":"lebanonMusic2"],
                                               "one":["zero":"","one":"lebanonMusic4"]],
                                           "Art":[
                                               "zero":["zero":"lebanonArt1","one":"lebanonArt2"]],
                                           "Fun Facts":[
-                                              "zero":["zero":"lebanonFood1","one":"lebanonFood2"],
-                                              "one":["zero":"","one":"lebanonFood4"]]
+                                              "zero":["zero":"lebanonFood1","one":"lebanonFood2"]]
                                           ] //end of Lebanon images
             ], //end of all Lebanon content
             "Mexico":["Text":
-                ["Clothing":["zero":["zero":"Huipils are a traditional Mexican tunics originally worn by indigenous women in Mexico/Central America.",
+                ["Clothing":["zero":["zero":"Huipils are traditional Mexican tunics originally worn by indigenous women in Mexico/Central America.",
                                 "one":"Huipils often have ribbon, lace, and other colorful designs."],
-                             "one":["zero":"Rebozos are a modern version of ancient Aztec cloak and can serve as a scarf, blouse, or cape if folded different ways.",
+                             "one":["zero":"Rebozos are a modern version of the ancient Aztec cloak and can serve as a scarf, blouse, or cape if folded different ways.",
                                 "one":"Huarache are sandals with roots in Mexico’s early tribal groups."]],
-                 "Music":["zero":["zero":"Mariachi music is typically played at quinceaneras (a girl’s 15th birthday party) and on other celebrations.",
-                             "one":"The Mariachi band usually has violins, trumpets, and guitars like the vihuela (5-stringed guitar). Musicians wear a traditional Charro suit."],
+                 "Music":["zero":["zero":"Mariachi music is typically played at quinceaneras (a girl’s 15th birthday party) and during celebrations.",
+                             "one":"The Mariachi band usually has violins, trumpets, and the vihuela (5-stringed guitar). Musicians wear a traditional Charro suit."],
                           "one":["zero":"Ranchera music started in the ranches of rural Mexico.",
                                  "one":"It has songs about Mexican folklore, love, patriotism, and nature. It was particularly popular during the Mexican Revolution."]],
                  "Art":["zero":["zero":"Prominent in the city of Oaxaca, alebrijes are hand-painted sculptures of creatures.",
-                                "one":"Alebrijes have vibrant colors and with carefully painted decorations and patterns."],
+                                "one":"Alebrijes have vibrant colors and carefully painted decorations/patterns."],
                         "one":["zero":"The city of Puebla is famous for its Talavera tiles.",
                                "one":"The tiles are made with clay from the Puebla region and are only painted with six natural colors."]],
-                 "Fun Facts":["zero":["zero":"Chilaquiles are a popular breakfast dish with fried tortillas, eggs, pulled chicken, and green or red salsa.",
-                                      "one":"Tacos al pastor are a variety of tacos, becoming popular in the 1920s-30s when Lebanese and Syrian immigrants arrived in Mexico. It contains a tortilla, pork strips, onion, and pineapple."]]
+                 "Fun Facts":["zero":["zero":"Chilaquiles are a popular breakfast dish with fried tortillas, eggs, pulled chicken, and green/red salsa.",
+                                      "one":"Tacos al pastor are a variety of tacos containing tortillas, pork strips, onion, and pineapple. They became popular in the 1920s-30s when Lebanese and Syrian immigrants arrived in Mexico."]]
                 ], //end of Mexico text
                                           "ImageNames":[
                                           "Clothing":[
@@ -166,20 +160,20 @@ struct InfoService{
                                           ] //end of Mexico images
             ], //end of all Mexico content
             "Navajo Nation":["Text":
-                ["Clothing":["zero":["zero":"Traditional clothes are typically worn only for special social occasions.",
-                                "one":"Traditional Navajo clothing for women are pleated velvet/cotton skirts, a velvet blouse, a shawl, and deer moccasins. Men’s traditional clothing include velvet/cotton shirts, silver/turquoise jewelry, deer moccasins, and a headband."]],
-                 "Music":["zero":["zero":"Traditional Navajo music is vocal with instruments like drums, rattles, the rasp, flutes, and whistles used as accompaniment. ",
-                             "one":"Sacred holy songs detail stories or epics about religion or morality. All traditional songs have chants, but contemporary Navajo music has many genres (punk, metal, hip hop, rock, etc.)"]
+                ["Clothing":["zero":["zero":"Traditional clothes are typically worn only for special social occasions. Men’s traditional clothing include velvet/cotton shirts, silver/turquoise jewelry, deer moccasins, and a headband.",
+                                "one":"Traditional Navajo clothing for women are velvet/cotton skirts, velvet blouses, shawls, and deer moccasins. "]],
+                 "Music":["zero":["zero":"Traditional Navajo music is vocal with instruments like drums, rattles, flutes, and whistles.",
+                             "one":"Sacred holy songs have stories/epics about religion and morals. All traditional songs have chants, but contemporary Navajo music has many genres (punk, metal, hip hop, rock, etc.)"]
                           ],
                  "Art":["zero":["zero":"In the middle of the 1800s, Navajos learned silversmithing techniques from the Spaniards and Mexicans.",
-                                "one":"The Navajos used silver along with turquoise to create jewelry for ceremonies and religious rituals. Turquoise is particularly important to Navajos, as it represents water, sky, harvests, health, and protection."],
+                                "one":"The Navajos used silver and turquoise to create jewelry for ceremonies. Turquoise is particularly important to Navajos, as it represents water, sky, harvests, health, and protection."],
                         "one":["zero":"",
-                        "one":"Navajos also make baskets for ceremonial purposes. These baskets are also used for household displays and wedding ceremonies."]
+                        "one":"Navajos make baskets for ceremonial purposes. These baskets are also used for household displays and wedding ceremonies."]
                       ],
                  "Fun Facts":["zero":["zero":"The Navajo Code Talkers saved countless lives during WW2.",
-                                      "one":"The Code Talkers served in all 6 Marine divisions and spoke in the Diné language to effectively transmit classified information on battlefield strategies and orders."],
+                                      "one":"The Code Talkers served in all 6 Marine divisions and spoke in the Diné language to effectively transmit classified battlefield strategies/information."],
                               "one":["zero":"Without the Navajo Code Talkers, the Marines may not have been able to capture Iwo Jima.",
-                                     "one":"While Morse code took hours to decipher, the Navajos could decode the message in minutes. The complexity of the Diné language made it ideal for transmitting important battlefield information."]]
+                                     "one":"Morse code took hours to decipher, but the Navajos could decode the message in minutes. The complexity of the Diné language made it ideal for transmitting classified battlefield information."]]
                 ], //end of Navajo Nation text
                                           "ImageNames":[
                                           "Clothing":[
@@ -196,17 +190,17 @@ struct InfoService{
             ], //end of all Navajo Nation content
             "Norway":["Text":
                 ["Clothing":["zero":["zero":"Norway’s national clothing item is the bunad, which is a festival dress.",
-                                "one":"The bunad is tight-fitting and made of wool. It’s often worn with silver jewellery, since silver is a culturally important material in Norway."],
+                                "one":"The bunad is a tight-fitting dress made of wool. It’s often worn with silver jewellery, since silver is a culturally important material in Norway."],
                              "one":["zero":"Norwegians wear the bunad for Constitution Day, weddings, folk dances, and religious occasions.",
                                 "one":"Bunads vary between regions and often showcase the culture and heritage of a particular town."]],
-                 "Music":["zero":["zero":"Norwegian traditional dances are typically called bygdedans, which means village/regional dance. ",
-                             "one":"Folk dances are usually done in couples and with 2 or 3 beat dances."],
-                          "one":["zero":"Norway, Sweden, and Denmark, which neighbor each other, share the musical tradition of the fiddle instrument.",
+                 "Music":["zero":["zero":"",
+                             "one":"Norwegian traditional folk dances are usually done in couples and with 2 or 3 beat melody."],
+                          "one":["zero":"Norway, Sweden, and Denmark share the musical tradition of the fiddle instrument.",
                                  "one":"The Hardanger fiddle is prominent in Norwegian folk music, and this fiddle is similar to the violin."]],
-                 "Art":["zero":["zero":"Norwegian art is full of medieval church paintings and Viking art. ",
-                                "one":"There are many remnants of Viking art in Norway, including stone monuments in the countryside."],
-                        "one":["zero":"In the 1800s, landscape painting became popular in Norway.",
-                               "one":"Edvard Munch is one of the most prominent Norwegian artists, with his famous painting The Scream."]],
+                 "Art":["zero":["zero":"In the 1800s, landscape painting became popular in Norway.",
+                                "one":"Edvard Munch is one of the most prominent Norwegian artists, with his famous painting The Scream."],
+                        "one":["zero":"Norwegian art is full of medieval church paintings and Viking art.",
+                               "one":"There are many remnants of Viking art in Norway, including stone monuments in the countryside."]],
                  "Fun Facts":["zero":["zero":"From September to March, the northern lights or aurora borealis are visible from Northern Norway. ",
                                       "one":"The beautiful lights are filled with green, blue, pink, and violet."],
                               "one":["zero":"Norway has more than 1,000 fjords, and some of the fjords are World Heritage sites.",
@@ -220,20 +214,20 @@ struct InfoService{
                                               "zero":["zero":"","one":"norwayMusic2"],
                                               "one":["zero":"norwayMusic3","one":"norwayMusic4"]],
                                           "Art":[
-                                              "zero":["zero":"","one":"norwayArt2"],
-                                              "one":["zero":"norwayArt3","one":"norwayArt4"]],
+                                              "zero":["zero":"norwayArt1","one":"norwayArt2"],
+                                              "one":["zero":"","one":"norwayArt4"]],
                                           "Fun Facts":[
                                               "zero":["zero":"norwayFunFact1","one":"norwayFunFact2"],
                                               "one":["zero":"norwayFunFact3","one":"norwayFunFact4"]]
                                           ] //end of Norway images
             ], //end of all Norway content
             "Peru":["Text":
-                ["Clothing":["zero":["zero":"The Montera is a traditional hat with a woven strap tying it under the chin",
-                                "one":"Peruvians traditionally wear the Lliclla, which is a square of colorful, heavy woven cloth worn around the shoulders like a shawl."],
-                             "one":["zero":"",
-                                "one":"Polleras are traditional handwoven skirts made with bayeta cloth. These wide skirts are covered in multi-colored fabrics and designs vary by region."]],
-                 "Music":["zero":["zero":"The Andean style of Peruvian music is known for flutes, panpipes, and wind instruments.",
-                             "one":"Peruvian music has been influenced by indigenous music in the Andes Mountains, Spanish music, and African music. The national instrument in Peru is the charango and has influences from Spain’s vihuela string instrument. "]],
+                ["Clothing":["zero":["zero":"The Montera is a traditional hat with a woven strap.",
+                                "one":"Peruvians traditionally wear the Lliclla, which is a colorful, heavy, woven square cloth worn around the shoulders like a shawl."],
+                             "one":["zero":"Polleras are traditional handwoven skirts made with bayeta cloth.",
+                                "one":"These wide skirts are covered in multi-colored fabrics and designs vary by region."]],
+                 "Music":["zero":["zero":"Music in the Andres region of Peru has flutes, panpipes, and wind instruments.",
+                             "one":"Peruvian music has been influenced by Andean, Spanish, and African music. The national instrument of Peru is the charango, which is similar to the Spanish vihuela string instrument."]],
                  "Art":["zero":["zero":"A common artform among Peruvians is spinning and weaving cotton, llama, alpaca, and sheep wool to make cloth. Different villages have different weaving styles. ",
                                 "one":"Chulucanas Pottery is popular in Northwestern Peru. This pottery form has Incan influences and is mostly black and white."]],
                  "Fun Facts":["zero":["zero":"The Amazon Rainforest--the largest rainforest in the world--covers roughly half of Peru",
@@ -242,7 +236,7 @@ struct InfoService{
                                           "ImageNames":[
                                           "Clothing":[
                                               "zero":["zero":"PeruClothing1","one":"PeruClothing2"],
-                                              "one":["zero":"","one":"PeruClothing4"]],
+                                              "one":["zero":"PeruClothing3","one":"PeruClothing4"]],
                                           "Music":[
                                               "zero":["zero":"PeruMusic1","one":"PeruMusic2"]],
                                           "Art":[
@@ -252,17 +246,17 @@ struct InfoService{
                                           ] //end of Norway images
             ],
             "South Africa":["Text":
-                ["Clothing":["zero":["zero":"South Africa is known for its diversity, with Black, White, Mixed, and Asian as the largest racial groups.",
+                ["Clothing":["zero":["zero":"South Africa is known for its multicultural population.",
                                 "one":"The traditional clothes for the Zulus (ethnic group) consist of animal skins for the men and skirts embellished with beads for the women."],
                              "one":["zero":"Traditional clothes for the Xhosa (ethnic group) consist of shawls and capes.",
                                 "one":"These shawls have detailed designs sewn onto them. Another Xhosa tradition is face-painting."]],
-                 "Music":["zero":["zero":"South Africa has a multilingual national anthem celebrating its diverse culture: “Nkosi Sikelel’ iAfrica.”",
-                             "one":"Popular genres in South Africa are kwaito (African house music), jazz, hip hop, Afrikaans rock, African gospel, and more."],
-                          "one":["zero":"Zulu traditional dances have stomping on the ground, weapons, and shields.",
-                                 "one":"Traditional Xhosa dances heavily involve group singing and clapping as an accompaniment to dancing. Instruments include mouth harps, rattles, whistles, flute, and stringed-instruments."]],
-                 "Art":["zero":["zero":"The oldest African hunter-gatherers are the San Bushman and lived in South Africa’s Drakensberg mountains 4,000 years ago.",
-                                "one":"The group painted a significant amount of art on cave and rock walls, creating sub-Saharan Africa’s largest collection of rock paintings."],
-                        "one":["zero":"The Ndebele people are famous for their beadwork and murals on buildings.",
+                 "Music":["zero":["zero":"Zulu traditional dances have stomping on the ground, weapons, and shields.",
+                             "one":"Traditional Xhosa dances have group singing, clapping, and dancing. Instruments include mouth harps, rattles, flute, and stringed-instruments."],
+                          "one":["zero":"South Africa has a multilingual national anthem celebrating its diverse culture (Nkosi Sikelel’ iAfrica)",
+                                 "one":"Popular genres in South Africa are kwaito (African house music), jazz, hip hop, Afrikaans rock, African gospel, and more."]],
+                 "Art":["zero":["zero":"The oldest African hunter-gatherers lived in South Africa’s Drakensberg mountains 4,000 years ago.",
+                                "one":"The San peoples painted a significant amount of art on cave/rock walls, creating sub-Saharan Africa’s largest collection of rock paintings."],
+                        "one":["zero":"The Ndebele people are famous for their beadwork and building murals.",
                                "one":"They initially used soot, ash, and clay for the mural colors, but colored paints are more widely used today. "]],
                  "Fun Facts":["zero":["zero":"South Africa has 11 official languages.",
                                       "one":"They include: Zulu, Xhosa, Afrikaans, English, Sepedi/Northern Sotho, Tswana, Southern Sotho, Venda, and Ndebele."],
@@ -285,23 +279,21 @@ struct InfoService{
                                           ] //end of South Africa images
             ], //end of all South Africa content
             "Roma":["Text":
-                ["Clothing":["zero":["zero":"The traditional clothing for Roma women in Finland includes a velvet skirt and long-sleeve blouse.",
-                                "one":"Currently, many Roma women wear lighter skirts, and jewellery, typically gold jewellery, is an important aspect of the outfit."],
-                             "one":["zero":"Roma men do not wear as many traditional clothes as Roma women.",
-                                "one":"Currently, most Roma men wear straight trousers, a white/colored shirt, a jacket, and dark shoes."]],
-                 "Music":["zero":["zero":"Romani music is typically based on the different folk musics of the region the Romani group is in. ",
-                             "one":"Romani music is particularly popular in Hungary. In the 1948 Hungarian Revolution, Romani musical groups played for the soldiers for entertainment and morale."],
-                          "one":["zero":"Romani music groups in Hungary played without scores, instead playing by ear.",
-                                 "one":"Romani bands first had string instruments, the harp, and duda (bagpipe). Because of the influence of Western classical music, the bands started using violins, the cimbalom (string instrument), and double bass."]],
-                 "Art":["zero":["zero":"Carved wooden designs on Roma wagons in England are a prominent art form.",
-                                "one":"These wagon designs were famous worldwide, and have been created by Romani groups in other European countries."]],
-                 "Fun Facts":["zero":["zero":"The Romani language has several different dialects and is considered an Indo-Aryan language with influences from Sanskrit, the ancient language of India.",
-                                      "one":"The majority of Romani speak one of the dialects of the Romani language along with the language of the country they live in; most Romani are in Europe. The Romani people may also mix in words from the languages of the countries they reside in while speaking Romani. "]]
+                ["Clothing":["zero":["zero":"Traditional clothing for Roma women in Finland includes velvet skirts and long-sleeve blouses.",
+                                "one":"For day-to-day clothing, many Roma women wear lighter skirts. Gold jewellery is an important aspect of the outfit."],
+                             "one":["zero":"Roma men typically do not wear as many traditional clothes as Roma women.",
+                                "one":"Most Roma men wear dark straight trousers, a white/colored shirt, a jacket, and dark shoes."]],
+                 "Music":["zero":["zero":"Romani music is different per region.",
+                             "one":"Romani music is particularly popular in Hungary. During the 1948 Hungarian Revolution, Romani musical groups played for the soldiers for entertainment and morale."]],
+                 "Art":["zero":["zero":"Carved wooden designs on Roma wagons are a prominent Roma art form.",
+                                "one":"These wagon designs are famous worldwide, and have been created by Romani groups in a variety of European countries."]],
+                 "Fun Facts":["zero":["zero":"The Romani language has several dialects. It was influenced by Sanskrit, the ancient language of India.",
+                                      "one":"The majority of Romani are bilingual. Most can speak a Romani dialect and the predominant language of the country they live in."]]
                 ], //end of The Romani text
                                           "ImageNames":[
                                           "Clothing":[
-                                              "zero":["zero":"romaniClothing1","one":""],
-                                              "one":["zero":"romaniClothing3","one":""]],
+                                              "zero":["zero":"","one":"romaniClothing2"],
+                                              "one":["zero":"","one":"romaniClothing4"]],
                                           "Music":[
                                               "zero":["zero":"","one":"romaniMusic2"]],
                                           "Art":[
@@ -329,7 +321,7 @@ struct InfoService{
         
         "Lebanon":
         ["Quiz Questions":[
-            "zero":["zero":"Traditional clothes for men consist of:","one":"  Dark baggy trousers, white shirt","two":"  Dark Vest, red/black belt, headdress","three":"  All of the above"],
+            "zero":["zero":"Traditional clothes for women consist of:","one":"  Vests, Cloaks","two":"  Long dresses, baggy pants","three":"  All of the above"],
             "one":["zero":"The tablah, a hand drum… ","one":"  Is often decorated with wood, tiles, and metal","two":"  Has a narrow opening","three":"  Is not very popular in Lebanon"],
             "two":["zero":"People in Lebanon almost always eat… ","one":"  Noodles and dumplings","two":"  With family/in a community","three":"  Quesadillas and chilaquiles"]]],
         
@@ -418,5 +410,97 @@ struct InfoService{
             }
         }
         
+        let sourcesRef=Database.database().reference().child("Sources")
+        let sourcesArray: [String:[String:[String:String]]]=[
+            "Ghana":[
+                "zero":
+                    ["BBC: Ghanaian Music":"https://www.bbc.com/news/av/world-25627844/queen-s-baton-relay-the-flute-magician-of-ghana"],
+                "one":["Afropop: Northern and Southern Ghanaian Music":"https://www.youtube.com/watch?v=XX3-dMeyXwc"],
+                "two":["Britannica: Ghana Daily Life and Social Customs":"https://www.britannica.com/place/Ghana/Daily-life-and-social-customs"],
+                "three":["Culture Trip: Ghanaian Dishes":"https://theculturetrip.com/africa/ghana/articles/10-traditional-ghanaian-dishes-you-need-to-try/"],
+                "four":["Vagabond Journey: Clothing in Ghana":"https://www.vagabondjourney.com/clothing-in-ghana/"],
+                "five":["Research Gate: Wood Carving in Ghana":"https://www.researchgate.net/publication/317411955_WOOD_CARVING_IN_THE_AKUAPEM_HILLS_OF_GHANA_PROSPECTS_CHALLENGES_AND_THE_WAY_FORWARD"],
+                "six":["Wikipedia: Music of Ghana":"https://en.wikipedia.org/wiki/Music_of_Ghana"],
+                "seven":["Wikipedia: Ghanaian Smock":"https://en.wikipedia.org/wiki/Ghanaian_smock"],
+                "eight":["Wikipedia: Ghanaian Hip Hop":"https://en.wikipedia.org/wiki/Gh_hiphop"]
+            ],
+            "Lebanon":[
+                "zero":["Traditional Lebanese Clothing":"https://www.reference.com/world-view/traditional-clothing-lebanon-f78adf469935aba0"],
+                "one":["Wikipedia: Culture of Lebanon":"https://en.wikipedia.org/wiki/Culture_of_Lebanon#Music"],
+                "two":["Wikipedia: Music of Lebanon":"https://en.wikipedia.org/wiki/Music_of_Lebanon"]
+            ],
+            "Mexico":[
+                "zero":["Culture Trip: Introduction to Mexican Folk Art":"https://theculturetrip.com/north-america/mexico/articles/a-brief-introduction-to-mexican-folk-art-in-10-pieces/"],
+                "one":["BBC: Mexican Food":"https://www.bbcgoodfood.com/howto/guide/top-10-foods-try-mexico"],
+                "two":["Mexican Clothing":"http://www.facts-about-mexico.com/mexican-clothing.html"],
+                "three":["Traditional Mexican Music":"https://www.haciendatresrios.com/culture-and-tradition/traditional-mexican-music/"]
+            ],
+            "Navajo Nation":[
+                "zero":["Navajo Culture":"https://www.discovernavajo.com/Navajo-Culture.aspx"],
+                "one":["Navajo Code Talkers":"https://navajocodetalkers.org/story-of-the-navajo-code-talkers/"],
+                "two":["Indian Arts and Culture: Turquoise":"http://www.indianartsandculture.org/whatsnew/?releaseID=292"],
+                "three":["History of Turquoise":"http://www.historyofturquoise.com/navajo-turquoise/"],
+                "four":["Wikipedia: Navajo Music":"https://en.wikipedia.org/wiki/Navajo_music"]
+            ],
+            "Norway":[
+                "zero":["Life in Norway: Bunad":"https://www.lifeinnorway.net/bunad/"],
+                "one":["Visit Norway: Northern Lights":"https://www.visitnorway.com/things-to-do/nature-attractions/northern-lights/"],
+                "two":["Visit Norway: Fjords":"https://www.visitnorway.com/things-to-do/nature-attractions/fjords/"],
+                "three":["Wikipedia: Music of Norway":"https://en.wikipedia.org/wiki/Music_of_Norway"],
+                "four":["Wikipedia: Norweigan Art":"https://en.wikipedia.org/wiki/Norwegian_art"]
+            ],
+            "Peru":[
+                "zero":["Threads of Peru: Traditional Andean Clothing":"https://threadsofperu.com/pages/traditional-andean-clothng"],
+                "one":["National Geographic: Peru":"https://www.natgeokids.com/za/discover/geography/countries/country-fact-file-peru/"],
+                "two":["Peruvian Music":"https://www.machupicchu.org/peruvian_music.htm"],
+                "three":["Peru Culture":"http://www.discover-peru.org/culture-peru/"],
+                "four":["Wikipedia: Peruvian Art":"https://en.wikipedia.org/wiki/Peruvian_art"]
+            ],
+            "Roma":[
+                "zero":["Britannica: Roma":"https://www.britannica.com/topic/Rom"],
+                "one":["Romani Clothing":"https://www.romanit.fi/in-english/traditions-and-customs/clothes-and-ideals/"],
+                "two":["Wikipedia: Romani Music":"https://en.wikipedia.org/wiki/Romani_music"],
+                "three":["Wikipedia: The Romani People":"https://en.wikipedia.org/wiki/Romani_people "]
+            ],
+            "South Africa":[
+                "zero":["South African History":"https://www.sahistory.org.za/article/south-africas-diverse-culture-artistic-and-linguistic-heritage"],
+                "one":["Ndebele Beadwork":"http://southafrica.co.za/ndebele-ndzundza-beadwork-and-art.html"],
+                "two":["Baltimore Sun: Ndebele Beadwork":"https://www.baltimoresun.com/news/bs-xpm-1990-10-03-1990276028-story.html"],
+                "three":["Contemporary South African Art":"https://www.contemporary-african-art.com/south-african-art.html"],
+                "four":["Historical South African Art":"https://www.brandsouthafrica.com/south-africa-fast-facts/arts-facts/overview-history-south-african-art"],
+                "five":["BBC: South African Food":"https://www.bbcgoodfood.com/howto/guide/top-10-foods-try-south-africa"],
+                "six":["Wikipedia: South Africa National Anthem":"https://en.wikipedia.org/wiki/National_anthem_of_South_Africa"],
+                "seven":["Wikipedia: South African Art":"https://en.wikipedia.org/wiki/South_African_art"],
+                "eight":["Wikipedia: Ethnic Groups in South Africa":"https://en.wikipedia.org/wiki/Ethnic_groups_in_South_Africa"]
+            ],
+            "South Korea":[
+                "zero":["Traditional Korean Clothes":"https://english.visitkorea.or.kr/enu/AKR/AK_ENG_2_2.jsp"],
+                "one":["History of the Hanbok":"https://blog.inspiremekorea.com/history/history-of-the-hanbok/"],
+                "two":["Traditional Korean Arts":"http://www.korea.net/AboutKorea/Culture-and-the-Arts/Traditional-Arts"],
+                "three":["Arirang Folk Song":"https://ich.unesco.org/en/RL/arirang-lyrical-folk-song-in-the-republic-of-korea-00445"],
+                "four":["Britannica: Daegeum Flute":"https://www.britannica.com/art/taegum"],
+                "five":["BTS":"https://www.bbc.co.uk/newsround/45721656"],
+                "six":["BTS Statistics":"https://www.marketwatch.com/story/all-the-stats-proving-k-pops-bts-is-just-as-popular-as-taylor-swift-billie-eilish-and-other-american-pop-stars-2019-07-30"],
+                "seven":["Korean Dishes":"https://www.cnn.com/travel/article/best-korean-dishes/index.html"],
+                "eight":["History of Korean Art and Architecture":"https://brewminate.com/a-history-of-korean-art-and-architecture/"]
+            ],
+            "Tonga":[
+                "zero":["The Kingdom of Tonga":"http://www.thekingdomoftonga.com/the-kingdom-today/"],
+                "one":["Britannica: Tongan History":"https://www.britannica.com/place/Tonga/History"],
+                "two":["New York Times: Tongan Woven Mats":"https://www.nytimes.com/1970/07/04/archives/in-tonga-its-sign-of-respect.html"],
+                "three":["Food and Cultural Practices in Tonga":"https://metrosouth.health.qld.gov.au/sites/default/files/cultural-profile-tongan.pdf"],
+                "four":["Wikipedia: The Culture of Tonga":"https://en.wikipedia.org/wiki/Culture_of_Tonga"],
+                "five":["Wikipedia: Ta'ovala":"https://en.wikipedia.org/wiki/Ta%CA%BBovala "],
+                "six":["Wikipedia: Kiekie":"https://en.wikipedia.org/wiki/Kiekie_(clothing)"],
+                "seven":["Wikipedia: Lakalaka":"https://en.wikipedia.org/wiki/Lakalaka"],
+                "eight":["Wikipedia: Tau'olunga":"https://en.wikipedia.org/wiki/Tau%CA%BBolunga"]
+            ]
+        ]
+        
+        sourcesRef.setValue(sourcesArray){(error, _) in
+            if let error=error{
+                assertionFailure(error.localizedDescription)
+            }
+        }
     }
 }
