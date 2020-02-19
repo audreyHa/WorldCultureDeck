@@ -9,18 +9,18 @@ World Culture Deck incorporates Firebase Authentication for signing users in, Fi
 Firebase Analytics may share Data with other tools provided by Firebase, such as Crash Reporting, Remote Config or Notifications.
  
 Personal Data collected by World Culture Deck through Firebase:
-*Email and username
-*Quiz scores, total badges earned, total stars earned
-*Geography/region
-*Usage data
-*Number of users
-*Number of sessions
-*Session duration
-*iPhone type
-*Application opens
-*Application updates
-*First launches
-*Frequency of app crashes
+* Email and username
+* Quiz scores, total badges earned, total stars earned
+* Geography/region
+* Usage data
+* Number of users
+* Number of sessions
+* Session duration
+* iPhone type
+* Application opens
+* Application updates
+* First launches
+* Frequency of app crashes
 
 The only purpose of World Culture Deck collecting user data for this version is to improve user experience and guide development for the next release. If you do not wish to participate and help the app (and me) better understand your needs, you are always welcome to come back and install a later version.
  
