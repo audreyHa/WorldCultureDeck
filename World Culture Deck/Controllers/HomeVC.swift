@@ -12,10 +12,12 @@ import SwiftyJSON
 
 class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
+    @IBOutlet weak var blueBackground: UIView!
     @IBOutlet weak var allDeckCollectionView: UICollectionView!
     @IBOutlet weak var completedCollectionView: UICollectionView!
     @IBOutlet weak var starLabel: UILabel!
     @IBOutlet weak var completedDecksLabel: UILabel!
+    @IBOutlet weak var WCDLabel: UILabel!
     
     var collectionViewFlowLayout: UICollectionViewFlowLayout!
     var completedNames: [String]!
@@ -24,13 +26,17 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        WCDLabel.adjustsFontSizeToFitWidth=true
+        
         StarService.displayStars(myLabel: starLabel)
         InfoService.insertAllCountryInfo()
         
-        var hasSetUpCompletedCountries=UserDefaults.standard.bool(forKey: "hasSetUpCompletedCountries")
-        if(hasSetUpCompletedCountries==nil || hasSetUpCompletedCountries==false){
-            InfoService.setUpCompletedCountries()
-            UserDefaults.standard.set(true, forKey: "hasSetUpCompletedCountries")
+        UIGraphicsBeginImageContext(blueBackground.frame.size)
+        UIImage(named: "0_FlagCollage")?.draw(in: blueBackground.bounds)
+        
+        if let image = UIGraphicsGetImageFromCurrentImageContext(){
+            UIGraphicsEndImageContext()
+            blueBackground.backgroundColor = UIColor(patternImage: image.alpha(0.2))
         }
         
         var allNames=["Ghana","Lebanon","Mexico","Navajo Nation","Norway","Peru","Roma","South Africa","South Korea","Tonga"]
@@ -90,10 +96,24 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         var completedCountries: [String:Bool]=[:]
         
         let completedCountryRef=Database.database().reference().child("users").child(User.current.uid).child("Completed Countries")
+        let userRef=Database.database().reference().child("users").child(User.current.uid)
         
-        completedCountryRef.observeSingleEvent(of: .value, with: { (snapshot) in
-                completedCountries=snapshot.value as! [String:Bool]
-                completionHandler(completedCountries)
+        userRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            if snapshot.hasChild("Completed Countries"){
+                completedCountryRef.observeSingleEvent(of: .value, with: { (snapshot) in
+                        completedCountries=snapshot.value as! [String:Bool]
+                        completionHandler(completedCountries)
+                })
+            }else{
+                print("Need to add completed countries")
+                completedCountryRef.setValue(["Some Country":false]){(error, _) in
+                    completedCountries=["Some Country":false]
+                    completionHandler(completedCountries)
+                    if let error=error{
+                        assertionFailure(error.localizedDescription)
+                    }
+                }
+            }
         })
     }
     
@@ -196,6 +216,16 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
 }
 
 extension UIViewController{
+    func logIn(){
+        if Reachability.isConnectedToNetwork(){
+            print("Internet Connection Available!")
+        }else{
+            UserDefaults.standard.set("logIn",forKey: "typeShortAlert")
+            
+            makeShortAlert()
+        }
+    }
+    
     func checkNetwork(){
         if Reachability.isConnectedToNetwork(){
             print("Internet Connection Available!")

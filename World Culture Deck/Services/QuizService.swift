@@ -39,9 +39,38 @@ struct QuizService{
                     let currentStarCount=mutableData.value as? String ?? "0"
                        mutableData.value=String(Int(currentStarCount)!+(incrementBy*10))
                     
+                    var totalStars=Int(currentStarCount)!+(incrementBy*10)
+                    if(totalStars>=300){
+                        let badge300Ref=Database.database().reference().child("users").child(currentUID).child("Badges").child("300 Stars")
+                        
+                         badge300Ref.setValue(true){(error, _) in
+                             if let error=error{
+                                 assertionFailure(error.localizedDescription)
+                             }
+                         }
+                    }else if(totalStars>=200){
+                        let badge200Ref=Database.database().reference().child("users").child(currentUID).child("Badges").child("200 Stars")
+                        
+                         badge200Ref.setValue(true){(error, _) in
+                             if let error=error{
+                                 assertionFailure(error.localizedDescription)
+                             }
+                         }
+                    }else if(totalStars>=100){
+                        let badge100Ref=Database.database().reference().child("users").child(currentUID).child("Badges").child("100 Stars")
+                        
+                         badge100Ref.setValue(true){(error, _) in
+                             if let error=error{
+                                 assertionFailure(error.localizedDescription)
+                             }
+                         }
+                    }
+                    
+                        //checking if most recent quiz score was 3/3
                         if((incrementBy+Int(currentScore)!)==3){
                             let currentUID=User.current.uid
                             
+                            //Set a country as completed if the quiz score was 3/3
                             let completedRef=Database.database().reference().child("users").child(currentUID).child("Completed Countries").child(countryName)
                            
                             completedRef.setValue(true){(error, _) in
@@ -64,6 +93,8 @@ struct QuizService{
                }
            }
         })
+        
+        NotificationCenter.default.post(name: Notification.Name("updateBadgeCollectionView"), object: nil)
     }
     
     static func displayQuizScore(myLabel: UILabel){

@@ -23,7 +23,7 @@ class CreateUsernameViewController: UIViewController {
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        checkNetwork()
+        logIn()
     }
     
     @IBAction func nextButtonTapped(_ sender: UIButton){

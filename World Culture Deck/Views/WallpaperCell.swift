@@ -11,7 +11,6 @@ import UIKit
 class WallpaperCell: UICollectionViewCell {
 
     @IBOutlet weak var wallpaperImageView: UIImageView!
-    @IBOutlet weak var starsButton: UIButton!
     @IBOutlet weak var regionLabel: UILabel!
     
     override func awakeFromNib() {

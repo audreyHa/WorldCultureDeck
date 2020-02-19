@@ -27,7 +27,7 @@ class LoginViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        checkNetwork()
+        logIn()
     }
     
     @IBAction func loginButtonTapped(_ sender: Any) {

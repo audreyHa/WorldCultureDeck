@@ -11,6 +11,7 @@ import Firebase
 
 class SettingsVC: UIViewController {
 
+    @IBOutlet weak var blueBackground: UIView!
     @IBOutlet weak var settingsHeader: UILabel!
     
     @IBOutlet weak var surroundingGreyView: UIView!
@@ -20,13 +21,22 @@ class SettingsVC: UIViewController {
     @IBOutlet weak var completedCountLabel: UILabel!
     @IBOutlet weak var remainingCountLabel: UILabel!
     @IBOutlet weak var quizScoreCountLabel: UILabel!
+    @IBOutlet weak var badgeCountLabel: UILabel!
     
     @IBOutlet weak var starCountLabel: UILabel!
+    @IBOutlet weak var WCDLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        WCDLabel.adjustsFontSizeToFitWidth=true
+        UIGraphicsBeginImageContext(blueBackground.frame.size)
+        UIImage(named: "0_FlagCollage")?.draw(in: blueBackground.bounds)
+        
+        if let image = UIGraphicsGetImageFromCurrentImageContext(){
+            UIGraphicsEndImageContext()
+            blueBackground.backgroundColor = UIColor(patternImage: image.alpha(0.2))
+        }
         surroundingGreyView.layer.cornerRadius=10
         logoutButton.layer.cornerRadius=10
         suggestionButton.layer.cornerRadius=10
@@ -34,6 +44,7 @@ class SettingsVC: UIViewController {
 
         StarService.displayStars(myLabel: starCountLabel)
         updateTotals()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -71,8 +82,30 @@ class SettingsVC: UIViewController {
             var totalQuizCorrect=Int(self.starCountLabel.text!)!/10
             self.quizScoreCountLabel.text="\(totalQuizCorrect)/\(completedNames.count*3)"
         }
+        
+        self.returnStarCount{starString in
+            var starInt=Int(starString)
+            if(starInt! >= 300){
+                self.badgeCountLabel.text="3"
+            }else if(starInt! >= 200){
+                self.badgeCountLabel.text="2"
+            }else if(starInt! >= 100){
+                self.badgeCountLabel.text="1"
+            }else{
+                self.badgeCountLabel.text="0"
+            }
+        }
     }
     
+    func returnStarCount(completionHandler: @escaping (String) -> Void) {
+        let starCountRef=Database.database().reference().child("users").child(User.current.uid).child("stars")
+        
+        starCountRef.observeSingleEvent(of: .value, with: { (snapshot) in
+                var starString=snapshot.value as! String
+                completionHandler(starString)
+        })
+    }
+     
     func returnCompletedDict(completionHandler: @escaping ([String:Bool]) -> Void) {
         print("Running return completed names")
         var completedCountries: [String:Bool]=[:]

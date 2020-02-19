@@ -10,15 +10,25 @@ import Foundation
 import FirebaseDatabase
 
 struct InfoService{
-    static func setUpCompletedCountries(){
-        let completedCountryRef=Database.database().reference().child("users").child(User.current.uid).child("Completed Countries")
-        print("completedCountryRef")
-        completedCountryRef.setValue(["Some Country":false]){(error, _) in
-            if let error=error{
-                assertionFailure(error.localizedDescription)
-            }
-        }
-    }
+//    static func setUpCompletedCountries(){
+//        let userRef=Database.database().reference().child("users").child(User.current.uid)
+//        
+//        userRef.observeSingleEvent(of: .value, with: { (snapshot) in
+//            if snapshot.hasChild("Completed Countries"){
+//                print("Don't have to append any completed countries")
+//
+//            }else{
+//                print("Need to add completed countries")
+//                let completedCountryRef=Database.database().reference().child("users").child(User.current.uid).child("Completed Countries")
+//                print("completedCountryRef")
+//                completedCountryRef.setValue(["Some Country":false]){(error, _) in
+//                    if let error=error{
+//                        assertionFailure(error.localizedDescription)
+//                    }
+//                }
+//            }
+//        })
+//    }
     
     static func insertAllCountryInfo(){
         

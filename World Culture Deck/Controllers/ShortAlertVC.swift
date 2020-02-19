@@ -32,6 +32,22 @@ class ShortAlertVC: UIViewController {
             bigHeader.text="ALERT!"
             label.text="You need Wi-Fi/Internet to access lessons!"
             okButton.setTitle("  Ok  ", for: .normal)
+        case "logIn":
+            bigHeader.text="ALERT!"
+            label.text="You need Wi-Fi/Internet to log in!"
+            okButton.setTitle("  Ok  ", for: .normal)
+        case "needToUnlock":
+            bigHeader.text="ALERT!"
+            label.text="You need more stars to unlock this badge!"
+            okButton.setTitle("  Ok  ", for: .normal)
+        case "errorSaving":
+            bigHeader.text="ALERT!"
+            label.text="Error saving badge image!"
+            okButton.setTitle("  Ok  ", for: .normal)
+        case "savedSuccess":
+            bigHeader.text="Success!"
+            label.text="Successfuly saved badge image to Photo Library!"
+            okButton.setTitle("  Ok  ", for: .normal)
         default:
             print("Error! Could not react to short alert!")
         }
@@ -48,6 +64,7 @@ class ShortAlertVC: UIViewController {
         centerView.superview?.bringSubviewToFront(centerView)
         
         wcdImage.superview?.bringSubviewToFront(wcdImage)
+    
     }
     
     @IBAction func okPressed(_ sender: Any) {
