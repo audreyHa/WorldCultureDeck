@@ -29,6 +29,12 @@ class LoginViewController: UIViewController {
         
         loginButton.titleLabel?.adjustsFontSizeToFitWidth=true
         continueButton.titleLabel?.adjustsFontSizeToFitWidth=true
+        
+        var privacyPolicy=UserDefaults.standard.bool(forKey: "privacyPolicy")
+        
+        if(privacyPolicy==nil || privacyPolicy==false){
+            makePrivacyPolicy()
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -44,9 +50,6 @@ class LoginViewController: UIViewController {
         present(authViewController, animated: true)
     }
     
-    @IBAction func continuePressed(_ sender: Any) {
-        
-    }
     
 }
 

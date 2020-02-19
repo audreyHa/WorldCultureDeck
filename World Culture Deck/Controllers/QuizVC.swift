@@ -17,6 +17,7 @@ class QuizVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     @IBOutlet weak var redoButton: UIButton!
     @IBOutlet weak var starLabel: UILabel!
     @IBOutlet weak var WCDLabel: UILabel!
+    @IBOutlet weak var headerLabel: UILabel!
     
     var userAnswersString: [String]=["","",""]
     var userAnswers: [String]=["","",""]
@@ -34,6 +35,9 @@ class QuizVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         
         QuizService.displayQuizScore(myLabel: topScoreLabel)
         StarService.displayStars(myLabel: starLabel)
+        
+        var countryName=UserDefaults.standard.string(forKey: "countryName")!
+        headerLabel.text="\(countryName): Quiz"
     }
     
     override func viewDidAppear(_ animated: Bool) {

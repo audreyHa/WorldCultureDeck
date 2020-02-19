@@ -254,4 +254,13 @@ extension UIViewController{
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
+    
+    func makePrivacyPolicy(){
+        print("privacy policy alert created")
+        let vc = storyboard!.instantiateViewController(withIdentifier: "PrivacyPolicyVC") as! PrivacyPolicyVC
+        var transparentGrey=UIColor(red: 0.16, green: 0.16, blue: 0.16, alpha: 0.95)
+        vc.view.backgroundColor = transparentGrey
+        vc.modalPresentationStyle = .overCurrentContext
+        present(vc, animated: true, completion: nil)
+    }
 }

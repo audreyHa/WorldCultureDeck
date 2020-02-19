@@ -15,7 +15,8 @@ class NLI_QuizController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var topScoreLabel: UILabel!
     @IBOutlet weak var redoButton: UIButton!
     @IBOutlet weak var WCDLabel: UILabel!
-
+    @IBOutlet weak var headerLabel: UILabel!
+    
     var userAnswersString: [String]=["","",""]
     var userAnswers: [String]=["","",""]
 
@@ -29,6 +30,9 @@ class NLI_QuizController: UIViewController, UITableViewDelegate, UITableViewData
         NotificationCenter.default.addObserver(self, selector: #selector(self.newAnswerPressed(notification:)), name: Notification.Name("newAnswerPressed"), object: nil)
         
         tableView.allowsSelection=false
+        
+        var countryName=UserDefaults.standard.string(forKey: "NLI_countryName")!
+        headerLabel.text="\(countryName): Quiz"
     }
 
     @objc func newAnswerPressed(notification: Notification) {

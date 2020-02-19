@@ -1517,6 +1517,7 @@
                     <navigationItem key="navigationItem" id="sCU-v3-HS1"/>
                     <connections>
                         <outlet property="WCDLabel" destination="OZ7-sE-lfV" id="hhR-F3-Dwo"/>
+                        <outlet property="headerLabel" destination="zQT-za-ngM" id="du0-hN-Sjh"/>
                         <outlet property="redoButton" destination="2Ye-Nn-lTy" id="6kU-Ta-gCZ"/>
                         <outlet property="starLabel" destination="3fu-Hs-42N" id="CH6-6V-WAh"/>
                         <outlet property="submitButton" destination="Z7G-jI-DdX" id="7gg-iZ-S57"/>
