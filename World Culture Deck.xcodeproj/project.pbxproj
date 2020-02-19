@@ -18,6 +18,7 @@
 		F66B88D523FCF12B0018892D /* NLI_InfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66B88D423FCF12B0018892D /* NLI_InfoController.swift */; };
 		F66B88D723FCF1610018892D /* NLI_QuizController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66B88D623FCF1610018892D /* NLI_QuizController.swift */; };
 		F66B88D923FCF17E0018892D /* NLI_SourceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66B88D823FCF17E0018892D /* NLI_SourceVC.swift */; };
+		F66B88DB23FCFF010018892D /* NLI_quizCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66B88DA23FCFF010018892D /* NLI_quizCell.swift */; };
 		F6A4657023BA1649004255BE /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4656F23BA1649004255BE /* HomeVC.swift */; };
 		F6A4657223BA197A004255BE /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4657123BA197A004255BE /* SettingsVC.swift */; };
 		F6A4657423BA2303004255BE /* WallpaperVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4657323BA2303004255BE /* WallpaperVC.swift */; };
@@ -64,6 +65,7 @@
 		F66B88D423FCF12B0018892D /* NLI_InfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLI_InfoController.swift; sourceTree = "<group>"; };
 		F66B88D623FCF1610018892D /* NLI_QuizController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLI_QuizController.swift; sourceTree = "<group>"; };
 		F66B88D823FCF17E0018892D /* NLI_SourceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLI_SourceVC.swift; sourceTree = "<group>"; };
+		F66B88DA23FCFF010018892D /* NLI_quizCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLI_quizCell.swift; sourceTree = "<group>"; };
 		F6A4656F23BA1649004255BE /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		F6A4657123BA197A004255BE /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		F6A4657323BA2303004255BE /* WallpaperVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperVC.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				F66B88D423FCF12B0018892D /* NLI_InfoController.swift */,
 				F66B88D623FCF1610018892D /* NLI_QuizController.swift */,
 				F66B88D823FCF17E0018892D /* NLI_SourceVC.swift */,
+				F66B88DA23FCFF010018892D /* NLI_quizCell.swift */,
 			);
 			path = NotLoggedInControllers;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 			files = (
 				F6E3433C23BAE02F005B62A2 /* AllDecksCell.swift in Sources */,
 				F6D9BEB123E7F2C7005F0690 /* InfoService.swift in Sources */,
+				F66B88DB23FCFF010018892D /* NLI_quizCell.swift in Sources */,
 				F66B88D723FCF1610018892D /* NLI_QuizController.swift in Sources */,
 				F6BEF4CD23FB41C600863713 /* ShortAlertVC.swift in Sources */,
 				F61DB99623DC136C008943C6 /* QuizVC.swift in Sources */,

@@ -784,7 +784,7 @@
         <!--Country Controller-->
         <scene sceneID="6Fx-zh-Puk">
             <objects>
-                <viewController id="oEm-XA-QTI" customClass="NLI_CountryController" customModule="World_Culture_Deck" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="oEm-XA-QTI" customClass="CountryController" customModule="World_Culture_Deck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Kw-fp-l26">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -940,7 +940,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQ4-aL-2ez">
                                                 <rect key="frame" x="181.66666666666669" y="0.0" width="151.66666666666669" height="151.66666666666666"/>
                                                 <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="30"/>
-                                                <state key="normal" title=" Fun Facts ">
+                                                <state key="normal" title=" Fun Facts">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -1045,7 +1045,7 @@
         <!--Info Controller-->
         <scene sceneID="lLv-N6-vKY">
             <objects>
-                <viewController id="HX0-2h-ZkL" customClass="NLI_InfoController" customModule="World_Culture_Deck" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="HX0-2h-ZkL" customClass="InfoController" customModule="World_Culture_Deck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nlf-r9-OKX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1255,10 +1255,10 @@
             </objects>
             <point key="canvasLocation" x="1703" y="192"/>
         </scene>
-        <!--Quiz Controller-->
+        <!--QuizVC-->
         <scene sceneID="LOm-i6-RJy">
             <objects>
-                <viewController id="dds-SJ-LGe" customClass="NLI_QuizController" customModule="World_Culture_Deck" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dds-SJ-LGe" customClass="QuizVC" customModule="World_Culture_Deck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KsA-34-bGb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1528,10 +1528,10 @@
             </objects>
             <point key="canvasLocation" x="979.71014492753636" y="989.73214285714278"/>
         </scene>
-        <!--SourceVC-->
+        <!--SourcesVC-->
         <scene sceneID="Rfa-Ax-KuK">
             <objects>
-                <viewController id="ght-nR-pdn" customClass="NLI_SourceVC" customModule="World_Culture_Deck" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ght-nR-pdn" customClass="SourcesVC" customModule="World_Culture_Deck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tOI-s0-LGQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

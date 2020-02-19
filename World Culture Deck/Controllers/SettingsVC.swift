@@ -55,6 +55,12 @@ class SettingsVC: UIViewController {
         remainingHeading.adjustsFontSizeToFitWidth=true
         scoreHeading.adjustsFontSizeToFitWidth=true
         badgesHeading.adjustsFontSizeToFitWidth=true
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.updateSettings(notification:)), name: Notification.Name("updateSettings"), object: nil)
+    }
+    
+    @objc func updateSettings(notification: Notification) {
+        updateTotals()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -87,10 +93,6 @@ class SettingsVC: UIViewController {
             
             self.completedCountLabel.text="\(completedNames.count)"
             self.remainingCountLabel.text="\(incompletedNames.count)"
-            
-           
-            var totalQuizCorrect=Int(self.starCountLabel.text!)!/10
-            self.quizScoreCountLabel.text="\(totalQuizCorrect)/\(completedNames.count*3)"
         }
         
         self.returnStarCount{starString in
@@ -105,6 +107,33 @@ class SettingsVC: UIViewController {
                 self.badgeCountLabel.text="0"
             }
         }
+        
+        self.returnQuizRight{rightString in
+            self.quizScoreCountLabel.text="\(rightString)/"
+        }
+        
+        self.returnQuizTotal{totalString in
+            self.quizScoreCountLabel.text! += "\(totalString)"
+            
+        }
+    }
+    
+    func returnQuizTotal(completionHandler: @escaping (String) -> Void){
+        let quizTotalRef=Database.database().reference().child("users").child(User.current.uid).child("quizTotal")
+        quizTotalRef.observeSingleEvent(of: .value, with: { (snapshot) in
+                let totalString=snapshot.value as? String ?? "0"
+                completionHandler(totalString)
+        })
+    }
+    
+    
+    
+    func returnQuizRight(completionHandler: @escaping (String) -> Void){
+        let quizRightRef=Database.database().reference().child("users").child(User.current.uid).child("quizCount")
+        quizRightRef.observeSingleEvent(of: .value, with: { (snapshot) in
+                let rightString=snapshot.value as? String ?? "0"
+                completionHandler(rightString)
+        })
     }
     
     func returnStarCount(completionHandler: @escaping (String) -> Void) {

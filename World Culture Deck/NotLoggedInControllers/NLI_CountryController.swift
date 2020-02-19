@@ -27,8 +27,6 @@ class NLI_CountryController: UIViewController {
             
             WCDLabel.adjustsFontSizeToFitWidth=true
             
-            StarService.displayStars(myLabel: starLabel)
-
             mapImage.layer.cornerRadius=10
             mapImage.clipsToBounds=true
             
@@ -41,13 +39,9 @@ class NLI_CountryController: UIViewController {
 
             setUpForCountry()
         }
-        
-        override func viewDidAppear(_ animated: Bool) {
-            checkNetwork()
-        }
-        
+
         func setUpForCountry(){
-            var countryName=UserDefaults.standard.string(forKey: "NLIcountryName")!
+            var countryName=UserDefaults.standard.string(forKey: "NLI_countryName")!
             countryNameLabel.text=countryName
             
             var countryMapString=countryName+"Map"
@@ -80,7 +74,7 @@ class NLI_CountryController: UIViewController {
         func returnCountryBlurb() -> String{
             print("Running return country blurb")
 
-            var countryName=UserDefaults.standard.string(forKey: "NLIcountryName")!
+            var countryName=UserDefaults.standard.string(forKey: "NLI_countryName")!
             let allBlurbs=InfoService.returnBlurbs()
             let blurb=allBlurbs[countryName]
             
@@ -88,25 +82,25 @@ class NLI_CountryController: UIViewController {
         }
         
         @IBAction func clothingPressed(_ sender: Any) {
-            UserDefaults.standard.set("Clothing",forKey:"infoType")
+            UserDefaults.standard.set("Clothing",forKey:"NLI_infoType")
             performSegue(withIdentifier: "infoController", sender: nil)
             
         }
         
         @IBAction func musicPressed(_ sender: Any) {
-            UserDefaults.standard.set("Music",forKey:"infoType")
+            UserDefaults.standard.set("Music",forKey:"NLI_infoType")
             performSegue(withIdentifier: "infoController", sender: nil)
             
         }
         
         @IBAction func artPressed(_ sender: Any) {
-            UserDefaults.standard.set("Art",forKey:"infoType")
+            UserDefaults.standard.set("Art",forKey:"NLI_infoType")
             performSegue(withIdentifier: "infoController", sender: nil)
             
         }
         
         @IBAction func foodPressed(_ sender: Any) {
-            UserDefaults.standard.set("Fun Facts",forKey:"infoType")
+            UserDefaults.standard.set("Fun Facts",forKey:"NLI_infoType")
             performSegue(withIdentifier: "infoController", sender: nil)
             
         }

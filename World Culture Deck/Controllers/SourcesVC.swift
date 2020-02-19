@@ -31,6 +31,7 @@ class SourcesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         var countryName=UserDefaults.standard.string(forKey: "countryName")!
         
+        linksHeaderLabel.adjustsFontSizeToFitWidth=true
         linksHeaderLabel.text="\(countryName): Links/Sources"
         
         UIGraphicsBeginImageContext(blueBackground.frame.size)

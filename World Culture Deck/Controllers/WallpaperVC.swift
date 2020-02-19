@@ -45,6 +45,19 @@ class WallpaperVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         StarService.displayStars(myLabel: starCountLabel)
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.updateBadgeCollectionView(notification:)), name: Notification.Name("updateBadgeCollectionView"), object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.saveBadgeImage(notification:)), name: Notification.Name("saveBadgeImage"), object: nil)
+    }
+    
+    @objc func saveBadgeImage(notification: Notification) {
+        var badgeImageIndex=UserDefaults.standard.integer(forKey: "badgeImageIndex")
+        if(lockedStatus[badgeImageIndex]==false){
+            let badgeBackground=["100_badge_background","200_badge_background","300_badge_background"]
+            UIImageWriteToSavedPhotosAlbum(UIImage(named:badgeBackground[badgeImageIndex])!, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+        }else{
+            UserDefaults.standard.set("needToUnlock",forKey: "typeShortAlert")
+            makeShortAlert()
+        }
     }
     
     @objc func updateBadgeCollectionView(notification: Notification) {

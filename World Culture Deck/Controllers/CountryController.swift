@@ -22,13 +22,15 @@ class CountryController: UIViewController {
     @IBOutlet weak var blueBackground: UIView!
     @IBOutlet weak var quizButton: UIButton!
     @IBOutlet weak var linksVideoButton: UIButton!
+    @IBOutlet weak var starLabel: UILabel!
     @IBOutlet weak var countryNameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         WCDLabel.adjustsFontSizeToFitWidth=true
-        
+        StarService.displayStars(myLabel: starLabel)
+
         mapImage.layer.cornerRadius=10
         mapImage.clipsToBounds=true
         

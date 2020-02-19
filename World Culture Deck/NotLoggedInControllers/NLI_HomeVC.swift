@@ -37,7 +37,6 @@ class NLI_HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        checkNetwork()
         setupAllDecksLayout()
     }
     
@@ -69,7 +68,8 @@ class NLI_HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         var countryName=allNames[indexPath.row]
-        UserDefaults.standard.set(countryName, forKey:"NLIcountryName")
+        print(countryName)
+        UserDefaults.standard.set(countryName, forKey:"NLI_countryName")
         performSegue(withIdentifier: "countryController", sender: nil)
     }
     

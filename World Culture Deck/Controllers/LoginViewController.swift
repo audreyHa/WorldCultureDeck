@@ -26,6 +26,9 @@ class LoginViewController: UIViewController {
         loginButton.layer.cornerRadius=10
         continueButton.layer.cornerRadius=10
         WCDLabel.adjustsFontSizeToFitWidth=true
+        
+        loginButton.titleLabel?.adjustsFontSizeToFitWidth=true
+        continueButton.titleLabel?.adjustsFontSizeToFitWidth=true
     }
     
     override func viewDidAppear(_ animated: Bool) {
