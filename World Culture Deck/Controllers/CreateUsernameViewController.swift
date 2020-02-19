@@ -20,6 +20,8 @@ class CreateUsernameViewController: UIViewController {
         super.viewDidLoad()
         nextButton.layer.cornerRadius=10
         createUsernameLabel.adjustsFontSizeToFitWidth=true
+        
+        self.hideKeyboardWhenTappedAround()
     }
 
     override func viewDidAppear(_ animated: Bool) {

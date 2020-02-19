@@ -98,11 +98,28 @@ class SettingsVC: UIViewController {
     }
     
     func returnStarCount(completionHandler: @escaping (String) -> Void) {
-        let starCountRef=Database.database().reference().child("users").child(User.current.uid).child("stars")
+        print("Running return star count")
+        var starCount: String=""
         
-        starCountRef.observeSingleEvent(of: .value, with: { (snapshot) in
-                var starString=snapshot.value as! String
-                completionHandler(starString)
+        let starCountRef=Database.database().reference().child("users").child(User.current.uid).child("stars")
+        let userRef=Database.database().reference().child("users").child(User.current.uid)
+        
+        userRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            if snapshot.hasChild("stars"){
+                starCountRef.observeSingleEvent(of: .value, with: { (snapshot) in
+                        starCount=snapshot.value as! String
+                        completionHandler(starCount)
+                })
+            }else{
+                print("Need to add stars")
+                starCountRef.setValue("0"){(error, _) in
+                    starCount="0"
+                    completionHandler(starCount)
+                    if let error=error{
+                        assertionFailure(error.localizedDescription)
+                    }
+                }
+            }
         })
     }
      
