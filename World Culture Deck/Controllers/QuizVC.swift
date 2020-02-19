@@ -16,13 +16,15 @@ class QuizVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     @IBOutlet weak var topScoreLabel: UILabel!
     @IBOutlet weak var redoButton: UIButton!
     @IBOutlet weak var starLabel: UILabel!
-
+    @IBOutlet weak var WCDLabel: UILabel!
+    
     var userAnswersString: [String]=["","",""]
     var userAnswers: [String]=["","",""]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        WCDLabel.adjustsFontSizeToFitWidth=true
         UserDefaults.standard.set(false,forKey:"isFeedback")
         submitButton.layer.cornerRadius=10
 

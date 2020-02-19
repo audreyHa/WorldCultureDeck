@@ -17,12 +17,14 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var WCDLabel: UILabel!
+    @IBOutlet weak var continueButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         loginButton.layer.cornerRadius=10
+        continueButton.layer.cornerRadius=10
         WCDLabel.adjustsFontSizeToFitWidth=true
     }
     
@@ -38,7 +40,13 @@ class LoginViewController: UIViewController {
         let authViewController=authUI.authViewController()
         present(authViewController, animated: true)
     }
+    
+    @IBAction func continuePressed(_ sender: Any) {
+        
+    }
+    
 }
+
 
 extension LoginViewController: FUIAuthDelegate{
     func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?){

@@ -11,6 +11,12 @@ import Firebase
 
 class SettingsVC: UIViewController {
 
+    @IBOutlet weak var decksHeading: UILabel!
+    @IBOutlet weak var remainingHeading: UILabel!
+    @IBOutlet weak var scoreHeading: UILabel!
+    @IBOutlet weak var badgesHeading: UILabel!
+    
+    
     @IBOutlet weak var blueBackground: UIView!
     @IBOutlet weak var settingsHeader: UILabel!
     
@@ -45,6 +51,10 @@ class SettingsVC: UIViewController {
         StarService.displayStars(myLabel: starCountLabel)
         updateTotals()
         
+        decksHeading.adjustsFontSizeToFitWidth=true
+        remainingHeading.adjustsFontSizeToFitWidth=true
+        scoreHeading.adjustsFontSizeToFitWidth=true
+        badgesHeading.adjustsFontSizeToFitWidth=true
     }
     
     override func viewDidAppear(_ animated: Bool) {

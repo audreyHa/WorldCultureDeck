@@ -11,6 +11,7 @@ import FirebaseDatabase
 
 class SourcesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var WCDLabel: UILabel!
     @IBOutlet weak var linksTableView: UITableView!
     @IBOutlet weak var linksHeaderLabel: UILabel!
     @IBOutlet weak var starCountLabel: UILabel!
@@ -22,6 +23,7 @@ class SourcesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        WCDLabel.adjustsFontSizeToFitWidth=true
         
         StarService.displayStars(myLabel: starCountLabel)
 

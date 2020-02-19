@@ -12,6 +12,7 @@ import FirebaseDatabase
 
 class CountryController: UIViewController {
 
+    @IBOutlet weak var WCDLabel: UILabel!
     @IBOutlet weak var clothingButton: UIButton!
     @IBOutlet weak var musicButton: UIButton!
     @IBOutlet weak var artButton: UIButton!
@@ -21,14 +22,13 @@ class CountryController: UIViewController {
     @IBOutlet weak var blueBackground: UIView!
     @IBOutlet weak var quizButton: UIButton!
     @IBOutlet weak var linksVideoButton: UIButton!
-    @IBOutlet weak var starLabel: UILabel!
     @IBOutlet weak var countryNameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        StarService.displayStars(myLabel: starLabel)
-
+        WCDLabel.adjustsFontSizeToFitWidth=true
+        
         mapImage.layer.cornerRadius=10
         mapImage.clipsToBounds=true
         

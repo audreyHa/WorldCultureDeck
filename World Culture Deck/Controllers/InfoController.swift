@@ -11,6 +11,7 @@ import FirebaseDatabase
 
 class InfoController: UIViewController {
 
+    @IBOutlet weak var WCDLabel: UILabel!
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var firstImage: UIImageView!
     @IBOutlet weak var firstLabel: UILabel!
@@ -28,7 +29,9 @@ class InfoController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        WCDLabel.adjustsFontSizeToFitWidth=true
+        
         backButton.layer.cornerRadius=10
         nextButton.layer.cornerRadius=10
         
