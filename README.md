@@ -27,4 +27,5 @@ The only purpose of World Culture Deck collecting user data for this version is 
 If you have any questions, please feel free to contact me at dayhighlightsmobileapp@gmail.com!
  
 Sincerely, 
+
 Audrey Ha
