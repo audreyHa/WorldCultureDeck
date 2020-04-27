@@ -24,7 +24,7 @@ Personal Data collected by World Culture Deck through Firebase:
 
 The only purpose of World Culture Deck collecting user data for this version is to improve user experience and guide development for the next release. If you do not wish to participate and help the app (and me) better understand your needs, you are always welcome to come back and install a later version.
  
-If you have any questions, please feel free to contact me at dayhighlightsmobileapp@gmail.com!
+If you have any questions, please feel free to contact me at dayhighlightsapp@gmail.com!
  
 Sincerely, 
 
