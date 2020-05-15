@@ -24,17 +24,23 @@ class SettingsVC: UIViewController {
     @IBOutlet weak var logoutButton: UIButton!
     @IBOutlet weak var suggestionButton: UIButton!
     
-    @IBOutlet weak var completedCountLabel: UILabel!
-    @IBOutlet weak var remainingCountLabel: UILabel!
-    @IBOutlet weak var quizScoreCountLabel: UILabel!
-    @IBOutlet weak var badgeCountLabel: UILabel!
-    
     @IBOutlet weak var starCountLabel: UILabel!
     @IBOutlet weak var WCDLabel: UILabel!
+    @IBOutlet weak var starButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        var myLabels=[WCDLabel, decksHeading, remainingHeading, scoreHeading, badgesHeading, settingsHeader, starCountLabel]
+        var myButtons=[logoutButton, suggestionButton]
+        
+        for myLabel in myLabels{
+            makeLabelAccessible(myLabel: myLabel!)
+        }
+        
+        for myButton in myButtons{
+            makeButtonAccessible(myButton: myButton!)
+        }
+        
         WCDLabel.adjustsFontSizeToFitWidth=true
         UIGraphicsBeginImageContext(blueBackground.frame.size)
         UIImage(named: "0_FlagCollage")?.draw(in: blueBackground.bounds)
@@ -57,6 +63,21 @@ class SettingsVC: UIViewController {
         badgesHeading.adjustsFontSizeToFitWidth=true
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.updateSettings(notification:)), name: Notification.Name("updateSettings"), object: nil)
+        
+        starButton.isAccessibilityElement=false
+        starCountLabel.accessibilityLabel="\(UserDefaults.standard.integer(forKey: "numberStars")) stars"
+    }
+    
+    func makeLabelAccessible(myLabel: UILabel){
+        myLabel.adjustsFontForContentSizeCategory=true
+        myLabel.adjustsFontSizeToFitWidth=true
+        myLabel.font=UIFontMetrics.default.scaledFont(for: myLabel.font)
+    }
+    
+    func makeButtonAccessible(myButton: UIButton){
+        myButton.titleLabel!.adjustsFontForContentSizeCategory=true
+        myButton.titleLabel!.adjustsFontSizeToFitWidth=true
+        myButton.titleLabel!.font=UIFontMetrics.default.scaledFont(for: myButton.titleLabel!.font)
     }
     
     @objc func updateSettings(notification: Notification) {
@@ -91,29 +112,29 @@ class SettingsVC: UIViewController {
             print("Completed names: \(completedNames)")
             print("Incompleted names: \(incompletedNames)")
             
-            self.completedCountLabel.text="\(completedNames.count)"
-            self.remainingCountLabel.text="\(incompletedNames.count)"
+            self.decksHeading.text="Decks Completed: \(completedNames.count)"
+            self.remainingHeading.text="Decks Remaining: \(incompletedNames.count)"
         }
         
         self.returnStarCount{starString in
             var starInt=Int(starString)
             if(starInt! >= 300){
-                self.badgeCountLabel.text="3"
+                self.badgesHeading.text="# of Badges Earned: 3"
             }else if(starInt! >= 200){
-                self.badgeCountLabel.text="2"
+                self.badgesHeading.text="# of Badges Earned: 2"
             }else if(starInt! >= 100){
-                self.badgeCountLabel.text="1"
+                self.badgesHeading.text="# of Badges Earned: 1"
             }else{
-                self.badgeCountLabel.text="0"
+                self.badgesHeading.text="# of Badges Earned: 0"
             }
         }
         
         self.returnQuizRight{rightString in
-            self.quizScoreCountLabel.text="\(rightString)/"
+            self.scoreHeading.text="Total Quiz Score: \(rightString)/"
         }
         
         self.returnQuizTotal{totalString in
-            self.quizScoreCountLabel.text! += "\(totalString)"
+            self.scoreHeading.text! += "\(totalString)"
             
         }
     }

@@ -23,6 +23,8 @@ class InfoController: UIViewController {
     @IBOutlet weak var pageCountLabel: UILabel!
     @IBOutlet weak var blueBackground: UIView!
     @IBOutlet weak var starLabel: UILabel!
+    @IBOutlet weak var xButton: UIButton!
+    @IBOutlet weak var starButton: UIButton!
     
     var pageCount: Int=0
     var numberWords: [String]!
@@ -48,6 +50,38 @@ class InfoController: UIViewController {
         
         numberWords=["zero","one","two","three","four","five","six"]
         setUpPage()
+        
+        xButton.accessibilityLabel="Close \(UserDefaults.standard.string(forKey: "infoType")!) page"
+        xButton.accessibilityHint="Tap to go back to \(countryName) page"
+        
+        var myLabels=[WCDLabel, headerLabel, firstLabel, secondLabel, pageCountLabel, starLabel]
+        var myButtons=[backButton, nextButton]
+        
+        for myLabel in myLabels{
+            makeLabelAccessible(myLabel: myLabel!)
+        }
+        
+        for myButton in myButtons{
+            makeButtonAccessible(myButton: myButton!)
+        }
+        
+        starButton.isAccessibilityElement=false
+        starLabel.accessibilityLabel="\(UserDefaults.standard.integer(forKey: "numberStars")) stars"
+        
+        backButton.isAccessibilityElement=true
+        nextButton.isAccessibilityElement=true
+    }
+    
+    func makeLabelAccessible(myLabel: UILabel){
+        myLabel.adjustsFontForContentSizeCategory=true
+        myLabel.adjustsFontSizeToFitWidth=true
+        myLabel.font=UIFontMetrics.default.scaledFont(for: myLabel.font)
+    }
+    
+    func makeButtonAccessible(myButton: UIButton){
+        myButton.titleLabel!.adjustsFontForContentSizeCategory=true
+        myButton.titleLabel!.adjustsFontSizeToFitWidth=true
+        myButton.titleLabel!.font=UIFontMetrics.default.scaledFont(for: myButton.titleLabel!.font)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -67,9 +101,22 @@ class InfoController: UIViewController {
             
             textCategoryArray=countryTextArray[infoType]! as! [String : [String : String]]
             
+            if(self.pageCount==0){
+                self.backButton.accessibilityHint="You are currently on page \(self.pageCount+1) out of \(textCategoryArray.count). You cannot go backwards."
+            }else{
+                self.backButton.accessibilityHint="You are currently on page \(self.pageCount+1) out of \(textCategoryArray.count). Tap to go 1 page backwards."
+            }
+            
+            if(self.pageCount==textCategoryArray.count){
+                self.nextButton.accessibilityHint="You are currently on page \(self.pageCount+1) out of \(textCategoryArray.count). There is no next page."
+            }else{
+                self.nextButton.accessibilityHint="You are currently on page \(self.pageCount+1) out of \(textCategoryArray.count). Tap to go 1 page forwards."
+            }
+            
             if(self.pageCount<=textCategoryArray.count-1){ //making sure that page count isn't exceding
                 //setting the page count and header label
                 self.pageCountLabel.text="\(self.pageCount+1)/\(textCategoryArray.count)"
+                
                 self.headerLabel.text="\(countryName): \(infoType)"
                 
                 //Setting the first and second labels

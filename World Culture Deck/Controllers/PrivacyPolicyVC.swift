@@ -23,13 +23,23 @@ class PrivacyPolicyVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        bigHeader.adjustsFontSizeToFitWidth = true
-        okButton.titleLabel!.adjustsFontSizeToFitWidth = true
+        
+        var myLabels=[bigHeader]
+        var myButtons=[okButton]
+        
+        for myLabel in myLabels{
+            makeLabelAccessible(myLabel: myLabel!)
+        }
+        
+        for myButton in myButtons{
+            makeButtonAccessible(myButton: myButton!)
+        }
         
         bigHeader.text="Privacy Policy!"
         okButton.setTitle("  Continue  ", for: .normal)
         
-        
+        bigTextView.font=UIFontMetrics.default.scaledFont(for: bigTextView.font!)
+        bigTextView.adjustsFontForContentSizeCategory=true
         
         topView.layer.cornerRadius = 10
         topView.clipsToBounds = true
@@ -54,10 +64,23 @@ class PrivacyPolicyVC: UIViewController {
         if hyperlinked {
             bigTextView.attributedText! = NSAttributedString(attributedString: linkedText)
         }
+        
+    }
     
+    func makeLabelAccessible(myLabel: UILabel){
+        myLabel.adjustsFontForContentSizeCategory=true
+        myLabel.adjustsFontSizeToFitWidth=true
+        myLabel.font=UIFontMetrics.default.scaledFont(for: myLabel.font)
+    }
+    
+    func makeButtonAccessible(myButton: UIButton){
+        myButton.titleLabel!.adjustsFontForContentSizeCategory=true
+        myButton.titleLabel!.adjustsFontSizeToFitWidth=true
+        myButton.titleLabel!.font=UIFontMetrics.default.scaledFont(for: myButton.titleLabel!.font)
     }
     
     @IBAction func okPressed(_ sender: Any) {
+        UserDefaults.standard.set(true, forKey: "privacyPolicy")
         navigationController?.popViewController(animated: true)
 
         dismiss(animated: true, completion: nil)

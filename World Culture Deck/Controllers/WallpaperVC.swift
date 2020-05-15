@@ -15,6 +15,7 @@ class WallpaperVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var WCDLabel: UILabel!
     @IBOutlet weak var starCountLabel: UILabel!
+    @IBOutlet weak var starButton: UIButton!
     
     var collectionViewFlowLayout: UICollectionViewFlowLayout!
     
@@ -47,6 +48,9 @@ class WallpaperVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         NotificationCenter.default.addObserver(self, selector: #selector(self.updateBadgeCollectionView(notification:)), name: Notification.Name("updateBadgeCollectionView"), object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.saveBadgeImage(notification:)), name: Notification.Name("saveBadgeImage"), object: nil)
+        
+        starButton.isAccessibilityElement=false
+        starCountLabel.accessibilityLabel="\(UserDefaults.standard.integer(forKey: "numberStars")) stars"
     }
     
     @objc func saveBadgeImage(notification: Notification) {
@@ -116,6 +120,12 @@ class WallpaperVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
             }
             
         }
+        
+        cell.downloadButton.accessibilityLabel="Download \(cell.regionLabel.text!) Badge"
+        cell.downloadButton.accessibilityHint="You currently have \(UserDefaults.standard.integer(forKey: "numberStars")) stars."
+        
+        cell.wallpaperImageView.isAccessibilityElement=false
+        
         return cell
     }
     

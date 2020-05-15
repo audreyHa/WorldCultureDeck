@@ -16,6 +16,7 @@ class NLI_QuizController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var redoButton: UIButton!
     @IBOutlet weak var WCDLabel: UILabel!
     @IBOutlet weak var headerLabel: UILabel!
+    @IBOutlet weak var xButton: UIButton!
     
     var userAnswersString: [String]=["","",""]
     var userAnswers: [String]=["","",""]
@@ -33,8 +34,37 @@ class NLI_QuizController: UIViewController, UITableViewDelegate, UITableViewData
         
         var countryName=UserDefaults.standard.string(forKey: "NLI_countryName")!
         headerLabel.text="\(countryName): Quiz"
+        
+        var myLabels=[WCDLabel, topScoreLabel, headerLabel]
+        var myButtons=[submitButton]
+        
+        for myLabel in myLabels{
+            makeLabelAccessible(myLabel: myLabel!)
+        }
+        
+        for myButton in myButtons{
+            makeButtonAccessible(myButton: myButton!)
+        }
+        
+        xButton.accessibilityLabel="Close quiz page"
+        xButton.accessibilityHint="Tap to go back to \(countryName) page"
+        
+        redoButton.accessibilityLabel="Redo Quiz"
+        topScoreLabel.accessibilityViewIsModal = true
     }
 
+    func makeLabelAccessible(myLabel: UILabel){
+        myLabel.adjustsFontForContentSizeCategory=true
+        myLabel.adjustsFontSizeToFitWidth=true
+        myLabel.font=UIFontMetrics.default.scaledFont(for: myLabel.font)
+    }
+    
+    func makeButtonAccessible(myButton: UIButton){
+        myButton.titleLabel!.adjustsFontForContentSizeCategory=true
+        myButton.titleLabel!.adjustsFontSizeToFitWidth=true
+        myButton.titleLabel!.font=UIFontMetrics.default.scaledFont(for: myButton.titleLabel!.font)
+    }
+    
     @objc func newAnswerPressed(notification: Notification) {
         var answer=UserDefaults.standard.string(forKey: "NLI_newAnswer")
         var index=UserDefaults.standard.integer(forKey: "NLI_newAnswerIndex")
@@ -75,6 +105,8 @@ class NLI_QuizController: UIViewController, UITableViewDelegate, UITableViewData
             }
             
             topScoreLabel.text="Score: \(totalCorrect)/3"
+            
+            UIAccessibility.post(notification: .screenChanged, argument: topScoreLabel)
         }
         
     }
@@ -106,9 +138,6 @@ class NLI_QuizController: UIViewController, UITableViewDelegate, UITableViewData
         
         let questions=InfoService.returnQuizInfo()[countryName]!["Quiz Questions"]
         cell.questionLabel.text=questions![numberWords[indexPath.row]]!["zero"]
-        
-        
-        
         
         let isFeedback=UserDefaults.standard.bool(forKey: "NLI_isFeedback")
         if(isFeedback){
@@ -178,6 +207,13 @@ class NLI_QuizController: UIViewController, UITableViewDelegate, UITableViewData
             }
         }
 
+        cell.selectionStyle = .none
+        cell.isAccessibilityElement=false
+        cell.questionLabel.isAccessibilityElement=true
+        cell.firstOption.isAccessibilityElement=true
+        cell.secondOption.isAccessibilityElement=true
+        cell.thirdOption.isAccessibilityElement=true
+        
         return cell
     }
 

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WallpaperCell" id="gTV-IL-0wX" customClass="WallpaperCell" customModule="World_Culture_Deck" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WallpaperCell" id="gTV-IL-0wX" customClass="WallpaperCell" customModule="World_Cultures" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="160" height="204"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -17,22 +17,22 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Hp-Fm-22P">
-                        <rect key="frame" x="10" y="10" width="140" height="140"/>
+                        <rect key="frame" x="15" y="10" width="130" height="130"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="0Hp-Fm-22P" secondAttribute="height" multiplier="1:1" id="xgJ-Il-myl"/>
                         </constraints>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6r0-St-uhT">
-                        <rect key="frame" x="15" y="155" width="130" height="44"/>
+                        <rect key="frame" x="15" y="154" width="130" height="45"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="America" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Vz-Bb-6LV">
-                                <rect key="frame" x="0.0" y="0.0" width="81" height="44"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Vz-Bb-6LV">
+                                <rect key="frame" x="0.0" y="0.0" width="80" height="45"/>
                                 <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhy-jj-cBL">
-                                <rect key="frame" x="86" y="0.0" width="44" height="44"/>
+                                <rect key="frame" x="85" y="0.0" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="lhy-jj-cBL" secondAttribute="height" multiplier="1:1" id="57I-00-h0W"/>
                                 </constraints>
@@ -43,16 +43,19 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="Z2h-EJ-Am2"/>
+                        </constraints>
                     </stackView>
                 </subviews>
             </view>
             <color key="backgroundColor" red="0.78039215689999997" green="0.94117647059999998" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="0Hp-Fm-22P" secondAttribute="trailing" constant="10" id="5qa-Xn-61m"/>
-                <constraint firstItem="6r0-St-uhT" firstAttribute="top" secondItem="0Hp-Fm-22P" secondAttribute="bottom" constant="5" id="MFD-qz-8b4"/>
+                <constraint firstAttribute="trailing" secondItem="0Hp-Fm-22P" secondAttribute="trailing" constant="15" id="5qa-Xn-61m"/>
+                <constraint firstItem="6r0-St-uhT" firstAttribute="top" relation="greaterThanOrEqual" secondItem="0Hp-Fm-22P" secondAttribute="bottom" constant="5" id="MFD-qz-8b4"/>
                 <constraint firstItem="0Hp-Fm-22P" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="QP3-mn-hzy"/>
                 <constraint firstAttribute="bottom" secondItem="6r0-St-uhT" secondAttribute="bottom" constant="5" id="Ud0-LR-KLB"/>
-                <constraint firstItem="0Hp-Fm-22P" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="diR-pI-Xwe"/>
+                <constraint firstItem="0Hp-Fm-22P" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="diR-pI-Xwe"/>
                 <constraint firstAttribute="trailing" secondItem="6r0-St-uhT" secondAttribute="trailing" constant="15" id="ltI-Y9-ajg"/>
                 <constraint firstItem="6r0-St-uhT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="wHO-Q6-0vd"/>
             </constraints>

@@ -14,6 +14,8 @@ class NLI_HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
     @IBOutlet weak var blueBackground: UIView!
     @IBOutlet weak var allDeckCollectionView: UICollectionView!
     @IBOutlet weak var WCDLabel: UILabel!
+    @IBOutlet weak var homeLabel: UILabel!
+    @IBOutlet weak var cultureDecksLabel: UILabel!
     
     var collectionViewFlowLayout: UICollectionViewFlowLayout!
     var allNames: [String]!
@@ -21,8 +23,6 @@ class NLI_HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        WCDLabel.adjustsFontSizeToFitWidth=true
-        
         UIGraphicsBeginImageContext(blueBackground.frame.size)
         UIImage(named: "0_FlagCollage")?.draw(in: blueBackground.bounds)
         
@@ -34,10 +34,37 @@ class NLI_HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
         allNames=["Ghana","Lebanon","Mexico","Navajo Nation","Norway","Peru","Roma","South Africa","South Korea","Tonga"]
         
         self.setupCollectionView()
+        xButton.accessibilityLabel="Close home page"
+        xButton.accessibilityHint="Tap to go back to login page"
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.reloadNLICultureCards(notification:)), name: Notification.Name("reloadNLICultureCards"), object: nil)
+    }
+    
+    @objc func reloadNLICultureCards(notification: Notification) {
+        print("reload NLI Culture Cards")
+        allDeckCollectionView.reloadData()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         setupAllDecksLayout()
+        
+        var myLabels=[WCDLabel, homeLabel, cultureDecksLabel]
+        
+        for myLabel in myLabels{
+            makeLabelAccessible(myLabel: myLabel!)
+        }
+    }
+    
+    func makeLabelAccessible(myLabel: UILabel){
+        myLabel.adjustsFontForContentSizeCategory=true
+        myLabel.adjustsFontSizeToFitWidth=true
+        myLabel.font=UIFontMetrics.default.scaledFont(for: myLabel.font)
+    }
+    
+    func makeButtonAccessible(myButton: UIButton){
+        myButton.titleLabel!.adjustsFontForContentSizeCategory=true
+        myButton.titleLabel!.adjustsFontSizeToFitWidth=true
+        myButton.titleLabel!.font=UIFontMetrics.default.scaledFont(for: myButton.titleLabel!.font)
     }
     
     private func setupCollectionView(){
@@ -76,13 +103,23 @@ class NLI_HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
         let cell=collectionView.dequeueReusableCell(withReuseIdentifier: "AllDecksCell", for: indexPath) as! AllDecksCell
         cell.layer.cornerRadius=10
-    
+        
+        cell.regionLabel.adjustsFontForContentSizeCategory=true
         cell.regionLabel.adjustsFontSizeToFitWidth=true
+        
+        
+        cell.regionLabel.adjustsFontForContentSizeCategory = true
+        
         cell.regionLabel.text=allNames[indexPath.row]
     
         cell.regionImage.layer.cornerRadius=10
         cell.regionImage.image=UIImage(named: "\(allNames[indexPath.row])Cover")
-    
+        cell.regionImage.accessibilityLabel=allNames[indexPath.row]+" image"
+        
+        cell.isAccessibilityElement=true
+        cell.accessibilityTraits = .button
+        cell.accessibilityLabel=allNames[indexPath.row]+" culture card"
+        
         return cell
     }
 

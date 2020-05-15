@@ -20,6 +20,12 @@
 		F66B88D923FCF17E0018892D /* NLI_SourceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66B88D823FCF17E0018892D /* NLI_SourceVC.swift */; };
 		F66B88DB23FCFF010018892D /* NLI_quizCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66B88DA23FCFF010018892D /* NLI_quizCell.swift */; };
 		F66B88DD23FD2C420018892D /* PrivacyPolicyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F66B88DC23FD2C420018892D /* PrivacyPolicyVC.swift */; };
+		F681FB992467837A007CD4EA /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F681FB9424678346007CD4EA /* Montserrat-Bold.otf */; };
+		F681FB9A2467837A007CD4EA /* Montserrat-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = F681FB952467835A007CD4EA /* Montserrat-Light.otf */; };
+		F681FB9B2467837A007CD4EA /* Montserrat-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = F681FB9624678363007CD4EA /* Montserrat-Regular.otf */; };
+		F681FB9C2467837A007CD4EA /* Montserrat-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = F681FB9724678368007CD4EA /* Montserrat-SemiBold.otf */; };
+		F681FB9D2467837A007CD4EA /* Montserrat-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = F681FB982467836E007CD4EA /* Montserrat-Thin.otf */; };
+		F681FB9F24678424007CD4EA /* Montserrat-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = F681FB9E24678421007CD4EA /* Montserrat-Medium.otf */; };
 		F6A4657023BA1649004255BE /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4656F23BA1649004255BE /* HomeVC.swift */; };
 		F6A4657223BA197A004255BE /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4657123BA197A004255BE /* SettingsVC.swift */; };
 		F6A4657423BA2303004255BE /* WallpaperVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4657323BA2303004255BE /* WallpaperVC.swift */; };
@@ -45,6 +51,16 @@
 		F6CE53D123B9DB7400B42791 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CE53D023B9DB7400B42791 /* Constants.swift */; };
 		F6CE53D323B9DBB700B42791 /* Storyboard+Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6CE53D223B9DBB700B42791 /* Storyboard+Utility.swift */; };
 		F6D9BEB123E7F2C7005F0690 /* InfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D9BEB023E7F2C7005F0690 /* InfoService.swift */; };
+		F6E003502465E9BA00B23006 /* Muli-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6E0034A2465E9AC00B23006 /* Muli-Bold.ttf */; };
+		F6E003512465E9BC00B23006 /* Muli-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6E0034C2465E9AC00B23006 /* Muli-BoldItalic.ttf */; };
+		F6E003522465E9BF00B23006 /* Muli-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6E0034E2465E9AC00B23006 /* Muli-ExtraLight.ttf */; };
+		F6E003532465E9BF00B23006 /* Muli-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6E0034B2465E9AC00B23006 /* Muli-ExtraLightItalic.ttf */; };
+		F6E003542465E9BF00B23006 /* Muli-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6E0034F2465E9AC00B23006 /* Muli-Italic.ttf */; };
+		F6E003552465E9BF00B23006 /* Muli-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6E003492465E9AB00B23006 /* Muli-Light.ttf */; };
+		F6E003562465E9BF00B23006 /* Muli-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6E0034D2465E9AC00B23006 /* Muli-LightItalic.ttf */; };
+		F6E003572465E9BF00B23006 /* Muli-Semi-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6E003482465E9AB00B23006 /* Muli-Semi-BoldItalic.ttf */; };
+		F6E003582465E9BF00B23006 /* Muli-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6E003462465E9AB00B23006 /* Muli-SemiBold.ttf */; };
+		F6E003592465E9BF00B23006 /* Muli.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6E003472465E9AB00B23006 /* Muli.ttf */; };
 		F6E3433723BAD4B5005B62A2 /* WallpaperCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E3433523BAD4B5005B62A2 /* WallpaperCell.swift */; };
 		F6E3433823BAD4B5005B62A2 /* WallpaperCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6E3433623BAD4B5005B62A2 /* WallpaperCell.xib */; };
 		F6E3433A23BADC02005B62A2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E3433923BADC02005B62A2 /* TabBarController.swift */; };
@@ -68,6 +84,12 @@
 		F66B88D823FCF17E0018892D /* NLI_SourceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLI_SourceVC.swift; sourceTree = "<group>"; };
 		F66B88DA23FCFF010018892D /* NLI_quizCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLI_quizCell.swift; sourceTree = "<group>"; };
 		F66B88DC23FD2C420018892D /* PrivacyPolicyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyVC.swift; sourceTree = "<group>"; };
+		F681FB9424678346007CD4EA /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
+		F681FB952467835A007CD4EA /* Montserrat-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.otf"; sourceTree = "<group>"; };
+		F681FB9624678363007CD4EA /* Montserrat-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.otf"; sourceTree = "<group>"; };
+		F681FB9724678368007CD4EA /* Montserrat-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.otf"; sourceTree = "<group>"; };
+		F681FB982467836E007CD4EA /* Montserrat-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Thin.otf"; sourceTree = "<group>"; };
+		F681FB9E24678421007CD4EA /* Montserrat-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.otf"; sourceTree = "<group>"; };
 		F6A4656F23BA1649004255BE /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		F6A4657123BA197A004255BE /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		F6A4657323BA2303004255BE /* WallpaperVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperVC.swift; sourceTree = "<group>"; };
@@ -95,6 +117,16 @@
 		F6CE53D023B9DB7400B42791 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F6CE53D223B9DBB700B42791 /* Storyboard+Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+Utility.swift"; sourceTree = "<group>"; };
 		F6D9BEB023E7F2C7005F0690 /* InfoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoService.swift; sourceTree = "<group>"; };
+		F6E003462465E9AB00B23006 /* Muli-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-SemiBold.ttf"; sourceTree = "<group>"; };
+		F6E003472465E9AB00B23006 /* Muli.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Muli.ttf; sourceTree = "<group>"; };
+		F6E003482465E9AB00B23006 /* Muli-Semi-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Semi-BoldItalic.ttf"; sourceTree = "<group>"; };
+		F6E003492465E9AB00B23006 /* Muli-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Light.ttf"; sourceTree = "<group>"; };
+		F6E0034A2465E9AC00B23006 /* Muli-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Bold.ttf"; sourceTree = "<group>"; };
+		F6E0034B2465E9AC00B23006 /* Muli-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		F6E0034C2465E9AC00B23006 /* Muli-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-BoldItalic.ttf"; sourceTree = "<group>"; };
+		F6E0034D2465E9AC00B23006 /* Muli-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-LightItalic.ttf"; sourceTree = "<group>"; };
+		F6E0034E2465E9AC00B23006 /* Muli-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-ExtraLight.ttf"; sourceTree = "<group>"; };
+		F6E0034F2465E9AC00B23006 /* Muli-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Italic.ttf"; sourceTree = "<group>"; };
 		F6E3433523BAD4B5005B62A2 /* WallpaperCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperCell.swift; sourceTree = "<group>"; };
 		F6E3433623BAD4B5005B62A2 /* WallpaperCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WallpaperCell.xib; sourceTree = "<group>"; };
 		F6E3433923BADC02005B62A2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -165,6 +197,7 @@
 		F6CE53A423B99E7A00B42791 /* World Culture Deck */ = {
 			isa = PBXGroup;
 			children = (
+				F6E003452465E99C00B23006 /* fonts */,
 				F66B88CF23FCEB7E0018892D /* NotLoggedInControllers */,
 				F6CE53C723B9A80C00B42791 /* Controllers */,
 				F6CE53C223B9A42A00B42791 /* Views */,
@@ -226,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				F6CE53C323B9A46100B42791 /* Login.storyboard */,
+				F6A6CA6D23D6ADF0007158B8 /* InfoController.swift */,
 				F6CE53C523B9A4B900B42791 /* Main.storyboard */,
 			);
 			path = Storyboards;
@@ -254,13 +288,35 @@
 				F6A4657323BA2303004255BE /* WallpaperVC.swift */,
 				F6E3433923BADC02005B62A2 /* TabBarController.swift */,
 				F62E07E223D685B400A5D157 /* CountryController.swift */,
-				F6A6CA6D23D6ADF0007158B8 /* InfoController.swift */,
 				F61DB99523DC136C008943C6 /* QuizVC.swift */,
 				F6C5D87123FA5986004DBDB4 /* SourcesVC.swift */,
 				F6BEF4CC23FB41C600863713 /* ShortAlertVC.swift */,
 				F66B88DC23FD2C420018892D /* PrivacyPolicyVC.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F6E003452465E99C00B23006 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F6E0034A2465E9AC00B23006 /* Muli-Bold.ttf */,
+				F6E0034C2465E9AC00B23006 /* Muli-BoldItalic.ttf */,
+				F6E0034E2465E9AC00B23006 /* Muli-ExtraLight.ttf */,
+				F6E0034B2465E9AC00B23006 /* Muli-ExtraLightItalic.ttf */,
+				F6E0034F2465E9AC00B23006 /* Muli-Italic.ttf */,
+				F6E003492465E9AB00B23006 /* Muli-Light.ttf */,
+				F6E0034D2465E9AC00B23006 /* Muli-LightItalic.ttf */,
+				F6E003482465E9AB00B23006 /* Muli-Semi-BoldItalic.ttf */,
+				F6E003462465E9AB00B23006 /* Muli-SemiBold.ttf */,
+				F6E003472465E9AB00B23006 /* Muli.ttf */,
+				F681FB9424678346007CD4EA /* Montserrat-Bold.otf */,
+				F681FB952467835A007CD4EA /* Montserrat-Light.otf */,
+				F681FB9E24678421007CD4EA /* Montserrat-Medium.otf */,
+				F681FB9624678363007CD4EA /* Montserrat-Regular.otf */,
+				F681FB9724678368007CD4EA /* Montserrat-SemiBold.otf */,
+				F681FB982467836E007CD4EA /* Montserrat-Thin.otf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,13 +380,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6E003582465E9BF00B23006 /* Muli-SemiBold.ttf in Resources */,
 				F6CE53B523B99E7C00B42791 /* LaunchScreen.storyboard in Resources */,
+				F6E003542465E9BF00B23006 /* Muli-Italic.ttf in Resources */,
+				F681FB9B2467837A007CD4EA /* Montserrat-Regular.otf in Resources */,
+				F6E003562465E9BF00B23006 /* Muli-LightItalic.ttf in Resources */,
+				F6E003572465E9BF00B23006 /* Muli-Semi-BoldItalic.ttf in Resources */,
+				F681FB9A2467837A007CD4EA /* Montserrat-Light.otf in Resources */,
+				F6E003592465E9BF00B23006 /* Muli.ttf in Resources */,
 				F6CE53B223B99E7C00B42791 /* Preview Assets.xcassets in Resources */,
 				F6CE53BD23B9A10200B42791 /* GoogleService-Info.plist in Resources */,
+				F6E003522465E9BF00B23006 /* Muli-ExtraLight.ttf in Resources */,
+				F6E003532465E9BF00B23006 /* Muli-ExtraLightItalic.ttf in Resources */,
+				F6E003512465E9BC00B23006 /* Muli-BoldItalic.ttf in Resources */,
+				F6E003552465E9BF00B23006 /* Muli-Light.ttf in Resources */,
 				F6CE53C623B9A4B900B42791 /* Main.storyboard in Resources */,
+				F681FB9C2467837A007CD4EA /* Montserrat-SemiBold.otf in Resources */,
+				F681FB9F24678424007CD4EA /* Montserrat-Medium.otf in Resources */,
 				F6CE53C423B9A46100B42791 /* Login.storyboard in Resources */,
 				F6E3433823BAD4B5005B62A2 /* WallpaperCell.xib in Resources */,
+				F6E003502465E9BA00B23006 /* Muli-Bold.ttf in Resources */,
+				F681FB9D2467837A007CD4EA /* Montserrat-Thin.otf in Resources */,
 				F6CE53AF23B99E7C00B42791 /* Assets.xcassets in Resources */,
+				F681FB992467837A007CD4EA /* Montserrat-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,6 +654,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2.0;
 				DEVELOPMENT_ASSET_PATHS = "\"World Culture Deck/Preview Content\"";
 				DEVELOPMENT_TEAM = X5ZKFR55NQ;
 				ENABLE_PREVIEWS = YES;
@@ -590,6 +663,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.audrey-ha.World-Culture-Deck";
 				PRODUCT_NAME = "World Cultures";
 				SWIFT_VERSION = 5.0;
@@ -603,6 +677,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2.0;
 				DEVELOPMENT_ASSET_PATHS = "\"World Culture Deck/Preview Content\"";
 				DEVELOPMENT_TEAM = X5ZKFR55NQ;
 				ENABLE_PREVIEWS = YES;
@@ -611,6 +686,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.audrey-ha.World-Culture-Deck";
 				PRODUCT_NAME = "World Cultures";
 				SWIFT_VERSION = 5.0;

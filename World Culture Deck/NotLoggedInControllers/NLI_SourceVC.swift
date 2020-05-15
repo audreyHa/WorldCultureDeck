@@ -13,8 +13,8 @@ class NLI_SourceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     @IBOutlet weak var WCDLabel: UILabel!
     @IBOutlet weak var linksTableView: UITableView!
     @IBOutlet weak var linksHeaderLabel: UILabel!
-    @IBOutlet weak var starCountLabel: UILabel!
     @IBOutlet weak var blueBackground: UIView!
+    @IBOutlet weak var xButton: UIButton!
     
     var countrySources:[String:[String:String]]=[:]
     var shortenedTitleArray: [String]! = []
@@ -54,8 +54,29 @@ class NLI_SourceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
                 self.linksArray.append(longLink)
             }
         }
+        
+        xButton.accessibilityLabel="Close links page"
+        xButton.accessibilityHint="Tap to go back to \(countryName) page"
+        
+        var myLabels=[WCDLabel, linksHeaderLabel]
+        
+        for myLabel in myLabels{
+            makeLabelAccessible(myLabel: myLabel!)
+        }
     }
 
+    func makeLabelAccessible(myLabel: UILabel){
+        myLabel.adjustsFontForContentSizeCategory=true
+        myLabel.adjustsFontSizeToFitWidth=true
+        myLabel.font=UIFontMetrics.default.scaledFont(for: myLabel.font)
+    }
+    
+    func makeButtonAccessible(myButton: UIButton){
+        myButton.titleLabel!.adjustsFontForContentSizeCategory=true
+        myButton.titleLabel!.adjustsFontSizeToFitWidth=true
+        myButton.titleLabel!.font=UIFontMetrics.default.scaledFont(for: myButton.titleLabel!.font)
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         linksTableView.reloadData()
     }
@@ -70,7 +91,13 @@ class NLI_SourceVC: UIViewController, UITableViewDelegate, UITableViewDataSource
 
         cell.websiteLabel.text=self.shortenedTitleArray[indexPath.row]
         
+        cell.isAccessibilityElement=true
+        cell.accessibilityTraits = .button
+        cell.accessibilityLabel="\(self.shortenedTitleArray[indexPath.row]) Website"
+        cell.accessibilityHint="Tap to go to webpage"
+        
         linksTableView.reloadRows(at: [indexPath], with: .automatic)
+
         return cell
     }
     

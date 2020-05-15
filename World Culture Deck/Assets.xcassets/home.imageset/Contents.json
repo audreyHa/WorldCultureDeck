@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "100_badge_background.jpg",
+      "filename" : "tabHomeImgV3.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "tabHomeImgV2.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "tabHomeImg.png",
       "scale" : "3x"
     }
   ],

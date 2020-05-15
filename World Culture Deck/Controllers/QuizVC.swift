@@ -18,6 +18,8 @@ class QuizVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     @IBOutlet weak var starLabel: UILabel!
     @IBOutlet weak var WCDLabel: UILabel!
     @IBOutlet weak var headerLabel: UILabel!
+    @IBOutlet weak var xButton: UIButton!
+    @IBOutlet weak var starButton: UIButton!
     
     var userAnswersString: [String]=["","",""]
     var userAnswers: [String]=["","",""]
@@ -38,6 +40,36 @@ class QuizVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         
         var countryName=UserDefaults.standard.string(forKey: "countryName")!
         headerLabel.text="\(countryName): Quiz"
+        
+        xButton.accessibilityLabel="Close quiz page"
+        xButton.accessibilityHint="Tap to go back to \(countryName) page"
+        redoButton.accessibilityLabel="Redo Quiz"
+        
+        var myLabels=[WCDLabel, starLabel, topScoreLabel, headerLabel]
+        var myButtons=[submitButton]
+        
+        for myLabel in myLabels{
+            makeLabelAccessible(myLabel: myLabel!)
+        }
+        
+        for myButton in myButtons{
+            makeButtonAccessible(myButton: myButton!)
+        }
+        
+        starButton.isAccessibilityElement=false
+        starLabel.accessibilityLabel="\(UserDefaults.standard.integer(forKey: "numberStars")) stars"
+    }
+    
+    func makeLabelAccessible(myLabel: UILabel){
+        myLabel.adjustsFontForContentSizeCategory=true
+        myLabel.adjustsFontSizeToFitWidth=true
+        myLabel.font=UIFontMetrics.default.scaledFont(for: myLabel.font)
+    }
+    
+    func makeButtonAccessible(myButton: UIButton){
+        myButton.titleLabel!.adjustsFontForContentSizeCategory=true
+        myButton.titleLabel!.adjustsFontSizeToFitWidth=true
+        myButton.titleLabel!.font=UIFontMetrics.default.scaledFont(for: myButton.titleLabel!.font)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -98,6 +130,8 @@ class QuizVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
             }
            
             StarService.displayStars(myLabel: starLabel)
+            
+            UIAccessibility.post(notification: .screenChanged, argument: topScoreLabel)
         }
         
     }
@@ -200,7 +234,14 @@ class QuizVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
                 }
             }
         }
-
+        
+        cell.selectionStyle = .none
+        cell.isAccessibilityElement=false
+        cell.questionLabel.isAccessibilityElement=true
+        cell.firstOption.isAccessibilityElement=true
+        cell.secondOption.isAccessibilityElement=true
+        cell.thirdOption.isAccessibilityElement=true
+        
         return cell
     }
     
@@ -210,17 +251,17 @@ class QuizVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     func setButtonSelected(myButton: UIButton){
         myButton.backgroundColor=mintColor
-        myButton.setTitleColor(tealColor, for: .normal)
+        myButton.setTitleColor(UIColor.black, for: .normal)
     }
     
     func setButtonRed(myButton: UIButton){
         myButton.backgroundColor=redColor
-        myButton.setTitleColor(mintColor, for: .normal)
+        myButton.setTitleColor(UIColor.white, for: .normal)
     }
     
     func setButtonUNSelected(myButton: UIButton){
         myButton.backgroundColor=tealColor
-        myButton.setTitleColor(mintColor, for: .normal)
+        myButton.setTitleColor(UIColor.white, for: .normal)
     }
     
     

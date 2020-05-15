@@ -10,18 +10,18 @@ import UIKit
 
 class NLI_InfoController: UIViewController {
 
-     @IBOutlet weak var WCDLabel: UILabel!
+        @IBOutlet weak var WCDLabel: UILabel!
         @IBOutlet weak var headerLabel: UILabel!
         @IBOutlet weak var firstImage: UIImageView!
         @IBOutlet weak var firstLabel: UILabel!
         @IBOutlet weak var secondLabel: UILabel!
         @IBOutlet weak var secondImage: UIImageView!
         @IBOutlet weak var backButton: UIButton!
-
         @IBOutlet weak var nextButton: UIButton!
         @IBOutlet weak var pageCountLabel: UILabel!
         @IBOutlet weak var blueBackground: UIView!
-        
+        @IBOutlet weak var xButton: UIButton!
+    
         var pageCount: Int=0
         var numberWords: [String]!
         
@@ -44,9 +44,35 @@ class NLI_InfoController: UIViewController {
             
             numberWords=["zero","one","two","three","four","five","six"]
             setUpPage()
+            
+            xButton.accessibilityLabel="Close \(UserDefaults.standard.string(forKey: "NLI_infoType")!) page"
+            xButton.accessibilityHint="Tap to go back to \(countryName) page"
+            
+            var myButtons=[backButton, nextButton]
+            var myLabels=[WCDLabel, headerLabel, firstLabel, secondLabel, pageCountLabel]
+            
+            for myButton in myButtons{
+                makeButtonAccessible(myButton: myButton!)
+            }
+            
+            for myLabel in myLabels{
+                makeLabelAccessible(myLabel: myLabel!)
+            }
+
         }
 
+        func makeLabelAccessible(myLabel: UILabel){
+            myLabel.adjustsFontForContentSizeCategory=true
+            myLabel.adjustsFontSizeToFitWidth=true
+            myLabel.font=UIFontMetrics.default.scaledFont(for: myLabel.font)
+        }
         
+        func makeButtonAccessible(myButton: UIButton){
+            myButton.titleLabel!.adjustsFontForContentSizeCategory=true
+            myButton.titleLabel!.adjustsFontSizeToFitWidth=true
+            myButton.titleLabel!.font=UIFontMetrics.default.scaledFont(for: myButton.titleLabel!.font)
+        }
+    
         func setUpPage(){
             
             var textCategoryArray: [String:[String:String]]=[:]
@@ -59,6 +85,18 @@ class NLI_InfoController: UIViewController {
             var countryTextArray: [String:[String:[String:String]]]=countryArray["Text"]! as! [String : [String : [String : String]]]
             
             textCategoryArray=countryTextArray[infoType]! as! [String : [String : String]]
+            
+            if(self.pageCount==0){
+                self.backButton.accessibilityHint="You are currently on page \(self.pageCount+1) out of \(textCategoryArray.count). You cannot go backwards."
+            }else{
+                self.backButton.accessibilityHint="You are currently on page \(self.pageCount+1) out of \(textCategoryArray.count). Tap to go 1 page backwards."
+            }
+            
+            if(self.pageCount==textCategoryArray.count){
+                self.nextButton.accessibilityHint="You are currently on page \(self.pageCount+1) out of \(textCategoryArray.count). There is no next page."
+            }else{
+                self.nextButton.accessibilityHint="You are currently on page \(self.pageCount+1) out of \(textCategoryArray.count). Tap to go 1 page forwards."
+            }
             
             if(self.pageCount<=textCategoryArray.count-1){ //making sure that page count isn't exceding
                 //setting the page count and header label

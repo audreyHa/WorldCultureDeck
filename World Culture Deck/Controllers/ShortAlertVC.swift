@@ -64,7 +64,22 @@ class ShortAlertVC: UIViewController {
         centerView.superview?.bringSubviewToFront(centerView)
         
         wcdImage.superview?.bringSubviewToFront(wcdImage)
+        
+        makeLabelAccessible(myLabel: bigHeader)
+        makeLabelAccessible(myLabel: label)
+        makeButtonAccessible(myButton: okButton)
+    }
     
+    func makeLabelAccessible(myLabel: UILabel){
+        myLabel.adjustsFontForContentSizeCategory=true
+        myLabel.adjustsFontSizeToFitWidth=true
+        myLabel.font=UIFontMetrics.default.scaledFont(for: myLabel.font)
+    }
+    
+    func makeButtonAccessible(myButton: UIButton){
+        myButton.titleLabel!.adjustsFontForContentSizeCategory=true
+        myButton.titleLabel!.adjustsFontSizeToFitWidth=true
+        myButton.titleLabel!.font=UIFontMetrics.default.scaledFont(for: myButton.titleLabel!.font)
     }
     
     @IBAction func okPressed(_ sender: Any) {

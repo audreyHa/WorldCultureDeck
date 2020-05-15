@@ -8,7 +8,6 @@
 
 import UIKit
 import FirebaseDatabase
-import SwiftyJSON
 
 class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
@@ -17,7 +16,10 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     @IBOutlet weak var completedCollectionView: UICollectionView!
     @IBOutlet weak var starLabel: UILabel!
     @IBOutlet weak var completedDecksLabel: UILabel!
+    @IBOutlet weak var cultureDecksLabel: UILabel!
     @IBOutlet weak var WCDLabel: UILabel!
+    @IBOutlet weak var homeLabel: UILabel!
+    @IBOutlet weak var starButton: UIButton!
     
     var collectionViewFlowLayout: UICollectionViewFlowLayout!
     var completedNames: [String]!
@@ -25,7 +27,13 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        var myLabels=[starLabel, completedDecksLabel, WCDLabel,cultureDecksLabel,homeLabel]
+        
+        for myLabel in myLabels{
+            makeLabelAccessible(myLabel: myLabel!)
+        }
+        
         WCDLabel.adjustsFontSizeToFitWidth=true
         
         StarService.displayStars(myLabel: starLabel)
@@ -61,6 +69,20 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.newDeckCompleted(notification:)), name: Notification.Name("newDeckCompleted"), object: nil)
         
+        starButton.isAccessibilityElement=false
+        starLabel.accessibilityLabel="\(UserDefaults.standard.integer(forKey: "numberStars")) stars"
+    }
+    
+    func makeLabelAccessible(myLabel: UILabel){
+        myLabel.adjustsFontForContentSizeCategory=true
+        myLabel.adjustsFontSizeToFitWidth=true
+        myLabel.font=UIFontMetrics.default.scaledFont(for: myLabel.font)
+    }
+    
+    func makeButtonAccessible(myButton: UIButton){
+        myButton.titleLabel!.adjustsFontForContentSizeCategory=true
+        myButton.titleLabel!.adjustsFontSizeToFitWidth=true
+        myButton.titleLabel!.font=UIFontMetrics.default.scaledFont(for: myButton.titleLabel!.font)
     }
     
     @objc func newDeckCompleted(notification: Notification) {
@@ -188,27 +210,37 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
         if(collectionView==allDeckCollectionView){ //incompleted deck
             let cell=collectionView.dequeueReusableCell(withReuseIdentifier: "AllDecksCell", for: indexPath) as! AllDecksCell
-                cell.layer.cornerRadius=10
+            cell.layer.cornerRadius=10
+        
+            cell.regionLabel.adjustsFontSizeToFitWidth=true
+            cell.regionLabel.text=incompletedNames[indexPath.row]
+            cell.regionLabel.adjustsFontForContentSizeCategory=true
+        
+            cell.regionImage.layer.cornerRadius=10
+            cell.regionImage.image=UIImage(named: "\(incompletedNames[indexPath.row])Cover")
             
-                cell.regionLabel.adjustsFontSizeToFitWidth=true
-                cell.regionLabel.text=incompletedNames[indexPath.row]
+            cell.isAccessibilityElement=true
+            cell.accessibilityTraits = .button
+            cell.accessibilityLabel=incompletedNames[indexPath.row]+" culture card"
             
-                cell.regionImage.layer.cornerRadius=10
-                cell.regionImage.image=UIImage(named: "\(incompletedNames[indexPath.row])Cover")
-            
-                return cell
+            cell.accessibilityHint="Scroll horizontally to see more culture cards"
+            return cell
         }else{ //completed deck
             let cell=collectionView.dequeueReusableCell(withReuseIdentifier: "CompletedDecksCell", for: indexPath) as! CompletedDecksCell
-                cell.layer.cornerRadius=10
+            cell.layer.cornerRadius=10
+        
+            cell.regionLabel.adjustsFontSizeToFitWidth=true
+            cell.regionLabel.text=completedNames[indexPath.row]
+        
+        
+            cell.regionImage.layer.cornerRadius=10
+            cell.regionImage.image=UIImage(named: "\(completedNames[indexPath.row])Cover")
             
-                cell.regionLabel.adjustsFontSizeToFitWidth=true
-                cell.regionLabel.text=completedNames[indexPath.row]
-            
-            
-                cell.regionImage.layer.cornerRadius=10
-                cell.regionImage.image=UIImage(named: "\(completedNames[indexPath.row])Cover")
-            
-                return cell
+            cell.isAccessibilityElement=true
+            cell.accessibilityTraits = .button
+            cell.accessibilityLabel=completedNames[indexPath.row]+" culture card"
+            cell.accessibilityHint="Scroll horizontally to see more culture cards"
+            return cell
         }
         
     }

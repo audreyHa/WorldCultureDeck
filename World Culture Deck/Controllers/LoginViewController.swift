@@ -18,23 +18,42 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var WCDLabel: UILabel!
     @IBOutlet weak var continueButton: UIButton!
+    @IBOutlet weak var orLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        loginButton.layer.cornerRadius=10
-        continueButton.layer.cornerRadius=10
-        WCDLabel.adjustsFontSizeToFitWidth=true
+        var myButtons=[loginButton, continueButton]
+        var myLabels=[WCDLabel, orLabel]
         
-        loginButton.titleLabel?.adjustsFontSizeToFitWidth=true
-        continueButton.titleLabel?.adjustsFontSizeToFitWidth=true
+        for myButton in myButtons{
+            makeButtonAccessible(myButton: myButton!)
+        }
+        
+        for myLabel in myLabels{
+            makeLabelAccessible(myLabel: myLabel!)
+        }
         
         var privacyPolicy=UserDefaults.standard.bool(forKey: "privacyPolicy")
         
         if(privacyPolicy==nil || privacyPolicy==false){
             makePrivacyPolicy()
         }
+    }
+    
+    func makeLabelAccessible(myLabel: UILabel){
+        myLabel.adjustsFontForContentSizeCategory=true
+        myLabel.adjustsFontSizeToFitWidth=true
+        myLabel.font=UIFontMetrics.default.scaledFont(for: myLabel.font)
+    }
+    
+    func makeButtonAccessible(myButton: UIButton){
+        myButton.layer.cornerRadius=10
+        myButton.titleLabel!.adjustsFontForContentSizeCategory=true
+        myButton.titleLabel!.adjustsFontSizeToFitWidth=true
+        myButton.titleLabel!.font=UIFontMetrics.default.scaledFont(for: myButton.titleLabel!.font)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -50,6 +69,9 @@ class LoginViewController: UIViewController {
         present(authViewController, animated: true)
     }
     
+    @IBAction func continuePressed(_ sender: Any) {
+        
+    }
     
 }
 

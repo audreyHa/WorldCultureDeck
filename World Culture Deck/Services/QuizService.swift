@@ -139,6 +139,7 @@ struct QuizService{
     static func displayQuizScore(myLabel: UILabel){
         let currentUID=User.current.uid
         var countryName: String=UserDefaults.standard.string(forKey: "countryName")!
+        print("Displaying top score: \(countryName)")
         let quizRef=Database.database().reference().child("quizScores").child(countryName).child(currentUID)
         var currentScore="0"
         

@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UyJ-W8-HdG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UyJ-W8-HdG">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Medium.otf">
+            <string>Montserrat-Medium</string>
+        </array>
+        <array key="Montserrat-SemiBold.otf">
+            <string>Montserrat-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--SettingsVC-->
+        <!--Settings-->
         <scene sceneID="ufd-zj-dnZ">
             <objects>
-                <viewController id="W9L-10-x0Q" customClass="SettingsVC" customModule="World_Culture_Deck" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="W9L-10-x0Q" customClass="SettingsVC" customModule="World_Cultures" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Akd-mO-U3E">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,8 +31,8 @@
                                         <rect key="frame" x="15" y="5" width="384" height="79.666666666666671"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="World Culture Deck" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUs-wc-Uco">
-                                                <rect key="frame" x="0.0" y="18.666666666666671" width="295.33333333333331" height="42"/>
-                                                <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="30"/>
+                                                <rect key="frame" x="0.0" y="21.333333333333325" width="295.33333333333331" height="36.666666666666657"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="30"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -54,48 +62,44 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U2m-1a-IMC">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="p50-HW-Tfh">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zs7-3h-Cvz">
                                                         <rect key="frame" x="15" y="0.0" width="384" height="50"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ac-hF-9lw">
-                                                                <rect key="frame" x="0.0" y="0.0" width="289" height="50"/>
-                                                                <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="20"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="304" height="50"/>
+                                                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="20"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zs7-3h-Cvz">
-                                                                <rect key="frame" x="304" y="0.0" width="80" height="50"/>
-                                                                <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xah-wJ-dxV">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="35" height="50"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="35" id="DbY-Nz-pCd"/>
-                                                                        </constraints>
-                                                                        <color key="tintColor" red="0.16078431369999999" green="0.63137254899999995" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                        <state key="normal" image="star.fill" catalog="system">
-                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        </state>
-                                                                    </button>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vat-ls-cUd">
-                                                                        <rect key="frame" x="35" y="0.0" width="45" height="50"/>
-                                                                        <color key="tintColor" red="0.16078431369999999" green="0.63137254899999995" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="45" id="JLL-Lj-HFq"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="25"/>
-                                                                        <color key="textColor" red="0.16078431369999999" green="0.63137254899999995" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                            </stackView>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xah-wJ-dxV">
+                                                                <rect key="frame" x="304" y="0.0" width="35" height="50"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="35" id="DbY-Nz-pCd"/>
+                                                                </constraints>
+                                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <state key="normal" image="star.fill" catalog="system">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vat-ls-cUd">
+                                                                <rect key="frame" x="339" y="0.0" width="45" height="50"/>
+                                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="45" id="JLL-Lj-HFq"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="25"/>
+                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstItem="p50-HW-Tfh" firstAttribute="leading" secondItem="U2m-1a-IMC" secondAttribute="leading" constant="15" id="fMx-49-c2x"/>
-                                                    <constraint firstItem="p50-HW-Tfh" firstAttribute="centerY" secondItem="U2m-1a-IMC" secondAttribute="centerY" id="hJ0-v0-t1u"/>
-                                                    <constraint firstAttribute="trailing" secondItem="p50-HW-Tfh" secondAttribute="trailing" constant="15" id="otI-1w-NtM"/>
+                                                    <constraint firstItem="Zs7-3h-Cvz" firstAttribute="top" secondItem="U2m-1a-IMC" secondAttribute="top" id="KQl-GL-ub6"/>
+                                                    <constraint firstItem="Zs7-3h-Cvz" firstAttribute="leading" secondItem="U2m-1a-IMC" secondAttribute="leading" constant="15" id="S8U-7b-hXG"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Zs7-3h-Cvz" secondAttribute="bottom" id="Zf9-u1-cKK"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Zs7-3h-Cvz" secondAttribute="trailing" constant="15" id="ah0-kB-G2x"/>
                                                     <constraint firstAttribute="height" constant="50" id="yns-Yf-o3K"/>
                                                 </constraints>
                                             </view>
@@ -105,93 +109,37 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="F9n-27-ik4">
                                                         <rect key="frame" x="15" y="15" width="354" height="445.66666666666669"/>
                                                         <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="2QX-HN-G6z" userLabel="DecksCompleted">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Decks Completed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v2V-pX-JKk">
                                                                 <rect key="frame" x="0.0" y="0.0" width="354" height="65"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Decks Completed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v2V-pX-JKk">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="264" height="65"/>
-                                                                        <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="20"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgq-r3-teH">
-                                                                        <rect key="frame" x="294" y="0.0" width="60" height="65"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="60" id="P7c-IC-6MD"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="20"/>
-                                                                        <color key="textColor" red="0.16078431369999999" green="0.63137254899999995" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="RuO-Cy-N7h" userLabel="DecksRemaining">
+                                                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="20"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Decks Remaining:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3Z-vT-kOi">
                                                                 <rect key="frame" x="0.0" y="95.000000000000028" width="354" height="65.333333333333343"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Decks Remaining:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3Z-vT-kOi">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="264" height="65.333333333333329"/>
-                                                                        <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="20"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3mo-gx-D3O" userLabel="DecksRemaining">
-                                                                        <rect key="frame" x="294" y="0.0" width="60" height="65.333333333333329"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="60" id="nKK-w4-cYU"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="20"/>
-                                                                        <color key="textColor" red="0.097609010090000004" green="0.22002248269999999" blue="0.44544861219999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ZK4-gG-jb5" userLabel="QuizScore">
+                                                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="20"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Quiz Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vYi-Rd-90m">
                                                                 <rect key="frame" x="0.0" y="190.33333333333334" width="354" height="65"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Quiz Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vYi-Rd-90m">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="264" height="65"/>
-                                                                        <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="20"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6S3-HU-mSZ" userLabel="QuizScoreCount">
-                                                                        <rect key="frame" x="294" y="0.0" width="60" height="65"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="60" id="CQ1-Og-qAF"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="20"/>
-                                                                        <color key="textColor" red="0.16078431369999999" green="0.63137254899999995" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Ban-zK-zFe" userLabel="WallpapersPurchased">
+                                                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="20"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Badges Earned:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ycy-Wk-omI">
                                                                 <rect key="frame" x="0.0" y="285.33333333333337" width="354" height="65"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# of Badges Earned:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ycy-Wk-omI">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="264" height="65"/>
-                                                                        <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="20"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjS-u9-yCH" userLabel="DecksRemaining">
-                                                                        <rect key="frame" x="294" y="0.0" width="60" height="65"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="60" id="Rli-DT-T3u"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="20"/>
-                                                                        <color key="textColor" red="0.097609010090000004" green="0.22002248269999999" blue="0.44544861219999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                            </stackView>
+                                                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="20"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="NPb-vW-Veu" userLabel="Buttons">
                                                                 <rect key="frame" x="0.0" y="380.33333333333337" width="354" height="65.333333333333314"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7pc-ls-HsQ">
                                                                         <rect key="frame" x="0.0" y="0.0" width="146.66666666666666" height="65.333333333333329"/>
                                                                         <color key="backgroundColor" red="0.16078431369999999" green="0.63137254899999995" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                        <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="15"/>
+                                                                        <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="15"/>
                                                                         <state key="normal" title="Log Out">
                                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
@@ -202,8 +150,10 @@
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPi-Ts-sn1">
                                                                         <rect key="frame" x="176.66666666666663" y="0.0" width="177.33333333333337" height="65.333333333333329"/>
                                                                         <color key="backgroundColor" red="0.78039215689999997" green="0.94117647059999998" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                                        <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="15"/>
-                                                                        <state key="normal" title="Send Suggestion"/>
+                                                                        <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="15"/>
+                                                                        <state key="normal" title="Send Suggestion">
+                                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
                                                                         <connections>
                                                                             <action selector="suggestionPressed:" destination="W9L-10-x0Q" eventType="touchUpInside" id="99D-k0-IzQ"/>
                                                                         </connections>
@@ -215,20 +165,17 @@
                                                             </stackView>
                                                         </subviews>
                                                         <constraints>
-                                                            <constraint firstAttribute="trailing" secondItem="RuO-Cy-N7h" secondAttribute="trailing" id="1WA-Ud-nrm"/>
                                                             <constraint firstItem="NPb-vW-Veu" firstAttribute="leading" secondItem="F9n-27-ik4" secondAttribute="leading" id="3zV-W0-zic"/>
-                                                            <constraint firstItem="NPb-vW-Veu" firstAttribute="height" secondItem="2QX-HN-G6z" secondAttribute="height" id="6OV-4p-Phd"/>
-                                                            <constraint firstAttribute="trailing" secondItem="ZK4-gG-jb5" secondAttribute="trailing" id="9az-oj-hoz"/>
-                                                            <constraint firstItem="RuO-Cy-N7h" firstAttribute="height" secondItem="2QX-HN-G6z" secondAttribute="height" id="Khw-FY-X1j"/>
-                                                            <constraint firstItem="Ban-zK-zFe" firstAttribute="height" secondItem="2QX-HN-G6z" secondAttribute="height" id="QUP-5h-4SJ"/>
-                                                            <constraint firstAttribute="trailing" secondItem="2QX-HN-G6z" secondAttribute="trailing" id="V1B-9V-O7R"/>
-                                                            <constraint firstItem="RuO-Cy-N7h" firstAttribute="leading" secondItem="F9n-27-ik4" secondAttribute="leading" id="W10-Mb-Crv"/>
-                                                            <constraint firstAttribute="trailing" secondItem="Ban-zK-zFe" secondAttribute="trailing" id="eOF-9d-d2W"/>
+                                                            <constraint firstItem="vYi-Rd-90m" firstAttribute="height" secondItem="v2V-pX-JKk" secondAttribute="height" id="EO8-vq-Wci"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Ycy-Wk-omI" secondAttribute="trailing" id="IFu-ic-U8Z"/>
+                                                            <constraint firstItem="Ycy-Wk-omI" firstAttribute="height" secondItem="v2V-pX-JKk" secondAttribute="height" id="KqH-1T-vGX"/>
+                                                            <constraint firstItem="t3Z-vT-kOi" firstAttribute="height" secondItem="v2V-pX-JKk" secondAttribute="height" id="Nai-EN-jTj"/>
+                                                            <constraint firstItem="NPb-vW-Veu" firstAttribute="height" secondItem="v2V-pX-JKk" secondAttribute="height" id="Pma-JG-Gy2"/>
+                                                            <constraint firstAttribute="trailing" secondItem="v2V-pX-JKk" secondAttribute="trailing" id="eZP-f9-qUB"/>
+                                                            <constraint firstAttribute="trailing" secondItem="NPb-vW-Veu" secondAttribute="trailing" id="er1-My-IKs"/>
+                                                            <constraint firstAttribute="trailing" secondItem="t3Z-vT-kOi" secondAttribute="trailing" id="ffZ-qk-eLP"/>
                                                             <constraint firstAttribute="trailing" secondItem="NPb-vW-Veu" secondAttribute="trailing" id="rRs-tK-R0U"/>
-                                                            <constraint firstItem="ZK4-gG-jb5" firstAttribute="height" secondItem="2QX-HN-G6z" secondAttribute="height" id="ujt-o4-Ztg"/>
-                                                            <constraint firstItem="Ban-zK-zFe" firstAttribute="leading" secondItem="F9n-27-ik4" secondAttribute="leading" id="xzv-Gl-0Hq"/>
-                                                            <constraint firstItem="2QX-HN-G6z" firstAttribute="leading" secondItem="F9n-27-ik4" secondAttribute="leading" id="yqh-yS-txS"/>
-                                                            <constraint firstItem="ZK4-gG-jb5" firstAttribute="leading" secondItem="F9n-27-ik4" secondAttribute="leading" id="zhd-Ty-gis"/>
+                                                            <constraint firstAttribute="trailing" secondItem="vYi-Rd-90m" secondAttribute="trailing" id="z7Y-Ks-EDL"/>
                                                         </constraints>
                                                     </stackView>
                                                 </subviews>
@@ -275,20 +222,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iTb-uA-01I"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="gear" catalog="system" id="mGU-7J-YPY"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" id="mGU-7J-YPY"/>
                     <connections>
                         <outlet property="WCDLabel" destination="cUs-wc-Uco" id="9I2-fS-08F"/>
-                        <outlet property="badgeCountLabel" destination="cjS-u9-yCH" id="ofG-oz-c4C"/>
                         <outlet property="badgesHeading" destination="Ycy-Wk-omI" id="f9u-Nf-APJ"/>
                         <outlet property="blueBackground" destination="2IA-hX-hDh" id="kgH-z3-4Ti"/>
-                        <outlet property="completedCountLabel" destination="fgq-r3-teH" id="dKr-Y2-JN9"/>
                         <outlet property="decksHeading" destination="v2V-pX-JKk" id="VHs-ET-18i"/>
                         <outlet property="logoutButton" destination="7pc-ls-HsQ" id="YUJ-bU-V77"/>
-                        <outlet property="quizScoreCountLabel" destination="6S3-HU-mSZ" id="n1k-ov-sXX"/>
-                        <outlet property="remainingCountLabel" destination="3mo-gx-D3O" id="pWB-ta-PQ3"/>
                         <outlet property="remainingHeading" destination="t3Z-vT-kOi" id="yva-xB-Pee"/>
                         <outlet property="scoreHeading" destination="vYi-Rd-90m" id="vWY-5E-W1v"/>
                         <outlet property="settingsHeader" destination="4ac-hF-9lw" id="TMu-v2-u7V"/>
+                        <outlet property="starButton" destination="Xah-wJ-dxV" id="syz-z8-FZW"/>
                         <outlet property="starCountLabel" destination="Vat-ls-cUd" id="nh9-ID-Iuq"/>
                         <outlet property="suggestionButton" destination="fPi-Ts-sn1" id="pP1-IG-eqm"/>
                         <outlet property="surroundingGreyView" destination="Tje-N4-8Nb" id="OjM-0h-bDd"/>
@@ -298,10 +242,10 @@
             </objects>
             <point key="canvasLocation" x="-531" y="346"/>
         </scene>
-        <!--WallpaperVC-->
+        <!--Awards-->
         <scene sceneID="QtN-2m-9p8">
             <objects>
-                <viewController id="nuF-E1-m6h" customClass="WallpaperVC" customModule="World_Culture_Deck" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nuF-E1-m6h" customClass="WallpaperVC" customModule="World_Cultures" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="US5-w0-WX1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -313,8 +257,8 @@
                                         <rect key="frame" x="15" y="5" width="384" height="79.666666666666671"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="World Culture Deck" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VSB-nL-bm9">
-                                                <rect key="frame" x="0.0" y="18.666666666666671" width="295.33333333333331" height="42"/>
-                                                <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="30"/>
+                                                <rect key="frame" x="0.0" y="21.333333333333325" width="295.33333333333331" height="36.666666666666657"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="30"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -345,50 +289,46 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xIx-Bl-vaz" userLabel="WallpaperHeader">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Adz-OB-YTG">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3iC-Hf-VNy">
                                                         <rect key="frame" x="15" y="0.0" width="384" height="50"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Badges" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hok-8Q-VAi">
-                                                                <rect key="frame" x="0.0" y="0.0" width="274" height="50"/>
-                                                                <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="20"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="304" height="50"/>
+                                                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="20"/>
                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3iC-Hf-VNy">
-                                                                <rect key="frame" x="304" y="0.0" width="80" height="50"/>
-                                                                <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IXo-0s-bxv">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="35" height="50"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="35" id="brY-dC-2vu"/>
-                                                                        </constraints>
-                                                                        <color key="tintColor" red="0.16078431369999999" green="0.63137254899999995" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                        <state key="normal" image="star.fill" catalog="system">
-                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        </state>
-                                                                    </button>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBo-tg-P5r">
-                                                                        <rect key="frame" x="35" y="0.0" width="45" height="50"/>
-                                                                        <color key="tintColor" red="0.16078431369999999" green="0.63137254899999995" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="45" id="ejX-FY-3z0"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="25"/>
-                                                                        <color key="textColor" red="0.16078431369999999" green="0.63137254899999995" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                            </stackView>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IXo-0s-bxv">
+                                                                <rect key="frame" x="304" y="0.0" width="35" height="50"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="35" id="brY-dC-2vu"/>
+                                                                </constraints>
+                                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <state key="normal" image="star.fill" catalog="system">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBo-tg-P5r">
+                                                                <rect key="frame" x="339" y="0.0" width="45" height="50"/>
+                                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="45" id="ejX-FY-3z0"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="25"/>
+                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="3iC-Hf-VNy" secondAttribute="bottom" id="2U7-zi-GMd"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="5f2-sm-yR5"/>
-                                                    <constraint firstItem="Adz-OB-YTG" firstAttribute="leading" secondItem="xIx-Bl-vaz" secondAttribute="leading" constant="15" id="LBb-8e-Z1D"/>
+                                                    <constraint firstItem="3iC-Hf-VNy" firstAttribute="top" secondItem="xIx-Bl-vaz" secondAttribute="top" id="GoX-d9-nk4"/>
                                                     <constraint firstAttribute="height" constant="50" id="ejj-vW-GZJ"/>
-                                                    <constraint firstItem="Adz-OB-YTG" firstAttribute="centerY" secondItem="xIx-Bl-vaz" secondAttribute="centerY" id="nkq-gi-WuQ"/>
-                                                    <constraint firstAttribute="trailing" secondItem="Adz-OB-YTG" secondAttribute="trailing" constant="15" id="zb9-j5-oRF"/>
+                                                    <constraint firstAttribute="trailing" secondItem="3iC-Hf-VNy" secondAttribute="trailing" constant="15" id="lLv-68-vAZ"/>
+                                                    <constraint firstItem="3iC-Hf-VNy" firstAttribute="leading" secondItem="xIx-Bl-vaz" secondAttribute="leading" constant="15" id="r3q-Jp-all"/>
                                                 </constraints>
                                             </view>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QMK-7K-TX7">
@@ -446,11 +386,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="m94-VR-mPZ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="star.circle" catalog="system" id="TtJ-GX-L2e"/>
+                    <tabBarItem key="tabBarItem" title="Awards" image="awards" id="TtJ-GX-L2e"/>
                     <connections>
                         <outlet property="WCDLabel" destination="VSB-nL-bm9" id="gOK-6N-gM5"/>
                         <outlet property="blueBackground" destination="4II-Dz-ay8" id="dYS-J4-TIC"/>
                         <outlet property="collectionView" destination="QMK-7K-TX7" id="z3R-Ah-yh8"/>
+                        <outlet property="starButton" destination="IXo-0s-bxv" id="U7p-cy-CA7"/>
                         <outlet property="starCountLabel" destination="GBo-tg-P5r" id="zsw-dQ-dIp"/>
                     </connections>
                 </viewController>
@@ -461,7 +402,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="pfc-ct-8HY">
             <objects>
-                <tabBarController id="UyJ-W8-HdG" customClass="TabBarController" customModule="World_Culture_Deck" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="UyJ-W8-HdG" customClass="TabBarController" customModule="World_Cultures" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="W4O-nK-jui">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -481,7 +422,7 @@
         <!--Main-->
         <scene sceneID="0dX-Kp-2sw">
             <objects>
-                <viewController title="Main" id="L50-cy-GXG" customClass="HomeVC" customModule="World_Culture_Deck" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Main" id="L50-cy-GXG" customClass="HomeVC" customModule="World_Cultures" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="94o-Dv-uoF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -493,8 +434,8 @@
                                         <rect key="frame" x="15" y="5" width="384" height="79.666666666666671"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="World Culture Deck" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vww-uG-Szo">
-                                                <rect key="frame" x="0.0" y="18.666666666666671" width="295.33333333333331" height="42"/>
-                                                <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="30"/>
+                                                <rect key="frame" x="0.0" y="21.333333333333325" width="295.33333333333331" height="36.666666666666657"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="30"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -524,51 +465,47 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hoS-DW-npn" userLabel="WallpaperHeader">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="bmD-4G-HFk">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rGA-qQ-3ZF">
                                                         <rect key="frame" x="15" y="0.0" width="384" height="50"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bY8-Tj-3Xi">
-                                                                <rect key="frame" x="0.0" y="0.0" width="274" height="50"/>
-                                                                <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="20"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="304" height="50"/>
+                                                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="20"/>
                                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rGA-qQ-3ZF">
-                                                                <rect key="frame" x="304" y="0.0" width="80" height="50"/>
-                                                                <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9e-cP-bl6">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="35" height="50"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="35" id="khM-xU-Bbq"/>
-                                                                        </constraints>
-                                                                        <color key="tintColor" red="0.16078431369999999" green="0.63137254899999995" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                        <state key="normal" image="star.fill" catalog="system">
-                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                        </state>
-                                                                    </button>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnT-bo-8YK">
-                                                                        <rect key="frame" x="35" y="0.0" width="45" height="50"/>
-                                                                        <color key="tintColor" red="0.16078431369999999" green="0.63137254899999995" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="width" constant="45" id="Pwp-8U-Vfs"/>
-                                                                        </constraints>
-                                                                        <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="25"/>
-                                                                        <color key="textColor" red="0.16078431369999999" green="0.63137254899999995" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                            </stackView>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9e-cP-bl6">
+                                                                <rect key="frame" x="304" y="0.0" width="35" height="50"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="35" id="khM-xU-Bbq"/>
+                                                                </constraints>
+                                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <state key="normal" image="star.fill" catalog="system">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnT-bo-8YK">
+                                                                <rect key="frame" x="339" y="0.0" width="45" height="50"/>
+                                                                <color key="tintColor" red="0.16078431369999999" green="0.63137254899999995" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="45" id="Pwp-8U-Vfs"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="25"/>
+                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
                                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstItem="bmD-4G-HFk" firstAttribute="leading" secondItem="hoS-DW-npn" secondAttribute="leading" constant="15" id="2wY-Ue-MK9"/>
-                                                    <constraint firstAttribute="trailing" secondItem="bmD-4G-HFk" secondAttribute="trailing" constant="15" id="HXB-O9-xP2"/>
                                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="N21-gX-uCo"/>
-                                                    <constraint firstItem="bmD-4G-HFk" firstAttribute="centerY" secondItem="hoS-DW-npn" secondAttribute="centerY" id="RiI-cF-0uO"/>
+                                                    <constraint firstItem="rGA-qQ-3ZF" firstAttribute="leading" secondItem="hoS-DW-npn" secondAttribute="leading" constant="15" id="WUa-GI-LAG"/>
                                                     <constraint firstAttribute="height" constant="50" id="g7f-Qa-lVo"/>
+                                                    <constraint firstAttribute="trailing" secondItem="rGA-qQ-3ZF" secondAttribute="trailing" constant="15" id="oMm-Xj-mLZ"/>
+                                                    <constraint firstAttribute="bottom" secondItem="rGA-qQ-3ZF" secondAttribute="bottom" id="u7O-yf-JMQ"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="uCe-h2-6Vz"/>
+                                                    <constraint firstItem="rGA-qQ-3ZF" firstAttribute="top" secondItem="hoS-DW-npn" secondAttribute="top" id="uG0-yx-3GP"/>
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="glK-wo-SIn">
@@ -582,7 +519,7 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="35" id="cgG-iC-kT5"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="25"/>
+                                                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="25"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -596,7 +533,7 @@
                                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                                 </collectionViewFlowLayout>
                                                                 <cells>
-                                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AllDecksCell" id="A2H-Zp-AH1" customClass="AllDecksCell" customModule="World_Culture_Deck" customModuleProvider="target">
+                                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AllDecksCell" id="A2H-Zp-AH1" customClass="AllDecksCell" customModule="World_Cultures" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="159" height="214"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ASu-BA-XTl">
@@ -614,7 +551,7 @@
                                                                                         </imageView>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbc-CX-HzR">
                                                                                             <rect key="frame" x="10" y="144" width="139" height="50"/>
-                                                                                            <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="20"/>
+                                                                                            <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="20"/>
                                                                                             <nil key="textColor"/>
                                                                                             <nil key="highlightedColor"/>
                                                                                         </label>
@@ -657,7 +594,7 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="35" id="l4m-wZ-aPb"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="25"/>
+                                                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="25"/>
                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -671,7 +608,7 @@
                                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                                 </collectionViewFlowLayout>
                                                                 <cells>
-                                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CompletedDecksCell" id="Jzs-Ef-7Hr" customClass="CompletedDecksCell" customModule="World_Culture_Deck" customModuleProvider="target">
+                                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CompletedDecksCell" id="Jzs-Ef-7Hr" customClass="CompletedDecksCell" customModule="World_Cultures" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="151" height="206"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="HuO-a2-CaP">
@@ -689,7 +626,7 @@
                                                                                         </imageView>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bg-Vy-fp0">
                                                                                             <rect key="frame" x="10" y="136" width="131" height="50"/>
-                                                                                            <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="20"/>
+                                                                                            <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="17"/>
                                                                                             <nil key="textColor"/>
                                                                                             <nil key="highlightedColor"/>
                                                                                         </label>
@@ -766,13 +703,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="e80-cD-ajq"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="globe" catalog="system" id="eEr-qR-FPo"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home" id="eEr-qR-FPo"/>
                     <connections>
                         <outlet property="WCDLabel" destination="vww-uG-Szo" id="jvW-RG-NiJ"/>
                         <outlet property="allDeckCollectionView" destination="nJu-BA-weV" id="7Vs-B3-FCf"/>
                         <outlet property="blueBackground" destination="U5k-5G-4ix" id="1n0-oc-SGQ"/>
                         <outlet property="completedCollectionView" destination="NfG-kC-o3y" id="47G-vO-gKi"/>
                         <outlet property="completedDecksLabel" destination="FeQ-C7-iNy" id="ifH-0s-ANI"/>
+                        <outlet property="cultureDecksLabel" destination="KQ7-hp-EtD" id="XfT-1c-CU4"/>
+                        <outlet property="homeLabel" destination="bY8-Tj-3Xi" id="Sqd-NI-SeW"/>
+                        <outlet property="starButton" destination="E9e-cP-bl6" id="U35-Ld-B96"/>
                         <outlet property="starLabel" destination="tnT-bo-8YK" id="llg-gm-pDd"/>
                         <segue destination="oEm-XA-QTI" kind="show" identifier="countryController" id="UdE-sa-Igz"/>
                     </connections>
@@ -784,7 +724,7 @@
         <!--Country Controller-->
         <scene sceneID="6Fx-zh-Puk">
             <objects>
-                <viewController id="oEm-XA-QTI" customClass="CountryController" customModule="World_Culture_Deck" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="oEm-XA-QTI" customClass="CountryController" customModule="World_Cultures" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Kw-fp-l26">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -792,25 +732,28 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S1J-LD-Fxa">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="84.333333333333329"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vfW-aS-2uz">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vfW-aS-2uz">
                                         <rect key="frame" x="20" y="17.000000000000004" width="374" height="50.333333333333343"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="World Culture Deck" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yxd-LI-s3K">
-                                                <rect key="frame" x="0.0" y="0.0" width="303.33333333333331" height="50.333333333333336"/>
-                                                <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="30"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPg-S0-FLI">
-                                                <rect key="frame" x="323.33333333333331" y="1.6666666666666643" width="50.666666666666686" height="47.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="1.6666666666666643" width="50.666666666666664" height="47.333333333333336"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="TPg-S0-FLI" secondAttribute="height" multiplier="1:1" id="BFY-rR-mtY"/>
                                                 </constraints>
-                                                <state key="normal" backgroundImage="xmark.square" catalog="system"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" backgroundImage="xmark.square" catalog="system">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="xPressed:" destination="oEm-XA-QTI" eventType="touchUpInside" id="VeB-iN-evQ"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="World Culture Deck" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yxd-LI-s3K">
+                                                <rect key="frame" x="60.666666666666657" y="0.0" width="313.33333333333337" height="50.333333333333336"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="30"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -828,33 +771,33 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iRh-AB-kmg">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rm3-pL-fcn">
-                                                <rect key="frame" x="15" y="25" width="384" height="0.0"/>
-                                                <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="20"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qBx-t6-jtI">
-                                                <rect key="frame" x="319" y="0.0" width="80" height="50"/>
+                                                <rect key="frame" x="15" y="0.0" width="384" height="50"/>
                                                 <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rm3-pL-fcn">
+                                                        <rect key="frame" x="0.0" y="0.0" width="304" height="50"/>
+                                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nkf-b1-Uyx">
-                                                        <rect key="frame" x="0.0" y="0.0" width="35" height="50"/>
+                                                        <rect key="frame" x="304" y="0.0" width="35" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="35" id="Bbc-zq-YPx"/>
                                                         </constraints>
-                                                        <color key="tintColor" red="0.16078431369999999" green="0.63137254899999995" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="star.fill" catalog="system">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S1i-6J-lWn">
-                                                        <rect key="frame" x="35" y="0.0" width="45" height="50"/>
+                                                        <rect key="frame" x="339" y="0.0" width="45" height="50"/>
                                                         <color key="tintColor" red="0.16078431369999999" green="0.63137254899999995" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="45" id="Ivu-Aq-KIx"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="25"/>
-                                                        <color key="textColor" red="0.16078431369999999" green="0.63137254899999995" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="25"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -862,12 +805,10 @@
                                         </subviews>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="Rm3-pL-fcn" firstAttribute="centerY" secondItem="iRh-AB-kmg" secondAttribute="centerY" id="N6v-1K-1rr"/>
                                             <constraint firstItem="qBx-t6-jtI" firstAttribute="centerY" secondItem="iRh-AB-kmg" secondAttribute="centerY" id="NDv-R0-J00"/>
                                             <constraint firstAttribute="trailing" secondItem="qBx-t6-jtI" secondAttribute="trailing" constant="15" id="Om8-2Z-q7z"/>
                                             <constraint firstAttribute="height" constant="50" id="PZc-wc-Srx"/>
-                                            <constraint firstAttribute="trailing" secondItem="Rm3-pL-fcn" secondAttribute="trailing" constant="15" id="QXL-Ea-sad"/>
-                                            <constraint firstItem="Rm3-pL-fcn" firstAttribute="leading" secondItem="iRh-AB-kmg" secondAttribute="leading" constant="15" id="qBn-Lz-jTg"/>
+                                            <constraint firstItem="qBx-t6-jtI" firstAttribute="leading" secondItem="iRh-AB-kmg" secondAttribute="leading" constant="15" id="wRw-Dw-SRo"/>
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="pt7-6u-VYt" userLabel="mapInfo">
@@ -881,7 +822,7 @@
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9x-yP-zHm">
                                                 <rect key="frame" x="181.66666666666669" y="0.0" width="151.66666666666669" height="151.33333333333334"/>
-                                                <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -895,12 +836,12 @@
                                             <constraint firstAttribute="bottom" secondItem="0pC-Ka-eIx" secondAttribute="bottom" id="ldg-27-H0Q"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="m7c-lT-Fof">
-                                        <rect key="frame" x="40.333333333333343" y="231.33333333333337" width="333.33333333333326" height="151.66666666666663"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xZt-8E-PA8">
+                                        <rect key="frame" x="25" y="231.33333333333334" width="364" height="511.33333333333326"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Fm-Au-nx9">
-                                                <rect key="frame" x="0.0" y="0.0" width="151.66666666666666" height="151.66666666666666"/>
-                                                <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="364" height="93"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="30"/>
                                                 <state key="normal" title=" Clothing ">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -909,8 +850,8 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWO-L7-6Gu">
-                                                <rect key="frame" x="181.66666666666669" y="0.0" width="151.66666666666669" height="151.66666666666666"/>
-                                                <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="30"/>
+                                                <rect key="frame" x="0.0" y="103" width="364" height="92.666666666666686"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="30"/>
                                                 <state key="normal" title=" Music ">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -918,18 +859,9 @@
                                                     <action selector="musicPressed:" destination="oEm-XA-QTI" eventType="touchUpInside" id="LcT-m0-TYl"/>
                                                 </connections>
                                             </button>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="6Fm-Au-nx9" firstAttribute="height" secondItem="hWO-L7-6Gu" secondAttribute="height" id="AOJ-oA-CNJ"/>
-                                            <constraint firstItem="6Fm-Au-nx9" firstAttribute="width" secondItem="hWO-L7-6Gu" secondAttribute="width" id="Tu0-TF-0HC"/>
-                                        </constraints>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Tn8-BF-Z0y">
-                                        <rect key="frame" x="40.333333333333343" y="398" width="333.33333333333326" height="151.66666666666663"/>
-                                        <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P42-Ak-d5K">
-                                                <rect key="frame" x="0.0" y="0.0" width="151.66666666666666" height="151.66666666666666"/>
-                                                <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="30"/>
+                                                <rect key="frame" x="0.0" y="205.66666666666669" width="364" height="93"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="30"/>
                                                 <state key="normal" title=" Art ">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -938,8 +870,8 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQ4-aL-2ez">
-                                                <rect key="frame" x="181.66666666666669" y="0.0" width="151.66666666666669" height="151.66666666666666"/>
-                                                <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="30"/>
+                                                <rect key="frame" x="0.0" y="308.66666666666669" width="364" height="92.666666666666686"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="30"/>
                                                 <state key="normal" title=" Fun Facts">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -947,62 +879,64 @@
                                                     <action selector="foodPressed:" destination="oEm-XA-QTI" eventType="touchUpInside" id="7jZ-7B-ZCo"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Lm-wR-dBb">
+                                                <rect key="frame" x="0.0" y="411.33333333333331" width="364" height="45"/>
+                                                <color key="backgroundColor" red="0.78039215689999997" green="0.94117647059999998" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="5q1-wb-n0l"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="20"/>
+                                                <state key="normal" title="Quiz!">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="quizPressed:" destination="oEm-XA-QTI" eventType="touchUpInside" id="oi6-Lu-hP3"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZw-0w-Ice">
+                                                <rect key="frame" x="0.0" y="466.33333333333331" width="364" height="45"/>
+                                                <color key="backgroundColor" red="0.16078431369999999" green="0.63137254899999995" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="20"/>
+                                                <state key="normal" title="More Links">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="ght-nR-pdn" kind="show" id="Pj6-JO-hVz"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="P42-Ak-d5K" firstAttribute="width" secondItem="KQ4-aL-2ez" secondAttribute="width" id="5Cv-vp-bul"/>
-                                            <constraint firstItem="P42-Ak-d5K" firstAttribute="height" secondItem="KQ4-aL-2ez" secondAttribute="height" id="6lj-j8-Vaa"/>
+                                            <constraint firstItem="P42-Ak-d5K" firstAttribute="leading" secondItem="xZt-8E-PA8" secondAttribute="leading" id="3Gp-bD-eLJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="qZw-0w-Ice" secondAttribute="trailing" id="7JB-lr-zDj"/>
+                                            <constraint firstItem="qZw-0w-Ice" firstAttribute="leading" secondItem="xZt-8E-PA8" secondAttribute="leading" id="AQM-RF-FXo"/>
+                                            <constraint firstItem="KQ4-aL-2ez" firstAttribute="leading" secondItem="xZt-8E-PA8" secondAttribute="leading" id="Cqs-3x-O45"/>
+                                            <constraint firstItem="6Fm-Au-nx9" firstAttribute="leading" secondItem="xZt-8E-PA8" secondAttribute="leading" id="FjT-pN-DKn"/>
+                                            <constraint firstAttribute="trailing" secondItem="hWO-L7-6Gu" secondAttribute="trailing" id="Qkx-mL-TR3"/>
+                                            <constraint firstItem="hWO-L7-6Gu" firstAttribute="height" secondItem="6Fm-Au-nx9" secondAttribute="height" id="XXB-ZJ-rNb"/>
+                                            <constraint firstItem="7Lm-wR-dBb" firstAttribute="height" secondItem="qZw-0w-Ice" secondAttribute="height" id="ZuD-QL-XT4"/>
+                                            <constraint firstAttribute="trailing" secondItem="P42-Ak-d5K" secondAttribute="trailing" id="aS1-C6-NiQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="6Fm-Au-nx9" secondAttribute="trailing" id="bDu-61-wRx"/>
+                                            <constraint firstItem="KQ4-aL-2ez" firstAttribute="height" secondItem="6Fm-Au-nx9" secondAttribute="height" id="c8c-z1-Dzi"/>
+                                            <constraint firstItem="hWO-L7-6Gu" firstAttribute="leading" secondItem="xZt-8E-PA8" secondAttribute="leading" id="h3C-6Z-UKb"/>
+                                            <constraint firstItem="7Lm-wR-dBb" firstAttribute="leading" secondItem="xZt-8E-PA8" secondAttribute="leading" id="mDw-iV-QGQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="7Lm-wR-dBb" secondAttribute="trailing" id="r5a-ID-4s4"/>
+                                            <constraint firstItem="P42-Ak-d5K" firstAttribute="height" secondItem="6Fm-Au-nx9" secondAttribute="height" id="y0T-sl-7Mh"/>
+                                            <constraint firstAttribute="trailing" secondItem="KQ4-aL-2ez" secondAttribute="trailing" id="zXA-dX-AsY"/>
                                         </constraints>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Lm-wR-dBb">
-                                        <rect key="frame" x="41.333333333333343" y="564.66666666666663" width="331.33333333333326" height="40"/>
-                                        <color key="backgroundColor" red="0.78039215689999997" green="0.94117647059999998" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="qfw-Z3-Vhn"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="20"/>
-                                        <state key="normal" title="Quiz!"/>
-                                        <connections>
-                                            <action selector="quizPressed:" destination="oEm-XA-QTI" eventType="touchUpInside" id="oi6-Lu-hP3"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZw-0w-Ice">
-                                        <rect key="frame" x="41.333333333333343" y="619.66666666666663" width="331.33333333333326" height="40"/>
-                                        <color key="backgroundColor" red="0.16078431369999999" green="0.63137254899999995" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="6X2-OB-LE6"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="20"/>
-                                        <state key="normal" title="More Links">
-                                            <color key="titleColor" red="0.78039215689999997" green="0.94117647059999998" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="ght-nR-pdn" kind="show" id="Pj6-JO-hVz"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.097609010090000004" green="0.22002248269999999" blue="0.44544861219999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="pt7-6u-VYt" firstAttribute="centerX" secondItem="KkS-pP-6Fp" secondAttribute="centerX" id="3Hl-R0-heY"/>
                                     <constraint firstItem="pt7-6u-VYt" firstAttribute="top" secondItem="iRh-AB-kmg" secondAttribute="bottom" constant="15" id="5IO-pj-5gi"/>
-                                    <constraint firstItem="qZw-0w-Ice" firstAttribute="centerX" secondItem="KkS-pP-6Fp" secondAttribute="centerX" id="6mM-UY-3GD"/>
+                                    <constraint firstItem="xZt-8E-PA8" firstAttribute="leading" secondItem="KkS-pP-6Fp" secondAttribute="leading" constant="25" id="6fG-Bm-Bod"/>
                                     <constraint firstItem="pt7-6u-VYt" firstAttribute="height" secondItem="KkS-pP-6Fp" secondAttribute="height" multiplier="0.2" id="9wr-oV-BZi"/>
-                                    <constraint firstItem="7Lm-wR-dBb" firstAttribute="width" secondItem="KkS-pP-6Fp" secondAttribute="width" multiplier="0.8" id="CpB-4p-nmh"/>
-                                    <constraint firstItem="0pC-Ka-eIx" firstAttribute="height" secondItem="P42-Ak-d5K" secondAttribute="height" id="EFe-nv-UBj"/>
-                                    <constraint firstItem="Tn8-BF-Z0y" firstAttribute="centerX" secondItem="KkS-pP-6Fp" secondAttribute="centerX" id="Fcg-4F-nb5"/>
-                                    <constraint firstItem="Tn8-BF-Z0y" firstAttribute="top" secondItem="m7c-lT-Fof" secondAttribute="bottom" constant="15" id="KKU-KQ-YVU"/>
-                                    <constraint firstItem="0pC-Ka-eIx" firstAttribute="height" secondItem="6Fm-Au-nx9" secondAttribute="height" id="Q6E-Ha-tTj"/>
-                                    <constraint firstItem="7Lm-wR-dBb" firstAttribute="centerX" secondItem="KkS-pP-6Fp" secondAttribute="centerX" id="TJ5-fE-Fg9"/>
+                                    <constraint firstAttribute="trailing" secondItem="xZt-8E-PA8" secondAttribute="trailing" constant="25" id="HRd-69-jwO"/>
                                     <constraint firstItem="iRh-AB-kmg" firstAttribute="leading" secondItem="KkS-pP-6Fp" secondAttribute="leading" id="Tgr-YZ-agX"/>
-                                    <constraint firstItem="qZw-0w-Ice" firstAttribute="top" secondItem="7Lm-wR-dBb" secondAttribute="bottom" constant="15" id="Upj-d9-S5j"/>
-                                    <constraint firstItem="qZw-0w-Ice" firstAttribute="width" secondItem="KkS-pP-6Fp" secondAttribute="width" multiplier="0.8" id="bsY-30-eaB"/>
                                     <constraint firstAttribute="trailing" secondItem="iRh-AB-kmg" secondAttribute="trailing" id="c7C-uL-uNV"/>
-                                    <constraint firstItem="0pC-Ka-eIx" firstAttribute="width" secondItem="6Fm-Au-nx9" secondAttribute="width" id="e6R-iC-2Zd"/>
-                                    <constraint firstItem="0pC-Ka-eIx" firstAttribute="width" secondItem="P42-Ak-d5K" secondAttribute="width" id="eZa-b4-4PB"/>
-                                    <constraint firstItem="m7c-lT-Fof" firstAttribute="centerX" secondItem="KkS-pP-6Fp" secondAttribute="centerX" id="edK-UR-bhp"/>
-                                    <constraint firstItem="7Lm-wR-dBb" firstAttribute="height" secondItem="qZw-0w-Ice" secondAttribute="height" id="f0R-h1-cLp"/>
-                                    <constraint firstItem="m7c-lT-Fof" firstAttribute="top" secondItem="pt7-6u-VYt" secondAttribute="bottom" constant="15" id="mHM-FB-Sa8"/>
+                                    <constraint firstItem="xZt-8E-PA8" firstAttribute="top" secondItem="pt7-6u-VYt" secondAttribute="bottom" constant="15" id="kBf-fP-R1D"/>
                                     <constraint firstItem="iRh-AB-kmg" firstAttribute="top" secondItem="KkS-pP-6Fp" secondAttribute="top" id="tno-Xv-ozk"/>
-                                    <constraint firstItem="7Lm-wR-dBb" firstAttribute="top" secondItem="Tn8-BF-Z0y" secondAttribute="bottom" constant="15" id="xRh-TS-qxR"/>
+                                    <constraint firstAttribute="bottom" secondItem="xZt-8E-PA8" secondAttribute="bottom" constant="15" id="xvc-0K-iwI"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -1033,7 +967,9 @@
                         <outlet property="mapImage" destination="0pC-Ka-eIx" id="WOF-XR-yhY"/>
                         <outlet property="musicButton" destination="hWO-L7-6Gu" id="fgD-Pz-hlE"/>
                         <outlet property="quizButton" destination="7Lm-wR-dBb" id="1EY-6l-Md0"/>
+                        <outlet property="starButton" destination="nkf-b1-Uyx" id="Gz8-nh-U5x"/>
                         <outlet property="starLabel" destination="S1i-6J-lWn" id="rHt-gI-zpZ"/>
+                        <outlet property="xButton" destination="TPg-S0-FLI" id="AeT-an-RZf"/>
                         <segue destination="HX0-2h-ZkL" kind="show" identifier="infoController" id="Uaw-Mb-IQ3"/>
                         <segue destination="dds-SJ-LGe" kind="show" identifier="quizController" id="iBg-hx-dxv"/>
                     </connections>
@@ -1045,7 +981,7 @@
         <!--Info Controller-->
         <scene sceneID="lLv-N6-vKY">
             <objects>
-                <viewController id="HX0-2h-ZkL" customClass="InfoController" customModule="World_Culture_Deck" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="HX0-2h-ZkL" customClass="InfoController" customModule="World_Cultures" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nlf-r9-OKX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1053,25 +989,26 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="an4-5L-OuD">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="84.333333333333329"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Vsf-eQ-p2n">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Vsf-eQ-p2n">
                                         <rect key="frame" x="20" y="17.000000000000004" width="374" height="50.333333333333343"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="World Culture Deck" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6wl-J0-OE8">
-                                                <rect key="frame" x="0.0" y="0.0" width="303.33333333333331" height="50.333333333333336"/>
-                                                <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="30"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9C6-RJ-xC4">
-                                                <rect key="frame" x="323.33333333333331" y="1.6666666666666643" width="50.666666666666686" height="47.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="1.6666666666666643" width="50.666666666666664" height="47.333333333333336"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="9C6-RJ-xC4" secondAttribute="height" multiplier="1:1" id="R4g-5p-3yo"/>
                                                 </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" backgroundImage="xmark.square" catalog="system"/>
                                                 <connections>
                                                     <action selector="xPressed:" destination="HX0-2h-ZkL" eventType="touchUpInside" id="rAD-uM-hIU"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="World Culture Deck" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6wl-J0-OE8">
+                                                <rect key="frame" x="60.666666666666657" y="0.0" width="313.33333333333337" height="50.333333333333336"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="30"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -1089,33 +1026,33 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a6u-hc-j0b">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="poV-Hi-Zfi">
-                                                <rect key="frame" x="15" y="25" width="384" height="0.0"/>
-                                                <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="20"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OJd-2t-7of">
-                                                <rect key="frame" x="319" y="0.0" width="80" height="50"/>
+                                                <rect key="frame" x="15" y="0.0" width="384" height="50"/>
                                                 <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="poV-Hi-Zfi">
+                                                        <rect key="frame" x="0.0" y="0.0" width="304" height="50"/>
+                                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4oH-eO-6QX">
-                                                        <rect key="frame" x="0.0" y="0.0" width="35" height="50"/>
+                                                        <rect key="frame" x="304" y="0.0" width="35" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="35" id="AKh-I3-ZKF"/>
                                                         </constraints>
-                                                        <color key="tintColor" red="0.16078431369999999" green="0.63137254899999995" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="star.fill" catalog="system">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="04y-d8-V1Z">
-                                                        <rect key="frame" x="35" y="0.0" width="45" height="50"/>
+                                                        <rect key="frame" x="339" y="0.0" width="45" height="50"/>
                                                         <color key="tintColor" red="0.16078431369999999" green="0.63137254899999995" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="45" id="bbu-t9-xqn"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="25"/>
-                                                        <color key="textColor" red="0.16078431369999999" green="0.63137254899999995" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="25"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -1123,12 +1060,10 @@
                                         </subviews>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="poV-Hi-Zfi" firstAttribute="leading" secondItem="a6u-hc-j0b" secondAttribute="leading" constant="15" id="59T-up-kj0"/>
-                                            <constraint firstAttribute="trailing" secondItem="poV-Hi-Zfi" secondAttribute="trailing" constant="15" id="5mQ-LC-fr5"/>
+                                            <constraint firstItem="OJd-2t-7of" firstAttribute="leading" secondItem="a6u-hc-j0b" secondAttribute="leading" constant="15" id="JeX-mw-kmw"/>
                                             <constraint firstItem="OJd-2t-7of" firstAttribute="centerY" secondItem="a6u-hc-j0b" secondAttribute="centerY" id="ZPu-vT-v0X"/>
                                             <constraint firstAttribute="height" constant="50" id="c5n-8G-5Xq"/>
                                             <constraint firstAttribute="trailing" secondItem="OJd-2t-7of" secondAttribute="trailing" constant="15" id="eBU-hY-I4i"/>
-                                            <constraint firstItem="poV-Hi-Zfi" firstAttribute="centerY" secondItem="a6u-hc-j0b" secondAttribute="centerY" id="vjB-Vk-qA7"/>
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Twp-2D-osg" userLabel="firstBlock">
@@ -1139,7 +1074,7 @@
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxX-gi-p2m">
                                                 <rect key="frame" x="207" y="0.0" width="177" height="180.66666666666666"/>
-                                                <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -1163,8 +1098,10 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="80" id="uWj-hx-xee"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="20"/>
-                                                <state key="normal" title="Back"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="20"/>
+                                                <state key="normal" title="Back">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="backPressed:" destination="HX0-2h-ZkL" eventType="touchUpInside" id="jKy-8h-rV7"/>
                                                 </connections>
@@ -1175,8 +1112,10 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="80" id="beC-r9-86o"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="20"/>
-                                                <state key="normal" title="Next"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="20"/>
+                                                <state key="normal" title="Next">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="nextPressed:" destination="HX0-2h-ZkL" eventType="touchUpInside" id="ttL-pW-XUz"/>
                                                 </connections>
@@ -1191,7 +1130,7 @@
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPN-4B-HAT">
                                         <rect key="frame" x="20.666666666666657" y="471.33333333333331" width="372.66666666666674" height="162.66666666666669"/>
-                                        <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -1248,7 +1187,9 @@
                         <outlet property="pageCountLabel" destination="qYw-3U-5x3" id="mI4-fy-cou"/>
                         <outlet property="secondImage" destination="hN6-HO-2la" id="1GV-Oj-XqG"/>
                         <outlet property="secondLabel" destination="tPN-4B-HAT" id="mHj-Uc-8V4"/>
+                        <outlet property="starButton" destination="4oH-eO-6QX" id="jk4-Ke-cfJ"/>
                         <outlet property="starLabel" destination="04y-d8-V1Z" id="aVv-Hz-j5p"/>
+                        <outlet property="xButton" destination="9C6-RJ-xC4" id="afU-QI-8MH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0SJ-xT-ZaV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1258,7 +1199,7 @@
         <!--QuizVC-->
         <scene sceneID="LOm-i6-RJy">
             <objects>
-                <viewController id="dds-SJ-LGe" customClass="QuizVC" customModule="World_Culture_Deck" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dds-SJ-LGe" customClass="QuizVC" customModule="World_Cultures" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KsA-34-bGb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1266,25 +1207,26 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V98-vY-u7n">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="84.333333333333329"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="lUu-jX-A4p">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lUu-jX-A4p">
                                         <rect key="frame" x="20" y="17.000000000000004" width="374" height="50.333333333333343"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="World Culture Deck" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZ7-sE-lfV">
-                                                <rect key="frame" x="0.0" y="0.0" width="303.33333333333331" height="50.333333333333336"/>
-                                                <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="30"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Az-lV-XMS">
-                                                <rect key="frame" x="323.33333333333331" y="1.6666666666666643" width="50.666666666666686" height="47.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="1.6666666666666643" width="50.666666666666664" height="47.333333333333336"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="3Az-lV-XMS" secondAttribute="height" multiplier="1:1" id="Njm-SJ-pgg"/>
                                                 </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" backgroundImage="xmark.square" catalog="system"/>
                                                 <connections>
                                                     <action selector="xPressed:" destination="dds-SJ-LGe" eventType="touchUpInside" id="Wfa-RB-EID"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="World Culture Deck" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZ7-sE-lfV">
+                                                <rect key="frame" x="60.666666666666657" y="0.0" width="313.33333333333337" height="50.333333333333336"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="30"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -1302,33 +1244,33 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7JO-Hw-mj2">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQT-za-ngM">
-                                                <rect key="frame" x="15" y="25" width="384" height="0.0"/>
-                                                <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="20"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1sl-zm-4an">
-                                                <rect key="frame" x="319" y="0.0" width="80" height="50"/>
+                                                <rect key="frame" x="20" y="0.0" width="374" height="50"/>
                                                 <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQT-za-ngM">
+                                                        <rect key="frame" x="0.0" y="0.0" width="294" height="50"/>
+                                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ddd-Lg-YuB">
-                                                        <rect key="frame" x="0.0" y="0.0" width="35" height="50"/>
+                                                        <rect key="frame" x="294" y="0.0" width="35" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="35" id="lXT-Ft-RqF"/>
                                                         </constraints>
-                                                        <color key="tintColor" red="0.16078431369999999" green="0.63137254899999995" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="star.fill" catalog="system">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fu-Hs-42N">
-                                                        <rect key="frame" x="35" y="0.0" width="45" height="50"/>
-                                                        <color key="tintColor" red="0.16078431369999999" green="0.63137254899999995" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <rect key="frame" x="329" y="0.0" width="45" height="50"/>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="45" id="cDW-yW-35Z"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="25"/>
-                                                        <color key="textColor" red="0.16078431369999999" green="0.63137254899999995" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -1336,41 +1278,39 @@
                                         </subviews>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="zQT-za-ngM" firstAttribute="leading" secondItem="7JO-Hw-mj2" secondAttribute="leading" constant="15" id="6PM-Kf-9wb"/>
-                                            <constraint firstItem="zQT-za-ngM" firstAttribute="centerY" secondItem="7JO-Hw-mj2" secondAttribute="centerY" id="7Gz-X1-Eqe"/>
+                                            <constraint firstAttribute="trailing" secondItem="1sl-zm-4an" secondAttribute="trailing" constant="20" id="235-op-q83"/>
                                             <constraint firstItem="1sl-zm-4an" firstAttribute="centerY" secondItem="7JO-Hw-mj2" secondAttribute="centerY" id="XRX-XE-Xpk"/>
-                                            <constraint firstAttribute="trailing" secondItem="zQT-za-ngM" secondAttribute="trailing" constant="15" id="goV-fF-gMg"/>
                                             <constraint firstAttribute="height" constant="50" id="jQk-A4-LWC"/>
-                                            <constraint firstAttribute="trailing" secondItem="1sl-zm-4an" secondAttribute="trailing" constant="15" id="zsj-Iz-4ng"/>
+                                            <constraint firstItem="1sl-zm-4an" firstAttribute="leading" secondItem="7JO-Hw-mj2" secondAttribute="leading" constant="20" id="z37-75-VXZ"/>
                                         </constraints>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QFk-8p-ngs">
                                         <rect key="frame" x="0.0" y="125" width="414" height="513.66666666666663"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuizCell" rowHeight="240" id="Djk-CB-f7n" customClass="QuizCell" customModule="World_Culture_Deck" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="414" height="240"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuizCell" rowHeight="215" id="Djk-CB-f7n" customClass="QuizCell" customModule="World_Cultures" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="414" height="215"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Djk-CB-f7n" id="zTj-eE-OAZ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="240"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="215"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4db-of-iL2">
-                                                            <rect key="frame" x="20" y="11" width="374" height="218"/>
+                                                            <rect key="frame" x="20" y="11" width="374" height="193"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question 1: " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fF-34-pcZ">
-                                                                    <rect key="frame" x="10" y="10" width="354" height="28"/>
-                                                                    <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="20"/>
+                                                                    <rect key="frame" x="10" y="10.000000000000002" width="354" height="24.666666666666671"/>
+                                                                    <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="20"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zIU-PE-HsP">
-                                                                    <rect key="frame" x="10" y="48" width="354" height="160"/>
+                                                                    <rect key="frame" x="10" y="44.666666666666671" width="354" height="138.33333333333331"/>
                                                                     <subviews>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5pz-nJ-rZk">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="354" height="46.666666666666664"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="354" height="39.333333333333336"/>
                                                                             <color key="backgroundColor" red="0.16078431369999999" green="0.63137254899999995" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                            <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="17"/>
+                                                                            <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="17"/>
                                                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <state key="normal" title="  First Option">
                                                                                 <color key="titleColor" red="0.78039215689999997" green="0.94117647059999998" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -1380,9 +1320,9 @@
                                                                             </connections>
                                                                         </button>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KpU-9o-GVT">
-                                                                            <rect key="frame" x="0.0" y="56.666666666666671" width="354" height="46.666666666666671"/>
+                                                                            <rect key="frame" x="0.0" y="49.333333333333343" width="354" height="39.666666666666657"/>
                                                                             <color key="backgroundColor" red="0.031372549020000001" green="0.64313725489999995" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                            <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="17"/>
+                                                                            <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="17"/>
                                                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <state key="normal" title="  Second Option">
                                                                                 <color key="titleColor" red="0.78039215689999997" green="0.94117647059999998" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -1392,9 +1332,9 @@
                                                                             </connections>
                                                                         </button>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFe-OW-NJr">
-                                                                            <rect key="frame" x="0.0" y="113.33333333333336" width="354" height="46.666666666666671"/>
+                                                                            <rect key="frame" x="0.0" y="99" width="354" height="39.333333333333343"/>
                                                                             <color key="backgroundColor" red="0.031372549020000001" green="0.64313725489999995" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                            <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="17"/>
+                                                                            <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="17"/>
                                                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <state key="normal" title="  Third Option">
                                                                                 <color key="titleColor" red="0.78039215689999997" green="0.94117647059999998" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -1448,23 +1388,23 @@
                                         </connections>
                                     </tableView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gel-gm-hNG">
-                                        <rect key="frame" x="20" y="70.000000000000014" width="0.0" height="35"/>
+                                        <rect key="frame" x="20" y="70.000000000000014" width="319" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="Abs-59-Swf"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="30"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z7G-jI-DdX">
-                                        <rect key="frame" x="269" y="658.66666666666663" width="125" height="45"/>
+                                        <rect key="frame" x="267" y="658.66666666666663" width="127" height="45"/>
                                         <color key="backgroundColor" red="0.81568627450980391" green="0.94901960784313721" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="SYv-rg-mHi"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="25"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="25"/>
                                         <state key="normal" title="  Submit!  ">
-                                            <color key="titleColor" red="0.16078431369999999" green="0.63137254899999995" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="submitPressed:" destination="dds-SJ-LGe" eventType="touchUpInside" id="g2a-Ue-cfT"/>
@@ -1475,6 +1415,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="2Ye-Nn-lTy" secondAttribute="height" multiplier="1:1" id="kFP-0w-Ki5"/>
                                         </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" backgroundImage="gobackward" catalog="system"/>
                                         <connections>
                                             <action selector="redoPressed:" destination="dds-SJ-LGe" eventType="touchUpInside" id="Jcj-yB-064"/>
@@ -1488,6 +1429,7 @@
                                     <constraint firstItem="gel-gm-hNG" firstAttribute="top" secondItem="7JO-Hw-mj2" secondAttribute="bottom" constant="20" id="9j2-Ao-HVB"/>
                                     <constraint firstItem="QFk-8p-ngs" firstAttribute="top" secondItem="2Ye-Nn-lTy" secondAttribute="bottom" constant="15" id="BEQ-OT-DN4"/>
                                     <constraint firstAttribute="trailing" secondItem="QFk-8p-ngs" secondAttribute="trailing" id="HAv-l9-Rky"/>
+                                    <constraint firstItem="2Ye-Nn-lTy" firstAttribute="leading" secondItem="gel-gm-hNG" secondAttribute="trailing" constant="15" id="HIm-HX-eB1"/>
                                     <constraint firstItem="QFk-8p-ngs" firstAttribute="top" secondItem="gel-gm-hNG" secondAttribute="bottom" constant="20" id="LVq-MK-Ure"/>
                                     <constraint firstItem="gel-gm-hNG" firstAttribute="leading" secondItem="LcG-0a-XAe" secondAttribute="leading" constant="20" id="UId-YN-CxN"/>
                                     <constraint firstAttribute="trailing" secondItem="7JO-Hw-mj2" secondAttribute="trailing" id="hjD-Qs-1Nc"/>
@@ -1519,10 +1461,12 @@
                         <outlet property="WCDLabel" destination="OZ7-sE-lfV" id="hhR-F3-Dwo"/>
                         <outlet property="headerLabel" destination="zQT-za-ngM" id="du0-hN-Sjh"/>
                         <outlet property="redoButton" destination="2Ye-Nn-lTy" id="6kU-Ta-gCZ"/>
+                        <outlet property="starButton" destination="Ddd-Lg-YuB" id="c3u-FG-JE1"/>
                         <outlet property="starLabel" destination="3fu-Hs-42N" id="CH6-6V-WAh"/>
                         <outlet property="submitButton" destination="Z7G-jI-DdX" id="7gg-iZ-S57"/>
                         <outlet property="tableView" destination="QFk-8p-ngs" id="oy5-LZ-s5O"/>
                         <outlet property="topScoreLabel" destination="gel-gm-hNG" id="NUh-Lg-ndT"/>
+                        <outlet property="xButton" destination="3Az-lV-XMS" id="ckL-sc-VJJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KW9-ed-aFL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1532,7 +1476,7 @@
         <!--SourcesVC-->
         <scene sceneID="Rfa-Ax-KuK">
             <objects>
-                <viewController id="ght-nR-pdn" customClass="SourcesVC" customModule="World_Culture_Deck" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ght-nR-pdn" customClass="SourcesVC" customModule="World_Cultures" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tOI-s0-LGQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1540,26 +1484,27 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HJk-gt-YFC">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="84.333333333333329"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="grR-rO-ybu">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="grR-rO-ybu">
                                         <rect key="frame" x="20" y="17.000000000000004" width="374" height="50.333333333333343"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="World Culture Deck" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ix9-Er-2v0">
-                                                <rect key="frame" x="0.0" y="0.0" width="303.33333333333331" height="50.333333333333336"/>
-                                                <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="30"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xZ-qn-fHj">
-                                                <rect key="frame" x="323.33333333333331" y="1.6666666666666643" width="50.666666666666686" height="47.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="1.6666666666666643" width="50.666666666666664" height="47.333333333333336"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="4xZ-qn-fHj" secondAttribute="height" multiplier="1:1" id="FfD-cS-cNW"/>
                                                 </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" backgroundImage="xmark.square" catalog="system"/>
                                                 <connections>
                                                     <action selector="xPressed:" destination="ght-nR-pdn" eventType="touchUpInside" id="kJQ-np-qeO"/>
                                                     <action selector="xPressed:" destination="dds-SJ-LGe" eventType="touchUpInside" id="vnr-YZ-YLa"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="World Culture Deck" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ix9-Er-2v0">
+                                                <rect key="frame" x="60.666666666666657" y="0.0" width="313.33333333333337" height="50.333333333333336"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="30"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -1577,56 +1522,52 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SNi-ad-qhM">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="DOJ-dZ-JA0">
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JZE-vH-3Rz">
                                                 <rect key="frame" x="15" y="0.0" width="384" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hki-LN-vGM">
-                                                        <rect key="frame" x="0.0" y="0.0" width="289" height="50"/>
-                                                        <fontDescription key="fontDescription" name="PingFangHK-Medium" family="PingFang HK" pointSize="20"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="304" height="50"/>
+                                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JZE-vH-3Rz">
-                                                        <rect key="frame" x="304" y="0.0" width="80" height="50"/>
-                                                        <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2L-uu-MvY">
-                                                                <rect key="frame" x="0.0" y="0.0" width="35" height="50"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="35" id="PNa-6t-efW"/>
-                                                                </constraints>
-                                                                <color key="tintColor" red="0.16078431369999999" green="0.63137254899999995" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                <state key="normal" image="star.fill" catalog="system">
-                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                </state>
-                                                            </button>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KoK-h6-QLI">
-                                                                <rect key="frame" x="35" y="0.0" width="45" height="50"/>
-                                                                <color key="tintColor" red="0.16078431369999999" green="0.63137254899999995" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="45" id="leg-F7-0tE"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="25"/>
-                                                                <color key="textColor" red="0.16078431369999999" green="0.63137254899999995" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2L-uu-MvY">
+                                                        <rect key="frame" x="304" y="0.0" width="35" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="35" id="PNa-6t-efW"/>
+                                                        </constraints>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" image="star.fill" catalog="system">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KoK-h6-QLI">
+                                                        <rect key="frame" x="339" y="0.0" width="45" height="50"/>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="45" id="leg-F7-0tE"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="25"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="DOJ-dZ-JA0" secondAttribute="trailing" constant="15" id="2cC-cA-pXz"/>
+                                            <constraint firstItem="JZE-vH-3Rz" firstAttribute="top" secondItem="SNi-ad-qhM" secondAttribute="top" id="5cc-t9-YlU"/>
                                             <constraint firstAttribute="height" constant="50" id="S2C-l0-6iQ"/>
-                                            <constraint firstItem="DOJ-dZ-JA0" firstAttribute="centerY" secondItem="SNi-ad-qhM" secondAttribute="centerY" id="c9i-HI-dzh"/>
-                                            <constraint firstItem="DOJ-dZ-JA0" firstAttribute="leading" secondItem="SNi-ad-qhM" secondAttribute="leading" constant="15" id="dpA-2j-Q5E"/>
+                                            <constraint firstAttribute="trailing" secondItem="JZE-vH-3Rz" secondAttribute="trailing" constant="15" id="SWQ-x2-elO"/>
+                                            <constraint firstItem="JZE-vH-3Rz" firstAttribute="leading" secondItem="SNi-ad-qhM" secondAttribute="leading" constant="15" id="aHG-FJ-RVS"/>
+                                            <constraint firstAttribute="bottom" secondItem="JZE-vH-3Rz" secondAttribute="bottom" id="fc7-mH-UOf"/>
                                         </constraints>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lKE-Ok-uIX">
                                         <rect key="frame" x="30" y="80" width="354" height="579"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LinksCell" rowHeight="115" id="w5F-XJ-DMS" customClass="LinksCell" customModule="World_Culture_Deck" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LinksCell" rowHeight="115" id="w5F-XJ-DMS" customClass="LinksCell" customModule="World_Cultures" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="354" height="115"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="w5F-XJ-DMS" id="aCb-uy-FEf">
@@ -1635,7 +1576,7 @@
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Link" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xum-8L-cl2">
                                                             <rect key="frame" x="20" y="11" width="314" height="93"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -1690,7 +1631,9 @@
                         <outlet property="blueBackground" destination="aWg-RU-KrW" id="v9V-mt-Mwa"/>
                         <outlet property="linksHeaderLabel" destination="Hki-LN-vGM" id="DEP-7J-nQA"/>
                         <outlet property="linksTableView" destination="lKE-Ok-uIX" id="Uz3-9W-ogO"/>
+                        <outlet property="starButton" destination="a2L-uu-MvY" id="fx9-c2-das"/>
                         <outlet property="starCountLabel" destination="KoK-h6-QLI" id="UVr-6S-tcZ"/>
+                        <outlet property="xButton" destination="4xZ-qn-fHj" id="Emg-VT-vgk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="swt-3k-48a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1700,7 +1643,7 @@
         <!--ShortAlertVC-->
         <scene sceneID="wQD-i3-a8x">
             <objects>
-                <viewController restorationIdentifier="ShortAlertVC" storyboardIdentifier="ShortAlertVC" title="ShortAlertVC" id="wrb-6K-CGw" customClass="ShortAlertVC" customModule="World_Culture_Deck" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="ShortAlertVC" storyboardIdentifier="ShortAlertVC" title="ShortAlertVC" id="wrb-6K-CGw" customClass="ShortAlertVC" customModule="World_Cultures" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="att-2y-8Ku">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1722,14 +1665,14 @@
                                         <rect key="frame" x="0.0" y="57.666666666666686" width="290" height="135"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Big Header" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23Y-Eh-EcF">
-                                                <rect key="frame" x="30" y="10" width="230" height="28"/>
-                                                <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="20"/>
-                                                <color key="textColor" red="0.031372549020000001" green="0.64313725489999995" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <rect key="frame" x="30" y="10.000000000000002" width="230" height="24.666666666666671"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="20"/>
+                                                <color key="textColor" red="0.054901960780000002" green="0.22352941179999999" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqE-0U-f8i">
-                                                <rect key="frame" x="20" y="48" width="250" height="67"/>
-                                                <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="18"/>
+                                                <rect key="frame" x="20" y="44.666666666666622" width="250" height="70.333333333333314"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -1749,10 +1692,12 @@
                                         <rect key="frame" x="0.0" y="182.66666666666669" width="290" height="67.333333333333314"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jar-xj-bfU">
-                                                <rect key="frame" x="89.666666666666657" y="19.999999999999947" width="111" height="32.333333333333343"/>
+                                                <rect key="frame" x="72.666666666666657" y="14.999999999999947" width="145" height="37.333333333333343"/>
                                                 <color key="backgroundColor" red="0.81568627449999997" green="0.94901960780000005" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="16"/>
-                                                <state key="normal" title="  Button Text  "/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="16"/>
+                                                <state key="normal" title="  Button Text  ">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="okPressed:" destination="wrb-6K-CGw" eventType="touchUpInside" id="uwR-gO-j0D"/>
                                                 </connections>
@@ -1762,7 +1707,8 @@
                                         <constraints>
                                             <constraint firstItem="jar-xj-bfU" firstAttribute="centerX" secondItem="5Zl-hb-ofb" secondAttribute="centerX" id="509-Du-5du"/>
                                             <constraint firstAttribute="bottom" secondItem="jar-xj-bfU" secondAttribute="bottom" constant="15" id="Don-SA-C7W"/>
-                                            <constraint firstItem="jar-xj-bfU" firstAttribute="top" secondItem="5Zl-hb-ofb" secondAttribute="top" constant="20" id="ldO-PF-rY2"/>
+                                            <constraint firstItem="jar-xj-bfU" firstAttribute="width" secondItem="5Zl-hb-ofb" secondAttribute="width" multiplier="0.5" id="I0c-dy-eDV"/>
+                                            <constraint firstItem="jar-xj-bfU" firstAttribute="top" secondItem="5Zl-hb-ofb" secondAttribute="top" constant="15" id="ldO-PF-rY2"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -1811,11 +1757,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="awards" width="30" height="30"/>
         <image name="gear" catalog="system" width="64" height="58"/>
-        <image name="globe" catalog="system" width="64" height="60"/>
         <image name="gobackward" catalog="system" width="60" height="64"/>
+        <image name="home" width="30" height="30"/>
         <image name="logo_clear" width="2048" height="2048"/>
-        <image name="star.circle" catalog="system" width="64" height="60"/>
+        <image name="settings" width="30" height="30"/>
         <image name="star.fill" catalog="system" width="64" height="58"/>
         <image name="xmark.square" catalog="system" width="64" height="56"/>
     </resources>

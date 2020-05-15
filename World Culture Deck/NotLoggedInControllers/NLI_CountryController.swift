@@ -21,7 +21,8 @@ class NLI_CountryController: UIViewController {
         @IBOutlet weak var linksVideoButton: UIButton!
         @IBOutlet weak var starLabel: UILabel!
         @IBOutlet weak var countryNameLabel: UILabel!
-        
+        @IBOutlet weak var xButton: UIButton!
+    
         override func viewDidLoad() {
             super.viewDidLoad()
             
@@ -38,8 +39,33 @@ class NLI_CountryController: UIViewController {
             quizButton.titleLabel?.adjustsFontSizeToFitWidth=true
 
             setUpForCountry()
+            
+            xButton.accessibilityLabel="Close \(UserDefaults.standard.string(forKey: "NLI_countryName")!) page"
+            xButton.accessibilityHint="Tap to go back to all culture cards."
+            
+            var myLabels=[countryNameLabel, WCDLabel, countryDescription]
+            var myButtons=[clothingButton, musicButton, artButton, foodButton, quizButton, linksVideoButton]
+            
+            for myLabel in myLabels{
+                makeLabelAccessible(myLabel: myLabel!)
+            }
+            
+            for myButton in myButtons{
+                makeButtonAccessible(myButton: myButton!)
+            }
         }
-
+        
+    func makeLabelAccessible(myLabel: UILabel){
+        myLabel.adjustsFontForContentSizeCategory=true
+        myLabel.adjustsFontSizeToFitWidth=true
+        myLabel.font=UIFontMetrics.default.scaledFont(for: myLabel.font)
+    }
+    
+    func makeButtonAccessible(myButton: UIButton){
+        myButton.titleLabel!.adjustsFontForContentSizeCategory=true
+        myButton.titleLabel!.font=UIFontMetrics.default.scaledFont(for: myButton.titleLabel!.font)
+    }
+    
         func setUpForCountry(){
             var countryName=UserDefaults.standard.string(forKey: "NLI_countryName")!
             countryNameLabel.text=countryName
@@ -106,6 +132,7 @@ class NLI_CountryController: UIViewController {
         }
         
         @IBAction func xPressed(_ sender: Any) {
+            NotificationCenter.default.post(name: Notification.Name("reloadNLICultureCards"), object: nil)
             navigationController?.popViewController(animated: true)
             dismiss(animated: true, completion: nil)
         }

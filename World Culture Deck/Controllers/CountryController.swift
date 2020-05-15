@@ -24,6 +24,8 @@ class CountryController: UIViewController {
     @IBOutlet weak var linksVideoButton: UIButton!
     @IBOutlet weak var starLabel: UILabel!
     @IBOutlet weak var countryNameLabel: UILabel!
+    @IBOutlet weak var xButton: UIButton!
+    @IBOutlet weak var starButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +44,35 @@ class CountryController: UIViewController {
         quizButton.titleLabel?.adjustsFontSizeToFitWidth=true
 
         setUpForCountry()
+        
+        var myLabels=[WCDLabel, starLabel, countryNameLabel,countryDescription]
+        var myButtons=[clothingButton, musicButton, artButton, foodButton, quizButton, linksVideoButton]
+        
+        for myLabel in myLabels{
+            makeLabelAccessible(myLabel: myLabel!)
+        }
+        
+        for myButton in myButtons{
+            makeButtonAccessible(myButton: myButton!)
+        }
+        
+        xButton.accessibilityLabel="Close \(UserDefaults.standard.string(forKey: "countryName")!) page"
+        xButton.accessibilityHint="Tap to go back to all culture cards"
+        
+        starButton.isAccessibilityElement=false
+        starLabel.accessibilityLabel="\(UserDefaults.standard.integer(forKey: "numberStars")) stars"
+    }
+    
+    func makeLabelAccessible(myLabel: UILabel){
+        myLabel.adjustsFontForContentSizeCategory=true
+        myLabel.adjustsFontSizeToFitWidth=true
+        myLabel.font=UIFontMetrics.default.scaledFont(for: myLabel.font)
+    }
+    
+    func makeButtonAccessible(myButton: UIButton){
+        myButton.titleLabel!.adjustsFontForContentSizeCategory=true
+        myButton.titleLabel!.adjustsFontSizeToFitWidth=true
+        myButton.titleLabel!.font=UIFontMetrics.default.scaledFont(for: myButton.titleLabel!.font)
     }
     
     override func viewDidAppear(_ animated: Bool) {

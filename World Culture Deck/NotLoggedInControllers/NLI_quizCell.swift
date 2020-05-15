@@ -23,8 +23,21 @@ class NLI_quizCell: UITableViewCell {
         super.awakeFromNib()
 
         allOptionButtons=[firstOption, secondOption, thirdOption]
-    }
+        
+        guard let customFont = UIFont(name: "Montserrat-SemiBold", size: UIFont.labelFontSize) else {
+            fatalError("""
+                Failed to load the "Montserrat" font.
+                Make sure the font file is included in the project and the font name is spelled correctly.
+                """
+            )
+        }
 
+        questionLabel.font = UIFontMetrics(forTextStyle: .body).scaledFont(for: customFont)
+        for button in allOptionButtons{
+            button.titleLabel!.font = UIFontMetrics(forTextStyle: .body).scaledFont(for: customFont)
+        }
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }

@@ -15,6 +15,16 @@ class LinksCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        guard let customFont = UIFont(name: "Montserrat-SemiBold", size: UIFont.labelFontSize) else {
+            fatalError("""
+                Failed to load the "Montserrat" font.
+                Make sure the font file is included in the project and the font name is spelled correctly.
+                """
+            )
+        }
+
+        websiteLabel.font = UIFontMetrics(forTextStyle: .body).scaledFont(for: customFont)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

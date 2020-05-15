@@ -22,6 +22,7 @@ struct StarService{
           starCount = snapshot.value as? String ?? "0" //just set variable currentScore to 0 if that quiz has never been taken before
             print("star count \(starCount)")
             myLabel.text = "\(starCount)"
+            UserDefaults.standard.set(starCount, forKey: "numberStars")
         })
         
     }

@@ -15,14 +15,14 @@
 	<key>CFBundlePackageType</key>
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>World Culture Deck needs to add the badge photo to your Photos Library!</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>World Culture Deck needs to add the badge photo to your Photos Library!</string>
+	<key>NSPhotoLibraryUsageDescription</key>
 	<string>World Culture Deck needs to add the badge photo to your Photos Library!</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
@@ -57,6 +57,25 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Muli-Bold.ttf</string>
+		<string>Muli-BoldItalic.ttf</string>
+		<string>Muli-ExtraLight.ttf</string>
+		<string>Muli-ExtraLightItalic.ttf</string>
+		<string>Muli-Italic.ttf</string>
+		<string>Muli-Light.ttf</string>
+		<string>Muli-LightItalic.ttf</string>
+		<string>Muli-Semi-BoldItalic.ttf</string>
+		<string>Muli-SemiBold.ttf</string>
+		<string>Muli.ttf</string>
+		<string>Montserrat-Bold.otf</string>
+		<string>Montserrat-Light.otf</string>
+		<string>Montserrat-Regular.otf</string>
+		<string>Montserrat-SemiBold.otf</string>
+		<string>Montserrat-Thin.otf</string>
+		<string>Montserrat-Medium.otf</string>
 	</array>
 </dict>
 </plist>
