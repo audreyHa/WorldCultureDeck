@@ -28,7 +28,7 @@ class WallpaperVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
-        
+        starCountLabel.adjustsFontSizeToFitWidth=true
         WCDLabel.adjustsFontSizeToFitWidth=true
         UIGraphicsBeginImageContext(blueBackground.frame.size)
         UIImage(named: "0_FlagCollage")?.draw(in: blueBackground.bounds)

@@ -837,10 +837,10 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xZt-8E-PA8">
-                                        <rect key="frame" x="25" y="231.33333333333334" width="364" height="511.33333333333326"/>
+                                        <rect key="frame" x="25" y="231.33333333333334" width="364" height="496.33333333333326"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Fm-Au-nx9">
-                                                <rect key="frame" x="0.0" y="0.0" width="364" height="93"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="364" height="89"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="30"/>
                                                 <state key="normal" title=" Clothing ">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -850,7 +850,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWO-L7-6Gu">
-                                                <rect key="frame" x="0.0" y="103" width="364" height="92.666666666666686"/>
+                                                <rect key="frame" x="0.0" y="99" width="364" height="89.333333333333314"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="30"/>
                                                 <state key="normal" title=" Music ">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -860,7 +860,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P42-Ak-d5K">
-                                                <rect key="frame" x="0.0" y="205.66666666666669" width="364" height="93"/>
+                                                <rect key="frame" x="0.0" y="198.33333333333331" width="364" height="89"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="30"/>
                                                 <state key="normal" title=" Art ">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -870,7 +870,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQ4-aL-2ez">
-                                                <rect key="frame" x="0.0" y="308.66666666666669" width="364" height="92.666666666666686"/>
+                                                <rect key="frame" x="0.0" y="297.33333333333331" width="364" height="89"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="30"/>
                                                 <state key="normal" title=" Fun Facts">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -880,7 +880,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Lm-wR-dBb">
-                                                <rect key="frame" x="0.0" y="411.33333333333331" width="364" height="45"/>
+                                                <rect key="frame" x="0.0" y="396.33333333333331" width="364" height="45"/>
                                                 <color key="backgroundColor" red="0.78039215689999997" green="0.94117647059999998" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="5q1-wb-n0l"/>
@@ -894,7 +894,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZw-0w-Ice">
-                                                <rect key="frame" x="0.0" y="466.33333333333331" width="364" height="45"/>
+                                                <rect key="frame" x="0.0" y="451.33333333333331" width="364" height="45"/>
                                                 <color key="backgroundColor" red="0.16078431369999999" green="0.63137254899999995" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="20"/>
                                                 <state key="normal" title="More Links">
@@ -936,7 +936,7 @@
                                     <constraint firstAttribute="trailing" secondItem="iRh-AB-kmg" secondAttribute="trailing" id="c7C-uL-uNV"/>
                                     <constraint firstItem="xZt-8E-PA8" firstAttribute="top" secondItem="pt7-6u-VYt" secondAttribute="bottom" constant="15" id="kBf-fP-R1D"/>
                                     <constraint firstItem="iRh-AB-kmg" firstAttribute="top" secondItem="KkS-pP-6Fp" secondAttribute="top" id="tno-Xv-ozk"/>
-                                    <constraint firstAttribute="bottom" secondItem="xZt-8E-PA8" secondAttribute="bottom" constant="15" id="xvc-0K-iwI"/>
+                                    <constraint firstAttribute="bottom" secondItem="xZt-8E-PA8" secondAttribute="bottom" constant="30" id="xvc-0K-iwI"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -1269,7 +1269,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="45" id="cDW-yW-35Z"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="25"/>
+                                                        <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="25"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -1547,7 +1547,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="45" id="leg-F7-0tE"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" name="PingFangHK-Regular" family="PingFang HK" pointSize="25"/>
+                                                        <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="25"/>
                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
