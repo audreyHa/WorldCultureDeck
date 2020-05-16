@@ -259,7 +259,6 @@
 			isa = PBXGroup;
 			children = (
 				F6CE53C323B9A46100B42791 /* Login.storyboard */,
-				F6A6CA6D23D6ADF0007158B8 /* InfoController.swift */,
 				F6CE53C523B9A4B900B42791 /* Main.storyboard */,
 			);
 			path = Storyboards;
@@ -288,6 +287,7 @@
 				F6A4657323BA2303004255BE /* WallpaperVC.swift */,
 				F6E3433923BADC02005B62A2 /* TabBarController.swift */,
 				F62E07E223D685B400A5D157 /* CountryController.swift */,
+				F6A6CA6D23D6ADF0007158B8 /* InfoController.swift */,
 				F61DB99523DC136C008943C6 /* QuizVC.swift */,
 				F6C5D87123FA5986004DBDB4 /* SourcesVC.swift */,
 				F6BEF4CC23FB41C600863713 /* ShortAlertVC.swift */,

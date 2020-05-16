@@ -53,6 +53,9 @@ class NLI_CountryController: UIViewController {
             for myButton in myButtons{
                 makeButtonAccessible(myButton: myButton!)
             }
+            
+            mapImage.accessibilityLabel="Map of \(UserDefaults.standard.string(forKey: "NLI_countryName")!)"
+            mapImage.isAccessibilityElement=true
         }
         
     func makeLabelAccessible(myLabel: UILabel){

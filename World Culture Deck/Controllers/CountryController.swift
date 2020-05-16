@@ -61,6 +61,9 @@ class CountryController: UIViewController {
         
         starButton.isAccessibilityElement=false
         starLabel.accessibilityLabel="\(UserDefaults.standard.integer(forKey: "numberStars")) stars"
+        
+        mapImage.accessibilityLabel="Map of \(UserDefaults.standard.string(forKey: "countryName")!)"
+        mapImage.isAccessibilityElement=true
     }
     
     func makeLabelAccessible(myLabel: UILabel){

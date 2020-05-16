@@ -40,6 +40,7 @@ class InfoController: UIViewController {
         StarService.displayStars(myLabel: starLabel)
         
         var countryName=UserDefaults.standard.string(forKey: "countryName")!
+        var infoType=UserDefaults.standard.string(forKey: "infoType")!
         UIGraphicsBeginImageContext(blueBackground.frame.size)
         UIImage(named: "\(countryName)Background")?.draw(in: blueBackground.bounds)
         
@@ -51,7 +52,7 @@ class InfoController: UIViewController {
         numberWords=["zero","one","two","three","four","five","six"]
         setUpPage()
         
-        xButton.accessibilityLabel="Close \(UserDefaults.standard.string(forKey: "infoType")!) page"
+        xButton.accessibilityLabel="Close \(infoType) page"
         xButton.accessibilityHint="Tap to go back to \(countryName) page"
         
         var myLabels=[WCDLabel, headerLabel, firstLabel, secondLabel, pageCountLabel, starLabel]
@@ -70,6 +71,14 @@ class InfoController: UIViewController {
         
         backButton.isAccessibilityElement=true
         nextButton.isAccessibilityElement=true
+        
+        firstImage.isAccessibilityElement=true
+        secondImage.isAccessibilityElement=true
+        
+        firstImage.accessibilityLabel="\(countryName) \(infoType)"
+        secondImage.accessibilityLabel="\(countryName) \(infoType)"
+        firstImage.accessibilityHint=""
+        secondImage.accessibilityHint=""
     }
     
     func makeLabelAccessible(myLabel: UILabel){

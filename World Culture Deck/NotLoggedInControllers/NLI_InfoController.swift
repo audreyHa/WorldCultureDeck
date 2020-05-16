@@ -34,6 +34,8 @@ class NLI_InfoController: UIViewController {
             nextButton.layer.cornerRadius=10
             
             var countryName=UserDefaults.standard.string(forKey: "NLI_countryName")!
+            var infoType=UserDefaults.standard.string(forKey: "NLI_infoType")!
+            
             UIGraphicsBeginImageContext(blueBackground.frame.size)
             UIImage(named: "\(countryName)Background")?.draw(in: blueBackground.bounds)
             
@@ -45,7 +47,7 @@ class NLI_InfoController: UIViewController {
             numberWords=["zero","one","two","three","four","five","six"]
             setUpPage()
             
-            xButton.accessibilityLabel="Close \(UserDefaults.standard.string(forKey: "NLI_infoType")!) page"
+            xButton.accessibilityLabel="Close \(infoType) page"
             xButton.accessibilityHint="Tap to go back to \(countryName) page"
             
             var myButtons=[backButton, nextButton]
@@ -58,7 +60,12 @@ class NLI_InfoController: UIViewController {
             for myLabel in myLabels{
                 makeLabelAccessible(myLabel: myLabel!)
             }
-
+            
+            firstImage.isAccessibilityElement=true
+            secondImage.isAccessibilityElement=true
+            
+            firstImage.accessibilityLabel="\(countryName) \(infoType)"
+            secondImage.accessibilityLabel="\(countryName) \(infoType)"
         }
 
         func makeLabelAccessible(myLabel: UILabel){

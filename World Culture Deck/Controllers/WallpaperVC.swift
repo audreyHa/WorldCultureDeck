@@ -110,7 +110,7 @@ class WallpaperVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         cell.wallpaperImageView.layer.cornerRadius=10
         cell.regionLabel.text=badgeTitles[indexPath.row]
         
-        cell.wallpaperImageView.accessibilityLabel="Image of \(badgeTitles[indexPath.row]) badge"
+        
         
         self.returnBadgesDict{badgesDict in
             if(badgesDict[self.badgeTitles[indexPath.row]] != nil && badgesDict[self.badgeTitles[indexPath.row]]==true){
@@ -123,11 +123,12 @@ class WallpaperVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
             
         }
         
+        cell.wallpaperImageView.isAccessibilityElement=true
+        cell.wallpaperImageView.accessibilityLabel="\(badgeTitles[indexPath.row]) badge"
+        
         cell.downloadButton.accessibilityLabel="Download \(cell.regionLabel.text!) Badge"
         cell.downloadButton.accessibilityHint="You currently have \(UserDefaults.standard.integer(forKey: "numberStars")) stars."
-        
-        cell.wallpaperImageView.isAccessibilityElement=false
-        
+
         return cell
     }
     
