@@ -4,7 +4,7 @@ World Culture Deck is an app for people of all ages to learn about various cultu
 The app contains lessons and content on traditional clothing, art, music, and fun facts about countries and groups worldwide. Users can also take quizzes and earn badges.
 
 ## Privacy Policy
-World Culture Deck incorporates Firebase Authentication for signing users in, Firebase Realtime Database for storing user data, and Firebase Analytics: an analytics service provided by Google LLC. In order to understand Google's use of Data, see Google's policy on “How Google uses data when you use our partners' sites or apps.”
+World Culture Deck incorporates Firebase Authentication for signing users in, Firebase Realtime Database for storing user data, and Firebase Analytics: an analytics service provided by Google LLC. In order to understand Google's use of Data, see Google's policy on [“How Google uses data when you use our partners' sites or apps.”](https://policies.google.com/technologies/partner-sites)
  
 Firebase Analytics may share Data with other tools provided by Firebase, such as Crash Reporting, Remote Config or Notifications.
  
