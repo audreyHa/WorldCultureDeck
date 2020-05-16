@@ -136,10 +136,9 @@ class NLI_QuizController: UIViewController, UITableViewDelegate, UITableViewData
         
         let questions=InfoService.returnQuizInfo()[countryName]!["Quiz Questions"]
         cell.questionLabel.text=questions![numberWords[indexPath.row]]!["zero"]
+        cell.questionLabel.accessibilityHint="Question \(indexPath.row + 1) out of 3"
         
-        
-        
-        
+
         let isFeedback=UserDefaults.standard.bool(forKey: "NLI_isFeedback")
         if(isFeedback){
             for i in 1...3{
@@ -165,28 +164,37 @@ class NLI_QuizController: UIViewController, UITableViewDelegate, UITableViewData
                 switch(correctAnswersArray[countryName]![correctIndex]){
                 case "A":
                     self.setButtonSelected(myButton: cell.firstOption)
+                    cell.firstOption.accessibilityLabel = "Correct Answer: " + questions![numberWords[indexPath.row]]![numberWords[1]]!
                 case "B":
                     self.setButtonSelected(myButton: cell.secondOption)
+                    cell.secondOption.accessibilityLabel = "Correct Answer: " + questions![numberWords[indexPath.row]]![numberWords[2]]!
                 default:
                     self.setButtonSelected(myButton: cell.thirdOption)
+                    cell.thirdOption.accessibilityLabel = "Correct Answer: " + questions![numberWords[indexPath.row]]![numberWords[3]]!
                 }
                     
                 switch(self.userAnswers[correctIndex]){
                 case "A":
                     self.setButtonRed(myButton: cell.firstOption)
+                    cell.firstOption.accessibilityLabel = "Incorrect Answer: " + questions![numberWords[indexPath.row]]![numberWords[1]]!
                 case "B":
                     self.setButtonRed(myButton: cell.secondOption)
+                    cell.secondOption.accessibilityLabel = "Incorrect Answer: " + questions![numberWords[indexPath.row]]![numberWords[2]]!
                 default:
                     self.setButtonRed(myButton: cell.thirdOption)
+                    cell.thirdOption.accessibilityLabel = "Incorrect Answer: " + questions![numberWords[indexPath.row]]![numberWords[3]]!
                 }
             }else{
                 switch(self.userAnswers[correctIndex]){
                 case "A":
                     self.setButtonSelected(myButton: cell.firstOption)
+                    cell.firstOption.accessibilityLabel = "Correct Answer: " + questions![numberWords[indexPath.row]]![numberWords[1]]!
                 case "B":
                     self.setButtonSelected(myButton: cell.secondOption)
+                    cell.secondOption.accessibilityLabel = "Correct Answer: " + questions![numberWords[indexPath.row]]![numberWords[2]]!
                 default:
                     self.setButtonSelected(myButton: cell.thirdOption)
+                    cell.thirdOption.accessibilityLabel = "Correct Answer: " + questions![numberWords[indexPath.row]]![numberWords[3]]!
                 }
             }
 
@@ -199,6 +207,8 @@ class NLI_QuizController: UIViewController, UITableViewDelegate, UITableViewData
                 var optionTitle=questions![numberWords[indexPath.row]]![numberWords[i]]
                 myButton?.setTitle(optionTitle, for: .normal)
                 self.setButtonUNSelected(myButton: myButton!)
+                
+                myButton!.accessibilityLabel="\(optionTitle!)"
                 
                 for answer in self.userAnswersString{
                     if(answer==optionTitle){
@@ -224,16 +234,16 @@ class NLI_QuizController: UIViewController, UITableViewDelegate, UITableViewData
 
     func setButtonSelected(myButton: UIButton){
         myButton.backgroundColor=mintColor
-        myButton.setTitleColor(tealColor, for: .normal)
+        myButton.setTitleColor(UIColor.black, for: .normal)
     }
 
     func setButtonRed(myButton: UIButton){
         myButton.backgroundColor=redColor
-        myButton.setTitleColor(mintColor, for: .normal)
+        myButton.setTitleColor(UIColor.white, for: .normal)
     }
 
     func setButtonUNSelected(myButton: UIButton){
         myButton.backgroundColor=tealColor
-        myButton.setTitleColor(mintColor, for: .normal)
+        myButton.setTitleColor(UIColor.white, for: .normal)
     }
 }

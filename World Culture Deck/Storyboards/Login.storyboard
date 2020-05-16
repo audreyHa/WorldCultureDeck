@@ -1110,7 +1110,7 @@
                                                                             <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="18"/>
                                                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <state key="normal" title="  First Option">
-                                                                                <color key="titleColor" red="0.78039215689999997" green="0.94117647059999998" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             </state>
                                                                             <connections>
                                                                                 <action selector="option1Pressed:" destination="1Lx-gO-FfL" eventType="touchUpInside" id="FhF-NY-DUX"/>
@@ -1122,7 +1122,7 @@
                                                                             <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="18"/>
                                                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <state key="normal" title="  Second Option">
-                                                                                <color key="titleColor" red="0.78039215689999997" green="0.94117647059999998" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             </state>
                                                                             <connections>
                                                                                 <action selector="option2Pressed:" destination="1Lx-gO-FfL" eventType="touchUpInside" id="6Vi-uf-EPf"/>
@@ -1134,7 +1134,7 @@
                                                                             <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="18"/>
                                                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <state key="normal" title="  Third Option">
-                                                                                <color key="titleColor" red="0.78039215689999997" green="0.94117647059999998" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             </state>
                                                                             <connections>
                                                                                 <action selector="option3Pressed:" destination="1Lx-gO-FfL" eventType="touchUpInside" id="ig6-VG-Dyu"/>
@@ -1184,15 +1184,6 @@
                                             <outlet property="delegate" destination="jwp-cI-tnk" id="Tbk-aP-lKZ"/>
                                         </connections>
                                     </tableView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yDI-WK-kbr">
-                                        <rect key="frame" x="20" y="70" width="280" height="35"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="hgm-BU-Gvc"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="25"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="svw-UW-Rkp">
                                         <rect key="frame" x="228" y="535.5" width="127" height="45"/>
                                         <color key="backgroundColor" red="0.81568627449999997" green="0.94901960780000005" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1207,8 +1198,17 @@
                                             <action selector="submitPressed:" destination="jwp-cI-tnk" eventType="touchUpInside" id="SjA-5P-Sc1"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yDI-WK-kbr">
+                                        <rect key="frame" x="75" y="70" width="285" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="X8S-go-aOx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Fi-PZ-095">
-                                        <rect key="frame" x="315" y="63.5" width="45" height="46"/>
+                                        <rect key="frame" x="15" y="63.5" width="45" height="46"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="3Fi-PZ-095" secondAttribute="height" multiplier="1:1" id="31o-ha-hvp"/>
                                         </constraints>
@@ -1221,20 +1221,20 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.097609010090000004" green="0.22002248269999999" blue="0.44544861219999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="yDI-WK-kbr" secondAttribute="trailing" constant="15" id="3ov-5L-Q9W"/>
                                     <constraint firstItem="MyJ-TT-Exs" firstAttribute="leading" secondItem="qik-ea-aUN" secondAttribute="leading" id="4Tf-ON-ELP"/>
                                     <constraint firstItem="yDI-WK-kbr" firstAttribute="top" secondItem="ml8-fD-5lF" secondAttribute="bottom" constant="20" id="8OU-We-k8r"/>
-                                    <constraint firstItem="yDI-WK-kbr" firstAttribute="leading" secondItem="qik-ea-aUN" secondAttribute="leading" constant="20" id="BKK-e0-H0m"/>
                                     <constraint firstItem="ml8-fD-5lF" firstAttribute="leading" secondItem="qik-ea-aUN" secondAttribute="leading" id="EBh-E9-dt7"/>
                                     <constraint firstAttribute="trailing" secondItem="MyJ-TT-Exs" secondAttribute="trailing" id="ICM-qB-iWg"/>
                                     <constraint firstItem="ml8-fD-5lF" firstAttribute="top" secondItem="qik-ea-aUN" secondAttribute="top" id="JdZ-oL-2WC"/>
                                     <constraint firstItem="MyJ-TT-Exs" firstAttribute="top" secondItem="3Fi-PZ-095" secondAttribute="bottom" constant="15" id="NdI-HJ-1cB"/>
                                     <constraint firstAttribute="trailing" secondItem="svw-UW-Rkp" secondAttribute="trailing" constant="20" id="O0E-aq-Whl"/>
-                                    <constraint firstItem="3Fi-PZ-095" firstAttribute="leading" secondItem="yDI-WK-kbr" secondAttribute="trailing" constant="15" id="SE1-Q0-hZr"/>
                                     <constraint firstItem="MyJ-TT-Exs" firstAttribute="top" secondItem="yDI-WK-kbr" secondAttribute="bottom" constant="20" id="UAu-jh-9KA"/>
                                     <constraint firstItem="svw-UW-Rkp" firstAttribute="top" secondItem="MyJ-TT-Exs" secondAttribute="bottom" constant="20" id="daM-cq-SJf"/>
+                                    <constraint firstItem="3Fi-PZ-095" firstAttribute="leading" secondItem="qik-ea-aUN" secondAttribute="leading" constant="15" id="hX3-0S-BdC"/>
                                     <constraint firstAttribute="trailing" secondItem="ml8-fD-5lF" secondAttribute="trailing" id="na6-pa-aaR"/>
+                                    <constraint firstItem="yDI-WK-kbr" firstAttribute="leading" secondItem="3Fi-PZ-095" secondAttribute="trailing" constant="15" id="oQ3-5i-R0E"/>
                                     <constraint firstItem="3Fi-PZ-095" firstAttribute="top" secondItem="ml8-fD-5lF" secondAttribute="bottom" constant="15" id="pMu-GT-cJ5"/>
-                                    <constraint firstAttribute="trailing" secondItem="3Fi-PZ-095" secondAttribute="trailing" constant="15" id="qSS-Rb-oTP"/>
                                     <constraint firstAttribute="bottom" secondItem="svw-UW-Rkp" secondAttribute="bottom" constant="20" id="rhN-rO-nCj"/>
                                 </constraints>
                             </view>
