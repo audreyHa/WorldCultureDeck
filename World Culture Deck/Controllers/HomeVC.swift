@@ -231,6 +231,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         
             cell.regionLabel.adjustsFontSizeToFitWidth=true
             cell.regionLabel.text=completedNames[indexPath.row]
+            cell.regionLabel.adjustsFontForContentSizeCategory=true
         
         
             cell.regionImage.layer.cornerRadius=10
