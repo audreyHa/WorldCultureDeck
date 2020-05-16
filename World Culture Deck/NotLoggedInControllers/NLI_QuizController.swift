@@ -1,3 +1,4 @@
+  
 //
 //  NLI_QuizController.swift
 //  World Culture Deck
@@ -5,7 +6,6 @@
 //  Created by Audrey Ha on 2/18/20.
 //  Copyright © 2020 AudreyHa. All rights reserved.
 //
-
 import UIKit
 
 class NLI_QuizController: UIViewController, UITableViewDelegate, UITableViewDataSource{
@@ -35,6 +35,10 @@ class NLI_QuizController: UIViewController, UITableViewDelegate, UITableViewData
         var countryName=UserDefaults.standard.string(forKey: "NLI_countryName")!
         headerLabel.text="\(countryName): Quiz"
         
+        xButton.accessibilityLabel="Close quiz page"
+        xButton.accessibilityHint="Tap to go back to \(countryName) page"
+        redoButton.accessibilityLabel="Redo Quiz"
+        
         var myLabels=[WCDLabel, topScoreLabel, headerLabel]
         var myButtons=[submitButton]
         
@@ -45,12 +49,6 @@ class NLI_QuizController: UIViewController, UITableViewDelegate, UITableViewData
         for myButton in myButtons{
             makeButtonAccessible(myButton: myButton!)
         }
-        
-        xButton.accessibilityLabel="Close quiz page"
-        xButton.accessibilityHint="Tap to go back to \(countryName) page"
-        
-        redoButton.accessibilityLabel="Redo Quiz"
-        topScoreLabel.accessibilityViewIsModal = true
     }
 
     func makeLabelAccessible(myLabel: UILabel){
@@ -138,6 +136,9 @@ class NLI_QuizController: UIViewController, UITableViewDelegate, UITableViewData
         
         let questions=InfoService.returnQuizInfo()[countryName]!["Quiz Questions"]
         cell.questionLabel.text=questions![numberWords[indexPath.row]]!["zero"]
+        
+        
+        
         
         let isFeedback=UserDefaults.standard.bool(forKey: "NLI_isFeedback")
         if(isFeedback){
