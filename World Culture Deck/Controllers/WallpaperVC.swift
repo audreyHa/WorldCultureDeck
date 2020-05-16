@@ -110,6 +110,8 @@ class WallpaperVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         cell.wallpaperImageView.layer.cornerRadius=10
         cell.regionLabel.text=badgeTitles[indexPath.row]
         
+        cell.wallpaperImageView.accessibilityLabel="Image of \(badgeTitles[indexPath.row]) badge"
+        
         self.returnBadgesDict{badgesDict in
             if(badgesDict[self.badgeTitles[indexPath.row]] != nil && badgesDict[self.badgeTitles[indexPath.row]]==true){
                 cell.wallpaperImageView.image=UIImage(named: self.badgeNames[indexPath.row])

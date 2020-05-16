@@ -162,6 +162,7 @@ class QuizVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         self.returnCountryQuizQuestions{value in
 
             cell.questionLabel.text=value[numberWords[indexPath.row]]!["zero"]
+            cell.questionLabel.accessibilityLabel="Question \(indexPath.row + 1) out of 3: \(value[numberWords[indexPath.row]]!["zero"]!)"
             
             let optionButtons=[cell.firstOption, cell.secondOption, cell.thirdOption]
             let countryName=UserDefaults.standard.string(forKey: "countryName")!
@@ -191,28 +192,37 @@ class QuizVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
                     switch(correctAnswersArray[countryName]![correctIndex]){
                     case "A":
                         self.setButtonSelected(myButton: cell.firstOption)
+                        cell.firstOption.accessibilityLabel = "Correct Answer: " + value[numberWords[indexPath.row]]!["one"]!
                     case "B":
                         self.setButtonSelected(myButton: cell.secondOption)
+                        cell.secondOption.accessibilityLabel = "Correct Answer: " + value[numberWords[indexPath.row]]!["two"]!
                     default:
                         self.setButtonSelected(myButton: cell.thirdOption)
+                        cell.thirdOption.accessibilityLabel = "Correct Answer: " + value[numberWords[indexPath.row]]!["three"]!
                     }
                         
                     switch(self.userAnswers[correctIndex]){
                     case "A":
                         self.setButtonRed(myButton: cell.firstOption)
+                        cell.firstOption.accessibilityLabel = "Incorrect Answer: " + value[numberWords[indexPath.row]]!["one"]!
                     case "B":
                         self.setButtonRed(myButton: cell.secondOption)
+                        cell.secondOption.accessibilityLabel = "Incorrect Answer: " + value[numberWords[indexPath.row]]!["two"]!
                     default:
                         self.setButtonRed(myButton: cell.thirdOption)
+                        cell.thirdOption.accessibilityLabel = "Incorrect Answer: " + value[numberWords[indexPath.row]]!["three"]!
                     }
                 }else{
                     switch(self.userAnswers[correctIndex]){
                     case "A":
                         self.setButtonSelected(myButton: cell.firstOption)
+                        cell.firstOption.accessibilityLabel = "Correct Answer: " + value[numberWords[indexPath.row]]!["one"]!
                     case "B":
                         self.setButtonSelected(myButton: cell.secondOption)
+                        cell.secondOption.accessibilityLabel = "Correct Answer: " + value[numberWords[indexPath.row]]!["two"]!
                     default:
                         self.setButtonSelected(myButton: cell.thirdOption)
+                        cell.thirdOption.accessibilityLabel = "Correct Answer: " + value[numberWords[indexPath.row]]!["three"]!
                     }
                 }
 
@@ -224,11 +234,13 @@ class QuizVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
                     
                     var optionTitle=value[numberWords[indexPath.row]]![numberWords[i]]
                     myButton?.setTitle(optionTitle, for: .normal)
+                    myButton!.accessibilityLabel="\(optionTitle!)"
                     self.setButtonUNSelected(myButton: myButton!)
                     
                     for answer in self.userAnswersString{
                         if(answer==optionTitle){
                             self.setButtonSelected(myButton: myButton!)
+                            myButton!.accessibilityLabel="\(optionTitle!): Currently Selected"
                         }
                     }
                 }

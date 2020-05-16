@@ -119,13 +119,13 @@ class SettingsVC: UIViewController {
         self.returnStarCount{starString in
             var starInt=Int(starString)
             if(starInt! >= 300){
-                self.badgesHeading.text="# of Badges Earned: 3"
+                self.badgesHeading.text="Number of Badges Earned: 3"
             }else if(starInt! >= 200){
-                self.badgesHeading.text="# of Badges Earned: 2"
+                self.badgesHeading.text="Number of Badges Earned: 2"
             }else if(starInt! >= 100){
-                self.badgesHeading.text="# of Badges Earned: 1"
+                self.badgesHeading.text="Number of Badges Earned: 1"
             }else{
-                self.badgesHeading.text="# of Badges Earned: 0"
+                self.badgesHeading.text="Number of Badges Earned: 0"
             }
         }
         

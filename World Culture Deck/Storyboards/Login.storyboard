@@ -1085,27 +1085,27 @@
                                         <rect key="frame" x="0.0" y="125" width="375" height="390.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NLI_quizCell" rowHeight="240" id="1Lx-gO-FfL" customClass="NLI_quizCell" customModule="World_Cultures" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="375" height="240"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NLI_quizCell" rowHeight="248" id="1Lx-gO-FfL" customClass="NLI_quizCell" customModule="World_Cultures" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="375" height="248"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1Lx-gO-FfL" id="cdg-xj-o2h">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="248"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tcR-wE-LWB">
-                                                            <rect key="frame" x="15" y="11" width="345" height="218"/>
+                                                            <rect key="frame" x="15" y="11" width="345" height="226"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question 1: " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F0J-ct-PUI">
-                                                                    <rect key="frame" x="10" y="10" width="325" height="24.5"/>
+                                                                    <rect key="frame" x="10" y="15" width="325" height="24.5"/>
                                                                     <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="20"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1DM-aZ-Jmg">
-                                                                    <rect key="frame" x="10" y="44.5" width="325" height="163.5"/>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="1DM-aZ-Jmg">
+                                                                    <rect key="frame" x="10" y="54.5" width="325" height="161.5"/>
                                                                     <subviews>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chu-Qj-S3o">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="325" height="48"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="325" height="44"/>
                                                                             <color key="backgroundColor" red="0.16078431369999999" green="0.63137254899999995" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                             <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="18"/>
                                                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1117,7 +1117,7 @@
                                                                             </connections>
                                                                         </button>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uyv-FS-Hqj">
-                                                                            <rect key="frame" x="0.0" y="58" width="325" height="47.5"/>
+                                                                            <rect key="frame" x="0.0" y="59" width="325" height="43.5"/>
                                                                             <color key="backgroundColor" red="0.031372549020000001" green="0.64313725489999995" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                             <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="18"/>
                                                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1129,7 +1129,7 @@
                                                                             </connections>
                                                                         </button>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZMf-hP-Tby">
-                                                                            <rect key="frame" x="0.0" y="115.5" width="325" height="48"/>
+                                                                            <rect key="frame" x="0.0" y="117.5" width="325" height="44"/>
                                                                             <color key="backgroundColor" red="0.031372549020000001" green="0.64313725489999995" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                             <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="18"/>
                                                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1154,9 +1154,9 @@
                                                             <constraints>
                                                                 <constraint firstAttribute="trailing" secondItem="F0J-ct-PUI" secondAttribute="trailing" constant="10" id="3tP-ol-bgx"/>
                                                                 <constraint firstItem="1DM-aZ-Jmg" firstAttribute="leading" secondItem="tcR-wE-LWB" secondAttribute="leading" constant="10" id="Bkv-Cj-ltv"/>
-                                                                <constraint firstItem="F0J-ct-PUI" firstAttribute="top" secondItem="tcR-wE-LWB" secondAttribute="top" constant="10" id="Nv7-z2-Kvm"/>
+                                                                <constraint firstItem="F0J-ct-PUI" firstAttribute="top" secondItem="tcR-wE-LWB" secondAttribute="top" constant="15" id="Nv7-z2-Kvm"/>
                                                                 <constraint firstAttribute="bottom" secondItem="1DM-aZ-Jmg" secondAttribute="bottom" constant="10" id="dfj-e6-hlA"/>
-                                                                <constraint firstItem="1DM-aZ-Jmg" firstAttribute="top" secondItem="F0J-ct-PUI" secondAttribute="bottom" constant="10" id="eK0-Xi-CO7"/>
+                                                                <constraint firstItem="1DM-aZ-Jmg" firstAttribute="top" secondItem="F0J-ct-PUI" secondAttribute="bottom" constant="15" id="eK0-Xi-CO7"/>
                                                                 <constraint firstAttribute="trailing" secondItem="1DM-aZ-Jmg" secondAttribute="trailing" constant="10" id="rCs-lf-8Vc"/>
                                                                 <constraint firstItem="F0J-ct-PUI" firstAttribute="leading" secondItem="tcR-wE-LWB" secondAttribute="leading" constant="10" id="sdj-iN-Qyl"/>
                                                             </constraints>
@@ -1266,7 +1266,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GjD-jj-sq6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1894" y="1616"/>
+            <point key="canvasLocation" x="1893.5999999999999" y="1615.1424287856073"/>
         </scene>
         <!--SourceVC-->
         <scene sceneID="ee4-7G-Ojn">

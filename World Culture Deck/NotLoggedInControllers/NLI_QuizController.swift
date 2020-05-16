@@ -136,7 +136,7 @@ class NLI_QuizController: UIViewController, UITableViewDelegate, UITableViewData
         
         let questions=InfoService.returnQuizInfo()[countryName]!["Quiz Questions"]
         cell.questionLabel.text=questions![numberWords[indexPath.row]]!["zero"]
-        cell.questionLabel.accessibilityHint="Question \(indexPath.row + 1) out of 3"
+        cell.questionLabel.accessibilityLabel="Question \(indexPath.row + 1) out of 3: \(questions![numberWords[indexPath.row]]!["zero"]!)"
         
 
         let isFeedback=UserDefaults.standard.bool(forKey: "NLI_isFeedback")
@@ -205,7 +205,8 @@ class NLI_QuizController: UIViewController, UITableViewDelegate, UITableViewData
                 myButton!.titleLabel?.adjustsFontSizeToFitWidth=true
                 
                 var optionTitle=questions![numberWords[indexPath.row]]![numberWords[i]]
-                myButton?.setTitle(optionTitle, for: .normal)
+                myButton!.setTitle(optionTitle, for: .normal)
+                myButton!.accessibilityLabel="\(optionTitle!)"
                 self.setButtonUNSelected(myButton: myButton!)
                 
                 myButton!.accessibilityLabel="\(optionTitle!)"
@@ -213,6 +214,7 @@ class NLI_QuizController: UIViewController, UITableViewDelegate, UITableViewData
                 for answer in self.userAnswersString{
                     if(answer==optionTitle){
                         self.setButtonSelected(myButton: myButton!)
+                        myButton!.accessibilityLabel="\(optionTitle!): Currently Selected"
                     }
                 }
             }
@@ -220,6 +222,7 @@ class NLI_QuizController: UIViewController, UITableViewDelegate, UITableViewData
 
         cell.selectionStyle = .none
         cell.isAccessibilityElement=false
+        cell.questionSurrounding.isAccessibilityElement=false
         cell.questionLabel.isAccessibilityElement=true
         cell.firstOption.isAccessibilityElement=true
         cell.secondOption.isAccessibilityElement=true
