@@ -16,6 +16,7 @@ class WallpaperVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     @IBOutlet weak var WCDLabel: UILabel!
     @IBOutlet weak var starCountLabel: UILabel!
     @IBOutlet weak var starButton: UIButton!
+    @IBOutlet weak var headerLabel: UILabel!
     
     var collectionViewFlowLayout: UICollectionViewFlowLayout!
     
@@ -28,8 +29,10 @@ class WallpaperVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
+        
         starCountLabel.adjustsFontSizeToFitWidth=true
         WCDLabel.adjustsFontSizeToFitWidth=true
+        
         UIGraphicsBeginImageContext(blueBackground.frame.size)
         UIImage(named: "0_FlagCollage")?.draw(in: blueBackground.bounds)
         
@@ -51,6 +54,18 @@ class WallpaperVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
         
         starButton.isAccessibilityElement=false
         starCountLabel.accessibilityLabel="\(UserDefaults.standard.integer(forKey: "numberStars")) stars"
+        
+        var myLabels=[WCDLabel, starCountLabel, headerLabel]
+        
+        for myLabel in myLabels{
+            makeLabelAccessible(myLabel: myLabel!)
+        }
+    }
+    
+    func makeLabelAccessible(myLabel: UILabel){
+        myLabel.adjustsFontForContentSizeCategory=true
+        myLabel.adjustsFontSizeToFitWidth=true
+        myLabel.font=UIFontMetrics.default.scaledFont(for: myLabel.font)
     }
     
     @objc func saveBadgeImage(notification: Notification) {

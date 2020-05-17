@@ -44,7 +44,9 @@
                             </button>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="lhy-jj-cBL" firstAttribute="top" secondItem="6r0-St-uhT" secondAttribute="top" id="PWj-qj-w6L"/>
                             <constraint firstAttribute="height" constant="45" id="Z2h-EJ-Am2"/>
+                            <constraint firstAttribute="bottom" secondItem="lhy-jj-cBL" secondAttribute="bottom" id="jlo-5f-yJO"/>
                         </constraints>
                     </stackView>
                 </subviews>

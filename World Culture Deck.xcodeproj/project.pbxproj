@@ -30,6 +30,7 @@
 		F6A4657223BA197A004255BE /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4657123BA197A004255BE /* SettingsVC.swift */; };
 		F6A4657423BA2303004255BE /* WallpaperVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A4657323BA2303004255BE /* WallpaperVC.swift */; };
 		F6A6CA6E23D6ADF0007158B8 /* InfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A6CA6D23D6ADF0007158B8 /* InfoController.swift */; };
+		F6AA44E52470A4E600C4D75F /* NLI_allDecksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AA44E42470A4E600C4D75F /* NLI_allDecksCell.swift */; };
 		F6BEF4CB23FB349D00863713 /* ReachabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BEF4CA23FB349D00863713 /* ReachabilityService.swift */; };
 		F6BEF4CD23FB41C600863713 /* ShortAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BEF4CC23FB41C600863713 /* ShortAlertVC.swift */; };
 		F6C5D87223FA5986004DBDB4 /* SourcesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C5D87123FA5986004DBDB4 /* SourcesVC.swift */; };
@@ -94,6 +95,7 @@
 		F6A4657123BA197A004255BE /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		F6A4657323BA2303004255BE /* WallpaperVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperVC.swift; sourceTree = "<group>"; };
 		F6A6CA6D23D6ADF0007158B8 /* InfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoController.swift; sourceTree = "<group>"; };
+		F6AA44E42470A4E600C4D75F /* NLI_allDecksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NLI_allDecksCell.swift; sourceTree = "<group>"; };
 		F6BEF4CA23FB349D00863713 /* ReachabilityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityService.swift; sourceTree = "<group>"; };
 		F6BEF4CC23FB41C600863713 /* ShortAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortAlertVC.swift; sourceTree = "<group>"; };
 		F6C5D87123FA5986004DBDB4 /* SourcesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesVC.swift; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 				F6E3433D23BAE03A005B62A2 /* CompletedDecksCell.swift */,
 				F61DB99723DC140C008943C6 /* QuizCell.swift */,
 				F6C5D87323FA5A17004DBDB4 /* LinksCell.swift */,
+				F6AA44E42470A4E600C4D75F /* NLI_allDecksCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -504,6 +507,7 @@
 				F65645EF23E6A974008FDD04 /* StarService.swift in Sources */,
 				F6CE53A823B99E7A00B42791 /* SceneDelegate.swift in Sources */,
 				F66B88DD23FD2C420018892D /* PrivacyPolicyVC.swift in Sources */,
+				F6AA44E52470A4E600C4D75F /* NLI_allDecksCell.swift in Sources */,
 				F6A6CA6E23D6ADF0007158B8 /* InfoController.swift in Sources */,
 				F66B88D323FCF1160018892D /* NLI_CountryController.swift in Sources */,
 				F6CE53CD23B9D5CD00B42791 /* CreateUsernameViewController.swift in Sources */,

@@ -56,9 +56,9 @@ class NLI_HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
     }
     
     func makeLabelAccessible(myLabel: UILabel){
-        myLabel.adjustsFontForContentSizeCategory=true
+//        myLabel.adjustsFontForContentSizeCategory=true
         myLabel.adjustsFontSizeToFitWidth=true
-        myLabel.font=UIFontMetrics.default.scaledFont(for: myLabel.font)
+//        myLabel.font=UIFontMetrics.default.scaledFont(for: myLabel.font)
     }
     
     func makeButtonAccessible(myButton: UIButton){
@@ -101,15 +101,10 @@ class NLI_HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
-        let cell=collectionView.dequeueReusableCell(withReuseIdentifier: "AllDecksCell", for: indexPath) as! AllDecksCell
+        let cell=collectionView.dequeueReusableCell(withReuseIdentifier: "NLI_allDecksCell", for: indexPath) as! NLI_allDecksCell
         cell.layer.cornerRadius=10
-        
-        cell.regionLabel.adjustsFontForContentSizeCategory=true
         cell.regionLabel.adjustsFontSizeToFitWidth=true
-        
-        
-        cell.regionLabel.adjustsFontForContentSizeCategory = true
-        
+    
         cell.regionLabel.text=allNames[indexPath.row]
     
         cell.regionImage.layer.cornerRadius=10

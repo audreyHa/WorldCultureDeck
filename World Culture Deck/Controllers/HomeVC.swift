@@ -20,6 +20,8 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     @IBOutlet weak var WCDLabel: UILabel!
     @IBOutlet weak var homeLabel: UILabel!
     @IBOutlet weak var starButton: UIButton!
+    @IBOutlet weak var myScrollView: UIScrollView!
+    @IBOutlet var myView: UIView!
     
     var collectionViewFlowLayout: UICollectionViewFlowLayout!
     var completedNames: [String]!
@@ -72,6 +74,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         starButton.isAccessibilityElement=false
         starLabel.accessibilityLabel="\(UserDefaults.standard.integer(forKey: "numberStars")) stars"
     }
+
     
     func makeLabelAccessible(myLabel: UILabel){
         myLabel.adjustsFontForContentSizeCategory=true
@@ -215,7 +218,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
             cell.regionLabel.adjustsFontSizeToFitWidth=true
             cell.regionLabel.text=incompletedNames[indexPath.row]
             cell.regionLabel.adjustsFontForContentSizeCategory=true
-        
+            
             cell.regionImage.layer.cornerRadius=10
             cell.regionImage.image=UIImage(named: "\(incompletedNames[indexPath.row])Cover")
             
@@ -232,8 +235,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
             cell.regionLabel.adjustsFontSizeToFitWidth=true
             cell.regionLabel.text=completedNames[indexPath.row]
             cell.regionLabel.adjustsFontForContentSizeCategory=true
-        
-        
+
             cell.regionImage.layer.cornerRadius=10
             cell.regionImage.image=UIImage(named: "\(completedNames[indexPath.row])Cover")
             
