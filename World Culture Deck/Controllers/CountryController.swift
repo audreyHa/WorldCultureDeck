@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Kingfisher
 import FirebaseDatabase
 
 class CountryController: UIViewController {
