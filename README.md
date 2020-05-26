@@ -1,5 +1,5 @@
 # WorldCultureDeck
-World Culture Deck is an app for people of all ages to learn about various cultures around the world!
+World Culture Deck is an app for students to learn about various cultures around the world!
 
 The app contains lessons and content on traditional clothing, art, music, and fun facts about countries and groups worldwide. Users can also take quizzes and earn badges.
 
